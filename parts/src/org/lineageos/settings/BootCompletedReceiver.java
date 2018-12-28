@@ -26,6 +26,7 @@ import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
@@ -40,6 +41,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DiracUtils.initialize(context);
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
         FileUtils.enableService(context);
