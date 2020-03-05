@@ -233,6 +233,9 @@ persist.sys.oem.otg_support=true
 # PASR
 vendor.power.pasr.enabled=false
 
+# Netflix
+ro.netflix.bsp_rev=Q8450-34634-1
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 vendor.perf.framepacing.enable=1
