@@ -43,7 +43,6 @@ ro.vendor.audio.voice.change.youme.support=true
 tunnel.audio.encode=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
-vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
