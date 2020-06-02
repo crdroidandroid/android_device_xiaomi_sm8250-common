@@ -3,6 +3,9 @@ persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
 tunnel.audio.encode=true
 
+# Battery Property
+ro.charger.enable_suspend = 1
+
 # Bluetooth
 bt.max.hfpclient.connections=1
 persist.vendor.bt.a2dp.hal.implementation=true
