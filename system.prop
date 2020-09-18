@@ -3,6 +3,10 @@ persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
 tunnel.audio.encode=true
 
+# Blur
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # Camera
 camera.disable_zsl_mode=true
 
