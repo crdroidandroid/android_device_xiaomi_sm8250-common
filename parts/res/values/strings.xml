@@ -17,4 +17,6 @@
     <string name="htsr_enable_title">Increase Touch Responsiveness</string>
     <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>
 
+    <!-- Refresh Rate Settings -->
+    <string name="refresh_rate_tile_title">Refresh Rate</string>
 </resources>
