@@ -63,9 +63,6 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 sys.displayfeature_hidl=true
 debug.force_no_blanking=true
 
-# DPM
-persist.vendor.dpm.feature=11
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
