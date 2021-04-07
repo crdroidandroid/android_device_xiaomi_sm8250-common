@@ -109,6 +109,7 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=2
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
+vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
