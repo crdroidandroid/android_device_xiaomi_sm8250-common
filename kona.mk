@@ -531,7 +531,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     fstab.qcom \
     fstab.qcom_ramdisk \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.smartcharging.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
