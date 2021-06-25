@@ -1,3 +1,6 @@
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+
 # Adaptive Suspend
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
