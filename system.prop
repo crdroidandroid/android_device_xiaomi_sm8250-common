@@ -2,6 +2,9 @@
 ro.config.media_vol_default=8
 ro.config.media_vol_steps=25
 
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+
 # Camera
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
