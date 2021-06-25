@@ -4,6 +4,7 @@ ro.config.media_vol_steps=25
 
 # Bluetooth
 persist.vendor.btstack.enable.twsplus=true
+persist.vendor.bt.a2dp.hal.implementation=true
 
 # Camera
 camera.disable_zsl_mode=true
