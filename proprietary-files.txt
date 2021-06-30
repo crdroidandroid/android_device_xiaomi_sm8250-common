@@ -501,6 +501,21 @@ vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
 vendor/lib/libsmwrapper.so
 
+# Media (Codec2) - from LA.UM.9.12.r1-10800-SMxx50.0
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|cd2c5d4f2050f7d72bb1116899da5abb49eb1864
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
+vendor/etc/media_codecs_c2.xml|490211cad553ce69d536c0e55848b6a7d499260d
+vendor/etc/media_codecs_performance_c2.xml|e16b7768c91f1e15ca3ddc146a77645605a1d090
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|3c396a276dfb589501105e7158459fa2d644607e
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy|a134d3d5d74294ca8164056b42389b1c7dbb2b65
+-vendor/etc/vintf/manifest/c2_manifest_vendor.xml|0e532bf1c7d6a0ee2e7e03a9cc3283a5bffc7f8e
+vendor/lib/libqcodec2_base.so|9a3d52c16ca09666ff018b248b6a5c446f375ee5
+vendor/lib/libqcodec2_basecodec.so|8cccf798e10347c5503569d5aa1cd76ed79cd160
+vendor/lib/libqcodec2_core.so|c3e0998689e257596e0217386976c5abd850b19b
+vendor/lib/libqcodec2_platform.so|6f765a9f564667f3eed1b294115cbbbe0f13e50b
+vendor/lib/libqcodec2_utils.so|b2cf8a4e42824affe423324dff34627fc722fb3f
+vendor/lib/libqcodec2_v4l2codec.so|70d923d14de32d774d8d8c10d48bb103f85dabce
+
 # Media - from LA.UM.9.12.r1-10800-SMxx50.0
 system_ext/lib/libmmosal.so|175c890c965a14043777000cd2cfc20264b04810
 system_ext/lib/libmmparser_lite.so|078224d83480b7f69eb30e0d036e24fa3fb0e37a
