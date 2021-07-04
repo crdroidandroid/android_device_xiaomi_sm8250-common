@@ -66,6 +66,9 @@
 # Touch Feature
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                  u:object_r:hal_touchfeature_xiaomi_default_exec:s0
 
+# Touch Sampling
+/sys/devices/virtual/touch/touch_dev/bump_sample_rate                                               u:object_r:sysfs_htsr:s0
+
 # Ultrasound devices
 /dev/elliptic[0-9]+                                                                                 u:object_r:ultrasound_device:s0
 /dev/mius(.*)?                                                                                      u:object_r:ultrasound_device:s0
