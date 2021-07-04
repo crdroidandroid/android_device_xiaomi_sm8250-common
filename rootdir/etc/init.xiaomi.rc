@@ -132,3 +132,7 @@ on property:vendor.usb.current_speed=super-speed
 
 on property:vendor.usb.current_speed=super-speed-plus
     setprop vendor.usb.uvc.payload_transfer_size 3072
+    
+# Touch
+on boot
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
