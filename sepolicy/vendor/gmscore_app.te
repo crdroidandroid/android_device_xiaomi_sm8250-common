@@ -1,2 +1,2 @@
-# GMS Services
-allow gmscore_app hal_memtrack_hwservice:hwservice_manager { find };
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager {find};
+binder_call(gmscore_app, hal_memtrack_default);
