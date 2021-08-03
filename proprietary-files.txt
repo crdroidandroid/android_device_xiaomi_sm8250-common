@@ -356,12 +356,6 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
 # IMS - from LA.UM.9.12.r1-10800-SMxx50.0
 system_ext/lib64/lib-imsvideocodec.so|99aae5a22dbaa4a2a78703be9cecd1349f3dcb44
 system_ext/lib64/lib-imsvt.so|d9ad478a372fe9c53821a7482e96f1fc0504dd1c
