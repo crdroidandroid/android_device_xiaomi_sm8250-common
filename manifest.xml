@@ -306,4 +306,9 @@
         <transport>hwbinder</transport>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.power.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IPasrManager/default</fqname>
+    </hal>
 </manifest>
