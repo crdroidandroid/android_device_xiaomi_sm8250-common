@@ -141,7 +141,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede025
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|52006534d0d9a9093afce38414bd385f5193cec2
 
 # Consumer IR
-vendor/lib64/hw/consumerir.default.so
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.kona.so
 
 # Display (HDR) - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/lib64/libhdr_tm.so|c1df243bb458e57633aa6193a0a3a2a48fc6360b
