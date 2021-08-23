@@ -68,6 +68,7 @@ persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
 # SSR
+persist.vendor.ssr.enable_ramdumps=1
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Zygote
