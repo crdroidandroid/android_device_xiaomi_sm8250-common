@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from alioth-user 11 RKQ1.200826.002 V12.5.2.0.RKHMIXM release-keys
+# Unpinned blobs from alioth_global-user 11 RKQ1.200826.002 V12.5.3.0.RKHMIXM release-keys
 
 # ADSP - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/adsprpcd|c49897b4ab71cb67629621a956203964d9949cf2
