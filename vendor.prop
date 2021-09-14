@@ -207,6 +207,12 @@ persist.vendor.hvdcp_opti.disallowed=1
 # Keystore
 ro.hardware.keystore_desede=true
 
+# IMS
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableQXDMLogs=1
+
 # Media
 debug.stagefright.c2inputsurface=-1
 ro.odm.build.media_performance_class=30
