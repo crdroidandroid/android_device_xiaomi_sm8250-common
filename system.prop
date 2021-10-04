@@ -19,6 +19,9 @@ pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
