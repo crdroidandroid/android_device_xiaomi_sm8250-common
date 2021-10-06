@@ -34,6 +34,9 @@ public final class DozeUtils {
 
     protected static final String ALWAYS_ON_DISPLAY = "always_on_display";
     protected static final String CATEG_PICKUP_SENSOR = "pickup_sensor";
+
+    protected static final String DOZE_ENABLE = "doze_enable";
+
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     private static final String TAG = "DozeUtils";
     private static final boolean DEBUG = false;
