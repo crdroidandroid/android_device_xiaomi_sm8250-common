@@ -554,6 +554,9 @@ vendor/lib64/unnhal-acc-hvx.so|902b52e54aa5a85fd4989d3526c9e430cfc095a9
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf
 vendor/lib/libsn100u_fw.so
+vendor/lib64/jcos_nq_client.so
+vendor/lib64/ls_nq_client.so
+vendor/lib64/se_nq_extn_client.so
 
 # NVRAM
 vendor/bin/nv_mac
