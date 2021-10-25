@@ -160,8 +160,10 @@ on boot
     chown system system /sys/class/backlight/panel0-backlight/brightness_clone
     chmod 0664 /sys/class/power_supply/battery/dc_thermal_levels
     chown system system /sys/class/thermal/thermal_message/sconfig
+
     # Load all wlan drivers
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
+    
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
     
@@ -171,7 +173,10 @@ on boot
 
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
-
+    
+on property:sys.boot_completed=1
+    write /sys/class/thermal/thermal_message/sconfig 10
+    
 on charger
     mkdir /mnt/vendor/persist
     chown root system /mnt/vendor/persist
