@@ -460,15 +460,6 @@ vendor/lib64/libkeymasterutils.so|6febbcfd1835dbf4ffe6222040de86b4a34857dc
 vendor/lib64/libqtikeymaster4.so|3bc0833a03911e2f5f2d36fd754d6e02efba0df3
 vendor/lib64/libspcom.so|2c94581e2645034cfa25b4752eff450c65e1b9d5
 
-# PASR - from LA.UM.9.12.r1-10800-SMxx50.0
--vendor/app/pasrservice/pasrservice.apk|6d4e8bab2426b03231531ec09bce922601b8e8e6
-vendor/bin/hw/vendor.qti.power.pasrmanager@1.0-service|95e6ebcb7f3bfec201a320e257ccbf16a46fdc16
-vendor/etc/init/vendor.qti.power.pasrmanager@1.0-service.rc|b34c1b9179c89cd47adce145bae9a609e5141bc0
-vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so|400f9365b631869e3d965c690ec72d82f863a337
-vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so|78c60d41f26c603dd2c22305b3c21de2b6e61588
-vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so|271d283a2e906f590a3fae77f121befac87675e6
-vendor/lib64/vendor.qti.power.pasrmanager@1.0.so|0fea4e107af19559138f6f4d73ad6961cfeae6c3
-
 # Listen
 vendor/lib/hw/sound_trigger.primary.kona.so
 vendor/lib/libadpcmdec.so
