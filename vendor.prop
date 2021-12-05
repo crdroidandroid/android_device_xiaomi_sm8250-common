@@ -128,9 +128,6 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
-# Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
-
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
