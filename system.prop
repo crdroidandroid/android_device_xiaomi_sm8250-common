@@ -68,3 +68,16 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
+
+# Pre-rendering
+ro.vendor.perf.scroll_opt=true
+
+# Venom
+ro.surface_flinger.running_without_sync_framework=true
+
+# DHA Tunning
+ro.config.dha_tunnable=1
+
+# Smoothens UI
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
