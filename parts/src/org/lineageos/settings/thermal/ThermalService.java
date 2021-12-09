@@ -31,12 +31,16 @@ import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.provider.Settings;
 import android.util.Log;
+
+import java.util.Arrays;
 
 public class ThermalService extends Service {
 
     private static final String TAG = "ThermalService";
     private static final boolean DEBUG = false;
+    private static final String SETTINGS_GAME_LIST = "gamespace_game_list";
 
     private boolean mScreenOn = true;
     private String mCurrentApp = "";
@@ -47,9 +51,17 @@ public class ThermalService extends Service {
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            mPreviousApp = "";
-            mThermalUtils.setDefaultThermalProfile();
-            mThermalUtils.resetTouchModes();
+            switch (intent.getAction()) {
+                case Intent.ACTION_SCREEN_OFF:
+                    mScreenOn = false;
+                    setThermalProfile();
+                    mThermalUtils.resetTouchModes();
+                    break;
+                case Intent.ACTION_SCREEN_ON:
+                    mScreenOn = true;
+                    setThermalProfile();
+                    break;
+            }
         }
     };
 
@@ -93,10 +105,31 @@ public class ThermalService extends Service {
 
     private void setThermalProfile() {
         if (mScreenOn) {
-            mThermalUtils.setThermalProfile(mCurrentApp);
+            if (!isConfigured(mCurrentApp) && isListedOnGameSpace(mCurrentApp)) {
+                mThermalUtils.setThermalProfileForce(ThermalUtils.STATE_GAMING);
+            } else {
+                mThermalUtils.setThermalProfile(mCurrentApp);
+            }
         } else {
             mThermalUtils.setDefaultThermalProfile();
         }
+    }
+
+    private boolean isListedOnGameSpace(String packageName) {
+        String[] gameList = Settings.System.getString(getContentResolver(),
+                SETTINGS_GAME_LIST).split(";");
+        if (packageName == null || gameList.length == 0) {
+            return false;
+        }
+
+        return Arrays.stream(gameList).map(data -> {
+            String[] userGame = data.split("=");
+            return userGame.length == 2 ? userGame[0] : data;
+        }).anyMatch(it -> it.equals(packageName));
+    }
+
+    private boolean isConfigured(String packageName) {
+        return mThermalUtils.getStateForPackage(packageName) != ThermalUtils.STATE_DEFAULT;
     }
 
     private final TaskStackListener mTaskListener = new TaskStackListener() {
