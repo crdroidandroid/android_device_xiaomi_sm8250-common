@@ -728,8 +728,8 @@
       <virtual-bass-src-freqs frequency_low="76" frequency_high="166"/>
       <virtual-bass-subgains harmonic_2="-32" harmonic_3="-144" harmonic_4="-192"/>
       <virtualizer-front-speaker-angle value="18"/>
-      <virtualizer-height-speaker-angle value="10"/>
-      <virtualizer-surround-speaker-angle value="10"/>
+      <virtualizer-height-speaker-angle value="18"/>
+      <virtualizer-surround-speaker-angle value="18"/>
       <volume-modeler-calibration value="0"/>
       <audio-optimizer-enable value="true"/>
       <bass-extraction-enable value="false"/>
