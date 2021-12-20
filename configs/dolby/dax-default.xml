@@ -545,7 +545,7 @@
     </data>
     <include preset="ieq_balanced"/>
   </profile>
-  <tuning name="Speaker_landscape" classification="internal_speaker" endpoint_type="speaker" mono_device="false" has_sub="false" tuned_rate="48000" operating_mode="normal" profile_restrictions="none">
+  <tuning name="Speaker_landscape" classification="internal_speaker" endpoint_type="speaker" mono_device="false" has_sub="false" tuned_rate="48000" operating_mode="normal" profile_restrictions="none" output_channels="2">
     <device_id id="internal_speaker" endpoint_port="internal_speaker"/>
     <device_id id="Speaker_landscape" endpoint_port="internal_speaker"/>
     <data>
