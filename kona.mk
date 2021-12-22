@@ -288,8 +288,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
+    android.hidl.base@1.2 \
+    android.hidl.base@1.2.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
@@ -323,7 +323,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
-    libcodec2_hidl@1.0.vendor:32 \
+    libcodec2_hidl@1.2.vendor:32 \
     libcodec2_vndk.vendor:32
 
 PRODUCT_COPY_FILES += \
