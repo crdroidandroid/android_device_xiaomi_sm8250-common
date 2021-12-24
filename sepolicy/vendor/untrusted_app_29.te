@@ -6,3 +6,4 @@ allow untrusted_app_29 app_data_file:file { execute };
 allow untrusted_app_29 tmpfs:file {read};
 allow untrusted_app_29 sysfs:dir {search};
 allow untrusted_app_29 sockfs:udp_socket {ioctl};
+allow untrusted_app_29 app_data_file:file { execute };
