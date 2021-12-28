@@ -347,4 +347,8 @@
     <string-array name="config_highRefreshRateBlacklist">
         <item>"com.netflix.mediaclient"</item>
     </string-array>
+    
+    <!-- Whether device supports sensor based doze customizations -->
+    <bool name="config_dozePulsePickup">true</bool>
+    <bool name="config_dozePulseTilt">true</bool>
 </resources>
