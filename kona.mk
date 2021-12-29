@@ -218,8 +218,8 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service
 
 # Device-specific settings
-# PRODUCT_PACKAGES += \
-#    XiaomiParts
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # Component overrides
 PRODUCT_COPY_FILES += \
