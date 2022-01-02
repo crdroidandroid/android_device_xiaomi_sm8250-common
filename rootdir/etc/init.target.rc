@@ -121,7 +121,7 @@ on property:ro.boot.dp=0x0
     write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/pshold_reboot 7
 
 on boot
-    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-3
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
