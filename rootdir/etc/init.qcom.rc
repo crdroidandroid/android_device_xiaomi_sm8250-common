@@ -313,6 +313,9 @@ on post-fs-data
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
 
+    # Mic gain
+    write /sys/kernel/sound_control/mic_gain 15
+
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
     rm /data/vendor/radio/shmbus
