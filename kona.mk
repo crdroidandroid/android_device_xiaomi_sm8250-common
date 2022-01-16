@@ -7,6 +7,9 @@
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
@@ -456,6 +459,3 @@ PRODUCT_PACKAGES += \
 
 #PRODUCT_BOOT_JARS += \
 #    WfdCommon
-
-# Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
