@@ -84,16 +84,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.soundtrigger@2.3-impl
-
-PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.3-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.primary.kona \
     audio.r_submix.default \
     audio.usb.default \
-
-PRODUCT_PACKAGES += \
     liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
@@ -115,7 +111,6 @@ PRODUCT_PACKAGES += \
     libvisualizer \
     libvolumelistener
 
-# Audio configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio,$(TARGET_COPY_OUT_VENDOR)/etc) \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -140,9 +135,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-
-PRODUCT_PACKAGES += \
-    Snap
 
 # Camera motor
 PRODUCT_PACKAGES += \
@@ -188,9 +180,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.4-service.clearkey
-
-PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.4.vendor
 
 # fastbootd
@@ -266,10 +256,8 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
-
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
 
 # Neural networks
 PRODUCT_PACKAGES += \
@@ -318,10 +306,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/google/interfaces \
-    hardware/google/pixel
-
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -336,34 +320,30 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.6.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
 
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6.vendor \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
-
 # Rootdir
 PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom_ramdisk \
     init.class_main.sh \
     init.mdm.sh \
     init.mi.btmac.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qti.dcvs.sh
-
-PRODUCT_PACKAGES += \
     init.motor.rc \
     init.nfc.rc \
-    init.qcom.power.rc \
     init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.power.rc \
+    init.qti.dcvs.sh \
     init.recovery.qcom.rc \
     init.target.rc \
-    fstab.qcom \
-    fstab.qcom_ramdisk \
     ueventd.qcom.rc
 
 # Sensors
@@ -375,7 +355,10 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/xiaomi \
+    vendor/qcom/opensource/usb/etc
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -387,23 +370,15 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
-#PRODUCT_BOOT_JARS += \
-#    telephony-ext
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.2-service-qti
-
-PRODUCT_PACKAGES += \
+    android.hardware.usb@1.2-service-qti \
     init.qcom.usb.rc \
     init.qcom.usb.sh
-
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/qcom/opensource/usb/etc
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -433,7 +408,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/qca6390/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6390/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6390/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
@@ -441,6 +416,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
-
-#PRODUCT_BOOT_JARS += \
-#    WfdCommon
