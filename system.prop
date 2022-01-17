@@ -10,6 +10,8 @@ ro.sf.blurs_are_expensive=1
 # Camera
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
+persist.vendor.camera.eis.enable=1
+persist.camera.facepp.fdenable=0
 
 # Charger
 ro.charger.disable_init_blank=true
