@@ -193,10 +193,19 @@ vendor.gralloc.disable_ubwc=0
 ro.hardware.keystore_desede=true
 
 # Media
-debug.media.codec2=2
-debug.stagefright.c2inputsurface=-1
-debug.stagefright.ccodec=4
-debug.stagefright.omx_default_rank=512
+debug.stagefright.ccodec=1
+debug.stagefright.omx_default_rank=0
+drm.service.enabled=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+vendor.mm.enable.qcom_parser=16777215
 
 # NFC
 ro.camera.notify_nfc=1
