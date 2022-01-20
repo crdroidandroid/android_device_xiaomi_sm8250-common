@@ -7,5 +7,3 @@ type vendor_device_prop, property_type;
 type vendor_dolby_loglevel_prop, property_type;
 
 type vendor_fp_prop, property_type;
-
-type vendor_motor_prop, property_type;
