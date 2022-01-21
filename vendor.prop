@@ -207,6 +207,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.mm.enable.qcom_parser=16777215
 
+# Netflix
+ro.netflix.bsp_rev=Q8250-19134-1
+
 # NFC
 ro.camera.notify_nfc=1
 
