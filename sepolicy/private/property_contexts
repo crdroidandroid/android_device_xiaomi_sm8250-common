@@ -9,3 +9,6 @@ ro.product.mod_device                                                           
 
 # Vendor init
 ro.product.marketname                                                                               u:object_r:build_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages u:object_r:settingslib_prop:s0
