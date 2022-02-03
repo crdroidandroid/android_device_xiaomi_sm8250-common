@@ -336,7 +336,8 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libmm-omxcore \
-    android.hardware.media.c2@1.0.vendor
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.2.vendor
 
 # Enable Codec 2.0
 PRODUCT_PACKAGES += \
