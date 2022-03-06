@@ -158,6 +158,11 @@ vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
+# Display HDR
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+
 # DRM
 drm.service.enabled=true
 
