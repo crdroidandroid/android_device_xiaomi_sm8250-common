@@ -22,6 +22,3 @@ vendor.nxp.nxpnfc::INxpNfc                                          u:object_r:h
 
 # Secure element
 vendor.nxp.nxpese::INxpEse                                          u:object_r:hal_secure_element_hwservice:s0
-
-# VPP
-::vppService                                                        u:object_r:hal_vpp_hwservice:s0
