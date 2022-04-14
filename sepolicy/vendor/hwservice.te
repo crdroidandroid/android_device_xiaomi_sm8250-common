@@ -4,3 +4,5 @@ type hal_motor_hwservice, hwservice_manager_type;
 
 # Dolby
 type hal_dms_hwservice, hwservice_manager_type;
+
+type hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
