@@ -223,7 +223,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libhidltransport.vendor
 
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
