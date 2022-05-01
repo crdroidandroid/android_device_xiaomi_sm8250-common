@@ -231,6 +231,7 @@ on boot
 
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
+	copy  /vendor/etc/tunings.txt /mnt/vendor/persist/vpp/tunings.txt
 
     # Create persist for camera calibration data
     mkdir /mnt/vendor/persist/camera 0755 system cameraserver
