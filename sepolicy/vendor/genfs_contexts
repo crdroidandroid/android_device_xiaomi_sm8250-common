@@ -1,3 +1,6 @@
+# Swap
+genfscon proc  /sys/vm/rswappiness                                                                  u:object_r:proc_swaps:s0
+
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
 
