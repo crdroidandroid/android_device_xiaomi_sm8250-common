@@ -67,18 +67,25 @@ vendor/bin/loadalgo
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/libbt-hidlclient.so
+vendor/lib/libsoc_helper.so
+vendor/lib/libsoc_helper_jni.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbtnv.so
 vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper_jni.so
 
 # Bluetooth (A2DP)
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
@@ -89,12 +96,12 @@ system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 # Bluetooth (LDAC & LHDC)
 system/system/lib/libldacBT_abr.so
 system/system/lib/libldacBT_enc.so
-system/system/lib/liblhdcBT_enc.so
 system/system/lib/liblhdc.so
+system/system/lib/liblhdcBT_enc.so
 system/system/lib64/libldacBT_abr.so
 system/system/lib64/libldacBT_enc.so
-system/system/lib64/liblhdcBT_enc.so
 system/system/lib64/liblhdc.so
+system/system/lib64/liblhdcBT_enc.so
 
 # CDSP
 vendor/bin/cdsprpcd
