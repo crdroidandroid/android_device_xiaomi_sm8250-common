@@ -246,6 +246,9 @@ vendor/lib64/libwvhidl.so
 #vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|7afb6907a83aa7c9faa7308ae5b39338eadac1c8
 #vendor/lib64/vendor.dolby.hardware.dms@1.0.so|f3593ce869d036f98ddc7fc8223a8b55dcf0ca36
 
+# Dolby
+vendor/lib64/soundfx/libswvqe.so
+
 # DSP service
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
