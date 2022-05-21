@@ -1,6 +1,3 @@
-# Audio (Dolby)
-debug.stagefright.omx_default_rank.sw-audio=16
-
 # Bluetooth
 ro.bluetooth.library_name=libbluetooth_qti.so
 
