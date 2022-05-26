@@ -289,4 +289,6 @@ ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
 
 # WiFi
+ro.vendor.net.enable_dual_wifi=1
 wifi.aware.interface=wifi-aware0
+
