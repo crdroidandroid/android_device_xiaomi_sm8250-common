@@ -22,6 +22,9 @@ pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Disable vsync for cpu rendered apps
 debug.cpurend.vsync=false
 
@@ -45,6 +48,11 @@ persist.sys.fuse.passthrough.enable=true
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
+
+# Graphics
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+renderthread.skia.reduceopstasksplitting=true
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -81,6 +89,11 @@ persist.vendor.data.mode=concurrent
 # SSR
 persist.vendor.ssr.enable_ramdumps=1
 persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Video Calling
+persist.vendor.radio.report_codec=1
+persist.vendor.radio.vdp_on_ims_cap=1
+persist.vendor.qti.telephony.vt_cam_interface=2
 
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
