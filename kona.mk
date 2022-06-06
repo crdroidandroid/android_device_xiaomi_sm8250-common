@@ -148,7 +148,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     BluetoothQti \
-    liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
     libbundlewrapper \
