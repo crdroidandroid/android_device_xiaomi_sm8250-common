@@ -4,8 +4,6 @@ aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=1
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
-persist.audio.button_jack.profile=volume
-persist.audio.button_jack.switch=0
 persist.audio.fluence.speaker=false
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=true
@@ -18,13 +16,11 @@ persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
-ro.qc.sdk.audio.fluencetype=none
-ro.qc.sdk.audio.ssr=false
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 ro.vendor.audio.game.effect=true
 ro.vendor.audio.ring.filter=true
 ro.vendor.audio.scenario.support=true
@@ -40,7 +36,6 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
-tunnel.audio.encode=true
 use.voice.path.for.pcm.voip=true
 vendor.audio.adm.buffering.ms=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
@@ -136,13 +131,13 @@ ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
+debug.sf.disable_backpressure=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
 ro.surface_flinger.support_kernel_idle_timer=true
 ro.vendor.display.sensortype=2
-debug.sf.disable_backpressure=1
 vendor.display.comp_mask=16384
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
@@ -158,9 +153,9 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
 # Display HDR
-ro.surface_flinger.use_color_management=true
-ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.use_color_management=true
 
 # DRM
 drm.service.enabled=true
@@ -196,8 +191,8 @@ ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
-ro.vendor.bigpicture.split=1
 ro.vendor.bigpicture.downscale=1
+ro.vendor.bigpicture.split=1
 vendor.gralloc.disable_ubwc=0
 
 # Keystore
@@ -206,8 +201,6 @@ ro.hardware.keystore_desede=true
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
-drm.service.enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true
@@ -217,9 +210,6 @@ media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 ro.media.recorder-max-base-layer-fps=60
 vendor.mm.enable.qcom_parser=16777215
-
-# Netflix
-ro.netflix.bsp_rev=Q8250-19134-1
 
 # NFC
 ro.camera.notify_nfc=1
@@ -242,8 +232,8 @@ persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
-persist.vendor.data.iwlan.enable=true
 persist.vendor.radio.5g_mode_pref=0
+persist.vendor.radio.add_power_save=1
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.arfcn_test_mode=3
 persist.vendor.radio.bar_fake_gcell=1
@@ -259,7 +249,6 @@ persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.uicc_se_enabled=true
-persist.vendor.radio.add_power_save=1
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.com.android.dataroaming=false
 
@@ -274,9 +263,9 @@ persist.vendor.sensors.sync_request=true
 sys.vendor.shutdown.waittime=500
 
 # ULMK properties
-ro.lmk.use_minfree_levels=true
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
+ro.lmk.use_minfree_levels=true
 
 # USB
 vendor.usb.diag.func.name=diag
