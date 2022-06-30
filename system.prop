@@ -66,9 +66,6 @@ ro.zram.periodic_wb_delay_hours=24
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
 
-# Use Vulkan backend for Skia UI rendering
-debug.hwui.renderer=skiavk
-
 # Pre-rendering
 ro.vendor.perf.scroll_opt=true
 
