@@ -120,6 +120,10 @@
             <name>IStylusMode</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IHighTouchPollingRate</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <!-- Trust -->
     <hal format="hidl" optional="true">
