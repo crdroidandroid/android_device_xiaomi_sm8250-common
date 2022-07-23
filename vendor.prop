@@ -32,6 +32,11 @@ ro.vendor.audio.sos=true
 ro.vendor.audio.soundfx.type=mi
 ro.vendor.audio.soundfx.usb=true
 ro.vendor.audio.surround.support=true
+ro.vendor.audio.feature.spatial=7
+ro.vendor.audio.multichannel.5point1=true
+ro.vendor.audio.multichannel.5point1.headset=true
+ro.vendor.audio.surround.headphone.only=true
+ro.vendor.audio.videobox.switch=true
 ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
@@ -144,6 +149,7 @@ vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
+vendor.display.enable_camera_smooth=1
 vendor.display.enable_async_powermode=0
 vendor.display.enable_optimize_refresh=1
 vendor.display.enable_posted_start_dyn=1
@@ -165,6 +171,9 @@ persist.vendor.qfp=false
 
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# FM
+vendor.hw.fm.init=0
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
