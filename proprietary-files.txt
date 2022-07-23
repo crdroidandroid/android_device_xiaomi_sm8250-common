@@ -223,6 +223,10 @@ vendor/lib/libstagefright_soft_qtiflacdec.so
 vendor/lib64/libstagefright_soft_ac4dec.so
 vendor/lib64/libstagefright_soft_ddpdec.so
 
+# Display (Dpps)
+vendor/lib/libdpps.so
+vendor/lib64/libdpps.so
+
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
 
