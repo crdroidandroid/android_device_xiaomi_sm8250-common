@@ -34,5 +34,8 @@ ro.vendor.qti.core_ctl_min_cpu=2
 # Radio
 persist.vendor.radio.report_codec=1
 
+# Thermal Path
+vendor.sys.thermal.data.path=/data/vendor/thermal/
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
