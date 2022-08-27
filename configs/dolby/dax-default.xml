@@ -1450,7 +1450,7 @@
       </regulator-tuning>
       <regulator-sibilance-suppress-amounts-left value="0,0,0,0,0,0"/>
       <regulator-sibilance-suppress-amounts-right value="0,0,0,0,0,0"/>
-      <bass-enhancer-boost value="255"/>
+      <bass-enhancer-boost value="150"/>
       <bass-enhancer-cutoff-frequency value="160"/>
       <bass-enhancer-width value="16"/>
       <bass-extraction-cutoff-frequency value="200"/>
