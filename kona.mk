@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
+    android.hardware.soundtrigger@2.0-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
