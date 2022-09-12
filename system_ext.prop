@@ -18,3 +18,6 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=true
+
+# Charging
+ro.charger.enable_suspend=1
