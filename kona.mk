@@ -135,6 +135,16 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.kona
 
+# Audio Debugging Packages
+ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+    tinyplay \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    cplay
+endif
+
 # Audio configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
