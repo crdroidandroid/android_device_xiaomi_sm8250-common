@@ -10,8 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+ifeq ($(TARGET_IS_VAB),true)
 # Enable compression with xor
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
