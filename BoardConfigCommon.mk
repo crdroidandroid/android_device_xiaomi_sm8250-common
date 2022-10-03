@@ -209,7 +209,6 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 ifeq ($(TARGET_USE_HIGH_TOUCH_POLLING_RATE),true)
 # Touch
