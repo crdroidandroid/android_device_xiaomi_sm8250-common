@@ -94,14 +94,14 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Bluetooth (LDAC & LHDC)
-system/system/lib/libldacBT_abr.so
-system/system/lib/libldacBT_enc.so
-system/system/lib/liblhdc.so
-system/system/lib/liblhdcBT_enc.so
-system/system/lib64/libldacBT_abr.so
-system/system/lib64/libldacBT_enc.so
-system/system/lib64/liblhdc.so
-system/system/lib64/liblhdcBT_enc.so
+system/lib/libldacBT_abr.so
+system/lib/libldacBT_enc.so
+system/lib/liblhdc.so
+system/lib/liblhdcBT_enc.so
+system/lib64/libldacBT_abr.so
+system/lib64/libldacBT_enc.so
+system/lib64/liblhdc.so
+system/lib64/liblhdcBT_enc.so
 
 # CDSP
 vendor/bin/cdsprpcd
