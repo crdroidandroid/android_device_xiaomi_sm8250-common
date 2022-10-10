@@ -447,6 +447,19 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OMX - stagefright
+PRODUCT_PACKAGES += \
+    com.android.media \
+    com.android.media.swcodec \
+    android.hardware.media.omx@1.0-service \
+    libgui \
+    libmedia \
+    libmedia_jni \
+    libmediandk \
+    libstagefright \
+    libstagefright_omx \
+    libstagefright_foundation
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
