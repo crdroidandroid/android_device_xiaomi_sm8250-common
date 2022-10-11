@@ -210,8 +210,6 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Dolby OnePlus Imports
-system_ext/etc/permissions/privapp-com.dolby.daxappui.xml|f84f364135dda6fa68beb4039fcdf16e
-system_ext/etc/permissions/privapp-com.dolby.daxservice.xml|40dcac1d168acb603776cfeef44cab25
 system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|fce084b5ea52db53d25a7bbf64d8c7ce
 system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|cd1424d569038a393fccadb457c930c2
 system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml|3d8dfe8008f667cf2b3572983c08c3af
