@@ -155,6 +155,7 @@ vendor.display.qdcm.disable_factory_mode=1
 vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
+debug.sdm.support_writeback=0
 
 # DRM
 drm.service.enabled=true
