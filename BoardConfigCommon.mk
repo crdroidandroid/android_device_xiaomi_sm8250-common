@@ -71,6 +71,9 @@ endif
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# Firmware
+-include vendor/xiaomi/munch-firmware/BoardConfigVendor.mk
+
 # Fingerprint
 ifeq ($(TARGET_HAS_UDFPS),true)
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/xiaomi:libudfps_extension.xiaomi
