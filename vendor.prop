@@ -119,7 +119,8 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 
 # Camera
-vendor.camera.aux.packagelist=org.lineageos.aperture,com.android.camera
+persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
+vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
