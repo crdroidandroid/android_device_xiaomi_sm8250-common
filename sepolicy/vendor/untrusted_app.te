@@ -1,0 +1,1 @@
+allow untrusted_app color_display_service:service_manager {  find  };
