@@ -309,4 +309,7 @@
      <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
      <bool name="config_allowAllRotations">true</bool>
+
+    <!-- Whether device supports in-display fingerprint -->
+    <bool name="config_supportsUdfps">false</bool>
 </resources>
