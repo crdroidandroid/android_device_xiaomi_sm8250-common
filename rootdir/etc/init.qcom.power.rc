@@ -29,6 +29,9 @@ on enable-low-power
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+    # Enable EAS
+    write /proc/sys/kernel/sched_energy_aware 1
+
 on property:sys.boot_completed=1
     trigger enable-low-power
 
