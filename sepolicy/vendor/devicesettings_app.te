@@ -12,3 +12,19 @@ allow devicesettings_app proc_stat:file { read open getattr };
 
 allow devicesettings_app vendor_sysfs_kgsl_gpuclk:file { read open getattr };
 allow devicesettings_app vendor_sysfs_kgsl:file { read open getattr };
+
+# Allow devicesettings_app to write to HBM node
+rw_dir_file(devicesettings_app, vendor_sysfs_graphics)
+
+# Allow devicesettings_app to find hal_touchfeature_xiaomi_hwservice
+allow devicesettings_app hal_touchfeature_xiaomi_hwservice:hwservice_manager find;
+
+# Allow binder communication with hal_touchfeature_xiaomi_default
+binder_call(devicesettings_app, hal_touchfeature_xiaomi_default)
+
+# Allow devicesettings_app to write to sysfs_graphics
+allow devicesettings_app vendor_sysfs_graphics:file write;
+
+# Allow devicesettings_app to r/w disp_param
+allow devicesettings_app vendor_sysfs_graphics:dir r_dir_perms;
+allow devicesettings_app vendor_sysfs_graphics:file rw_file_perms;
