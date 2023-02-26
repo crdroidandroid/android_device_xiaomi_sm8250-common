@@ -118,12 +118,9 @@ TARGET_KERNEL_ARCH := arm64
 KERNEL_LD := LD=ld.lld
 TARGET_BUILD_WITH_LTO := true
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := latest
-TARGET_KERNEL_ADDITIONAL_FLAGS += AR=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-latest/bin/llvm-ar
-TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1 LLVM_IAS=1
-TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
-TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
-
+TARGET_KERNEL_CLANG_VERSION := clang-latest
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
