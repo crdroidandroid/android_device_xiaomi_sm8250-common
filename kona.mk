@@ -75,6 +75,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_wit
 # Enable userspace merge
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.userspace.snapshots.enabled=true
 
+# Use GZ compression
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := gz
+
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
     android.hardware.boot@1.2-impl-qti.recovery \
