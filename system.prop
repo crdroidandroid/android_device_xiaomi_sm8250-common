@@ -4,6 +4,7 @@ persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.hal.implementation=true
 
 # Camera
+log.tag.CHIUSECASE=ERROR
 camera.disable_zsl_mode=true
 persist.vendor.camera.privapp.list=com.android.camera
 vendor.camera.aux.packagelist=com.android.camera

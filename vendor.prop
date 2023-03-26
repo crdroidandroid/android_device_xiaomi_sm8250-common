@@ -122,6 +122,9 @@ vendor.qcom.bluetooth.soc=hastings
 persist.vendor.camera.privapp.list=com.android.camera,org.lineageos.aperture
 vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture
 
+# Camera
+persist.vendor.camera.logInfoMask=false
+
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8250
