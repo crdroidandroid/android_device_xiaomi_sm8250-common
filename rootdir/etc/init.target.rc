@@ -52,6 +52,9 @@ on init
 on early-fs
     start vold
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 on fs
     start hwservicemanager
     chmod 644 /mnt/vendor/persist/audio/us_manual_cal
