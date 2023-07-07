@@ -150,6 +150,7 @@ $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
 FRAMEWORK_PARTITIONS_RESERVED_SIZE := 1258291200
 else
 FRAMEWORK_PARTITIONS_RESERVED_SIZE := 104857600
+endif
 $(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := $(FRAMEWORK_PARTITIONS_RESERVED_SIZE)))
 $(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
