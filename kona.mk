@@ -99,6 +99,14 @@ PRODUCT_PACKAGES += \
     OpenDeltaOverlayKona
 endif
 
+# ART
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
