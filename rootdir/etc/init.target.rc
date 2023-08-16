@@ -417,3 +417,8 @@ on property:sys.boot_completed=1
     
 # Enable suspend to RAM
     write /sys/power/mem_sleep "deep"
+
+# Restrict access on this node
+on property:sys.boot_completed=1
+    # Only owner can acces this node
+    chmod 440 /proc/net/unix
