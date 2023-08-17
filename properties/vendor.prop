@@ -205,6 +205,7 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
+vendor.display.vds_allow_hwc=1
 
 # HVDCP
 persist.vendor.pps.disallowed=1
