@@ -18,14 +18,20 @@
 package org.lineageos.settings;
 
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.database.ContentObserver;
 import android.hardware.display.DisplayManager;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
+import org.lineageos.settings.display.ColorModeService;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -46,12 +52,13 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         } catch (Exception e) {
             Log.d(TAG, "Dirac is not present in system");
         }
+        // Display
+        context.startServiceAsUser(new Intent(context, ColorModeService.class),
+                UserHandle.CURRENT);        
         ThermalUtils.startService(context);
        RefreshUtils.startService(context);
        TouchSamplingUtils.restoreSamplingValue(context);
-
         overrideHdrTypes(context);
-	RefreshUtils.startService(context);
     }
 
     private static void overrideHdrTypes(Context context) {

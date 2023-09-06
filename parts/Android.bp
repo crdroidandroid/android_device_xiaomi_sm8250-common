@@ -21,6 +21,7 @@ android_app {
     overrides: ["MusicFX"],
     static_libs: [
         "org.lineageos.settings.resources",
+        "vendor.xiaomi.hardware.displayfeature-V2-java",
         "SettingsLib",
         "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
