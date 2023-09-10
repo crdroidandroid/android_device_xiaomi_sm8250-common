@@ -110,9 +110,7 @@ public class DiracUtils {
     public void setEnabled(boolean enable) {
         mDiracSound.setEnabled(enable);
         mDiracSound.setMusic(enable ? 1 : 0);
-        if (enable) {
-            refreshPlaybackIfNecessary();
-        }
+        refreshPlaybackIfNecessary();
     }
 
     public boolean isDiracEnabled() {
