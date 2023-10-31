@@ -281,14 +281,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
-# Dolby-Config
-PRODUCT_COPY_FILES += \
-    device/xiaomi/sm8250-common/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
-
-# Dolby Permissions
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/permissions/,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions)
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor
@@ -392,7 +384,6 @@ PRODUCT_COPY_FILES += \
 # Media Config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_kona_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona_vendor.xml \
-    $(LOCAL_PATH)/configs/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
 
 # Mlipay
 PRODUCT_PACKAGES += \

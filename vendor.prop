@@ -150,14 +150,9 @@ vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 debug.sdm.support_writeback=0
 
-# Dolby
-ro.vendor.dolby.dax.version=DAX3_3.6.1.6_r1
-
-# Dolby & Audio Miui Props
+# Miui Audio Props
 ro.audio.monitorRotation=true
-ro.vendor.audio.dolby.dax.support=true
 persist.vendor.audio.delta.refresh=true
-ro.vendor.audio.dolby.surround.enable=true
 
 # MiSound
 persist.vendor.audio.misound.disable=true
