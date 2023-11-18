@@ -6726,7 +6726,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="413" mnc="02">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
-
+	
+    <!-- PK -->
+    <carrier_config mcc="410" mnc="01,02,03,04,05,06,07">
+        <boolean name="carrier_volte_available_bool" value="true" />
+	<boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+	
     <!--印度 IN Airtel-->
     <carrier_config mcc="404" mnc="02,03,10,16,31,40,45,49,70,90,92,93,94,95,96,97,98">
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
