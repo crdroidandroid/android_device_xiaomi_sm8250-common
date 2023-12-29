@@ -1,7 +1,7 @@
 [
   {
-    "repository": "crdroidandroid/android_kernel_sm8250",
-    "target_path": "kernel/sm8250",
+    "repository": "crdroidandroid/android_kernel_xiaomi_sm8250",
+    "target_path": "kernel/xiaomi/sm8250",
     "branch": "14.0-pipa"
   },
   {
