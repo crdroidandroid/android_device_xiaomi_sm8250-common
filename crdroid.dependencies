@@ -3,11 +3,15 @@
     "repository": "crdroidandroid/android_kernel_sm8250",
     "target_path": "kernel/sm8250",
     "branch": "14.0-pipa",
-  }
+  },
+  {
+    "repository": "crdroidandroid/android_vendor_xiaomi_pipa",
+    "target_path": "vendor/xiaomi/pipa",
+  },
   {
     "repository": "crdroidandroid/proprietary_vendor_xiaomi_sm8250-common",
     "target_path": "vendor/xiaomi/sm8250-common",
-  }
+  },
   {
     "repository": "crdroidandroid/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi/",
