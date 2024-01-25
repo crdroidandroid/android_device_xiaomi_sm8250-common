@@ -28,7 +28,7 @@ public class AutoHBMThresholdPreference extends CustomSeekBarPreference {
 
     private static int mMinVal = 0;
     private static int mMaxVal = 60000;
-    private static int mDefVal = 20000;
+    private static int mDefVal = 7000;
 
     public AutoHBMThresholdPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -42,7 +42,7 @@ public class AutoHBMThresholdPreference extends CustomSeekBarPreference {
         mDefaultValueExists = true;
         mDefaultValue = mDefVal;
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
-        mValue = Integer.parseInt(sharedPrefs.getString(HBMFragment.KEY_AUTO_HBM_THRESHOLD, "20000"));
+        mValue = Integer.parseInt(sharedPrefs.getString(HBMFragment.KEY_AUTO_HBM_THRESHOLD, "7000"));
 
         setPersistent(false);
     }
