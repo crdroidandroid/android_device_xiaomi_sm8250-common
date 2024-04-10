@@ -177,6 +177,10 @@ on boot
     chmod 0664 /sys/class/thermal/thermal_message/flash_state
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
 
+    # Touchpanel
+    chmod 0660 /sys/touchpanel/double_tap
+    chown system system /sys/touchpanel/double_tap
+
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
     chown root system /sys/module/migt/parameters/add_lclus_affinity_uidlist
