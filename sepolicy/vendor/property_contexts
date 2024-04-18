@@ -46,9 +46,6 @@ ro.vendor.oem.sno                                                               
 # Mlipay
 persist.vendor.sys.pay                                                                              u:object_r:vendor_tee_listener_prop:s0
 
-# Motor
-persist.vendor.motor.                                                                               u:object_r:vendor_motor_prop:s0
-
 # RIL
 ro.vendor.ril                                                                                       u:object_r:vendor_public_vendor_default_prop:s0
 
