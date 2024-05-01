@@ -279,6 +279,21 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
+                <devicePort tagName="BT A2DP Out" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink"
+                            encodedFormats="AUDIO_FORMAT_SBC AUDIO_FORMAT_AAC AUDIO_FORMAT_APTX AUDIO_FORMAT_APTX_HD AUDIO_FORMAT_LDAC AUDIO_FORMAT_LHDC AUDIO_FORMAT_CELT AUDIO_FORMAT_APTX_ADAPTIVE AUDIO_FORMAT_APTX_TWSP">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
+                <devicePort tagName="BT A2DP Headphones" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink"
+                            encodedFormats="AUDIO_FORMAT_SBC AUDIO_FORMAT_AAC AUDIO_FORMAT_APTX AUDIO_FORMAT_APTX_HD AUDIO_FORMAT_LDAC AUDIO_FORMAT_LHDC AUDIO_FORMAT_CELT AUDIO_FORMAT_APTX_ADAPTIVE AUDIO_FORMAT_APTX_TWSP">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
+                <devicePort tagName="BT A2DP Speaker" type="AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink"
+                            encodedFormats="AUDIO_FORMAT_SBC AUDIO_FORMAT_AAC AUDIO_FORMAT_APTX AUDIO_FORMAT_APTX_HD AUDIO_FORMAT_LDAC AUDIO_FORMAT_LHDC AUDIO_FORMAT_CELT AUDIO_FORMAT_APTX_ADAPTIVE AUDIO_FORMAT_APTX_TWSP">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </devicePort>
 
                 <!-- Input devices declaration, i.e. Source DEVICE PORT -->
                 <devicePort tagName="Built-In Mic" type="AUDIO_DEVICE_IN_BUILTIN_MIC" role="source">
@@ -347,6 +362,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic"/>
                 <route type="mix" sink="mmap_no_irq_in"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
+                <route type="mix" sink="BT A2DP Out"
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                <route type="mix" sink="BT A2DP Headphones"
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                <route type="mix" sink="BT A2DP Speaker"
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
                 <route type="mix" sink="fast input"
                        sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,Wired Headset Mic"/>
                 <route type="mix" sink="quad mic"
@@ -360,9 +381,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
         <!-- Remote Submix Audio HAL -->
         <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
-
-        <!-- Bluetooth Audio HAL -->
-        <xi:include href="/vendor/etc/bluetooth_audio_policy_configuration.xml"/>
 
     </modules>
     <!-- End of Modules section -->
