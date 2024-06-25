@@ -22,6 +22,8 @@ AB_OTA_PARTITIONS += \
     vbmeta_system \
     vendor \
     vendor_boot
+else
+AB_OTA_UPDATER := false
 endif
 
 # Architecture
