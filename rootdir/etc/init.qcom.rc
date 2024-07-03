@@ -690,3 +690,10 @@ service vendor.qti.hardware.display.allocator /vendor/bin/hw/vendor.qti.hardware
     capabilities SYS_NICE
     onrestart restart surfaceflinger
     task_profiles ProcessCapacityHigh HighPerformance
+
+service surfaceflinger /system/bin/surfaceflinger
+    class main
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    writepid /dev/cpuset/system-background/tasks
