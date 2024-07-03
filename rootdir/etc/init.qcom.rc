@@ -810,3 +810,10 @@ on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_complet
 
 on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
     write /sys/devices/virtual/touch/touch_dev/bump_sample_rate 1
+
+service surfaceflinger /system/bin/surfaceflinger
+    class main
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    writepid /dev/cpuset/system-background/tasks
