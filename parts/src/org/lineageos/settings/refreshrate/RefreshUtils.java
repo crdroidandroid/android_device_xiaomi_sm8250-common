@@ -72,12 +72,19 @@ public final class RefreshUtils {
         mSharedPrefs.edit().putString(REFRESH_CONTROL, profiles).apply();
     }
 
-   protected void getOldRate(){
+    protected void getOldRate(){
         defaultMaxRate = Settings.System.getFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_DEFAULT);
         defaultMinRate = Settings.System.getFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, REFRESH_STATE_DEFAULT);
     }
 
+    private float getUserMaxRefreshRate() {
+        return Settings.System.getFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_DEFAULT);
+    }
 
+    private float getUserMinRefreshRate() {
+        return Settings.System.getFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, REFRESH_STATE_DEFAULT);
+    }
+    
     private void initializeOrientationListener(String packageName) {
         if (orientationListener != null) {
             orientationListener.disable();
@@ -90,7 +97,6 @@ public final class RefreshUtils {
                     return;
                 }
 
-                // Check the device orientation using Configuration
                 int currentOrientation = mContext.getResources().getConfiguration().orientation;
                 boolean newIsLandscape = (currentOrientation == Configuration.ORIENTATION_LANDSCAPE);
                 if (newIsLandscape != isLandscape) {
@@ -108,12 +114,39 @@ public final class RefreshUtils {
     }
 
     private void adjustRefreshRateForOrientation(String packageName) {
-        float minrate = defaultMinRate;
-        float maxrate = isLandscape ? REFRESH_STATE_LAND : REFRESH_STATE_EXTREME;
-        if (minrate > maxrate){
-            minrate = maxrate;
+        float minRate = defaultMinRate;
+        float maxRate = isLandscape ? REFRESH_STATE_LAND : REFRESH_STATE_EXTREME;
+        setRefreshRate(minRate, maxRate);
+    }
+
+    protected void checkOrientationAndSetRate(String packageName) {
+        int currentOrientation = mContext.getResources().getConfiguration().orientation;
+        boolean isCurrentlyLandscape = (currentOrientation == Configuration.ORIENTATION_LANDSCAPE);
+        float currentMaxRate = Settings.System.getFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_DEFAULT);
+
+        if (isCurrentlyLandscape) {
+            setLandscapeModeRefreshRate();
+        } else {
+            setPortraitModeRefreshRate();
         }
-        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxrate);
+    }
+
+    private void setLandscapeModeRefreshRate() {
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_LAND);
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, REFRESH_STATE_LAND);
+    }
+
+    private void setPortraitModeRefreshRate() {
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_EXTREME);
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, REFRESH_STATE_EXTREME);
+    }
+
+    private void setRefreshRate(float minRate, float maxRate) {
+        if (minRate > maxRate) {
+            minRate = maxRate;
+        }
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minRate);
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxRate);
     }
 
 
@@ -179,32 +212,26 @@ public final class RefreshUtils {
     protected void setRefreshRate(String packageName) {
         String value = getValue();
         String[] modes = value.split(":");
-        float maxrate = defaultMaxRate;
-        float minrate = defaultMinRate;
+        float maxRate = defaultMaxRate;
+        float minRate = defaultMinRate;
         isAppInList = false;
 
-            if (value != null) {
+        if (value != null) {
             modes = value.split(":");
 
             if (modes[0].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_STANDARD;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
-		isAppInList = true;
-           } else if (modes[1].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_EXTREME;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
-		isAppInList = true;
-            } else if (modes[2].contains(packageName + ",")) {
-                initializeOrientationListener(packageName); // Initialize orientation listener for landscape mode
+                maxRate = REFRESH_STATE_STANDARD;
                 isAppInList = true;
-                return; // Return early as the listener will handle the refresh rate
+            } else if (modes[1].contains(packageName + ",")) {
+                maxRate = REFRESH_STATE_EXTREME;
+                isAppInList = true;
+            } else if (modes[2].contains(packageName + ",")) {
+                initializeOrientationListener(packageName);
+                isAppInList = true;
+                return;
             }
-          }
-	Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minrate);
-        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxrate);
+        }
+	    Settings.System.putFloat(mContext.getContentResolver(), KEY_MIN_REFRESH_RATE, minRate);
+        Settings.System.putFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxRate);
     }
 }
