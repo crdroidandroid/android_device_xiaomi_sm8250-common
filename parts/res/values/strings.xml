@@ -14,7 +14,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <!-- Xiaomi Settings -->
+    <string name="app_title">Xiaomi Settings</string>
+    <string name="tile_add">Add tile</string>
+    <string name="tile_added">Tile added</string>
+    <string name="tile_not_added">Tile not added</string>
+    <string name="tile_already_added">Tile already added</string>
+    <string name="tile_on">On</string>
+    <string name="tile_off">Off</string>
+
 
     <!-- HBM settings -->
     <string name="hbm_fragment_title">High brightness mode</string>
@@ -71,6 +82,23 @@
     <string name="htsr_title">Touch Responsiveness</string>
     <string name="htsr_enable_title">Increase Touch Responsiveness</string>
     <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>    
+
+    <!-- Saturation -->
+    <string name="saturation_title">Display Saturation</string>
+    <string name="saturation_summary">Control the saturation level of the display</string>
+    <string name="saturation_footer_summary">Changing the color mode in display settings will override the saturation level, requiring it to be reapplied.</string>
+
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
+
+    <!-- Image preview -->
+    <string name="image_preview_content_description">Preview</string>
+    <string name="image_preview_next_page_content_description">Next</string>
+    <string name="image_preview_previous_page_content_description">Previous</string>
+
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>
     <string name="dc_dimming_enable_summary">Reduces eye strain in low light conditions</string>
