@@ -17,6 +17,7 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
+ro.audio.monitorRotation=true
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 ro.vendor.audio.game.effect=true
