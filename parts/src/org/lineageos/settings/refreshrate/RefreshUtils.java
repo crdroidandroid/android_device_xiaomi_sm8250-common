@@ -115,7 +115,7 @@ public final class RefreshUtils {
 
     private void adjustRefreshRateForOrientation(String packageName) {
         float minRate = defaultMinRate;
-        float maxRate = isLandscape ? REFRESH_STATE_LAND : REFRESH_STATE_EXTREME;
+        float maxRate = isLandscape && isAppInList ? REFRESH_STATE_LAND : REFRESH_STATE_EXTREME;
         setRefreshRate(minRate, maxRate);
     }
 
@@ -124,9 +124,9 @@ public final class RefreshUtils {
         boolean isCurrentlyLandscape = (currentOrientation == Configuration.ORIENTATION_LANDSCAPE);
         float currentMaxRate = Settings.System.getFloat(mContext.getContentResolver(), KEY_PEAK_REFRESH_RATE, REFRESH_STATE_DEFAULT);
 
-        if (isCurrentlyLandscape) {
+        if (isCurrentlyLandscape && isAppInList) {
             setLandscapeModeRefreshRate();
-        } else {
+        } else if (!isCurrentlyLandscape && isAppInList) {
             setPortraitModeRefreshRate();
         }
     }

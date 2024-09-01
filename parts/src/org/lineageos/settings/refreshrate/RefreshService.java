@@ -91,7 +91,7 @@ public class RefreshService extends Service {
                 String foregroundApp = info.topActivity.getPackageName();
                 int state = mRefreshUtils.getStateForPackage(foregroundApp);
                 
-                if (!mRefreshUtils.isAppInList && state != RefreshUtils.STATE_LAND) {
+                if (!mRefreshUtils.isAppInList) {
                     mRefreshUtils.getOldRate();
                 }
 
@@ -99,7 +99,7 @@ public class RefreshService extends Service {
                     mRefreshUtils.setRefreshRate(foregroundApp);
                     mPreviousApp = foregroundApp;
                 }
-                if (state == RefreshUtils.STATE_LAND) {
+                if (state == RefreshUtils.STATE_LAND && mRefreshUtils.isAppInList) {
                     mRefreshUtils.checkOrientationAndSetRate(foregroundApp);
                 }
             } catch (Exception e) {
