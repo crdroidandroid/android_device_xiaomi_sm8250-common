@@ -8,3 +8,5 @@ allow init vendor_data_file:file rw_file_perms;
 allow init vendor_sysfs_usb_supply:file setattr;
 allow init vendor_sysfs_battery_supply:file setattr;
 allow init vendor_sysfs_qcom_battery:file setattr;
+
+set_prop(init, vendor_fingerprint_prop)
