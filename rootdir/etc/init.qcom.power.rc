@@ -174,3 +174,7 @@ on charger
     # Enable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkscale_enable 1
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
+
+on property:persist.sys.device_provisioned=1 && property:sys.boot_completed=1
+    # Cap dex2oat cpu utilization
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 60
