@@ -187,6 +187,7 @@ vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+vendor/lib/libstagefrightdolby.so
 
 # DPM
 system/framework/tcmclient.jar
