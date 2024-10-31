@@ -166,6 +166,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.dolby.dax.support=true \
     ro.vendor.audio.dolby.surround.enable=true
 
+# Dolby MediaCodecs Dependenices
+PRODUCT_PACKAGES += \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_soft_common.vendor \
+    libstagefright_softomx.vendor \
+    libstagefright_softomx_plugin.vendor
+
 # Display
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service
@@ -260,11 +267,6 @@ PRODUCT_PACKAGES += \
     media_codecs_kona.xml \
     media_codecs_performance_kona.xml \
     video_system_specs.json
-
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-
 
 # NFC
 PRODUCT_PACKAGES += \
