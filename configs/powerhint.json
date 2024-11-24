@@ -464,6 +464,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Duration": 5000,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "GPUForceClkOn",
       "Duration": 5000,
       "Value": "1"
