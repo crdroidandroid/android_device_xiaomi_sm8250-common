@@ -23,6 +23,9 @@ dalvik.vm.systemuicompilerfilter=speed
 debug.gralloc.gfx_ubwc_disable=0
 persist.vendor.color.matrix=2
 
+# Display (Surface Flinger)
+ro.surface_flinger.enable_layer_caching=false
+
 # DPM
 persist.vendor.dpm.feature=1
 
