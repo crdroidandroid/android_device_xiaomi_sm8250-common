@@ -15,3 +15,6 @@ allow vendor_mdm_helper mnt_vendor_file:dir rw_dir_perms;
 allow vendor_mdm_helper mnt_vendor_file:dir create_dir_perms;
 allow vendor_mdm_helper mnt_vendor_file:file rw_file_perms;
 allow vendor_mdm_helper mnt_vendor_file:file create_file_perms;
+
+# Allow mdm_helper to use fowner capability
+allow vendor_mdm_helper self:capability fowner;
