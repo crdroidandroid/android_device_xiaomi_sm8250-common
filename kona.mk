@@ -243,6 +243,9 @@ PRODUCT_PACKAGES += \
     video_system_specs.json
 
 # MIUI Camera
+PRODUCT_PACKAGES += \
+    libgui_shim_miuicamera
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/default-permissions/miuicamera-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/miuicamera-permissions.xml
 
