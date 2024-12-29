@@ -111,6 +111,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/_llseek: 1/d" "${2}" && sed -i "/getdents64: 1/d" "${2}"
             ;;
+        system_ext/lib64/libcamera_algoup_jni.xiaomi.so|system_ext/lib64/libcamera_mianode_jni.xiaomi.so)
+            grep -q "libgui_shim_miuicamera.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_miuicamera.so" "${2}"
+            ;;
         *)
             return 1
             ;;
