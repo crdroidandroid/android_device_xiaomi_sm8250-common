@@ -56,8 +56,6 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Camera (MIUI Camera)
 product/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera2,GoogleCameraGo,Snap|d18ad1ceeb4076ec233da85f7e2cdfd0d8246669
-system_ext/lib/libcamera_algoup_jni.xiaomi.so
-system_ext/lib/libcamera_mianode_jni.xiaomi.so
 system_ext/lib64/libcamera_algoup_jni.xiaomi.so
 system_ext/lib64/libcamera_mianode_jni.xiaomi.so
 
