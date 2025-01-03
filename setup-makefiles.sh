@@ -45,15 +45,7 @@ function lib_to_package_fixup_vendor_variants() {
         com.qualcomm.qti.dpm.api@1.0 | \
             libmmosal | \
             vendor.qti.hardware.wifidisplaysession@1.0 | \
-            vendor.qti.imsrtpservice@3.0 | \
-            vendor.qti.ims.callcapability@1.0 | \
-            vendor.qti.ims.callinfo@1.0 | \
-            vendor.qti.ims.factory@1.0 | \
-            vendor.qti.ims.factory@1.1 | \
-            vendor.qti.ims.rcsconfig@1.0 | \
-            vendor.qti.ims.rcsconfig@1.1 | \
-            vendor.qti.ims.rcsconfig@2.0 | \
-            vendor.qti.ims.rcsconfig@2.1)
+            vendor.qti.imsrtpservice@3.0)
             echo "${1}_vendor"
             ;;
         libOmxCore | \

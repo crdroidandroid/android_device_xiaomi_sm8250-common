@@ -47,6 +47,11 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IBluetoothAudio/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>com.qualcomm.qti.dpm.api</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
+    </hal>
     <hal format="aidl" override="true">
         <name>vendor.nxp.nxpnfc_aidl</name>
     </hal>
