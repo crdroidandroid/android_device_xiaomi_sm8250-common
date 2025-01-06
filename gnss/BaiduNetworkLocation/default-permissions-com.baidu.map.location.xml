@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<exceptions>
+    <exception package="com.baidu.map.location">
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_NETWORK_STATE" fixed="false"/>
+        <permission name="android.permission.ACCESS_WIFI_STATE" fixed="false"/>
+        <permission name="android.permission.BLUETOOTH" fixed="false"/>
+        <permission name="android.permission.CHANGE_WIFI_STATE" fixed="false"/>
+        <permission name="android.permission.INSTALL_LOCATION_PROVIDER" fixed="false"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL" fixed="false"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS" fixed="false"/>
+        <permission name="android.permission.INTERNET" fixed="false"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED" fixed="false"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" fixed="false"/>
+        <permission name="android.permission.SYSTEM_ALERT_WINDOW" fixed="false"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS" fixed="false"/>
+        <permission name="android.permission.WRITE_SETTINGS" fixed="false"/>
+    </exception>
+</exceptions>

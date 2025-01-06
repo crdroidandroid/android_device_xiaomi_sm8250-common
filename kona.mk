@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Gnss
+PRODUCT_PACKAGES += \
+    BaiduNetworkLocation
+
 # Gnss configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gnss/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -288,6 +292,7 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
+    FrameworkResOverlayCN \
     NetworkStackOverlayCN
 
 PRODUCT_ENFORCE_RRO_TARGETS := *

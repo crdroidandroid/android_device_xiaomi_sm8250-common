@@ -1,0 +1,45 @@
+android_app_import {
+	name: "BaiduNetworkLocation",
+	owner: "baidu",
+	apk: "BaiduNetworkLocation.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+    required: [
+        "libnlocSDK7d",
+        "default-permissions-com.baidu.map.location",
+        "privapp-permissions-com.baidu.map.location",
+    ],
+}
+
+cc_prebuilt_library_shared {
+	name: "libnlocSDK7d",
+	owner: "baidu",
+	target: {
+		android_arm64: {
+			srcs: ["lib64/libnlocSDK7d.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	product_specific: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-com.baidu.map.location",
+    sub_dir: "default-permissions",
+    src: "default-permissions-com.baidu.map.location.xml",
+	product_specific: true,
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.baidu.map.location",
+    sub_dir: "permissions",
+    src: "privapp-permissions-com.baidu.map.location.xml",
+	product_specific: true,
+    filename_from_src: true,
+}

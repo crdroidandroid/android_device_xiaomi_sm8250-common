@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2025, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Whether to enable network location overlay which allows network location provider to be
+         replaced by an app at run-time. When disabled, only the
+         config_networkLocationProviderPackageName package will be searched for network location
+         provider, otherwise any system package is eligible. Anyone who wants to disable the overlay
+         mechanism can set it to false. -->
+    <bool name="config_enableNetworkLocationOverlay" translatable="false">false</bool>
+    <!-- Package name providing network location support. Used only when
+         config_enableNetworkLocationOverlay is false. -->
+    <string name="config_networkLocationProviderPackageName" translatable="false">com.baidu.map.location</string>
+
+    <!-- Whether to enable geocoder overlay which allows geocoder to be replaced
+         by an app at run-time. When disabled, only the
+         config_geocoderProviderPackageName package will be searched for
+         geocoder, otherwise any system package is eligible. Anyone who wants to
+         disable the overlay mechanism can set it to false.
+         -->
+    <bool name="config_enableGeocoderOverlay" translatable="false">false</bool>
+    <!-- Package name providing geocoder API support. Used only when
+         config_enableGeocoderOverlay is false. -->
+    <string name="config_geocoderProviderPackageName" translatable="false">com.baidu.map.location</string>
+
+    <!-- Package name(s) containing location provider support. These packages will be auto-granted
+         several permissions by the system, and should be system packages. -->
+    <string-array name="config_locationProviderPackageNames" translatable="false">
+        <!-- The Baidu network location provider -->
+        <item>com.baidu.map.location</item>
+        <!-- The Google provider -->
+        <item>com.google.android.gms</item>
+        <!-- The standard AOSP fused location provider -->
+        <item>com.android.location.fused</item>
+        <!-- The MicroG Unified location provider -->
+        <item>org.microg.nlp</item>
+    </string-array>
+</resources>
