@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# Gnss configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/gnss/etc/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
