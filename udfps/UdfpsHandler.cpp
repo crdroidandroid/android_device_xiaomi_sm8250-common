@@ -8,7 +8,6 @@
 
 #include "UdfpsHandler.h"
 
-#include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
 #include <android-base/unique_fd.h>
 #include <fcntl.h>
@@ -17,14 +16,14 @@
 #include <unistd.h>
 
 #define COMMAND_NIT 10
-#define PARAM_NIT_UDFPS 1
+#define PARAM_NIT_FOD 1
 #define PARAM_NIT_NONE 0
 
-#define UDFPS_STATUS_ON 1
-#define UDFPS_STATUS_OFF -1
+#define FOD_STATUS_ON 1
+#define FOD_STATUS_OFF -1
 
 #define TOUCH_DEV_PATH "/dev/xiaomi-touch"
-#define TOUCH_UDFPS_ENABLE 10
+#define TOUCH_FOD_ENABLE 10
 #define TOUCH_MAGIC 0x5400
 #define TOUCH_IOC_SETMODE TOUCH_MAGIC + 0
 
@@ -36,8 +35,6 @@ static const char* kFodUiPaths[] = {
 static const char* kFodStatusPaths[] = {
         "/sys/touchpanel/fod_status",
 };
-
-using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
 static bool readBool(int fd) {
     char c;
@@ -101,7 +98,7 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
                 }
 
                 mDevice->extCmd(mDevice, COMMAND_NIT,
-                                readBool(fd) ? PARAM_NIT_UDFPS : PARAM_NIT_NONE);
+                                readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
                 if (fodStatusFd >= 0) {
                     write(fodStatusFd, readBool(fd) ? "1" : "0", 1);
                 }
@@ -110,56 +107,37 @@ class XiaomiKonaUdfpsHandler : public UdfpsHandler {
     }
 
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
-        // nothing
-    }
-    void onFingerUp() {
-        // nothing
+        int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_ON};
+        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
     }
 
-    void onAcquired(int32_t result, int32_t vendorCode) {
-        if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
-            if (!enrolling) {
-                int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_OFF};
-                ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-            }
-        }
-        /* vendorCode
-         * 21: waiting for finger
-         * 22: finger down
-         * 23: finger up
-         */
-        if (vendorCode == 21) {
-            int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_ON};
-            ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
-        }
+    void onFingerUp() {
+        int arg[2] = {TOUCH_FOD_ENABLE, FOD_STATUS_OFF};
+        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+    }
+
+    void onAcquired(int32_t /*result*/, int32_t /*vendorCode*/) {
+        // nothing
     }
 
     void cancel() {
-        enrolling = false;
-        int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_OFF};
-        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
+        // nothing
     }
 
     void preEnroll() {
         LOG(DEBUG) << __func__;
-        enrolling = true;
     }
 
     void enroll() {
         LOG(DEBUG) << __func__;
-        enrolling = true;
     }
 
     void postEnroll() {
         LOG(DEBUG) << __func__;
-        enrolling = false;
-        int arg[2] = {TOUCH_UDFPS_ENABLE, UDFPS_STATUS_OFF};
-        ioctl(touch_fd_.get(), TOUCH_IOC_SETMODE, &arg);
     }
   private:
     fingerprint_device_t *mDevice;
     android::base::unique_fd touch_fd_;
-    bool enrolling = false;
 };
 
 static UdfpsHandler* create() {
