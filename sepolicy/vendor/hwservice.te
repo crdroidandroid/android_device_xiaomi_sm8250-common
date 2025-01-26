@@ -1,9 +1,3 @@
-# Camerapostproc
-type hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
-
-# Misys
-type hal_misys_xiaomi_hwservice, hwservice_manager_type;
-
 # Mlipay Payment
 type hal_mlipay_hwservice, hwservice_manager_type;
 type hal_mfidoca_hwservice, hwservice_manager_type;

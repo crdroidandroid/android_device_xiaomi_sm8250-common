@@ -55,16 +55,6 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Camera (MIUI Camera)
-product/priv-app/MiuiCamera/MiuiCamera.apk;OVERRIDES=Aperture,Camera2,GoogleCameraGo,Snap|d18ad1ceeb4076ec233da85f7e2cdfd0d8246669
-system_ext/lib64/libcamera_algoup_jni.xiaomi.so
-system_ext/lib64/libcamera_mianode_jni.xiaomi.so
-
-# Camera campostproc
-system_ext/lib/vendor.xiaomi.hardware.campostproc@1.0.so
-system_ext/lib64/libmicampostproc_client.so
-system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
-
 # Camera motor (sound) - from lmi
 system/media/audio/ui/popup_cangmen_down.ogg:system_ext/media/audio/ui/popup_cangmen_down.ogg|573b107889ccf639db5455af21129ce1fee93bc5
 system/media/audio/ui/popup_cangmen_up.ogg:system_ext/media/audio/ui/popup_cangmen_up.ogg|f152dea254b4eaae403b791c49c60c05ccf12ea7
@@ -502,9 +492,6 @@ vendor/etc/media_profiles_kona.xml:vendor/etc/media_profiles_V1_0.xml
 # Mink-Lowi Interface daemon
 vendor/bin/mlid
 vendor/lib64/libminksocket.so
-
-# MIUI scanner
-product/data-app/MiuiScanner/MiuiScanner.apk:product/priv-app/MiuiScanner/MiuiScanner.apk|bb929e4fb071b5bc3bd7e00e1e1e191e35448fcf
 
 # Neural networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti

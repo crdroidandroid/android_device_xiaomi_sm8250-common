@@ -1,6 +1,3 @@
-# Campostproc
-vendor.xiaomi.hardware.campostproc::IMiPostProcService                                              u:object_r:hal_camerapostproc_xiaomi_hwservice:s0
-
 # Displayfeature
 vendor.xiaomi.hardware.displayfeature::IDisplayFeature                                              u:object_r:vendor_hal_displayfeature_xiaomi_hwservice:s0
 
@@ -15,9 +12,6 @@ vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                   
 
 # Google WirelessCharger
 vendor.google.wireless_charger::IWirelessCharger                                                    u:object_r:hal_wlc_hwservice:s0
-
-# Misys
-vendor.xiaomi.hardware.misys::IMiSys                                                                u:object_r:hal_misys_xiaomi_hwservice:s0
 
 # Mlipay Payment
 vendor.xiaomi.hardware.mfidoca::IFidoService                                                        u:object_r:hal_mfidoca_hwservice:s0

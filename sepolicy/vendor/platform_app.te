@@ -13,33 +13,3 @@ get_prop(platform_app, vendor_displayfeature_prop)
 # To find and bind hal_wlc
 allow platform_app hal_wlc_hwservice:hwservice_manager find;
 binder_call(platform_app, hal_wlc)
-
-# Allow to execute data files
-allow platform_app app_data_file:file execute;
-
-# Allow to find camerapostproc hal
-allow platform_app { hal_camerapostproc_xiaomi_hwservice hal_misys_xiaomi_hwservice }:hwservice_manager find;
-
-# Allow to call camera hidl
-binder_call(platform_app, hal_camera_default)
-
-# Allow to read camera props
-get_prop(platform_app, vendor_camera_prop)
-
-allow platform_app cgroup:file r_file_perms;
-
-# Allow to read display props
-get_prop(platform_app, vendor_display_prop)
-
-# Allow to read audio props
-get_prop(platform_app, vendor_audio_prop)
-
-# Allow to access proc/stat
-allow platform_app proc_stat:file { open read };
-
-# Camera Post Processing
-typeattribute platform_app halclientdomain;
-typeattribute platform_app vendor_hal_camerapostproc_xiaomi_client;
-
-allow platform_app { hal_misys_hwservice vendor_hal_camerapostproc_xiaomi_hwservice }:hwservice_manager find;
-
