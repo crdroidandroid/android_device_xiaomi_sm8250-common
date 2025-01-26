@@ -72,7 +72,11 @@ on post-fs
     mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
 
     # Start services for bootanim
+    start surfaceflinger
+    start bootanim
     start vendor.hwcomposer-2-1
+    start vendor.configstore-hal
+    start vendor.qti.hardware.display.allocator
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
