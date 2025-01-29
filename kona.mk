@@ -159,7 +159,8 @@ endif
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    XiaomiParts \
+    XiaomiDolby
 
 # Display
 PRODUCT_PACKAGES += \
