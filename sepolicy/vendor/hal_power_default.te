@@ -9,3 +9,7 @@ allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 allow hal_power_default vendor_touchfeature_device:chr_file rw_file_perms;
 
 hal_client_domain(hal_power_default, hal_thermal)
+
+
+allow hal_power_default fwk_stats_service:service_manager find;
+allow hal_power_default hal_thermal_default:binder { call transfer };

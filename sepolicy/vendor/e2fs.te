@@ -1,0 +1,1 @@
+allow e2fs self:capability kill;

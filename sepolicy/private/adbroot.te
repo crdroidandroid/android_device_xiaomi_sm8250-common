@@ -1,0 +1,1 @@
+allow adbroot same_process_hal_file:file { getattr map open read };
