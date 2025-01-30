@@ -1,3 +1,5 @@
 # Allow SoterService to access the vendor HAL
 hal_client_domain(platform_app, vendor_hal_soter)
 binder_call(platform_app, vendor_hal_soter_qti)
+
+allow platform_app zygote:unix_stream_socket getopt;

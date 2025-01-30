@@ -1,3 +1,5 @@
 allow init same_process_hal_file:file execute;
 
 set_prop(init, vendor_fingerprint_prop)
+
+allow init adsprpcd_file:file mounton;

@@ -1,0 +1,1 @@
+allow hal_thermal_default hal_power_default:binder call;
