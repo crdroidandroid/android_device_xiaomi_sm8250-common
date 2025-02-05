@@ -384,7 +384,16 @@
             <Limit name="performance-point-1920x1080" value="240" />
             <Limit name="performance-point-1280x720" value="480" />
             <Limit name="concurrent-instances" max="16" />
+            <!-- Video Quality control -->
+                    <!-- QP supported using vendor extensions -->
+            <Feature name="qp-bounds" />
             <Feature name="can-swap-width-height" value="1" />
+            <Mapping kind="vq" name="video-qp-b-max" value="vendor.qti-ext-enc-qp-range.qp-b-max" />
+            <Mapping kind="vq" name="video-qp-b-min" value="vendor.qti-ext-enc-qp-range.qp-b-min" />
+            <Mapping kind="vq" name="video-qp-i-max" value="vendor.qti-ext-enc-qp-range.qp-i-max" />
+            <Mapping kind="vq" name="video-qp-i-min" value="vendor.qti-ext-enc-qp-range.qp-i-min" />
+            <Mapping kind="vq" name="video-qp-p-max" value="vendor.qti-ext-enc-qp-range.qp-p-max" />
+            <Mapping kind="vq" name="video-qp-p-min" value="vendor.qti-ext-enc-qp-range.qp-p-min" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc">
             <Limit name="size" min="128x128" max="4096x2304" />
