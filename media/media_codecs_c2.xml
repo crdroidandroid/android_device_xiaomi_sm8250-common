@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!--
-    Copyright (c) 2018-2020 Qualcomm Technologies, Inc.
+    Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
     All Rights Reserved.
     Confidential and Proprietary - Qualcomm Technologies, Inc.
 
@@ -85,10 +85,10 @@
             <Feature name="can-swap-width-height" value="1" />
         </MediaCodec>
         <MediaCodec name="c2.qti.avc.decoder.low_latency" type="video/avc">
-            <Limit name="size" min="96x96" max="4096x2160" />
+            <Limit name="size" min="128x128" max="4096x2176" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="24-2073600" />
+            <Limit name="blocks-per-second" range="64-2073600" />
             <Limit name="bitrate" range="1-60000000" />
             <Limit name="frame-rate" range="1-480" />
             <Limit name="performance-point-4096x2160" value="24" />
@@ -130,10 +130,10 @@
             <Limit name="performance-point-1280x720" value="480" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.decoder.low_latency" type="video/hevc" >
-            <Limit name="size" min="96x96" max="4096x2160" />
+            <Limit name="size" min="128x128" max="4096x2176" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="24" max="2073600" />
+            <Limit name="blocks-per-second" min="64" max="2073600" />
             <Limit name="bitrate" range="1-60000000" />
             <Limit name="frame-rate" range="1-480" />
             <Limit name="performance-point-4096x2160" value="24" />
