@@ -465,14 +465,19 @@ vendor/lib64/unnhal-acc-hvx.so
 vendor/bin/nv_mac
 
 # OMX
+vendor/lib/libOmxAacEnc.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
+vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxAmrDec.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxDsdDec.so
+vendor/lib/libOmxEvrcEnc.so
 vendor/lib/libOmxEvrcDec.so
+vendor/lib/libOmxG711Enc.so
 vendor/lib/libOmxG711Dec.so
+vendor/lib/libOmxQcelp13Enc.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
 vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
