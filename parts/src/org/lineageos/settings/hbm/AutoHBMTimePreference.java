@@ -1,0 +1,47 @@
+/*
+ * Copyright (C) 2016 The OmniROM Project
+                 2023 The Evolution X Project
+ * SPDX-License-Identifier: GPL-2.0-or-later
+ */
+
+package org.lineageos.settings.hbm;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.AttributeSet;
+import android.util.Log;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
+import androidx.preference.PreferenceViewHolder;
+
+public class AutoHBMTimePreference extends CustomSeekBarPreference {
+
+    private static int mMinVal = 1;
+    private static int mMaxVal = 10;
+    private static int mDefVal = 1;
+    private static final String AUTO_HBM_DISABLE_TIME_KEY = "auto_hbm_disable_time";
+
+    public AutoHBMTimePreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+
+        mInterval = 1;
+        mShowSign = false;
+        mUnits = "";
+        mContinuousUpdates = false;
+        mMinValue = mMinVal;
+        mMaxValue = mMaxVal;
+        mDefaultValueExists = true;
+        mDefaultValue = mDefVal;
+        SharedPreferences msharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        mValue = Integer.parseInt(msharedPrefs.getString(AUTO_HBM_DISABLE_TIME_KEY, "1"));
+
+        setPersistent(false);
+    }
+
+    @Override
+    protected void changeValue(int newValue) {
+        SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
+        prefChange.putString(AUTO_HBM_DISABLE_TIME_KEY, String.valueOf(newValue)).commit();
+    }
+}
