@@ -173,6 +173,9 @@ vendor.display.qdcm.mode_combine=1
 vendor.display.use_layer_ext=0
 vendor.display.use_smooth_motion=0
 
+# Disable vsync for cpu rendered apps
+debug.cpurend.vsync=false
+
 # DRM
 drm.service.enabled=true
 
