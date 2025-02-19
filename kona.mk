@@ -67,12 +67,8 @@ ifeq ($(TARGET_IS_VAB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    android.hardware.boot@1.2-service
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 $(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
