@@ -351,6 +351,11 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
 
+# Torch control
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:switch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_1 brightness 0660 cameraserver camera
+
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
 
