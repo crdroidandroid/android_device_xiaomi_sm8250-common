@@ -490,3 +490,8 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # HBM
 /sys/class/drm/card0/card0-DSI-1                        disp_param                      0666    system  system
+
+# Torch control
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:switch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_0 brightness 0660 cameraserver camera
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d300/leds/led:torch_1 brightness 0660 cameraserver camera

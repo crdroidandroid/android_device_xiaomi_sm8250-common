@@ -8,6 +8,9 @@ type sysfs_ssr_toggle, fs_type, sysfs_type;
 
 type sysfs_touchpanel, fs_type, sysfs_type;
 
+# Torch
+type sysfs_torch, fs_type, sysfs_type;
+
 type sysfs_ultrasound, fs_type, sysfs_type;
 
 type vendor_audio_socket, file_type;
