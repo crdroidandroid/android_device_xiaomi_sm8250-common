@@ -1,0 +1,7 @@
+on property:vendor.post_boot.parsed=1
+
+     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
+     chmod 0660 /sys/class/drm/sde-crtc-0/measured_fps
+ 
+     chown system system /sys/class/power_supply/battery/temp
+     chmod 0660 /sys/class/power_supply/battery/temp

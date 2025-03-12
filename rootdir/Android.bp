@@ -97,6 +97,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+     name: "init.munch.rc",
+     src: "etc/init.munch.rc",
+     sub_dir: "init",
+     vendor: true,
+ }
+
+prebuilt_etc {
     name: "init.recovery.qcom.rc",
     src: "etc/init.recovery.qcom.rc",
     sub_dir: "init",
