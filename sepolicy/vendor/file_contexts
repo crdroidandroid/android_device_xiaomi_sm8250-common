@@ -88,3 +88,6 @@
 /data/vendor/mac_addr(/.*)?                                                                         u:object_r:vendor_wifi_vendor_data_file:s0
 /mnt/vendor/persist/wlan_mac\.bin                                                                   u:object_r:vendor_persist_wcnss_service_file:s0
 /vendor/bin/nv_mac                                                                                  u:object_r:vendor_wcnss_service_exec:s0
+
+# Process and system statistics files
+/proc/stat u:object_r:proc_stat:s0
