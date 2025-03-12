@@ -95,5 +95,9 @@
 /mnt/vendor/persist/wlan_mac\.bin                                                                   u:object_r:vendor_persist_wcnss_service_file:s0
 /vendor/bin/nv_mac                                                                                  u:object_r:vendor_wcnss_service_exec:s0
 
+# Process and system statistics files
+/proc/stat u:object_r:proc_stat:s0
+
+
 # Xiaomi Touch
 /dev/xiaomi-touch                                                                                   u:object_r:vendor_touchfeature_device:s0
