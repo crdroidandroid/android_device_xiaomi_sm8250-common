@@ -37,6 +37,7 @@ public class RefreshRateTileService extends TileService {
     private final List<Float> availableRates = new ArrayList<>();
     private int activeRateMin;
     private int activeRateMax;
+    private boolean isAdaptiveRateActive = false;
 
     @Override
     public void onCreate() {
@@ -63,9 +64,17 @@ public class RefreshRateTileService extends TileService {
     private void syncFromSettings() {
         activeRateMin = getSettingOf(KEY_MIN_REFRESH_RATE);
         activeRateMax = getSettingOf(KEY_PEAK_REFRESH_RATE);
+
+        // Check if the rates are valid
+        if (activeRateMin == -1 || activeRateMax == -1) {
+            isAdaptiveRateActive = true; // Set the flag for adaptive rate
+        } else {
+            isAdaptiveRateActive = false; // Reset the flag if valid rates are found
+        }
     }
 
     private void cycleRefreshRate() {
+        if (isAdaptiveRateActive) return;
         if (activeRateMin < availableRates.size() - 1) {
             activeRateMin++;
         } else {
@@ -85,14 +94,21 @@ public class RefreshRateTileService extends TileService {
 
     private void updateTileView() {
         String displayText;
+
+        if (isAdaptiveRateActive) {
+            displayText = "Adaptive";
+        } else {
+
         float min = availableRates.get(activeRateMin);
         float max = availableRates.get(activeRateMax);
 
         displayText = String.format(Locale.US, min == max ? "%s" : "%s - %s",
             getFormatRate(min), getFormatRate(max));
+        }
+        
         tile.setContentDescription(displayText);
         tile.setSubtitle(displayText);
-        tile.setState(min == max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        tile.setState(!isAdaptiveRateActive ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         tile.updateTile();
     }
 
