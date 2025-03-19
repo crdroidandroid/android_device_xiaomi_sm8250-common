@@ -185,6 +185,10 @@ ro.vendor.audio.dolby.vision.support=true
 vendor.audio.dolby.control.support=true
 vendor.audio.dolby.control.tunning.by.volume.support=true
 
+# Dolby Vision
+ro.vendor.mi_sf.gallery_p3_dolby_opt=true
+ro.vendor.display.dolbyvision.support=true
+
 # DRM
 drm.service.enabled=true
 
