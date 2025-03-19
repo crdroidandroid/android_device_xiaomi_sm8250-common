@@ -178,6 +178,12 @@ ro.vendor.dolby.manufacturer=OPLUS
 ro.vendor.dolby.brand=OPLUS
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
+ro.vendor.audio.dolby.dax.support=true
+ro.vendor.audio.dolby.surround.enable=true
+ro.vendor.audio.dolby.fade_switch=true
+ro.vendor.audio.dolby.vision.support=true
+vendor.audio.dolby.control.support=true
+vendor.audio.dolby.control.tunning.by.volume.support=true
 
 # DRM
 drm.service.enabled=true
