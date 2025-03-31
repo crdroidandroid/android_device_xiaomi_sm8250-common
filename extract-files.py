@@ -18,6 +18,14 @@ from extract_utils.fixups_lib import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libbinder_shim.so')
+        .add_needed('libinput_shim.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .add_needed('libaudioclient_shim.so')
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'vendor/etc/init/init.mi_thermald.rc': blob_fixup()
         .regex_replace('.*seclabel u:r:mi_thermald:s0\n', ''),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
@@ -28,6 +36,16 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/mediadrm/libwvdrmengine.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    (
+     'vendor/lib/libstagefright_soft_ac4dec.so',
+     'vendor/lib/libstagefright_soft_ddpdec.so',
+     'vendor/lib/libstagefrightdolby.so',
+     'vendor/lib64/libdlbdsservice.so',
+     'vendor/lib64/libstagefright_soft_ac4dec.so',
+     'vendor/lib64/libstagefright_soft_ddpdec.so',
+     'vendor/lib64/libstagefrightdolby.so'
+     ): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
 }  # fmt: skip
 
 
