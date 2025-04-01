@@ -49,6 +49,17 @@ ro.vendor.qti.core_ctl_min_cpu=2
 # Radio
 persist.vendor.radio.report_codec=1
 
+# RmNet Data
+persist.rmnet.data.enable=true
+persist.data.wda.enable=true
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.agg.dl_pkt=10
+persist.data.df.agg.dl_size=4096
+persist.data.df.mux_count=8
+persist.data.df.iwlan_mux=9
+persist.data.df.dev_name=rmnet_usb0
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
