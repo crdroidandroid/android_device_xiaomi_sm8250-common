@@ -196,8 +196,12 @@ public class RefreshSettingsFragment extends PreferenceFragment
         switch (state) {
             case RefreshUtils.STATE_STANDARD:
                 return R.drawable.ic_refresh_60;
+            case RefreshUtils.STATE_HIGH:
+                return R.drawable.ic_refresh_90;
             case RefreshUtils.STATE_EXTREME:
                 return R.drawable.ic_refresh_120;
+            case RefreshUtils.STATE_ULTRA:
+                return R.drawable.ic_refresh_144;
             case RefreshUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_refresh_default;
