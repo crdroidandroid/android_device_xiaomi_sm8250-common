@@ -58,4 +58,6 @@
     <string name="refresh_default">Default</string>
     <string name="refresh_standard">Standard (60Hz)</string>    
     <string name="refresh_extreme">Extreme (120Hz)</string>    
+    <string name="refresh_high">High (90Hz)</string>
+    <string name="refresh_ultra">Ultra (144Hz)</string>
 </resources>

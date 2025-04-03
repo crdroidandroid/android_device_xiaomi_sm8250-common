@@ -239,7 +239,9 @@ public class RefreshSettingsFragment extends PreferenceFragment
         private final int[] items = {
                 R.string.refresh_default,
                 R.string.refresh_standard,
-                R.string.refresh_extreme
+                R.string.refresh_high,
+                R.string.refresh_extreme,
+                R.string.refresh_ultra
         };
 
         private ModeAdapter(Context context) {
@@ -370,8 +372,14 @@ public class RefreshSettingsFragment extends PreferenceFragment
                 case RefreshUtils.STATE_STANDARD:
                     mRefreshUtils.writePackage(entry.info.packageName, RefreshUtils.STATE_STANDARD);
                     break;
+                case RefreshUtils.STATE_HIGH:
+                    mRefreshUtils.writePackage(entry.info.packageName, RefreshUtils.STATE_HIGH);
+                    break;
                 case RefreshUtils.STATE_EXTREME:
                     mRefreshUtils.writePackage(entry.info.packageName, RefreshUtils.STATE_EXTREME);
+                    break;
+                case RefreshUtils.STATE_ULTRA:
+                    mRefreshUtils.writePackage(entry.info.packageName, RefreshUtils.STATE_ULTRA);
                     break;
             }
             notifyDataSetChanged();
