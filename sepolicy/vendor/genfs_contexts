@@ -1,3 +1,7 @@
+# Axion Tunings
+genfscon proc /sys/vm/dirty_writeback_centisecs                                                    u:object_r:proc_dirty:s0
+genfscon proc /sys/vm/vfs_cache_pressure                                                           u:object_r:proc_drop_caches:s0
+
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                                               u:object_r:sysfs_msm_boot:s0
 
