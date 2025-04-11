@@ -158,7 +158,8 @@ endif
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiDolby \
-    XiaomiParts
+    XiaomiParts \
+    DSPVolumeSynchronizer
 
 # Dolby Props
 PRODUCT_VENDOR_PROPERTIES += \
