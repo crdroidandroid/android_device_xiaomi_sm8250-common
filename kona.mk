@@ -159,7 +159,8 @@ endif
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiDolby \
-    XiaomiParts
+    XiaomiParts \
+    DSPVolumeSynchronizer
 
 # Dex
 # Speed profile services and wifi-service to reduce RAM and storage.
