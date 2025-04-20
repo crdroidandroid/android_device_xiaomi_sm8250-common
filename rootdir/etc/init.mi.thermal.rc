@@ -1,0 +1,7 @@
+on late-init
+    start mi_thermal_service
+
+service mi_thermal_service /vendor/bin/sh /vendor/etc/init.mi.thermal.sh
+    class late_start
+    user root
+    oneshot

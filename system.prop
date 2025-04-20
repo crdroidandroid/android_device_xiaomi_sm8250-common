@@ -1,4 +1,3 @@
-
 # Blur
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
@@ -44,6 +43,10 @@ persist.vendor.radio.report_codec=1
 
 # WFD
 vendor.wfdservice64=enable
+
+# Thermals
+ro.vendor.dfps.enable=false
+ro.vendor.smart_dfps.enable=false
 
 # RIL Powersaving
 persist.radio.add_power_save=1
