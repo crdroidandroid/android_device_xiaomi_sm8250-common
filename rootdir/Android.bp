@@ -47,6 +47,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "init.mi.thermal.sh",
+    src: "bin/init.mi.thermal.sh",
+    vendor: true,
+}
+
 // fstab
 soong_config_module_type {
     name: "xiaomi_kona_rootdir_prebuilt_etc",
@@ -121,5 +127,11 @@ prebuilt_etc {
     name: "ueventd.qcom.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd.qcom.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mi.thermal.rc",
+    src: "etc/init.mi.thermal.rc",
     vendor: true,
 }
