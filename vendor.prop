@@ -245,6 +245,7 @@ sys.vendor.shutdown.waittime=500
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
 ro.usb.uvc.enabled=true
 sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=diag
