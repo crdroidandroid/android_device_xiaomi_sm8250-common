@@ -98,3 +98,22 @@ service vendor.btmac-sh /vendor/bin/init.mi.btmac.sh
 # Radio
 on early-init
     setprop ro.vendor.radio.midevice ${ro.product.vendor.device}
+
+# USB
+on property:sys.boot_completed=1 && property:vendor.usb.uvc.function.init=1 && property:vendor.usb.uvc.payload_transfer_size=*
+    write /config/usb_gadget/g1/functions/uvc.0/streaming_maxpacket ${vendor.usb.uvc.payload_transfer_size}
+
+on property:vendor.usb.current_speed=low-speed
+    setprop vendor.usb.uvc.payload_transfer_size 1024
+
+on property:vendor.usb.current_speed=full-speed
+    setprop vendor.usb.uvc.payload_transfer_size 1024
+
+on property:vendor.usb.current_speed=high-speed
+    setprop vendor.usb.uvc.payload_transfer_size 1024
+
+on property:vendor.usb.current_speed=super-speed
+    setprop vendor.usb.uvc.payload_transfer_size 3072
+
+on property:vendor.usb.current_speed=super-speed-plus
+    setprop vendor.usb.uvc.payload_transfer_size 3072
