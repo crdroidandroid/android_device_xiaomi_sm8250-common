@@ -138,28 +138,16 @@ public final class RefreshUtils {
             modes = value.split(":");
 
             if (modes[0].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_STANDARD;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
+                maxrate = minrate = REFRESH_STATE_STANDARD;
 		isAppInList = true;
            } else if (modes[1].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_HIGH;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
+                maxrate = minrate = REFRESH_STATE_HIGH;
 		isAppInList = true;
            } else if (modes[2].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_EXTREME;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
+                maxrate = minrate = REFRESH_STATE_EXTREME;
 		isAppInList = true;
            } else if (modes[3].contains(packageName + ",")) {
-                maxrate = REFRESH_STATE_ULTRA;
-                if ( minrate > maxrate){
-                minrate = maxrate;
-                }
+                maxrate = minrate = REFRESH_STATE_ULTRA;
 		isAppInList = true;
            }
           }
