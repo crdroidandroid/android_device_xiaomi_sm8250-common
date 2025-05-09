@@ -35,6 +35,16 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/mediadrm/libwvdrmengine.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    (
+     'vendor/lib/libstagefright_soft_ac4dec.so',
+     'vendor/lib/libstagefright_soft_ddpdec.so',
+     'vendor/lib/libstagefrightdolby.so',
+     'vendor/lib64/libdlbdsservice.so',
+     'vendor/lib64/libstagefright_soft_ac4dec.so',
+     'vendor/lib64/libstagefright_soft_ddpdec.so',
+     'vendor/lib64/libstagefrightdolby.so'
+     ): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
 }  # fmt: skip
 
 
