@@ -257,17 +257,27 @@ $(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # Logging
 SPAMMY_LOG_TAGS := \
+     AsyncOperation \
+     BackgroundInstallControlService \
+     BinderNative \
+     dxwi \
+     HWUI \
      MiStcImpl \
+     OtherActivityInputConsumer \
      SDM \
      SDM-histogram \
      SensorService \
      SRE \
+     WindowManager \
+     WindowManagerShell \
      WifiHAL \
      cnss-daemon \
      libcitsensorservice@2.0-impl \
      libsensor-displayalgo \
      libsensor-parseRGB \
      libsensor-ssccalapi \
+     libjingle \
+     StrictMode \
      sensors \
      TextView \
      PerformanceBooster \
