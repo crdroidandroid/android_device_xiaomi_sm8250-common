@@ -85,7 +85,7 @@ public class HBMFragment extends PreferenceFragment implements Preference.OnPref
         filter.addAction(ACTION_DC_CHANGED);
         filter.addAction(ACTION_HBM_CHANGED);
         filter.addAction(ACTION_AUTO_HBM_CHANGED);
-        mContext.registerReceiver(mReceiver, filter);
+        mContext.registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     @Override

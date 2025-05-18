@@ -68,7 +68,7 @@ public class HBMModeTileService extends TileService {
 
     private void registerHBMReceiver() {
         IntentFilter filter = new IntentFilter(ACTION_HBM_CHANGED);
-        registerReceiver(mReceiver, filter);
+        registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     private void updateTileState(boolean newState) {

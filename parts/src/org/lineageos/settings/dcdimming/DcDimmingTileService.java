@@ -44,7 +44,7 @@ public class DcDimmingTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
-        registerReceiver(mReceiver, new IntentFilter(ACTION_DC_CHANGED));
+        registerReceiver(mReceiver, new IntentFilter(ACTION_DC_CHANGED), Context.RECEIVER_NOT_EXPORTED);
         updateUI(mSharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false));
     }
 

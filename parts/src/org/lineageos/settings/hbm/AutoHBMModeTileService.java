@@ -72,7 +72,7 @@ public class AutoHBMModeTileService extends TileService {
 
     private void registerAUTOHBMReceiver() {
         IntentFilter filter = new IntentFilter(ACTION_AUTO_HBM_CHANGED);
-        registerReceiver(mReceiver, filter);
+        registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     private void updateTileState(boolean newState) {

@@ -61,7 +61,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements Pre
 
     private void registerReceiver() {
         IntentFilter filter = new IntentFilter(ACTION_DC_CHANGED);
-        mContext.registerReceiver(mReceiver, filter);
+        mContext.registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     @Override

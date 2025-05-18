@@ -98,7 +98,7 @@ public class AutoHBMService extends Service {
     private void registerScreenStateReceiver() {
         IntentFilter filter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         filter.addAction(Intent.ACTION_SCREEN_OFF);
-        registerReceiver(mScreenStateReceiver, filter);
+        registerReceiver(mScreenStateReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     private void initializeLightSensorIfNeeded() {
