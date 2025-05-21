@@ -42,6 +42,7 @@ public class AutoHBMService extends Service {
 
     // Service state
     private boolean mAutoHBMActive = false;
+    private int mPreviousBrightness;
     private ExecutorService mExecutorService;
     private SensorManager mSensorManager;
     private Sensor mLightSensor;
@@ -153,11 +154,19 @@ public class AutoHBMService extends Service {
     }
 
     private void enableHBM(boolean newState) {
-        FileUtils.writeLine(HBM_NODE, newState ? "1" : "0");
-        
         if (newState) {
+            // Store current brightness before enabling HBM
+            mPreviousBrightness = Settings.System.getInt(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS, 255);
+            
+            FileUtils.writeLine(HBM_NODE, "1");
             FileUtils.writeLine(BACKLIGHT_NODE, "2047");
             Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 255);
+        } else {
+            FileUtils.writeLine(HBM_NODE, "0");
+            // Restore previous brightness
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 
+                mPreviousBrightness);
         }
 
         broadcastHBMState(newState);

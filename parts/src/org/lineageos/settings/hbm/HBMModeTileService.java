@@ -30,6 +30,7 @@ public class HBMModeTileService extends TileService {
     private static final String ACTION_DC_CHANGED = "org.lineageos.settings.device.DC_CHANGED";
 
     private SharedPreferences mSharedPrefs;
+    private int mPreviousBrightness;
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -88,10 +89,17 @@ public class HBMModeTileService extends TileService {
         SharedPreferences.Editor editor = mSharedPrefs.edit();
 
         // Update HBM state
-        FileUtils.writeLine(HBM_NODE, newState ? "1" : "0");
-        
         if (newState) {
+            // Store current brightness before enabling HBM
+            mPreviousBrightness = Settings.System.getInt(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS, 255);
+            FileUtils.writeLine(HBM_NODE, "1");
             handleHBMEnable(editor);
+        } else {
+            FileUtils.writeLine(HBM_NODE, "0");
+            // Restore previous brightness
+            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 
+                mPreviousBrightness);
         }
 
         // Save new HBM state and broadcast change

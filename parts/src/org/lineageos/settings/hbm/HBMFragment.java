@@ -36,6 +36,7 @@ public class HBMFragment extends PreferenceFragment implements Preference.OnPref
     private TwoStatePreference mAutoHBMSwitch;
     private SharedPreferences mSharedPrefs;
     private Context mContext;
+    private int mPreviousBrightness;
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -110,13 +111,21 @@ public class HBMFragment extends PreferenceFragment implements Preference.OnPref
     }
 
     private void handleHBMModeChange(boolean newState) {
-        FileUtils.writeLine(HBM_NODE, newState ? "1" : "0");
         SharedPreferences.Editor editor = mSharedPrefs.edit();
-
+        
         if (newState) {
+            // Store current brightness before enabling HBM
+            mPreviousBrightness = Settings.System.getInt(mContext.getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS, 255);
+            FileUtils.writeLine(HBM_NODE, "1");
             disableAUTOHBMIfEnabled(editor);
             disableDCDimmingIfEnabled(editor);
             updateBrightnessSettings();
+        } else {
+            FileUtils.writeLine(HBM_NODE, "0");
+            // Restore previous brightness
+            Settings.System.putInt(mContext.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 
+                mPreviousBrightness);
         }
 
         editor.putBoolean(HBM_ENABLE_KEY, newState).apply();
