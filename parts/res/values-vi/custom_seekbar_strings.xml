@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="custom_seekbar_value">Giá trị: <xliff:g id="v">%s</xliff:g></string>
+  <string name="custom_seekbar_default_value">mặc định</string>
+  <string name="custom_seekbar_default_value_to_set">Giá trị mặc định: <xliff:g id="v">%s</xliff:g>\nNhấn giữ để đặt</string>
+  <string name="custom_seekbar_default_value_is_set">Đã đặt giá trị mặc định</string>
+</resources>
