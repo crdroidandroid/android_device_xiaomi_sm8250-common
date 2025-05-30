@@ -101,7 +101,8 @@
             android:exported="true"
             android:icon="@drawable/ic_qs_refresh_rate"
             android:label="@string/refresh_rate_tile_title"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:settingsActivity="org.lineageos.settings.RefreshRateRedirectActivity">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
@@ -128,6 +129,16 @@
             android:exported="true"
             android:permission="RefreshService">
         </service>
+
+        <activity
+            android:name=".RefreshRateRedirectActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Transparent">
+                <intent-filter>
+                    <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
 
     </application>
 
