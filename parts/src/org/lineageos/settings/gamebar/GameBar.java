@@ -110,6 +110,9 @@ public class GameBar {
 
     private int mItemSpacingDp = 8;
 
+    private boolean mShowRamSpeed = false;
+    private boolean mShowRamTemp = false;
+
     private final Runnable mLongPressRunnable = new Runnable() {
         @Override
         public void run() {
@@ -185,8 +188,11 @@ public class GameBar {
         mShowGpuClock    = prefs.getBoolean("game_bar_gpu_clock_enable", false);
         mShowGpuTemp     = prefs.getBoolean("game_bar_gpu_temp_enable", false);
 
-        mDoubleTapCaptureEnabled = prefs.getBoolean("game_bar_doubletap_capture", false);
-        mSingleTapToggleEnabled  = prefs.getBoolean("game_bar_single_tap_toggle", false);
+        mShowRamSpeed    = prefs.getBoolean("game_bar_ram_speed_enable", false);
+        mShowRamTemp     = prefs.getBoolean("game_bar_ram_temp_enable", false);
+
+        mDoubleTapCaptureEnabled = prefs.getBoolean("game_bar_doubletap_capture", true);
+        mSingleTapToggleEnabled  = prefs.getBoolean("game_bar_single_tap_toggle", true);
 
         updateSplitMode(prefs.getString("game_bar_split_mode", "stacked"));
         updateTextSize(prefs.getInt("game_bar_text_size", 16));
@@ -384,6 +390,18 @@ public class GameBar {
             statViews.add(createStatLine("RAM", "N/A".equals(ramStr) ? "N/A" : ramStr + " MB"));
         }
 
+        // 6.1) RAM speed
+        if (mShowRamSpeed) {
+            String ramSpeedStr = GameBarMemInfo.getRamSpeed();
+            statViews.add(createStatLine("RAM Freq", ramSpeedStr));
+        }
+
+        // 6.2) RAM temp
+        if (mShowRamTemp) {
+            String ramTempStr = GameBarMemInfo.getRamTemp();
+            statViews.add(createStatLine("RAM Temp", ramTempStr));
+        }
+
         // 7) GPU usage
         String gpuUsageStr = "N/A";
         if (mShowGpuUsage) {
@@ -574,6 +592,9 @@ public class GameBar {
     public void setShowGpuUsage(boolean show)    { mShowGpuUsage = show; }
     public void setShowGpuClock(boolean show)    { mShowGpuClock = show; }
     public void setShowGpuTemp(boolean show)     { mShowGpuTemp = show; }
+
+    public void setShowRamSpeed(boolean show) { mShowRamSpeed = show; }
+    public void setShowRamTemp(boolean show) { mShowRamTemp = show; }
 
     public void updateTextSize(int sp) {
         mTextSizeSp = sp;
