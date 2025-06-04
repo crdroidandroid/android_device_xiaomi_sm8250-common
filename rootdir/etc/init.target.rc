@@ -94,6 +94,8 @@ on fs && property:ro.build.ab_update=true
     restorecon_recursive /mnt/rescue
 
 on post-fs
+    # AW882xx fw load path
+    write /sys/module/firmware_class/parameters/path /vendor/firmware
     # set RLIMIT_MEMLOCK to 64KB
     setrlimit 8 65536 65536
     write /dev/ipa 1
