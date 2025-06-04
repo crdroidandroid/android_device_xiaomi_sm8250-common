@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package org.lineageos.settings.refreshrate.tile;
 
 import android.app.Activity;
 import android.content.ComponentName;

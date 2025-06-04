@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package org.lineageos.settings.refreshrate.tile;
 
 import android.content.Context;
 import android.provider.Settings;
@@ -122,6 +122,7 @@ public class RefreshRateTileService extends TileService {
 
     @Override
     public void onClick() {
+        if (isAdaptiveRateActive) return;
         super.onClick();
         cycleRefreshRate();
         syncFromSettings();
