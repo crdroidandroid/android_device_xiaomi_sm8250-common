@@ -11,8 +11,65 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<androidx.recyclerview.widget.RecyclerView
-     xmlns:android="http://schemas.android.com/apk/res/android"
-     android:id="@+id/refresh_rv_view"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search apps..."
+        android:inputType="text"
+        android:background="@drawable/bg_search_rounded"
+        android:padding="12dp"
+        android:textColor="@android:color/primary_text_light"
+        android:textColorHint="@android:color/darker_gray"
+        android:elevation="2dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Configs"
+            android:background="@drawable/bg_button_rounded"
+            android:textColor="@color/button_text_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:elevation="2dp"/>
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Configs"
+            android:background="@drawable/bg_button_rounded"
+            android:textColor="@color/button_text_selector"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:elevation="2dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/refresh_rv_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
