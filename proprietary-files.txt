@@ -476,9 +476,6 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
-# NVRAM
-vendor/bin/nv_mac
-
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
