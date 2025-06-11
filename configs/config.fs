@@ -28,6 +28,9 @@ value:2909
 [AID_VENDOR_SSGTZD]
 value:2912
 
+[AID_VENDOR_QCC]
+value:2914
+
 [bt_firmware/]
 mode: 0771
 user: AID_SYSTEM
