@@ -219,6 +219,9 @@ ro.odm.build.media_performance_class=30
 # NFC
 ro.camera.notify_nfc=1
 
+# OTA
+ro.virtual_ab.compression.threads=true
+
 # OTG
 persist.sys.oem.otg_support=true
 
