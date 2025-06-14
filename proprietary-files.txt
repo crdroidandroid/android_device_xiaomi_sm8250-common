@@ -303,12 +303,14 @@ vendor/lib64/libc2d30_bltlib.so;DISABLE_CHECKELF
 
 # Graphics (Adreno firmware)
 vendor/firmware/a650_gmu.bin
-vendor/firmware/a650_sqe.fw
 vendor/firmware/a650_zap.b00
 vendor/firmware/a650_zap.b01
 vendor/firmware/a650_zap.b02
 vendor/firmware/a650_zap.elf
 vendor/firmware/a650_zap.mdt
+
+# Graphics (Adreno firmware) - from linux-firmware
+vendor/firmware/a650_sqe.fw|8fc431f00e9d2c4729912c53a7bbadffbc0ef5d0
 
 # Graphics (Vulkan) - from ishtar OS2.0.108.0.VMACNXM
 vendor/lib/hw/vulkan.adreno.so
