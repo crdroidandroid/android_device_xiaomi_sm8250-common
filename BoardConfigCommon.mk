@@ -184,6 +184,7 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/properties/vendor_phone.prop
 endif
 
 # Recovery
+$(call soong_config_set_bool,recovery,target_recovery_uses_qti_drm,true)
 ifeq ($(TARGET_IS_VAB),true)
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_AB.qcom
 else
