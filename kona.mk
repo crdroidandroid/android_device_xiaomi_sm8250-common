@@ -159,8 +159,7 @@ endif
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    XiaomiParts \
-    XiaomiDolby
+    XiaomiParts
 
 # Display
 PRODUCT_PACKAGES += \
@@ -256,16 +255,6 @@ PRODUCT_PACKAGES += \
     media_codecs_c2.xml \
     media_codecs_performance_c2.xml \
     video_system_specs.json
-
-# Media - Dolby vision
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.2.vendor \
-    libcodec2_hidl@1.2.vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libcodec2_hidl_shim.vendor
-
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -397,10 +386,6 @@ PRODUCT_PACKAGES += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # Vibrator
 ifneq ($(TARGET_IS_TABLET),true)
