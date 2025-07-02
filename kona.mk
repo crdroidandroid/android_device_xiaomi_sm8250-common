@@ -95,6 +95,12 @@ ART_BUILD_HOST_DEBUG := false
 USE_DEX2OAT_DEBUG := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
+
+# Enable adpf cpu hint session for SurfaceFlinger and HWUI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_adpf_cpu_hint=true \
+    debug.hwui.use_hint_manager=true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
