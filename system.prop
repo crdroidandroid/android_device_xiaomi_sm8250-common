@@ -9,6 +9,9 @@ debug.graphics.game_default_frame_rate.disabled=true
 ro.config.media_vol_default=8
 ro.config.media_vol_steps=25
 
+# Battery
+ro.config.small_battery=true
+
 # Camera
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
