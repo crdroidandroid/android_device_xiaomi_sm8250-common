@@ -165,6 +165,7 @@ TARGET_BOARD_PLATFORM := kona
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/props/odm.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/props/product.prop
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/props/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/props/vendor.prop
 ifneq ($(TARGET_IS_TABLET),true)
