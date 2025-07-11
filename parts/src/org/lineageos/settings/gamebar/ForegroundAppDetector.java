@@ -28,18 +28,38 @@ import java.util.List;
 public class ForegroundAppDetector {
 
     private static final String TAG = "ForegroundAppDetector";
+    private static String sLastKnownPackage = "Unknown";
+    private static long sLastUpdateTime = 0;
+    private static final long CACHE_TIMEOUT = 500; // Reduce cache timeout
+    
+    // Simple reflection caching
+    private static boolean sReflectionSetupFailed = false;
 
     public static String getForegroundPackageName(Context context) {
+        // Use cached result if still valid
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - sLastUpdateTime < CACHE_TIMEOUT && !"Unknown".equals(sLastKnownPackage)) {
+            return sLastKnownPackage;
+        }
 
         String pkg = tryGetRunningTasks(context);
         if (pkg != null) {
+            sLastKnownPackage = pkg;
+            sLastUpdateTime = currentTime;
             return pkg;
         }
-        pkg = tryReflectActivityTaskManager();
-        if (pkg != null) {
-            return pkg;
+        
+        if (!sReflectionSetupFailed) {
+            pkg = tryReflectActivityTaskManager();
+            if (pkg != null) {
+                sLastKnownPackage = pkg;
+                sLastUpdateTime = currentTime;
+                return pkg;
+            }
         }
-        return "Unknown";
+        
+        // Return cached value if available, otherwise "Unknown"
+        return sLastKnownPackage;
     }
 
     private static String tryGetRunningTasks(Context context) {
@@ -66,22 +86,24 @@ public class ForegroundAppDetector {
 
     private static String tryReflectActivityTaskManager() {
         try {
+            if (sReflectionSetupFailed) {
+                return null;
+            }
+            
             Class<?> atmClass = Class.forName("android.app.ActivityTaskManager");
             Method getServiceMethod = atmClass.getDeclaredMethod("getService");
             getServiceMethod.setAccessible(true);
             Object atmService = getServiceMethod.invoke(null);
             Method getTasksMethod = atmService.getClass().getMethod("getTasks", int.class);
+            
             @SuppressWarnings("unchecked")
             List<?> taskList = (List<?>) getTasksMethod.invoke(atmService, 1);
             if (taskList != null && !taskList.isEmpty()) {
-
                 Object firstTask = taskList.get(0);
-
                 Class<?> rtiClass = firstTask.getClass();
                 Method getTopActivityMethod = rtiClass.getDeclaredMethod("getTopActivity");
                 Object compName = getTopActivityMethod.invoke(firstTask);
                 if (compName != null) {
-
                     Method getPackageNameMethod = compName.getClass().getMethod("getPackageName");
                     String pkgName = (String) getPackageNameMethod.invoke(compName);
                     return pkgName;
@@ -89,6 +111,7 @@ public class ForegroundAppDetector {
             }
         } catch (Exception e) {
             Log.e(TAG, "tryReflectActivityTaskManager error: ", e);
+            sReflectionSetupFailed = true; // Disable reflection on error
         }
         return null;
     }

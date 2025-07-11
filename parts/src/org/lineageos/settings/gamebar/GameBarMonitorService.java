@@ -29,43 +29,90 @@ public class GameBarMonitorService extends Service {
     private Handler mHandler;
     private Runnable mMonitorRunnable;
     private static final long MONITOR_INTERVAL = 2000; // 2 seconds
+    private volatile boolean mIsRunning = false;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mHandler = new Handler();
+        mHandler = new Handler(android.os.Looper.getMainLooper());
         mMonitorRunnable = new Runnable() {
             @Override
             public void run() {
-                monitorForegroundApp();
-                mHandler.postDelayed(this, MONITOR_INTERVAL);
+                if (mIsRunning) {
+                    monitorForegroundApp();
+                    if (mIsRunning && mHandler != null) {
+                        mHandler.postDelayed(this, MONITOR_INTERVAL);
+                    }
+                }
             }
         };
-        mHandler.post(mMonitorRunnable);
+    }
+    
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        if (!mIsRunning) {
+            mIsRunning = true;
+            if (mHandler != null && mMonitorRunnable != null) {
+                mHandler.post(mMonitorRunnable);
+            }
+        }
+        return START_STICKY;
     }
 
+    private String mLastForegroundApp = "";
+    private boolean mLastGameBarState = false;
+    
     private void monitorForegroundApp() {
-        var prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        boolean masterEnabled = prefs.getBoolean("game_bar_enable", false);
-        if (masterEnabled) {
-            GameBar.getInstance(this).applyPreferences();
-            GameBar.getInstance(this).show();
-            return;
-        }
-        
-        boolean autoEnabled = prefs.getBoolean("game_bar_auto_enable", false);
-        if (!autoEnabled) {
-            GameBar.getInstance(this).hide();
-            return;
-        }
-        
-        String foreground = ForegroundAppDetector.getForegroundPackageName(this);
-        Set<String> autoApps = prefs.getStringSet(org.lineageos.settings.gamebar.GameBarPerAppConfigFragment.PREF_AUTO_APPS, new HashSet<>());
-        if (autoApps.contains(foreground)) {
-            GameBar.getInstance(this).applyPreferences();
-            GameBar.getInstance(this).show();
-        } else {
-            GameBar.getInstance(this).hide();
+        try {
+            if (!mIsRunning) return;
+            
+            var prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            boolean masterEnabled = prefs.getBoolean("game_bar_enable", false);
+            
+            if (masterEnabled) {
+                if (!mLastGameBarState) {
+                    GameBar gameBar = GameBar.getInstance(this);
+                    gameBar.applyPreferences();
+                    gameBar.show();
+                    mLastGameBarState = true;
+                }
+                return;
+            }
+            
+            boolean autoEnabled = prefs.getBoolean("game_bar_auto_enable", false);
+            if (!autoEnabled) {
+                if (mLastGameBarState) {
+                    GameBar.getInstance(this).hide();
+                    mLastGameBarState = false;
+                }
+                return;
+            }
+            
+            String foreground = ForegroundAppDetector.getForegroundPackageName(this);
+            
+            // Only update if foreground app changed
+            if (!foreground.equals(mLastForegroundApp)) {
+                Set<String> autoApps = prefs.getStringSet(
+                    org.lineageos.settings.gamebar.GameBarPerAppConfigFragment.PREF_AUTO_APPS, 
+                    new HashSet<>());
+                    
+                boolean shouldShow = autoApps.contains(foreground);
+                
+                if (shouldShow && !mLastGameBarState) {
+                    GameBar gameBar = GameBar.getInstance(this);
+                    gameBar.applyPreferences();
+                    gameBar.show();
+                    mLastGameBarState = true;
+                } else if (!shouldShow && mLastGameBarState) {
+                    GameBar.getInstance(this).hide();
+                    mLastGameBarState = false;
+                }
+                
+                mLastForegroundApp = foreground;
+            }
+        } catch (Exception e) {
+            // Prevent crashes from propagating
+            android.util.Log.e("GameBarMonitorService", "Error in monitorForegroundApp", e);
         }
     }
 
@@ -77,6 +124,24 @@ public class GameBarMonitorService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mHandler.removeCallbacks(mMonitorRunnable);
+        mIsRunning = false;
+        
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mMonitorRunnable);
+            mHandler.removeCallbacksAndMessages(null);
+        }
+        
+        // Clean up GameBar instance
+        try {
+            GameBar.destroyInstance();
+        } catch (Exception e) {
+            android.util.Log.e("GameBarMonitorService", "Error destroying GameBar instance", e);
+        }
+        
+        // Clear state variables to prevent lingering references
+        mLastForegroundApp = "";
+        mLastGameBarState = false;
+        mHandler = null;
+        mMonitorRunnable = null;
     }
 }

@@ -41,6 +41,7 @@ public class GameDataExport {
     private boolean mCapturing = false;
 
     private final List<String[]> mStatsRows = new ArrayList<>();
+    private static final int MAX_ROWS = 10000; // Prevent unlimited memory growth
 
     private static final String[] CSV_HEADER = {
             "DateTime",
@@ -66,6 +67,15 @@ public class GameDataExport {
     public void stopCapture() {
         mCapturing = false;
     }
+    
+    public void clearData() {
+        mStatsRows.clear();
+        mStatsRows.add(CSV_HEADER);
+    }
+    
+    public int getDataSize() {
+        return mStatsRows.size();
+    }
 
     public boolean isCapturing() {
         return mCapturing;
@@ -81,6 +91,14 @@ public class GameDataExport {
                                String gpuClock,
                                String gpuTemp) {
         if (!mCapturing) return;
+
+        // Prevent unlimited memory growth
+        if (mStatsRows.size() >= MAX_ROWS) {
+            // Remove oldest entries but keep header
+            if (mStatsRows.size() > 1) {
+                mStatsRows.subList(1, mStatsRows.size() / 2).clear();
+            }
+        }
 
         String[] row = {
                 dateTime,
