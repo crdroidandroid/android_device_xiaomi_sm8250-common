@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
     media_codecs_performance_c2.xml \
     video_system_specs.json
 
+ifneq ($(TARGET_IS_TABLET),true)
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
