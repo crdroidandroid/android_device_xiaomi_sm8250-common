@@ -16,15 +16,12 @@
 
 package org.lineageos.settings.thermal;
 
-import android.app.ActivityManager;
 import android.app.ActivityTaskManager;
 import android.app.ActivityTaskManager.RootTaskInfo;
 import android.app.IActivityTaskManager;
-import android.app.TaskStackListener;
 import android.app.Service;
 import android.app.TaskStackListener;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -40,8 +37,9 @@ public class ThermalService extends Service {
 
     private boolean mScreenOn = true;
     private String mCurrentApp = "";
-    private ThermalUtils mThermalUtils;
+    private String mPreviousApp = "";
 
+    private ThermalUtils mThermalUtils;
     private IActivityTaskManager mActivityTaskManager;
 
     private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
@@ -59,9 +57,9 @@ public class ThermalService extends Service {
         try {
             mActivityTaskManager = ActivityTaskManager.getService();
             mActivityTaskManager.registerTaskStackListener(mTaskListener);
-        } catch (RemoteException e) {
-            // Do nothing
+        } catch (RemoteException e) {            
         }
+
         mThermalUtils = new ThermalUtils(this);
         registerReceiver();
         super.onCreate();
@@ -110,6 +108,7 @@ public class ThermalService extends Service {
 
                 String foregroundApp = info.topActivity.getPackageName();
                 if (!foregroundApp.equals(mCurrentApp)) {
+                    mPreviousApp = mCurrentApp;
                     mCurrentApp = foregroundApp;
                     setThermalProfile();
                 }
