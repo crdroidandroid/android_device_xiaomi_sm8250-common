@@ -4980,7 +4980,7 @@
         <boolean name="config_prefer_2g_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="722" mnc="34">
-        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
+        <boolean name="editable_enhanced_4g_lte_bool" value="true" />
         <boolean name="config_prefer_2g_bool" value="false" />
         <string-array name="unloggable_numbers_string_array" num="1">
             <item value="144" />
