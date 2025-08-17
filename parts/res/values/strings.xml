@@ -15,7 +15,28 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Thermal Profiles -->
+     <!-- Dirac settings: Equalizer preset names (missing entries for arrays.xml) -->
+     <string name="dirac_preset_default">Default</string>
+     <string name="dirac_preset_rock">Rock</string>
+     <string name="dirac_preset_jazz">Jazz</string>
+     <string name="dirac_preset_pop">Pop</string>
+     <string name="dirac_preset_classical">Classical</string>
+     <string name="dirac_preset_hiphop">Hip Hop</string>
+     <string name="dirac_preset_blues">Blues</string>
+     <string name="dirac_preset_electronic">Electronic</string>
+     <string name="dirac_preset_country">Country</string>
+     <string name="dirac_preset_dance">Dance</string>
+     <string name="dirac_preset_metal">Metal</string>
+     <string name="dirac_preset_bass_booster">Bass Booster</string>
+
+     <!-- App label -->
+     <string name="device_settings_app_name">Device settings</string>
+
+     <!-- Dirac entry in Settings and QS tile -->
+     <string name="dirac_title">Mi Sound</string>
+     <string name="dirac_summary">Enhance audio quality with Dirac</string>
+
+     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
     <string name="thermal_default">Default</string>
@@ -84,6 +105,13 @@
     <string name="dirac_preset_treble_reduction">Treble Reduction</string>
     <string name="dirac_preset_soft_bass">Soft Bass</string>
     <string name="dirac_preset_soft_treble">Soft Treble</string>
+
+     <!-- Dirac settings: UI strings -->
+     <string name="dirac_enable">Enable</string>
+     <string name="dirac_headset_title">Headset type</string>
+     <string name="dirac_preset_title">Preset</string>
+     <string name="dirac_hifi_title">Hi-Fi</string>
+     <string name="dirac_hifi_summary">Enable high-fidelity mode for supported devices</string>
 
     <!-- Scene Selection -->
     <string name="music_headset_scenario_select">Select scene</string>
