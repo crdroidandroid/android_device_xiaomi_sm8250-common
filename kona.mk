@@ -417,8 +417,5 @@ PRODUCT_COPY_FILES += \
 # Wi-Fi Display
 $(call inherit-product, device/qcom/wfd/device.mk)
 
-PRODUCT_PACKAGES += \
-    libwfdaac_vendor
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sm8250-common/sm8250-common-vendor.mk)
