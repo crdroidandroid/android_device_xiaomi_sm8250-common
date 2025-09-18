@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+     <!-- Dirac settings: Equalizer preset names (missing entries for arrays.xml) -->
+     <string name="dirac_preset_default">Standard</string>
+     <string name="dirac_preset_rock">Rock</string>
+     <string name="dirac_preset_jazz">Jazz</string>
+     <string name="dirac_preset_pop">Pop</string>
+     <string name="dirac_preset_classical">Klassik</string>
+     <string name="dirac_preset_hiphop">Hip-Hop</string>
+     <string name="dirac_preset_blues">Blues</string>
+     <string name="dirac_preset_electronic">Elektronisch</string>
+     <string name="dirac_preset_country">Country</string>
+     <string name="dirac_preset_dance">Dance</string>
+     <string name="dirac_preset_metal">Metal</string>
+     <string name="dirac_preset_bass_booster">Bass-Booster</string>
+
+     <!-- App label -->
+     <string name="device_settings_app_name">Geräteeinstellungen</string>
+
+     <!-- Dirac entry in Settings and QS tile -->
+     <string name="dirac_title">Mi-Sound</string>
+     <string name="dirac_summary">Klangverbesserung mit Dirac</string>
+
+     <!-- Thermal Profiles -->
+    <string name="thermal_title">Temperaturprofile</string>
+    <string name="thermal_summary">Zur Leistungsoptimierung App-spezifische Temperaturprofile einstellen</string>
+    <string name="thermal_default">Standard</string>
+    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_browser">Browser</string>
+    <string name="thermal_camera">Kamera</string>
+    <string name="thermal_dialer">Telefonie</string>
+    <string name="thermal_gaming">Spiele</string>
+    <string name="thermal_streaming">Streamen</string>
+
+    <!-- Refresh Rate Settings -->
+    <string name="refresh_rate_tile_title">Bildwiederholrate</string>
+
+    <!-- Touch Control Settings -->
+    <string name="touch_control_title">Touch-Steuerung</string>
+    <string name="touch_game_mode_title">Aktivieren</string>
+    <string name="touch_response_title">Berührungsreaktion</string>
+    <string name="touch_response_summary">Einstellen der Touch-Reaktionsfähigkeit</string>
+    <string name="touch_sensitivity_title">Berührungsempfindlichkeit</string>
+    <string name="touch_sensitivity_summary">Einstellen der Touch-Empfindlichkeit bei wiederholtem Tippen</string>
+    <string name="touch_resistant_title">Randbereich-Empfindlichkeit</string>
+    <string name="touch_resistant_summary">Reduziert die Berührungsempfindlichkeit am Bildschirmrand, um versehentliches Auslösen von Bedienelementen zu vermeiden</string>
+
+    <!-- Per-app refresh rate -->
+    <string name="refresh_title">App-spezifische Bildwiederholrate</string>
+    <string name="refresh_summary">Maximale Bildwiederholrate für einzelne Apps festlegen</string>
+    <string name="refresh_default">Standard</string>
+    <string name="refresh_standard">60 Hz</string>    
+    <string name="refresh_extreme">120 Hz</string>    
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Lautsprecher reinigen</string>
+    <string name="clear_speaker_summary">Spielt einen 30-sekündigen Ton ab, um den Lautsprecher von Verunreinigungen zu befreien</string>
+    <string name="clear_speaker_description">Ein- bis zweimal ausführen, falls der Lautsprecher mit Staub verstopft ist; Medienlautstärke dabei auf 100% setzen.\n\nBei stark verschmutztem Lautsprecher zwei- bis fünfmal ausführen und das Gerät mit nach unten gerichtetem Lautsprecher schütteln.\n\nACHTUNG: Auf keinen Fall mit eingesteckten Kopfhörern ausführen!</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="dirac_headset_earbuds">Mi Earbuds</string>
+    <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
+    <string name="dirac_headset_piston_1">Mi Piston-1</string>
+    <string name="dirac_headset_general_inear">General In-Ear</string>
+    <string name="dirac_headset_piston_basic">Basic Edition</string>
+    <string name="dirac_headset_piston_2">Mi Piston-2</string>
+    <string name="dirac_headset_piston_standard">Standard Edition</string>
+    <string name="dirac_headset_piston_youth">Youth Edition</string>
+    <string name="dirac_headset_piston_color">Color Edition</string>
+    <string name="dirac_headset_in_ear">Mi In-Ear</string>
+    <string name="dirac_headset_capsule">Mi Capsule</string>
+    <string name="dirac_headset_in_ear_pro">Mi In-Ear Pro</string>
+    <string name="dirac_headset_comfort">Mi Comfort</string>
+    <string name="dirac_headset_reduction_noise">Mi Noise Cancelling Type-C</string>
+    <string name="dirac_headset_cancelling">Mi Noise Cancelling 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">Mi Half In-Ear</string>
+    <string name="dirac_headset_in_ear2">Mi In-Ear 2</string>
+    <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
+    <string name="dirac_headset_earphone">Mi Earphones</string>
+    <string name="dirac_headset_ear_four">Mi Quadruple Driver Earphones</string>
+    <string name="dirac_headset_piston_typec">Mi In-Ear Headphones (Type-C)</string>
+    <string name="dirac_headset_bluetooth_collar">Mi Bluetooth Neckband</string>
+    <string name="dirac_headset_bluetooth_linefree">Mi Bluetooth Earphones</string>
+    <string name="dirac_headset_redmi_earphones">Redmi Earphones</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_live">Live</string>
+    <string name="dirac_preset_balanced">Ausgeglichen</string>
+    <string name="dirac_preset_bass_reduction">Bassabsenkung</string>
+    <string name="dirac_preset_treble_reduction">Höhenabsenkung</string>
+    <string name="dirac_preset_soft_bass">Sanfter Bass</string>
+    <string name="dirac_preset_soft_treble">Sanfte Höhen</string>
+
+     <!-- Dirac settings: UI strings -->
+     <string name="dirac_enable">Aktivieren</string>
+     <string name="dirac_headset_title">Kopfhörertyp</string>
+     <string name="dirac_preset_title">Voreinstellung</string>
+     <string name="dirac_hifi_title">Hi-Fi</string>
+     <string name="dirac_hifi_summary">Hi-Fi-Modus für unterstützte Geräte aktivieren</string>
+
+    <!-- Scene Selection -->
+    <string name="music_headset_scenario_select">Szene auswählen</string>
+    <string name="music_headset_scenario_intelligent">Intelligent</string>
+    <string name="music_headset_scenario_music">Musik</string>
+    <string name="music_headset_scenario_video">Video</string>
+    <string name="music_headset_scenario_vocal">Stimme</string>
+
+    <!-- High Touch Polling -->
+    <string name="htsr_title">Berührungsempfindlichkeit</string>
+    <string name="htsr_enable_title">Erhöhte Berührungsempfindlichkeit</string>
+    <string name="htsr_enable_summary">Erhöht die Touch-Abfragerate und senkt so die Eingabelatenz</string>    
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">Anti-Flimmer-Modus</string>
+    <string name="dc_dimming_enable_summary">DC-Dimming ist augenfreundlicher bei schwachem Umgebungslicht (Wirkt sich aber negativ auf Bildqualität aus)</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC-Dimming wird vom derzeit verwendeten Kernel nicht unterstützt</string>
+
+    <!--Display settings fragment -->
+    <string name="display_settings_title">Benutzerdefinierte Display-Einstellungen</string>
+    <string name="display_settings_summary">DC Dimming, High Brightness Mode</string>
+
+    <!-- HBM settings -->
+    <string name="hbm_mode_title">High-Brightness-Modus</string>
+    <string name="hbm_mode_summary">Im High-Brightness-Modus kann die Bildschirmhelligkeit über den Standard-Maximalwert hinaus erhöht und so die Sichtbarkeit bei direkter Sonneneinstrahlung verbessert werden.</string>
+    <string name="hbm_enable_summary_not_supported">HBM wird vom derzeit verwendeten Kernel nicht unterstützt</string>
+
+</resources>
