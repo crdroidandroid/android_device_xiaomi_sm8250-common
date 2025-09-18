@@ -47,15 +47,14 @@
  }
  
  int32_t getTorchDefaultStrengthLevelExt() {
-     // Our default value is 75. This corresponds to 15%.
-     // As we have changed the maximum value, 59% now corresponds to 75.
-     return 59;
+     // Let's just use 40% of max strength we use below
+     return 120;
  }
  
  int32_t getTorchMaxStrengthLevelExt() {
-     // 255 out of 500 is a sane brightness.
-     // Let's cap it to 255 as max, we can go much higher, but I don't want to test this.
-     return 255;
+     // 300 seems good w.r.t max 750 for this device
+     // Let's cap it to 300 as max, we can go much higher, but I don't want to test this.
+     return 300;
  }
  
  int32_t getTorchStrengthLevelExt() {
