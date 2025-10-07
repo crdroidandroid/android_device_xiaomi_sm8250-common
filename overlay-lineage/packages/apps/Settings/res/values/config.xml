@@ -6,4 +6,7 @@
 <resources>
     <!-- Show battery cycle count -->
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+    
+    <!-- Whether to show double tap ambient settings -->
+    <bool name="config_supports_double_tap_ambient" translatable="false">true</bool>
 </resources>
