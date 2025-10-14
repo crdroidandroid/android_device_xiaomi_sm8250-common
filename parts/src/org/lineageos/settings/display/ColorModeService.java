@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Paranoid Android
+ * Copyright (C) 2023-2024 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -29,23 +29,26 @@ public class ColorModeService extends Service {
     private static final int DEFAULT_COLOR_MODE = SystemProperties.getInt(
             "persist.sys.sf.native_mode", 0);
 
-    /* color mode -> displayfeature (mode, value, cookie) */
-    private static final Map<Integer, DfParams> COLOR_MAP = Map.of(
-    258 /* vivid */, new DfParams(0, 2, 255),
-    256 /* saturated */, new DfParams(1, 2, 255),
-    257 /* original color PRO */, new DfParams(2, 2, 255),
-    266 /* original (advanced) */, new DfParams(26, 1, 0),
-    268 /* p3 */, new DfParams(26, 2, 0),
-    267 /* srgb */, new DfParams(26, 3, 0)
-    );
+    private static final DfParams STANDARD_PARAMS = new DfParams(2, 2, 255);
+
     /* original/p3/srgb */
     private static final int EXPERT_MODE = 26;
-    private static final DfParams EXPERT_PARAMS = new DfParams(26, 0, 10);
+    private static final DfParams EXPERT_PARAMS = new DfParams(EXPERT_MODE, 0, 10);
+
+    /* color mode -> displayfeature (mode, value, cookie) */
+    private static final Map<Integer, DfParams> COLOR_MAP = Map.of(
+        258, new DfParams(0, 2, 255),  // Vivid
+        256, new DfParams(1, 2, 255),  // Saturated
+        257, STANDARD_PARAMS,          // Original Colour Pro
+        266, new DfParams(26, 1, 0),   // Original (advanced)
+        268, new DfParams(26, 2, 0),   // P3
+        267, new DfParams(26, 3, 0)    // sRGB
+    );
 
     private final ContentObserver mSettingObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange) {
-            Log.e(TAG, "SettingObserver: onChange");
+            if (DEBUG) Log.d(TAG, "SettingObserver: onChange");
             setCurrentColorMode();
         }
     };
@@ -53,21 +56,22 @@ public class ColorModeService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.e(TAG, "onCreate");
-        getContentResolver().registerContentObserver(Settings.System.getUriFor(DISPLAY_COLOR_MODE),
-                    false, mSettingObserver, UserHandle.USER_CURRENT);
+        if (DEBUG) Log.d(TAG, "onCreate");
+        getContentResolver().registerContentObserver(
+                Settings.System.getUriFor(DISPLAY_COLOR_MODE),
+                false, mSettingObserver, UserHandle.USER_CURRENT);
         setCurrentColorMode();
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.e(TAG, "onStartCommand");
+        if (DEBUG) Log.d(TAG, "onStartCommand");
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
-        Log.e(TAG, "onDestroy");
+        if (DEBUG) Log.d(TAG, "onDestroy");
         getContentResolver().unregisterContentObserver(mSettingObserver);
         super.onDestroy();
     }
@@ -80,12 +84,13 @@ public class ColorModeService extends Service {
     private void setCurrentColorMode() {
         final int colorMode = Settings.System.getIntForUser(getContentResolver(),
                 DISPLAY_COLOR_MODE, DEFAULT_COLOR_MODE, UserHandle.USER_CURRENT);
-        if (!COLOR_MAP.containsKey(colorMode)) {
-            Log.e(TAG, "setCurrentColorMode: " + colorMode + " is not in colorMap!");
-            return;
-        }
-        final DfParams params = COLOR_MAP.get(colorMode);
-        Log.e(TAG, "setCurrentColorMode: " + colorMode + ", params=" + params);
+        
+        // Use getOrDefault to handle unknown color modes gracefully
+        final DfParams params = COLOR_MAP.getOrDefault(colorMode, STANDARD_PARAMS);
+        
+        if (DEBUG) Log.d(TAG, "setCurrentColorMode: " + colorMode + ", params=" + params);
+        
+        // Set expert params first if this is an expert mode
         if (params.mode == EXPERT_MODE) {
             DfWrapper.setDisplayFeature(EXPERT_PARAMS);
         }
