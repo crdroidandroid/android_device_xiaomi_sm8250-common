@@ -75,7 +75,7 @@ TARGET_USES_FOD_ZPOS := true
 endif
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # Firmware
 -include vendor/xiaomi/munch-firmware/BoardConfigVendor.mk
@@ -104,7 +104,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
 
 # Media
 TARGET_USES_ION := true
-
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -145,11 +144,11 @@ BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
 
 # Properties
-TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_ODM_PROP += $(COMMON_PATH)/props/odm.prop
+TARGET_SYSTEM_PROP += $(COMMON_PATH)/props/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/props/vendor.prop
 ifneq ($(TARGET_IS_TABLET),true)
-TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor_phone.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/props/vendor_phone.prop
 endif
 
 # Recovery
@@ -214,16 +213,17 @@ endif
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/configs/hidl/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/hidl/manifest.xml
 ifneq ($(TARGET_IS_TABLET),true)
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_phone.xml
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/hidl/manifest_phone.xml
 endif
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += nfc
-ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
+ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/configs/hidl/manifest_nfc.xml
 
 # Wi-Fi
 BOARD_WLAN_DEVICE := qcwcn
