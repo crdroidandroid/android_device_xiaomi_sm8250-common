@@ -13,12 +13,12 @@
 
 using android::base::GetProperty;
 
-#define HWC_PROP "ro.boot.hwc"
-#define SKU_PROP "ro.boot.product.hardware.sku"
+static const std::string kHwcProp = "ro.boot.hwc";
+static const std::string kSkuProp = "ro.boot.product.hardware.sku";
 
 void search_variant(const std::vector<variant_info>& variants) {
-    std::string hwc_value = GetProperty(HWC_PROP, "");
-    std::string sku_value = GetProperty(SKU_PROP, "");
+    std::string hwc_value = GetProperty(kHwcProp, "");
+    std::string sku_value = GetProperty(kSkuProp, "");
 
     for (const auto& variant : variants) {
         if ((variant.hwc_value == "" || variant.hwc_value == hwc_value) &&
@@ -50,6 +50,6 @@ void set_variant_props(const variant_info& variant) {
     }
 
     if (variant.nfc) {
-        property_override(SKU_PROP, "nfc");
+        property_override(kSkuProp, "nfc");
     }
 }
