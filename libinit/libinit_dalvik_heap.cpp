@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <libinit_dalvik_heap.h>
+#include "include/libinit_dalvik_heap.h"
 
-#include <libinit_utils.h>
+#include "include/libinit_utils.h"
 
 #include <sys/sysinfo.h>
 #include <string>

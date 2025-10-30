@@ -6,7 +6,7 @@
 
 #include "vendor_init.h"
 
-#include <libinit_dalvik_heap.h>
+#include "include/libinit_dalvik_heap.h"
 
 void vendor_load_properties() {
     set_dalvik_heap();
