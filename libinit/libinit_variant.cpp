@@ -4,11 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <android-base/logging.h>
-#include <android-base/properties.h>
+#include <libinit_variant.h>
+
 #include <libinit_utils.h>
 
-#include <libinit_variant.h>
+#include <android-base/logging.h>
+#include <android-base/properties.h>
 
 using android::base::GetProperty;
 
