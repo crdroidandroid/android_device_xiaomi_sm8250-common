@@ -49,5 +49,7 @@ void set_variant_props(const variant_info& variant) {
                           fingerprint_to_description(variant.build_fingerprint));
     }
 
-    if (variant.nfc) property_override(SKU_PROP, "nfc");
+    if (variant.nfc) {
+        property_override(SKU_PROP, "nfc");
+    }
 }
