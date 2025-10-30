@@ -21,11 +21,16 @@ void search_variant(const std::vector<variant_info>& variants) {
     std::string sku_value = GetProperty(kSkuProp, "");
 
     for (const auto& variant : variants) {
-        if ((variant.hwc_value == "" || variant.hwc_value == hwc_value) &&
-            (variant.sku_value == "" || variant.sku_value == sku_value)) {
-            set_variant_props(variant);
-            break;
+        if (variant.hwc_value != "" && variant.hwc_value != hwc_value) {
+            continue;
         }
+
+        if (variant.sku_value != "" && variant.sku_value != sku_value) {
+            continue;
+        }
+
+        set_variant_props(variant);
+        return;
     }
 }
 
