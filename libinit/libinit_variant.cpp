@@ -10,6 +10,7 @@
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
+#include <string>
 
 using android::base::GetProperty;
 
