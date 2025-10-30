@@ -16,7 +16,7 @@ using android::base::GetProperty;
 #define HWC_PROP "ro.boot.hwc"
 #define SKU_PROP "ro.boot.product.hardware.sku"
 
-void search_variant(const std::vector<variant_info> variants) {
+void search_variant(const std::vector<variant_info>& variants) {
     std::string hwc_value = GetProperty(HWC_PROP, "");
     std::string sku_value = GetProperty(SKU_PROP, "");
 
@@ -29,7 +29,7 @@ void search_variant(const std::vector<variant_info> variants) {
     }
 }
 
-void set_variant_props(const variant_info variant) {
+void set_variant_props(const variant_info& variant) {
     // Older devices don't have marketname
     auto marketname = !variant.marketname.empty() ? variant.marketname : variant.model;
 

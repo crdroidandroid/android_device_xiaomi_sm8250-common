@@ -10,7 +10,7 @@
 #include <sys/_system_properties.h>
 #include <vector>
 
-void property_override(std::string prop, std::string value, bool add) {
+void property_override(const std::string& prop, const std::string& value, bool add) {
     auto pi = (prop_info*)__system_property_find(prop.c_str());
     if (pi != nullptr) {
         __system_property_update(pi, value.c_str(), value.length());
@@ -44,7 +44,7 @@ void set_ro_build_prop(const std::string& prop, const std::string& value, bool p
     s.append(" ");                  \
     s.append(to_append);
 
-std::string fingerprint_to_description(std::string fingerprint) {
+std::string fingerprint_to_description(const std::string& fingerprint) {
     std::string delimiter = "/";
     std::string delimiter2 = ":";
     std::string build_fingerprint_copy = fingerprint;

@@ -23,6 +23,6 @@ struct variant_info {
     bool nfc;
 };
 
-void search_variant(const std::vector<variant_info> variants);
+void search_variant(const std::vector<variant_info>& variants);
 
-void set_variant_props(const variant_info variant);
+void set_variant_props(const variant_info& variant);
