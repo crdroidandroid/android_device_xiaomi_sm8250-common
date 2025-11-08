@@ -19,6 +19,7 @@
 package org.lineageos.settings.thermal;
 
 import android.annotation.TargetApi;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.service.quicksettings.TileService;
 
@@ -54,6 +55,8 @@ public class ThermalTileService extends TileService {
         super.onClick();
         Intent ThermalProfiles = new Intent(this, ThermalActivity.class);
         ThermalProfiles.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivityAndCollapse(ThermalProfiles);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, ThermalProfiles,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        startActivityAndCollapse(pendingIntent);
     }
 }
