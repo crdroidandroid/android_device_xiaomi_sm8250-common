@@ -32,10 +32,10 @@ vendor/lib/libssrec.so
 
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
 
 # Audio FX MiSound module
 vendor/lib/soundfx/libmisoundfx.so
@@ -207,22 +207,22 @@ system_ext/lib64/vendor.xiaomi.hardware.displayfeature_aidl-V2-ndk.so
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
 vendor/etc/dolby/dax-default.xml|31fd7e38264f174dc27469c66828d0978307f1bb
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/media_codecs_dolby_audio.xml
 vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/lib/libdapparamstorage.so
-vendor/lib/libdeccfg.so
-vendor/lib/libstagefright_soft_ac4dec.so
-vendor/lib/libstagefright_soft_ddpdec.so
+vendor/etc/media_codecs_dolby_audio.xml
 vendor/lib/soundfx/libhwdap.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib/soundfx/libswvqe.so
+vendor/lib/libdapparamstorage.so
+vendor/lib/libdeccfg.so
+vendor/lib/libstagefright_soft_ac4dec.so
+vendor/lib/libstagefright_soft_ddpdec.so
+vendor/lib/libstagefrightdolby.so
 vendor/lib/vendor.dolby.hardware.dms@2.0.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdlbdsservice.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
-vendor/lib/libstagefrightdolby.so
 
 # DPM
 system/framework/tcmclient.jar
@@ -534,20 +534,20 @@ vendor/lib64/unnhal-acc-hvx.so
 vendor/bin/nv_mac
 
 # OMX
-vendor/lib/libOmxAacEnc.so
 vendor/lib/libOmxAacDec.so
+vendor/lib/libOmxAacEnc.so
 vendor/lib/libOmxAlacDec.so
-vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxAmrDec.so
+vendor/lib/libOmxAmrEnc.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxDsdDec.so
-vendor/lib/libOmxEvrcEnc.so
 vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxG711Enc.so
+vendor/lib/libOmxEvrcEnc.so
 vendor/lib/libOmxG711Dec.so
-vendor/lib/libOmxQcelp13Enc.so
+vendor/lib/libOmxG711Enc.so
 vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxQcelp13Enc.so
 vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
 vendor/lib/libOmxVpp.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
