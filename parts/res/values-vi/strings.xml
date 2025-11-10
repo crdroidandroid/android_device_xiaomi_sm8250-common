@@ -135,4 +135,142 @@
     <string name="dc_dimming_enable_title">Chống nhấp nháy</string>
     <string name="dc_dimming_enable_summary">Giảm mỏi mắt trong điều kiện ánh sáng yếu</string>
     <string name="dc_dimming_enable_summary_not_supported">Chức năng hiện không được hỗ trợ bởi kernel</string>
+
+    <!-- GameBar Overlay -->
+    <string name="game_bar_title">GameBar</string>
+    <string name="game_bar_summary">Bật lớp phủ hệ thống (FPS, Nhiệt độ, v.v.)</string>
+    <string name="overlay_permission_required">Cần quyền hiển thị lớp phủ</string>
+    <string name="overlay_permission_granted">Đã cấp quyền hiển thị lớp phủ</string>
+    <string name="overlay_permission_denied">Quyền hiển thị lớp phủ bị từ chối</string>
+    <string name="game_bar_tile_label">GameBar</string>
+    <string name="game_bar_tile_description">Bật/tắt lớp phủ GameBar</string>
+
+    <!-- Main Switch -->
+    <string name="game_bar_enable_title">Bật lớp phủ GameBar</string>
+    <string name="game_bar_enable_summary">Hiển thị lớp phủ với các chỉ số hiệu năng theo thời gian thực khi chơi game</string>
+
+    <!-- Overlay Features -->
+    <string name="game_bar_overlay_features_title">Tính năng lớp phủ</string>
+    <string name="game_bar_fps_enable_title">Hiển thị FPS</string>
+    <string name="game_bar_fps_enable_summary">Hiển thị số khung hình trên giây (FPS) hiện tại trên màn hình</string>
+    <string name="game_bar_temp_enable_title">Nhiệt độ thiết bị</string>
+    <string name="game_bar_temp_enable_summary">Hiển thị nhiệt độ của thiết bị (pin)</string>
+    <string name="game_bar_cpu_usage_enable_title">Mức sử dụng CPU</string>
+    <string name="game_bar_cpu_usage_enable_summary">Hiển thị phần trăm CPU đang sử dụng</string>
+    <string name="game_bar_cpu_clock_enable_title">Tốc độ xung CPU</string>
+    <string name="game_bar_cpu_clock_enable_summary">Hiển thị tốc độ xung hiện tại của từng lõi CPU</string>
+    <string name="game_bar_cpu_temp_enable_title">Nhiệt độ CPU</string>
+    <string name="game_bar_cpu_temp_enable_summary">Hiển thị nhiệt độ CPU (thermal_zone0)</string>
+    <string name="game_bar_ram_enable_title">Bộ nhớ RAM</string>
+    <string name="game_bar_ram_enable_summary">Hiển thị mức sử dụng RAM hiện tại (MB)</string>
+    <string name="game_bar_gpu_usage_enable_title">Mức sử dụng GPU</string>
+    <string name="game_bar_gpu_usage_enable_summary">Hiển thị phần trăm GPU đang sử dụng</string>
+    <string name="game_bar_gpu_clock_enable_title">Tốc độ xung GPU</string>
+    <string name="game_bar_gpu_clock_enable_summary">Hiển thị tần số xung GPU hiện tại</string>
+    <string name="game_bar_gpu_temp_enable_title">Nhiệt độ GPU</string>
+    <string name="game_bar_gpu_temp_enable_summary">Hiển thị nhiệt độ GPU hiện tại</string>
+
+    <!-- FPS Measurement Method -->
+    <string name="game_bar_fps_method_category_title">Phương pháp đo FPS</string>
+    <string name="game_bar_fps_method_title">Chọn phương pháp đo FPS</string>
+    <string name="game_bar_fps_method_summary">Chọn giữa phương pháp API mới (mặc định) hoặc Sysfs cũ</string>
+
+    <!-- Customization -->
+    <string name="game_bar_customization_title">Tùy chỉnh</string>
+    <string name="game_bar_text_size_title">Kích thước chữ</string>
+    <string name="game_bar_text_size_summary">Điều chỉnh kích thước văn bản hiển thị trên lớp phủ</string>
+    <string name="game_bar_background_alpha_title">Độ trong suốt nền</string>
+    <string name="game_bar_background_alpha_summary">Điều chỉnh mức độ trong suốt của nền lớp phủ</string>
+    <string name="game_bar_corner_radius_title">Độ bo góc lớp phủ</string>
+    <string name="game_bar_corner_radius_summary">Điều chỉnh độ cong của góc lớp phủ</string>
+    <string name="game_bar_padding_title">Khoảng đệm lớp phủ</string>
+    <string name="game_bar_padding_summary">Điều chỉnh khoảng cách giữa nội dung và viền lớp phủ</string>
+    <string name="game_bar_item_spacing_title">Khoảng cách giữa các dòng</string>
+    <string name="game_bar_item_spacing_summary">Điều chỉnh khoảng cách giữa các dòng thông tin</string>
+    <string name="game_bar_update_interval_title">Chu kỳ cập nhật</string>
+    <string name="game_bar_update_interval_summary">Thiết lập tần suất cập nhật dữ liệu lớp phủ</string>
+    <string name="game_bar_title_color_title">Màu tiêu đề thông số</string>
+    <string name="game_bar_title_color_summary">Màu cho chữ tiêu đề \'FPS\', \'Nhiệt độ\', \'CPU\', v.v.</string>
+    <string name="game_bar_value_color_title">Màu giá trị thông số</string>
+    <string name="game_bar_value_color_summary">Màu cho các giá trị số (ví dụ: \'29\', \'32.0°C\')</string>
+    <string name="game_bar_position_title">Vị trí lớp phủ</string>
+    <string name="game_bar_position_summary">Chọn vị trí hiển thị lớp phủ trên màn hình</string>
+    <string name="game_bar_format_title">Định dạng lớp phủ</string>
+    <string name="game_bar_format_summary">Chọn hiển thị Đầy đủ hoặc Tối giản</string>
+
+    <!-- Split Config -->
+    <string name="game_bar_split_config_title">Cấu hình chia bố cục</string>
+    <string name="game_bar_split_mode_title">Chế độ chia</string>
+    <string name="game_bar_split_mode_summary">Chọn hiển thị song song hoặc chồng dọc</string>
+
+    <!-- Overlay Gesture Controls -->
+    <string name="game_bar_gesture_controls_title">Cử chỉ điều khiển lớp phủ</string>
+    <string name="game_bar_single_tap_toggle_title">Bật chạm một lần để chuyển đổi</string>
+    <string name="game_bar_single_tap_toggle_summary">Chạm một lần để chuyển đổi giữa chế độ đầy đủ và tối giản</string>
+    <string name="game_bar_doubletap_capture_title">Bật chạm hai lần để ghi log</string>
+    <string name="game_bar_doubletap_capture_summary">Chạm hai lần để bắt đầu/dừng ghi lại dữ liệu</string>
+    <string name="game_bar_longpress_enable_title">Bật giữ lâu</string>
+    <string name="game_bar_longpress_enable_summary">Giữ lâu trên lớp phủ để mở cài đặt GameBar</string>
+    <string name="game_bar_longpress_timeout_title">Thời gian giữ lâu</string>
+    <string name="game_bar_longpress_timeout_summary">Thiết lập thời gian cần giữ để kích hoạt thao tác giữ lâu</string>
+
+    <!-- Capture Logs -->
+    <string name="game_bar_capture_logs_title">Ghi lại dữ liệu</string>
+    <string name="game_bar_capture_start_title">Bắt đầu ghi</string>
+    <string name="game_bar_capture_start_summary">Bắt đầu ghi lại FPS và dữ liệu hiệu năng theo thời gian thực</string>
+    <string name="game_bar_capture_stop_title">Dừng ghi</string>
+    <string name="game_bar_capture_stop_summary">Dừng ghi lại FPS và dữ liệu hiệu năng</string>
+    <string name="game_bar_capture_export_title">Xuất dữ liệu GameBar</string>
+    <string name="game_bar_capture_export_summary">Lưu dữ liệu FPS và hiệu năng đã ghi ra tệp CSV</string>
+    <string name="game_bar_capture_stopped">Đã dừng ghi</string>
+    <string name="game_bar_capture_started">Bắt đầu ghi</string>
+    <string name="game_bar_capture_exported">Đã xuất dữ liệu ra file</string>
+
+    <!-- Auto Enable -->
+    <string name="game_bar_auto_enable_title">Tự động bật GameBar</string>
+    <string name="game_bar_auto_enable_switch_title">Tự động bật GameBar cho ứng dụng đã chọn</string>
+    <string name="game_bar_auto_enable_switch_summary">Nếu bật, các ứng dụng đã chọn sẽ tự bật GameBar ngay cả khi công tắc chính tắt</string>
+    <string name="game_bar_app_selector_title">Chọn ứng dụng</string>
+    <string name="game_bar_app_selector_summary">Thêm ứng dụng cần tự động bật GameBar</string>
+    <string name="game_bar_app_remover_title">Xóa ứng dụng đã chọn</string>
+    <string name="game_bar_app_remover_summary">Xóa ứng dụng khỏi danh sách tự bật GameBar</string>
+
+    <!-- Update Interval -->
+    <string name="game_bar_update_interval_500ms">Mỗi 500ms</string>
+    <string name="game_bar_update_interval_1000ms">Mỗi giây</string>
+    <string name="game_bar_update_interval_2000ms">Mỗi 2 giây</string>
+    <string name="game_bar_update_interval_5000ms">Mỗi 5 giây</string>
+
+    <!-- Position -->
+    <string name="game_bar_position_top_left">Trên cùng bên trái</string>
+    <string name="game_bar_position_top_center">Trên cùng giữa</string>
+    <string name="game_bar_position_top_right">Trên cùng bên phải</string>
+    <string name="game_bar_position_bottom_left">Dưới cùng bên trái</string>
+    <string name="game_bar_position_bottom_center">Dưới cùng giữa</string>
+    <string name="game_bar_position_bottom_right">Dưới cùng bên phải</string>
+    <string name="game_bar_position_draggable">Tùy chỉnh kéo thả</string>
+
+    <!-- GameBar Colors -->
+    <string name="game_bar_color_white">Trắng</string>
+    <string name="game_bar_color_crimson">Đỏ tươi</string>
+    <string name="game_bar_color_fruit_salad">Xanh lá</string>
+    <string name="game_bar_color_royal_blue">Xanh hoàng gia</string>
+    <string name="game_bar_color_amber">Hổ phách</string>
+    <string name="game_bar_color_teal">Xanh ngọc</string>
+    <string name="game_bar_color_electric_violet">Tím điện</string>
+    <string name="game_bar_color_magenta">Hồng cánh sen</string>
+
+    <!-- Overlay format -->
+    <string name="game_bar_format_full">Đầy đủ</string>
+    <string name="game_bar_format_minimal">Tối giản</string>
+
+    <!-- Split Mode -->
+    <string name="game_bar_split_side_by_side">Bên cạnh nhau</string>
+    <string name="game_bar_split_stacked">Chồng lên nhau</string>
+
+    <!-- Long press timeouts -->
+    <string name="game_bar_longpress_1s">1 giây</string>
+    <string name="game_bar_longpress_3s">3 giây</string>
+    <string name="game_bar_longpress_5s">5 giây</string>
+    <string name="game_bar_longpress_10s">10 giây</string>
 </resources>

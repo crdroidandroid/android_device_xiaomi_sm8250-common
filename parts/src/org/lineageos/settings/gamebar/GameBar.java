@@ -144,10 +144,10 @@ public class GameBar {
                 if (mDoubleTapCaptureEnabled) {
                     if (GameDataExport.getInstance().isCapturing()) {
                         GameDataExport.getInstance().stopCapture();
-                        Toast.makeText(mContext, "Capture Stopped", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, R.string.game_bar_capture_stopped, Toast.LENGTH_SHORT).show();
                     } else {
                         GameDataExport.getInstance().startCapture();
-                        Toast.makeText(mContext, "Capture Started", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, R.string.game_bar_capture_started, Toast.LENGTH_SHORT).show();
                     }
                     return true;
                 }

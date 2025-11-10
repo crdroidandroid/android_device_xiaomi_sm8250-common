@@ -219,21 +219,21 @@ public class GameBarFragment extends PreferenceFragmentCompat {
         if (mCaptureStartPref != null) {
             mCaptureStartPref.setOnPreferenceClickListener(pref -> {
                 GameDataExport.getInstance().startCapture();
-                Toast.makeText(getContext(), "Started logging Data", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.game_bar_capture_started, Toast.LENGTH_SHORT).show();
                 return true;
             });
         }
         if (mCaptureStopPref != null) {
             mCaptureStopPref.setOnPreferenceClickListener(pref -> {
                 GameDataExport.getInstance().stopCapture();
-                Toast.makeText(getContext(), "Stopped logging Data", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.game_bar_capture_stopped, Toast.LENGTH_SHORT).show();
                 return true;
             });
         }
         if (mCaptureExportPref != null) {
             mCaptureExportPref.setOnPreferenceClickListener(pref -> {
                 GameDataExport.getInstance().exportDataToCsv();
-                Toast.makeText(getContext(), "Exported log data to file", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.game_bar_capture_exported, Toast.LENGTH_SHORT).show();
                 return true;
             });
         }
