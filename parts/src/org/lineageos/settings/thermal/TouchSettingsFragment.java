@@ -15,13 +15,12 @@
  */
 package org.lineageos.settings.thermal;
 
-import android.app.ActionBar;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 
+import android.view.MenuItem;
+
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
@@ -31,7 +30,8 @@ import org.lineageos.settings.R;
 import org.lineageos.settings.widget.SeekBarPreference;
 
 public class TouchSettingsFragment extends PreferenceFragment
-        implements SharedPreferences.OnSharedPreferenceChangeListener, OnCheckedChangeListener {
+        implements SharedPreferences.OnSharedPreferenceChangeListener,
+        Preference.OnPreferenceChangeListener {
 
     private SharedPreferences mSharedPrefs;
     private SeekBarPreference mTouchSensitivity;
@@ -56,7 +56,9 @@ public class TouchSettingsFragment extends PreferenceFragment
         getActivity().setTitle(getResources().getString(R.string.touch_control_title));
 
         mGameMode = (MainSwitchPreference) findPreference(Constants.PREF_TOUCH_GAME_MODE);
-        mGameMode.addOnSwitchChangeListener(this);
+        if (mGameMode != null) {
+            mGameMode.setOnPreferenceChangeListener(this);
+        }
 
         mTouchResistant = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESISTANT);
         mTouchResponse = (SeekBarPreference) findPreference(Constants.PREF_TOUCH_RESPONSE);
@@ -100,11 +102,14 @@ public class TouchSettingsFragment extends PreferenceFragment
     }
 
     @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        mGameMode.setChecked(isChecked);
-        mTouchSensitivity.setEnabled(isChecked);
-        mTouchResponse.setEnabled(isChecked);
-        mTouchResistant.setEnabled(isChecked);
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (Constants.PREF_TOUCH_GAME_MODE.equals(preference.getKey())) {
+            boolean isChecked = (Boolean) newValue;
+            mTouchSensitivity.setEnabled(isChecked);
+            mTouchResponse.setEnabled(isChecked);
+            mTouchResistant.setEnabled(isChecked);
+        }
+        return true;
     }
 
     private void updateDefaults() {
