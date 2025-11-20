@@ -17,8 +17,6 @@
 package org.lineageos.settings.dirac;
 
 import android.os.Bundle;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.util.Log;
 
 import androidx.preference.ListPreference;
@@ -32,7 +30,7 @@ import com.android.settingslib.widget.MainSwitchPreference;
 import org.lineageos.settings.R;
 
 public class DiracSettingsFragment extends PreferenceFragment implements
-        OnPreferenceChangeListener, OnCheckedChangeListener {
+        OnPreferenceChangeListener {
 
     private static final String TAG = "DiracSettingsFragment";
     private static final String PREF_ENABLE = "dirac_enable";
@@ -61,8 +59,10 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
         boolean enhancerEnabled = mDiracUtils != null ? mDiracUtils.isDiracEnabled() : false;
         mSwitchBar = (MainSwitchPreference) findPreference(PREF_ENABLE);
-        mSwitchBar.addOnSwitchChangeListener(this);
-        mSwitchBar.setChecked(enhancerEnabled);
+        if (mSwitchBar != null) {
+            mSwitchBar.setChecked(enhancerEnabled);
+            mSwitchBar.setOnPreferenceChangeListener(this);
+        }
 
         mHeadsetType = (ListPreference) findPreference(PREF_HEADSET);
         mHeadsetType.setOnPreferenceChangeListener(this);
@@ -84,6 +84,18 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (PREF_ENABLE.equals(preference.getKey())) {
+            if (mDiracUtils == null) return false;
+
+            boolean isChecked = (Boolean) newValue;
+            mDiracUtils.setEnabled(isChecked);
+            mHifi.setEnabled(isChecked);
+            mHeadsetType.setEnabled(isChecked);
+            mPreset.setEnabled(isChecked);
+            mScenes.setEnabled(isChecked);
+            return true;
+        }
+
         if (mDiracUtils == null) return false;
         switch (preference.getKey()) {
             case PREF_HEADSET:
@@ -101,17 +113,5 @@ public class DiracSettingsFragment extends PreferenceFragment implements
             default:
                 return false;
         }
-    }
-
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        mSwitchBar.setChecked(isChecked);
-
-        if (mDiracUtils == null) return;
-        mDiracUtils.setEnabled(isChecked);
-        mHifi.setEnabled(isChecked);
-        mHeadsetType.setEnabled(isChecked);
-        mPreset.setEnabled(isChecked);
-        mScenes.setEnabled(isChecked);
     }
 }
