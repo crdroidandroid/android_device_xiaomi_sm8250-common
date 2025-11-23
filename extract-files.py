@@ -18,6 +18,8 @@ from extract_utils.fixups_lib import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libinput_shim.so'),
     'vendor/etc/init/init.mi_thermald.rc': blob_fixup()
         .regex_replace('.*seclabel u:r:mi_thermald:s0\n', ''),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
