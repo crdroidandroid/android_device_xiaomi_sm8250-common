@@ -201,6 +201,10 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
 
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/qcom-battery/restrict_chg)
+$(call soong_config_set,lineage_health,fast_charge_value_none,1)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
+
 ifneq ($(TARGET_IS_VAB),true)
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti_recovery
