@@ -204,6 +204,7 @@ ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 ro.config.avoid_gfx_accel=true
 debug.sdm.support_writeback=0
+debug.sf.enable_egl_image_tracker=0
 
 # HVDCP
 persist.vendor.pps.disallowed=1
