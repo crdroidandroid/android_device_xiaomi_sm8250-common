@@ -51,6 +51,7 @@ public class RefreshRateTileService extends TileService {
                 availableRates.add(rate);
             }
         }
+        availableRates.sort(Float::compare);
         syncFromSettings();
     }
 
@@ -66,16 +67,21 @@ public class RefreshRateTileService extends TileService {
     }
 
     private void cycleRefreshRate() {
-        if (activeRateMin < availableRates.size() - 1) {
+        activeRateMax++;
+        if (activeRateMax >= availableRates.size()) {
             activeRateMin++;
-        } else {
-            activeRateMin = 0;
+            if (activeRateMin >= availableRates.size()) {
+                activeRateMin = activeRateMax = 0;
+            } else {
+                activeRateMax = activeRateMin;
+            }
         }
 
-        float rate = availableRates.get(activeRateMin);
-        Settings.System.putFloat(context.getContentResolver(), KEY_MIN_REFRESH_RATE, rate);
-        Settings.System.putFloat(context.getContentResolver(), KEY_PREFERRED_REFRESH_RATE, rate);
-        Settings.System.putFloat(context.getContentResolver(), KEY_PEAK_REFRESH_RATE, rate);
+        float minRate = availableRates.get(activeRateMin);
+        float maxRate = availableRates.get(activeRateMax);
+        Settings.System.putFloat(context.getContentResolver(), KEY_MIN_REFRESH_RATE, minRate);
+        Settings.System.putFloat(context.getContentResolver(), KEY_PREFERRED_REFRESH_RATE, maxRate);
+        Settings.System.putFloat(context.getContentResolver(), KEY_PEAK_REFRESH_RATE, maxRate);
     }
 
     private String getFormatRate(float rate) {
@@ -92,7 +98,6 @@ public class RefreshRateTileService extends TileService {
             getFormatRate(min), getFormatRate(max));
         tile.setContentDescription(displayText);
         tile.setSubtitle(displayText);
-        tile.setState(min == max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
         tile.updateTile();
     }
 
