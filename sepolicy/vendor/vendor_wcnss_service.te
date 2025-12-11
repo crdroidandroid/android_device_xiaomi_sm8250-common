@@ -1,0 +1,3 @@
+# Allow wcnss service (cnss-daemon) to create/read/write calibration files in /data/vendor/wifi
+allow vendor_wcnss_service vendor_wifi_vendor_data_file:dir create_dir_perms;
+allow vendor_wcnss_service vendor_wifi_vendor_data_file:file create_file_perms;
