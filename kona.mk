@@ -312,8 +312,6 @@ PRODUCT_PACKAGES += \
     media_codecs_performance_kona.xml \
     video_system_specs.json
 
-$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
-
 ifneq ($(TARGET_IS_TABLET),true)
 
 # NFC
