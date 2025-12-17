@@ -1,0 +1,4 @@
+allow nfc vendor_nfc_vendor_data_file:dir search;
+
+allow nfc vendor_nfc_vendor_data_file:dir { read getattr open };
+allow nfc vendor_nfc_vendor_data_file:file { read getattr open };
