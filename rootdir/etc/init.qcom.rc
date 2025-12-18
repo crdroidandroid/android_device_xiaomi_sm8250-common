@@ -455,6 +455,10 @@ on property:sys.boot_completed=1
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
 
+    # Charge Bypass
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 
