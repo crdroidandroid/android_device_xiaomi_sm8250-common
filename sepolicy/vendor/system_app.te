@@ -1,5 +1,9 @@
-allow system_app vendor_sysfs_graphics:file { getattr open read };
+allow system_app vendor_sysfs_graphics:file { getattr open read write };
 
 allow system_app zygote:unix_stream_socket getopt;
 allow system_app user_profile_data_file:dir read;
 allow system_app sysfs_zram:file { getattr open read };
+
+# Charge Bypass
+allow system_app vendor_sysfs_battery_supply:dir search;
+allow system_app vendor_sysfs_battery_supply:file { getattr open read write };

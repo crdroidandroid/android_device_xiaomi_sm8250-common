@@ -293,6 +293,45 @@
              </intent-filter>
         </receiver>
         
+        <!-- Bypass Charging -->
+        <activity
+            android:name=".charge.ChargeActivity"
+            android:label="@string/charge_bypass_title"
+            android:exported="true"
+            android:theme="@style/Theme.SubSettingsBase">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.development" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/charge_bypass_summary" />
+        </activity>
+        
+        <!-- Bypass Charging QS Tile -->
+        <service
+            android:name=".charge.BypassChargeTileService"
+            android:exported="true"
+            android:icon="@drawable/charger_24px"
+            android:label="@string/charge_bypass_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        
+        <!-- Disable bypass charging after disabling dev options -->
+        <receiver
+            android:name=".charge.BypassChargeBootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+                </receiver>
+        
     </application>
 
 </manifest>
