@@ -49,11 +49,6 @@ void set_variant_props(const variant_info& variant) {
 
     if (access("/system/bin/recovery", F_OK) != 0) {
         property_override("bluetooth.device.default_name", marketname, true);
-        set_ro_build_prop("fingerprint", variant.build_fingerprint);
-        property_override("ro.bootimage.build.fingerprint", variant.build_fingerprint);
-
-        property_override("ro.build.description",
-                          fingerprint_to_description(variant.build_fingerprint));
     }
 
     if (variant.nfc) {
