@@ -19,11 +19,11 @@ package org.lineageos.settings.charge;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 import org.lineageos.settings.R;
 
-public class ChargeSettingsFragment extends PreferenceFragment 
+public class ChargeSettingsFragment extends PreferenceFragmentCompat 
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_BYPASS_CHARGE = "bypass_charge";
@@ -56,6 +56,18 @@ public class ChargeSettingsFragment extends PreferenceFragment
         if (KEY_BYPASS_CHARGE.equals(preference.getKey())) {
             boolean bypassValue = (Boolean) newValue;
             if (bypassValue) {
+                ChargeUtils.SafetyCheckResult safetyCheck = chargeUtils.performSafetyChecks();
+
+                if (!safetyCheck.isSafe()) {
+                    new AlertDialog.Builder(requireActivity())
+                            .setTitle(R.string.charge_bypass_title)
+                            .setMessage(getString(R.string.charge_bypass_safety_failed, 
+                                    safetyCheck.getReason()))
+                            .setPositiveButton(android.R.string.ok, null)
+                            .show();
+                    return false;
+                }
+
                 new AlertDialog.Builder(requireActivity())
                         .setTitle(R.string.charge_bypass_title)
                         .setMessage(R.string.charge_bypass_warning)
@@ -63,6 +75,10 @@ public class ChargeSettingsFragment extends PreferenceFragment
                             chargeUtils.enableBypassCharge(true);
                             if (bypassChargePreference != null) {
                                 bypassChargePreference.setChecked(true);
+                            }
+                            try {
+                                BypassChargeTileService.updateTile(requireActivity());
+                            } catch (Exception e) {
                             }
                         })
                         .setNegativeButton(android.R.string.cancel, (dialog, which) -> {
@@ -74,6 +90,10 @@ public class ChargeSettingsFragment extends PreferenceFragment
                 return false;
             } else {
                 chargeUtils.enableBypassCharge(false);
+                try {
+                    BypassChargeTileService.updateTile(requireActivity());
+                } catch (Exception e) {
+                }
                 return true;
             }
         }
