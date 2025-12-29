@@ -56,6 +56,13 @@ public class BypassChargeTileService extends TileService {
     @Override
     public void onStartListening() {
         super.onStartListening();
+
+        if (!isDeveloperOptionsEnabled()) {
+            chargeUtils.enableBypassCharge(false);
+            updateTileUI(false);
+            return;
+        }
+
         executorService.execute(() -> {
             boolean enabled = chargeUtils.isBypassChargeEnabled();
             mainHandler.post(() -> updateTileUI(enabled));
@@ -65,6 +72,13 @@ public class BypassChargeTileService extends TileService {
     @Override
     public void onClick() {
         super.onClick();
+
+        if (!isDeveloperOptionsEnabled()) {
+            Toast.makeText(this, "Enable Developer Options first", Toast.LENGTH_SHORT).show();
+            chargeUtils.enableBypassCharge(false);
+            updateTileUI(false);
+            return;
+        }
 
         Tile tile = getQsTile();
         if (tile == null) {
@@ -106,6 +120,12 @@ public class BypassChargeTileService extends TileService {
             tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
             tile.updateTile();
         }
+    }
+
+    private boolean isDeveloperOptionsEnabled() {
+        return android.provider.Settings.Global.getInt(
+                getContentResolver(),
+                android.provider.Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, 0) == 1;
     }
 
     public static void updateTile(Context context) {
