@@ -28,6 +28,9 @@ persist.vendor.dpm.feature=1
 # Fake encryption
 ro.crypto.state=encrypted
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
