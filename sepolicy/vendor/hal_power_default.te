@@ -7,3 +7,5 @@ allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
 
 # Allow power hal r/w to touchfeature
 allow hal_power_default vendor_touchfeature_device:chr_file rw_file_perms;
+
+hal_client_domain(hal_power_default, hal_thermal)
