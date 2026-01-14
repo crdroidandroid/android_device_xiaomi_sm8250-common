@@ -17,4 +17,8 @@
 <resources>
   <!-- Whether to check that the proximity is unblocked before showing the incoming call UI. -->
   <bool name="config_answer_proximity_sensor_enabled">false</bool>
+
+    <!-- Blur radius within launcher elements -->
+    <integer name="max_depth_blur_radius">11</integer>
+    <dimen name="max_depth_blur_radius_enhanced">15dp</dimen>
 </resources>
