@@ -59,4 +59,10 @@
 
     <!-- Indicate the device support request channel on Wi-Fi Aware data-path. -->
     <bool translatable="false" name="config_wifiSupportChannelOnDataPath">true</bool>
+
+    <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
+    <integer name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
+
+    <!-- Integer indicating maximum hardware supported client number of soft ap -->
+    <integer name="config_wifiHardwareSoftapMaxClientCount">32</integer>
 </resources>
