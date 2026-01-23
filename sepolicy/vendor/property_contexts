@@ -56,3 +56,5 @@ persist.vendor.sensor.                                                          
 # Thermal
 persist.vendor.sys.thermal.config                                                                   u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                                                                                 u:object_r:vendor_thermal_normal_prop:s0
+is_expressive_design_enabled                                                                        u:object_r:exported_system_prop:s0
+renderthread.skia.                                                                                  u:object_r:exported_system_prop:s0
