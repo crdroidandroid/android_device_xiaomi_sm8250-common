@@ -200,7 +200,6 @@ on boot
     chown system system /sys/class/thermal/thermal_message/balance_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
 
-    write /sys/block/sda/queue/wbt_lat_usec 75000
 
 
 on property:persist.vendor.sys.fp.fod.large_field=1
