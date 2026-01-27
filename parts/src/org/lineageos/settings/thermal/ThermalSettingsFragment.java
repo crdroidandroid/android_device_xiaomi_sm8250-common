@@ -37,7 +37,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -51,7 +51,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ThermalSettingsFragment extends PreferenceFragment
+public class ThermalSettingsFragment extends PreferenceFragmentCompat
         implements ApplicationsState.Callbacks {
 
     private AllPackagesAdapter mAllPackagesAdapter;
@@ -332,7 +332,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
                     bundle.putString("appName", entry.label);
                     bundle.putString("packageName", entry.info.packageName);
                     touchSettingsFragment.setArguments(bundle);
-                    getActivity().getFragmentManager().beginTransaction()
+                    getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, touchSettingsFragment, "touchSettingsFragment")
                             .addToBackStack(null)
                             .commit();

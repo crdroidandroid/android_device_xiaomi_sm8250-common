@@ -23,7 +23,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
@@ -35,7 +35,7 @@ import org.lineageos.settings.utils.FileUtils;
 
 import java.io.File;
 
-public class DcDimmingSettingsFragment extends PreferenceFragment implements
+public class DcDimmingSettingsFragment extends PreferenceFragmentCompat implements
         OnPreferenceChangeListener {
 
     private SwitchPreferenceCompat mDcDimmingPreference;

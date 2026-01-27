@@ -21,7 +21,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.widget.MainSwitchPreference;
@@ -29,7 +29,7 @@ import com.android.settingslib.widget.MainSwitchPreference;
 import org.lineageos.settings.R;
 import org.lineageos.settings.widget.SeekBarPreference;
 
-public class TouchSettingsFragment extends PreferenceFragment
+public class TouchSettingsFragment extends PreferenceFragmentCompat
         implements SharedPreferences.OnSharedPreferenceChangeListener,
         Preference.OnPreferenceChangeListener {
 
@@ -43,7 +43,7 @@ public class TouchSettingsFragment extends PreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.touch_settings);
+        setPreferencesFromResource(R.xml.touch_settings, rootKey);
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         Bundle bundle = getArguments();

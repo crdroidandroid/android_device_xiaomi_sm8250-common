@@ -23,14 +23,14 @@ import android.content.SharedPreferences;
 import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.touchsampling.TouchSamplingUtils;
 import org.lineageos.settings.utils.FileUtils;
 
-public class TouchSamplingSettingsFragment extends PreferenceFragment implements
+public class TouchSamplingSettingsFragment extends PreferenceFragmentCompat implements
         OnPreferenceChangeListener {
 
     private static final String HTSR_ENABLE_KEY = "htsr_enable";

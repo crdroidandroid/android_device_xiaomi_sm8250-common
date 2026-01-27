@@ -29,7 +29,7 @@ public class TouchSamplingSettingsActivity extends CollapsingToolbarBaseActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+        getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 new TouchSamplingSettingsFragment(), TAG_HTSR).commit();
     }
 }
