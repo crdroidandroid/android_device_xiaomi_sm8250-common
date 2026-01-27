@@ -19,11 +19,11 @@ package org.lineageos.settings.charge;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 import org.lineageos.settings.R;
 
-public class ChargeSettingsFragment extends PreferenceFragmentCompat 
+public class ChargeSettingsFragment extends SettingsBasePreferenceFragment 
         implements Preference.OnPreferenceChangeListener {
 
     private static final String KEY_BYPASS_CHARGE = "bypass_charge";

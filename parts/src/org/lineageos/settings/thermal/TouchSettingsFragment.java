@@ -21,15 +21,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.widget.SeekBarPreference;
 
-public class TouchSettingsFragment extends PreferenceFragmentCompat
+public class TouchSettingsFragment extends SettingsBasePreferenceFragment
         implements SharedPreferences.OnSharedPreferenceChangeListener,
         Preference.OnPreferenceChangeListener {
 
