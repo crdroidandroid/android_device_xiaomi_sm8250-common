@@ -1,0 +1,2 @@
+allow toolbox resourcecache_data_file:dir rw_dir_perms;
+allow toolbox resourcecache_data_file:file unlink;
