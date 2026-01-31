@@ -15,3 +15,5 @@ set_prop(vendor_init, vendor_fingerprint_prop)
 
 # schedtune
 allow vendor_init device:file { create read write };
+
+allow vendor_init proc_sched:file write;
