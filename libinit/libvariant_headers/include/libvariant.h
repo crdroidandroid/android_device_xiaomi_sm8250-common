@@ -21,6 +21,7 @@ struct variant_info {
     std::string model;
     std::string build_fingerprint;
     std::string cert;
+    std::string flavor;
     std::string hwsku;
 
     bool nfc;
