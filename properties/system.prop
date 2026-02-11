@@ -6,6 +6,12 @@ persist.vendor.btstack.enable.twsplussho=true
 # Adaptive Suspend
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
+# Disable WiFi Multi-STA to prevent HAL -95 errors on A16 QPR2
+persist.vendor.wifi.multista=false
+
+# Disable Settings multi-STA feature flag
+persist.sys.fflag.override.settings_wifi_multista=false
+
 # Camera
 camera.disable_zsl_mode=true
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
