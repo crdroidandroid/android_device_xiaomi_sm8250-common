@@ -221,12 +221,8 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 return R.drawable.ic_thermal_dialer;
             case ThermalUtils.STATE_GAMING:
                 return R.drawable.ic_thermal_gaming;
-            case ThermalUtils.STATE_NAVIGATION:
-                return R.drawable.ic_thermal_navigation;
             case ThermalUtils.STATE_STREAMING:
                 return R.drawable.ic_thermal_streaming;
-            case ThermalUtils.STATE_VIDEO:
-                return R.drawable.ic_thermal_video;
             case ThermalUtils.STATE_DEFAULT:
             default:
                 return R.drawable.ic_thermal_default;
@@ -264,9 +260,7 @@ public class ThermalSettingsFragment extends PreferenceFragment
                 R.string.thermal_camera,
                 R.string.thermal_dialer,
                 R.string.thermal_gaming,
-                R.string.thermal_navigation,
-                R.string.thermal_streaming,
-                R.string.thermal_video
+                R.string.thermal_streaming
         };
 
         private ModeAdapter(Context context) {
