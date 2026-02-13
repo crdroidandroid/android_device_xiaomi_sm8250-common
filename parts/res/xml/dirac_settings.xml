@@ -16,6 +16,7 @@
 -->
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/dirac_title">
 
     <com.android.settingslib.widget.MainSwitchPreference
@@ -29,8 +30,8 @@
         android:entryValues="@array/dirac_headset_pref_values"
         android:defaultValue="0"
         android:title="@string/dirac_headset_title"
-        android:summary="%s"
-        android:icon="@drawable/ic_headphone" />
+        android:icon="@drawable/ic_headphone" 
+        app:useSimpleSummaryProvider="true" />
 
     <ListPreference
         android:key="dirac_preset_pref"
@@ -38,8 +39,8 @@
         android:entryValues="@array/dirac_preset_pref_values"
         android:defaultValue="0,0,0,0,0,0,0"
         android:title="@string/dirac_preset_title"
-        android:summary="%s"
-        android:icon="@drawable/ic_preset" />
+        android:icon="@drawable/ic_preset" 
+        app:useSimpleSummaryProvider="true" />
 
     <ListPreference
         android:key="scenario_selection"
@@ -47,8 +48,8 @@
         android:entryValues="@array/scenario_selector_values"
         android:defaultValue="4"
         android:title="@string/music_headset_scenario_select"
-        android:summary="%s"
-        android:icon="@drawable/ic_scenes" />
+        android:icon="@drawable/ic_scenes" 
+        app:useSimpleSummaryProvider="true" />
 
     <SwitchPreferenceCompat
         android:key="dirac_hifi_pref"
