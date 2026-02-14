@@ -6,3 +6,8 @@ persist.arm64.memtag.app.com.android.se=off
 persist.arm64.memtag.app.com.google.android.bluetooth=off 
 persist.arm64.memtag.app.com.android.nfc=off 
 persist.arm64.memtag.process.system_server=off
+
+# RKPD
+remote_provisioning.enable_rkpd=true 
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+remote_provisioning.connect_timeout_millis=2000
