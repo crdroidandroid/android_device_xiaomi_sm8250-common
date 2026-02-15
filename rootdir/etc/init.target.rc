@@ -30,8 +30,6 @@
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
-    write /sys/class/drm/card0/card0-DSI-1/thermal_hbm_disabled 0
-    chmod 0444 /sys/class/drm/card0/card0-DSI-1/thermal_hbm_disabled
 
     # Disable EAS
     write /proc/sys/kernel/sched_energy_aware 0
@@ -134,6 +132,14 @@ on property:ro.boot.dp=0x0
     write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/pshold_reboot 7
 
 on boot
+    # Allow system apps to modify exposure dim layer state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
+
+    # Allow system apps to modify exposure of HBM state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+
     chown system system /sys/class/touch/touch_dev/palm_sensor
     chown system system /sys/class/touch/touch_dev/partial_diff_data
 

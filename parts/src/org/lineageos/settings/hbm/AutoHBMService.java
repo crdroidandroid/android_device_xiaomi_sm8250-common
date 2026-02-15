@@ -24,7 +24,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class AutoHBMService extends Service {
-    private static final String HBM = "/sys/class/drm/card0/card0-DSI-1/disp_param";
+    private static final String HBM = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT = "/sys/class/backlight/panel0-backlight/brightness";
 
     private static boolean mAutoHBMActive = false;
@@ -54,11 +54,11 @@ public class AutoHBMService extends Service {
 
     private void enableHBM(boolean enable) {
         if (enable) {
-            FileUtils.writeLine(HBM, "0x10000");
+            FileUtils.writeLine(HBM, "1");
             FileUtils.writeLine(BACKLIGHT, "2047");
             Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 255);
         } else {
-            FileUtils.writeLine(HBM, "0xF0000");
+            FileUtils.writeLine(HBM, "0");
         }
     }
 

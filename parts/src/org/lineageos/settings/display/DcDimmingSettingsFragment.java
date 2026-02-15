@@ -41,8 +41,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
 
     private SwitchPreference mDcDimmingPreference;
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure";
-    private static final String HBM = "/sys/class/drm/card0/card0-DSI-1/disp_param";
+    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
+    private static final String HBM = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String HBM_KEY = "hbm";
 
     private File hbmFile;
@@ -76,7 +76,7 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
 
     private void disableHBM() {
         // Disable HBM mode
-        FileUtils.writeLine(HBM, "0xF0000");
+        FileUtils.writeLine(HBM, "0");
         // Make HBM mode path read-only
         hbmFile.setReadOnly();
         // Update HBM mode UI tile

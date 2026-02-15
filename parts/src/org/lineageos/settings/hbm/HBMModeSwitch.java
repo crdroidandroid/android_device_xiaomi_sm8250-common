@@ -28,8 +28,8 @@ import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.display.*;
 
 public class HBMModeSwitch implements OnPreferenceChangeListener {
-    private static final String HBM = "/sys/class/drm/card0/card0-DSI-1/disp_param";
-    private static final String BACKLIGHT = "/sys/class/backlight/panel0-backlight/brightness";
+    private static final String HBM = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
+     private static final String BACKLIGHT = "/sys/class/backlight/panel0-backlight/brightness";
     private Context mContext;
 
     public HBMModeSwitch(Context context) {
@@ -57,7 +57,7 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
     	if (dcDimmingEnabled) {
             return false;
         }
-        FileUtils.writeLine(getHBM(), enabled ? "0x10000" : "0xF0000");
+       FileUtils.writeLine(getHBM(), enabled ? "1" : "0"); 
         if (enabled) {
             FileUtils.writeLine(getBACKLIGHT(), "2047");
             Settings.System.putInt(mContext.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 255);
