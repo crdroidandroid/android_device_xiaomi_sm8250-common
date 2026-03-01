@@ -15,29 +15,21 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.dcdimming;
+package org.lineageos.settings.hbm;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
-import android.provider.Settings;
-import android.widget.Toast;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-import java.io.File;
+public class AutoHBMTileService extends TileService {
 
-public class DcDimmingTileService extends TileService {
-
-    private static final String DC_DIMMING_KEY = "dc_dimming";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure";
-    private static final String HBM_KEY = "hbm";
+    private static final String AUTO_HBM_KEY = "auto_hbm";
 
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
@@ -59,7 +51,7 @@ public class DcDimmingTileService extends TileService {
     public void onStartListening() {
         super.onStartListening();
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        updateUI(sharedPrefs.getBoolean(DC_DIMMING_KEY, false));
+        updateUI(sharedPrefs.getBoolean(AUTO_HBM_KEY, false));
     }
 
     @Override
@@ -74,22 +66,11 @@ public class DcDimmingTileService extends TileService {
         SharedPreferences sharedPrefs =
                 PreferenceManager.getDefaultSharedPreferences(this);
 
-        boolean hbmEnabled = sharedPrefs.getBoolean(HBM_KEY, false);
-
-        if (hbmEnabled) {
-            Toast.makeText(
-                    this,
-                    R.string.dc_dimming_disable_hbm_first,
-                    Toast.LENGTH_SHORT
-            ).show();
-            return;
-        }
-
         final boolean enabled =
-                !sharedPrefs.getBoolean(DC_DIMMING_KEY, false);
+                !sharedPrefs.getBoolean(AUTO_HBM_KEY, false);
 
-        FileUtils.writeLine(DC_DIMMING_NODE, enabled ? "1" : "0");
-        sharedPrefs.edit().putBoolean(DC_DIMMING_KEY, enabled).apply();
+        sharedPrefs.edit().putBoolean(AUTO_HBM_KEY, enabled).apply();
+        FileUtils.enableService(this);
         updateUI(enabled);
     }
 }

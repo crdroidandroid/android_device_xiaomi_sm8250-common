@@ -19,8 +19,6 @@ package org.lineageos.settings.hbm;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 

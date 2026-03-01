@@ -1,14 +1,32 @@
+/*
+* Copyright (C) 2016 The OmniROM Project
+* Copyright (C) 2018-2021 crDroid Android Project
+* Copyright (C) 2019-2022 Evolution X Project
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+*/
 package org.lineageos.settings.hbm;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.provider.Settings;
+import android.util.Log;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.TwoStatePreference;
@@ -16,183 +34,46 @@ import androidx.preference.TwoStatePreference;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.R;
 
-public class HBMFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
-    private static final String TAG = "HBMFragment";
+public class HBMFragment extends PreferenceFragment
+        implements Preference.OnPreferenceChangeListener {
+    private static final String TAG = HBMFragment.class.getSimpleName();
 
-    // Constants for preference keys and system nodes
-    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
-    private static final String HBM_ENABLE_KEY = "hbm";
-    private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
-    private static final String AUTO_HBM_ENABLE_KEY = "auto_hbm";
-    private static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
-    
-    // Intent actions
-    private static final String ACTION_HBM_CHANGED = "org.lineageos.settings.device.HBM_CHANGED";
-    private static final String ACTION_AUTO_HBM_CHANGED = "org.lineageos.settings.device.AUTO_HBM_CHANGED";
-    private static final String ACTION_DC_CHANGED = "org.lineageos.settings.device.DC_CHANGED";
+    public static final String HBM_SWITCH_KEY = "hbm";
+    public static final String AUTO_HBM_SWITCH_KEY = "auto_hbm";
+    public static final String AUTO_HBM_THRESHOLD_KEY = "auto_hbm_threshold";
+    public static final String HBM_DISABLE_TIME_KEY = "hbm_disable_time";
 
-    private TwoStatePreference mHBMModeSwitch;
-    private TwoStatePreference mAutoHBMSwitch;
-    private SharedPreferences mSharedPrefs;
-    private Context mContext;
-    private int mPreviousBrightness;
-
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (action == null) return;
-
-            switch (action) {
-                case ACTION_HBM_CHANGED:
-                    updateHBMState();
-                    break;
-                case ACTION_AUTO_HBM_CHANGED:
-                    updateAutoHBMState();
-                    break;
-            }
-        }
-    };
+    private static TwoStatePreference mHBMModeSwitch;
+    private static TwoStatePreference mAutoHBMSwitch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        mContext = getContext();
-        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-        
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getContext());
         addPreferencesFromResource(R.xml.hbm_settings);
-        initializeHBMPreferences();
-        registerReceiver();
-    }
 
-    private void initializeHBMPreferences() {
-        mHBMModeSwitch = findPreference(HBM_ENABLE_KEY);
-        mAutoHBMSwitch = findPreference(AUTO_HBM_ENABLE_KEY);
-        boolean hbmNodeExists = FileUtils.fileExists(HBM_NODE);
-        
-        if (hbmNodeExists) {
-            mHBMModeSwitch.setOnPreferenceChangeListener(this);
-            mAutoHBMSwitch.setOnPreferenceChangeListener(this);
-        } else {
-            mHBMModeSwitch.setSummary(R.string.hbm_enable_summary_not_supported);
-            mHBMModeSwitch.setEnabled(false);
-            mAutoHBMSwitch.setSummary(R.string.hbm_enable_summary_not_supported);
-            mAutoHBMSwitch.setEnabled(false);
-        }
-    }
+        // HBM
+        mHBMModeSwitch = (TwoStatePreference) findPreference(HBM_SWITCH_KEY);
+	    mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch(getContext()));
 
-    private void registerReceiver() {
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(ACTION_DC_CHANGED);
-        filter.addAction(ACTION_HBM_CHANGED);
-        filter.addAction(ACTION_AUTO_HBM_CHANGED);
-        mContext.registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
-    }
-
-    @Override
-    public void onDestroy() {
-        mContext.unregisterReceiver(mReceiver);
-        super.onDestroy();
+        // AutoHBM
+        mAutoHBMSwitch = (TwoStatePreference) findPreference(AUTO_HBM_SWITCH_KEY);
+        mAutoHBMSwitch.setOnPreferenceChangeListener(this);
+        mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false));
     }
 
     public static boolean isAUTOHBMEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(AUTO_HBM_ENABLE_KEY, false);
-    }
-
-    private void updateHBMState() {
-        boolean newState = mSharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
-        mHBMModeSwitch.setChecked(newState);
-    }
-
-    private void updateAutoHBMState() {
-        boolean newState = mSharedPrefs.getBoolean(AUTO_HBM_ENABLE_KEY, false);
-        mAutoHBMSwitch.setChecked(newState);
-    }
-
-    private void handleHBMModeChange(boolean newState) {
-        SharedPreferences.Editor editor = mSharedPrefs.edit();
-        
-        if (newState) {
-            // Store current brightness before enabling HBM
-            mPreviousBrightness = Settings.System.getInt(mContext.getContentResolver(),
-                    Settings.System.SCREEN_BRIGHTNESS, 255);
-            FileUtils.writeLine(HBM_NODE, "1");
-            disableAUTOHBMIfEnabled(editor);
-            disableDCDimmingIfEnabled(editor);
-            updateBrightnessSettings();
-        } else {
-            FileUtils.writeLine(HBM_NODE, "0");
-            // Restore previous brightness
-            Settings.System.putInt(mContext.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 
-                mPreviousBrightness);
-        }
-
-        editor.putBoolean(HBM_ENABLE_KEY, newState).apply();
-        broadcastStateChange(ACTION_HBM_CHANGED, newState);
-    }
-
-    private void handleAutoHBMChange(boolean newState) {
-        SharedPreferences.Editor editor = mSharedPrefs.edit();
-        
-        if (newState) {
-            disableHBMIfEnabled(editor);
-            disableDCDimmingIfEnabled(editor);
-        }
-
-        editor.putBoolean(AUTO_HBM_ENABLE_KEY, newState).apply();
-        broadcastStateChange(ACTION_AUTO_HBM_CHANGED, newState);
-        FileUtils.enableService(mContext);
-    }
-
-    private void disableHBMIfEnabled(SharedPreferences.Editor editor){
-        if (mSharedPrefs.getBoolean(HBM_ENABLE_KEY, false)) {
-            FileUtils.writeLine(HBM_NODE, "0");
-            broadcastStateChange(ACTION_HBM_CHANGED, false);
-            editor.putBoolean(HBM_ENABLE_KEY, false);
-        }  
-    }
-
-    private void disableDCDimmingIfEnabled(SharedPreferences.Editor editor){
-        if (mSharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false)) {
-            broadcastStateChange(ACTION_DC_CHANGED, false);
-            editor.putBoolean(DC_DIMMING_ENABLE_KEY, false);
-        }  
-    }
-
-    private void disableAUTOHBMIfEnabled(SharedPreferences.Editor editor){
-        if (mSharedPrefs.getBoolean(AUTO_HBM_ENABLE_KEY, false)) {
-
-            broadcastStateChange(ACTION_AUTO_HBM_CHANGED, false);
-            editor.putBoolean(AUTO_HBM_ENABLE_KEY, false);
-        }
-    }
-
-    private void updateBrightnessSettings() {
-        FileUtils.writeLine(BACKLIGHT_NODE, "2047");
-        Settings.System.putInt(mContext.getContentResolver(), 
-                Settings.System.SCREEN_BRIGHTNESS, 255);
-    }
-
-    private void broadcastStateChange(String action, boolean state) {
-        Intent intent = new Intent(action);
-        intent.putExtra("state", state);
-        mContext.sendBroadcast(intent);
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean newState = (Boolean) newValue;
-
-        if (preference == mHBMModeSwitch) {
-            handleHBMModeChange(newState);
-            return true;
-        }
-        
         if (preference == mAutoHBMSwitch) {
-            handleAutoHBMChange(newState);
+            Boolean enabled = (Boolean) newValue;
+            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
+            prefChange.putBoolean(AUTO_HBM_SWITCH_KEY, enabled).commit();
+            FileUtils.enableService(getContext());
             return true;
-        }
+           }
 
         return false;
     }

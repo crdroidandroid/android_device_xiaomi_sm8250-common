@@ -117,25 +117,6 @@
     <string name="htsr_enable_title">Tăng Cường độ phản hồi cảm ứng</string>
     <string name="htsr_enable_summary">Tăng tần suất lấy mẫu cảm ứng để giảm độ trễ</string>
 
-    <!-- HBM settings -->
-    <string name="hbm_fragment_title">Chế độ sáng cao</string>
-    <string name="hbm_fragment_summary">Cài đặt cho chế độ sáng cao</string>
-    <string name="hbm_mode_title">Chế độ sáng cao</string>
-    <string name="hbm_mode_summary">Bật độ sáng tối đa</string>
-    <string name="auto_hbm_title">Chế độ sáng cao tự động</string>
-    <string name="auto_hbm_summary">Bật độ sáng tối đa dựa trên điều kiện ánh sáng mặt trời</string>
-    <string name="auto_hbm_threshold_title"></string>
-    <string name="auto_hbm_threshold_summary">Ngưỡng (lux)</string>
-    <string name="hbm_disable_time_title"></string>
-    <string name="hbm_disable_time_summary">Thời gian vô hiệu hóa (giây)</string>
-    <string name="hbm_mode_warning">Cần bật độ sáng tự động để chế độ HBM tự động hoạt động. Sử dụng HBM trong thời gian dài có thể làm hỏng màn hình.</string>
-    <string name="hbm_enable_summary_not_supported">Chức năng hiện không được hỗ trợ bởi kernel</string>
-    
-    <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">Chống nhấp nháy</string>
-    <string name="dc_dimming_enable_summary">Giảm mỏi mắt trong điều kiện ánh sáng yếu</string>
-    <string name="dc_dimming_enable_summary_not_supported">Chức năng hiện không được hỗ trợ bởi kernel</string>
-
     <!-- GameBar Overlay -->
     <string name="game_bar_title">GameBar</string>
     <string name="game_bar_summary">Bật lớp phủ hệ thống (FPS, Nhiệt độ, v.v.)</string>
@@ -273,4 +254,24 @@
     <string name="game_bar_longpress_3s">3 giây</string>
     <string name="game_bar_longpress_5s">5 giây</string>
     <string name="game_bar_longpress_10s">10 giây</string>
+    
+    <!-- HBM settings -->
+    <string name="hbm_fragment_title">Chế độ độ sáng cao</string>
+    <string name="hbm_fragment_summary">Cài đặt cho HBM</string>
+    <string name="hbm_mode_title">HBM</string>
+    <string name="hbm_mode_summary">Bật chế độ độ sáng cao</string>
+    <string name="auto_hbm_title">HBM tự động</string>
+    <string name="auto_hbm_summary">Bật chế độ độ sáng cao dựa trên ánh sáng mặt trời</string>
+    <string name="auto_hbm_threshold_title"></string>
+    <string name="auto_hbm_threshold_summary">Ngưỡng (lux)</string>
+    <string name="hbm_disable_time_title"></string>
+    <string name="hbm_disable_time_summary">Thời gian trễ tắt (giây)</string>
+    <string name="hbm_mode_warning">Sử dụng chế độ độ sáng cao trong thời gian dài có thể làm hỏng màn hình</string>
+    <string name="hbm_disable_dc_dimming_first">Vui lòng tắt DC Dimming trước khi bật High Brightness Mode</string>
+
+    <!-- DC dimming settings -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Giảm mỏi mắt trong điều kiện ánh sáng yếu</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming hiện chưa được kernel hỗ trợ</string>
+    <string name="dc_dimming_disable_hbm_first">Vui lòng tắt High Brightness Mode trước khi bật DC Dimming</string>
 </resources>

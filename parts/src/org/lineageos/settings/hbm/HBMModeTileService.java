@@ -1,138 +1,122 @@
-package org.lineageos.settings.hbm;
+/*
+* Copyright (C) 2018 The OmniROM Project
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+*/
 
-import android.content.BroadcastReceiver;
+package org.lineageos.settings.hbm;
+import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.provider.Settings;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
-
+import android.provider.Settings;
+import android.widget.Toast;
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 public class HBMModeTileService extends TileService {
 
-    // System nodes
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
+    private static final String DC_DIMMING_KEY = "dc_dimming";
+    private static final String HBM_KEY = "hbm";
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
 
-    // Preference keys
-    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String HBM_ENABLE_KEY = "hbm";
-    private static final String AUTO_HBM_ENABLE_KEY = "auto_hbm";
-
-    // Intent actions
-    private static final String ACTION_HBM_CHANGED = "org.lineageos.settings.device.HBM_CHANGED";
-    private static final String ACTION_AUTO_HBM_CHANGED = "org.lineageos.settings.device.AUTO_HBM_CHANGED";
-    private static final String ACTION_DC_CHANGED = "org.lineageos.settings.device.DC_CHANGED";
-
-    private SharedPreferences mSharedPrefs;
-    private int mPreviousBrightness;
-
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (ACTION_HBM_CHANGED.equals(intent.getAction())) {
-                boolean newState = intent.getBooleanExtra("state", false);
-                updateTileState(newState);
-            }
-        }
-    };
+    private void updateUI(boolean enabled) {
+        final Tile tile = getQsTile();
+        tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+        tile.updateTile();
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
     public void onStartListening() {
         super.onStartListening();
-        registerHBMReceiver();
-        updateTileState(isHBMEnabled());
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        updateUI(sharedPrefs.getBoolean(HBM_KEY, false));
     }
 
     @Override
     public void onStopListening() {
         super.onStopListening();
-        unregisterReceiver(mReceiver);
     }
 
     @Override
     public void onClick() {
         super.onClick();
-        toggleHBMState();
-    }
 
-    private void registerHBMReceiver() {
-        IntentFilter filter = new IntentFilter(ACTION_HBM_CHANGED);
-        registerReceiver(mReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
-    }
+        SharedPreferences sharedPrefs =
+                PreferenceManager.getDefaultSharedPreferences(this);
 
-    private void updateTileState(boolean newState) {
-        Tile tile = getQsTile();
-        if (tile != null) {
-            tile.setState(newState ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
-            tile.updateTile();
+        final boolean dcDimmingEnabled =
+                sharedPrefs.getBoolean(DC_DIMMING_KEY, false);
+
+        if (dcDimmingEnabled) {
+            Toast.makeText(
+                    this,
+                    R.string.hbm_disable_dc_dimming_first,
+                    Toast.LENGTH_SHORT
+            ).show();
+            return;
         }
-    }
 
-    private boolean isHBMEnabled() {
-        return mSharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
-    }
+        final boolean enabled =
+                !sharedPrefs.getBoolean(HBM_KEY, false);
 
-    private void toggleHBMState() {
-        boolean newState = !isHBMEnabled();
-        SharedPreferences.Editor editor = mSharedPrefs.edit();
+        if (enabled) {
+            // Save current brightness level
+            int currentBrightness = Settings.System.getInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS,
+                    128
+            );
+            sharedPrefs.edit()
+                    .putInt("last_brightness", currentBrightness)
+                    .apply();
 
-        // Update HBM state
-        if (newState) {
-            // Store current brightness before enabling HBM
-            mPreviousBrightness = Settings.System.getInt(getContentResolver(),
-                    Settings.System.SCREEN_BRIGHTNESS, 255);
             FileUtils.writeLine(HBM_NODE, "1");
-            handleHBMEnable(editor);
+            FileUtils.writeLine(BACKLIGHT_NODE, "2047");
+            Settings.System.putInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS,
+                    255
+            );
         } else {
             FileUtils.writeLine(HBM_NODE, "0");
-            // Restore previous brightness
-            Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 
-                mPreviousBrightness);
+
+            // Restore last brightness level
+            int lastBrightness =
+                    sharedPrefs.getInt("last_brightness", 128);
+            Settings.System.putInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS,
+                    lastBrightness
+            );
         }
 
-        // Save new HBM state and broadcast change
-        editor.putBoolean(HBM_ENABLE_KEY, newState).apply();
-        broadcastStateChange(ACTION_HBM_CHANGED, newState);
-        updateTileState(newState);
-    }
-
-    private void updateBrightnessSettings() {
-        FileUtils.writeLine(BACKLIGHT_NODE, "2047");
-        Settings.System.putInt(getContentResolver(), 
-                Settings.System.SCREEN_BRIGHTNESS, 255);
-    }
-
-    private void handleHBMEnable(SharedPreferences.Editor editor) {
-        // Disable Auto HBM if enabled
-        if (mSharedPrefs.getBoolean(AUTO_HBM_ENABLE_KEY, false)) {
-            editor.putBoolean(AUTO_HBM_ENABLE_KEY, false);
-            broadcastStateChange(ACTION_AUTO_HBM_CHANGED, false);
-        }
-
-        // Disable DC Dimming if enabled
-        if (mSharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false)) {
-            FileUtils.writeLine(DC_DIMMING_NODE, "0");
-            editor.putBoolean(DC_DIMMING_ENABLE_KEY, false);
-            broadcastStateChange(ACTION_DC_CHANGED, false);
-        }
-        updateBrightnessSettings();
-    }
-
-    private void broadcastStateChange(String action, boolean state) {
-        Intent intent = new Intent(action);
-        intent.putExtra("state", state);
-        sendBroadcast(intent);
+        sharedPrefs.edit().putBoolean(HBM_KEY, enabled).apply();
+        updateUI(enabled);
     }
 }
