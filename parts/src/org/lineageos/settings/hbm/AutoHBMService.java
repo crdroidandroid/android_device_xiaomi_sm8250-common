@@ -37,6 +37,7 @@ public class AutoHBMService extends Service {
     private boolean dcDimmingEnabled;
 
     private int mStoredBrightness = -1;
+    private int mStoredBrightnessMode = -1;
 
     public void activateLightSensorRead() {
         submit(() -> {
@@ -56,22 +57,38 @@ public class AutoHBMService extends Service {
 
     private void enableHBM(boolean enable) {
         if (enable) {
-            // Store current brightness before enabling HBM
+            // Store current brightness and auto brightness mode before enabling HBM
             if (mStoredBrightness == -1) {
                 mStoredBrightness = Settings.System.getInt(getContentResolver(),
                         Settings.System.SCREEN_BRIGHTNESS, 255);
             }
+            if (mStoredBrightnessMode == -1) {
+                mStoredBrightnessMode = Settings.System.getInt(getContentResolver(),
+                        Settings.System.SCREEN_BRIGHTNESS_MODE,
+                        Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            }
+
+            // Disable auto brightness to prevent conflict with HBM
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+
             FileUtils.writeLine(HBM_NODE, "1");
             FileUtils.writeLine(BACKLIGHT_NODE, "2047");
             Settings.System.putInt(getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 255);
         } else {
             FileUtils.writeLine(HBM_NODE, "0");
-            // Restore brightness when disabling HBM
+            // Restore brightness and auto brightness mode when disabling HBM
             if (mStoredBrightness != -1) {
                 FileUtils.writeLine(BACKLIGHT_NODE, String.valueOf(mStoredBrightness));
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.SCREEN_BRIGHTNESS, mStoredBrightness);
                 mStoredBrightness = -1;
+            }
+            if (mStoredBrightnessMode != -1) {
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.SCREEN_BRIGHTNESS_MODE, mStoredBrightnessMode);
+                mStoredBrightnessMode = -1;
             }
         }
     }

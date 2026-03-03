@@ -1,21 +1,3 @@
-/*
-* Copyright (C) 2018 The OmniROM Project
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU General Public License as published by
-* the Free Software Foundation, either version 2 of the License, or
-* (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-* GNU General Public License for more details.
-*
-* You should have received a copy of the GNU General Public License
-* along with this program. If not, see <http://www.gnu.org/licenses/>.
-*
-*/
-
 package org.lineageos.settings.hbm;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -86,15 +68,28 @@ public class HBMModeTileService extends TileService {
                 !sharedPrefs.getBoolean(HBM_KEY, false);
 
         if (enabled) {
-            // Save current brightness level
+            // Save current brightness and auto brightness mode
             int currentBrightness = Settings.System.getInt(
                     getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS,
                     128
             );
+            int currentBrightnessMode = Settings.System.getInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+            );
             sharedPrefs.edit()
                     .putInt("last_brightness", currentBrightness)
+                    .putInt("last_brightness_mode", currentBrightnessMode)
                     .apply();
+
+            // Disable auto brightness to prevent conflict
+            Settings.System.putInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+            );
 
             FileUtils.writeLine(HBM_NODE, "1");
             FileUtils.writeLine(BACKLIGHT_NODE, "2047");
@@ -106,13 +101,22 @@ public class HBMModeTileService extends TileService {
         } else {
             FileUtils.writeLine(HBM_NODE, "0");
 
-            // Restore last brightness level
+            // Restore brightness
             int lastBrightness =
                     sharedPrefs.getInt("last_brightness", 128);
             Settings.System.putInt(
                     getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS,
                     lastBrightness
+            );
+
+            // Restore auto brightness mode
+            int lastBrightnessMode = sharedPrefs.getInt("last_brightness_mode",
+                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            Settings.System.putInt(
+                    getContentResolver(),
+                    Settings.System.SCREEN_BRIGHTNESS_MODE,
+                    lastBrightnessMode
             );
         }
 
