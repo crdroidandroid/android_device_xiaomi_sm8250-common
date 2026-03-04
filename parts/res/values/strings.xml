@@ -294,6 +294,8 @@
     <string name="hbm_disable_time_summary">disable delay (seconds)</string>
     <string name="hbm_mode_warning">Long time usage of High brightness mode may damage your display</string>
     <string name="hbm_disable_dc_dimming_first">Disable DC Dimming to enable High Brightness Mode</string>
+    <string name="hbm_turn_off_on_screen_off_title">Turn off HBM on screen off</string>
+    <string name="hbm_turn_off_on_screen_off_summary">Automatically turn off HBM when the screen turns off</string>
 
     <!-- DC dimming settings -->
     <string name="dc_dimming_enable_title">DC Dimming</string>

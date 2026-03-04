@@ -260,6 +260,8 @@
     <string name="hbm_disable_time_summary">задержка (секунды)</string>
     <string name="hbm_mode_warning">Длительное использование режима высокой яркости может повредить дисплей</string>
     <string name="hbm_disable_dc_dimming_first">Отключите DC Dimming, чтобы включить режим высокой яркости (HBM)</string>
+    <string name="hbm_turn_off_on_screen_off_title">Выключать HBM при выключении экрана</string>
+    <string name="hbm_turn_off_on_screen_off_summary">Автоматически выключать режим высокой яркости (HBM) после затухания экрана</string>
  
     <!-- DC Dimming -->
     <string name="dc_dimming_enable_title">DC Dimming</string>

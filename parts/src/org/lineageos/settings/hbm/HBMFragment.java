@@ -43,9 +43,11 @@ public class HBMFragment extends SettingsBasePreferenceFragment
     public static final String AUTO_HBM_SWITCH_KEY = "auto_hbm";
     public static final String AUTO_HBM_THRESHOLD_KEY = "auto_hbm_threshold";
     public static final String HBM_DISABLE_TIME_KEY = "hbm_disable_time";
+    public static final String HBM_TURN_OFF_ON_SCREEN_OFF_KEY = "hbm_turn_off_on_screen_off";
 
     private static TwoStatePreference mHBMModeSwitch;
     private static TwoStatePreference mAutoHBMSwitch;
+    private static TwoStatePreference mHBMScreenOffSwitch;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -54,12 +56,19 @@ public class HBMFragment extends SettingsBasePreferenceFragment
 
         // HBM
         mHBMModeSwitch = (TwoStatePreference) findPreference(HBM_SWITCH_KEY);
-	    mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch(getContext()));
+        mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch(getContext()));
 
         // AutoHBM
         mAutoHBMSwitch = (TwoStatePreference) findPreference(AUTO_HBM_SWITCH_KEY);
         mAutoHBMSwitch.setOnPreferenceChangeListener(this);
-        mAutoHBMSwitch.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false));
+        mAutoHBMSwitch.setChecked(prefs.getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false));
+
+        // HBM turn off on screen off
+        mHBMScreenOffSwitch = (TwoStatePreference) findPreference(HBM_TURN_OFF_ON_SCREEN_OFF_KEY);
+        if (mHBMScreenOffSwitch != null) {
+            mHBMScreenOffSwitch.setChecked(prefs.getBoolean(HBM_TURN_OFF_ON_SCREEN_OFF_KEY, false));
+            mHBMScreenOffSwitch.setOnPreferenceChangeListener(this);
+        }
     }
 
     public static boolean isAUTOHBMEnabled(Context context) {
@@ -74,7 +83,16 @@ public class HBMFragment extends SettingsBasePreferenceFragment
             prefChange.putBoolean(AUTO_HBM_SWITCH_KEY, enabled).commit();
             FileUtils.enableService(getContext());
             return true;
-           }
+        }
+
+        if (preference == mHBMScreenOffSwitch) {
+            Boolean enabled = (Boolean) newValue;
+            PreferenceManager.getDefaultSharedPreferences(getContext())
+                    .edit()
+                    .putBoolean(HBM_TURN_OFF_ON_SCREEN_OFF_KEY, enabled)
+                    .commit();
+            return true;
+        }
 
         return false;
     }

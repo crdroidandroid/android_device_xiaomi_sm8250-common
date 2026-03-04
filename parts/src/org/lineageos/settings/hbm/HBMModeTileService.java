@@ -1,6 +1,10 @@
 package org.lineageos.settings.hbm;
+
 import android.annotation.TargetApi;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
@@ -17,6 +21,39 @@ public class HBMModeTileService extends TileService {
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
 
+    private BroadcastReceiver mScreenOffReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (Intent.ACTION_SCREEN_OFF.equals(intent.getAction())) {
+                SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+                boolean turnOffOnScreenOff = prefs.getBoolean(
+                        HBMFragment.HBM_TURN_OFF_ON_SCREEN_OFF_KEY, false);
+                boolean hbmEnabled = prefs.getBoolean(HBM_KEY, false);
+
+                if (turnOffOnScreenOff && hbmEnabled) {
+                    FileUtils.writeLine(HBM_NODE, "0");
+
+                    int lastBrightness = prefs.getInt("last_brightness", 128);
+                    Settings.System.putInt(getContentResolver(),
+                            Settings.System.SCREEN_BRIGHTNESS, lastBrightness);
+
+                    int lastBrightnessMode = prefs.getInt("last_brightness_mode",
+                            Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+                    Settings.System.putInt(getContentResolver(),
+                            Settings.System.SCREEN_BRIGHTNESS_MODE, lastBrightnessMode);
+
+                    prefs.edit()
+                            .putBoolean(HBM_KEY, false)
+                            .remove("last_brightness")
+                            .remove("last_brightness_mode")
+                            .apply();
+
+                    updateUI(false);
+                }
+            }
+        }
+    };
+
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
         tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
@@ -26,11 +63,13 @@ public class HBMModeTileService extends TileService {
     @Override
     public void onCreate() {
         super.onCreate();
+        registerReceiver(mScreenOffReceiver, new IntentFilter(Intent.ACTION_SCREEN_OFF));
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        unregisterReceiver(mScreenOffReceiver);
     }
 
     @Override
