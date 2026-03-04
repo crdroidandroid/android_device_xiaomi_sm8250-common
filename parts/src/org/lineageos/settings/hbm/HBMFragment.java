@@ -45,9 +45,24 @@ public class HBMFragment extends SettingsBasePreferenceFragment
     public static final String HBM_DISABLE_TIME_KEY = "hbm_disable_time";
     public static final String HBM_TURN_OFF_ON_SCREEN_OFF_KEY = "hbm_turn_off_on_screen_off";
 
-    private static TwoStatePreference mHBMModeSwitch;
-    private static TwoStatePreference mAutoHBMSwitch;
-    private static TwoStatePreference mHBMScreenOffSwitch;
+    private TwoStatePreference mHBMModeSwitch;
+    private TwoStatePreference mAutoHBMSwitch;
+    private TwoStatePreference mHBMScreenOffSwitch;
+
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener =
+            (prefs, key) -> {
+                switch (key) {
+                    case HBM_SWITCH_KEY:
+                        mHBMModeSwitch.setChecked(prefs.getBoolean(HBM_SWITCH_KEY, false));
+                        if (mHBMScreenOffSwitch != null) {
+                            mHBMScreenOffSwitch.setEnabled(prefs.getBoolean(HBM_SWITCH_KEY, false));
+                        }
+                        break;
+                    case AUTO_HBM_SWITCH_KEY:
+                        mAutoHBMSwitch.setChecked(prefs.getBoolean(AUTO_HBM_SWITCH_KEY, false));
+                        break;
+                }
+            };
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -61,7 +76,7 @@ public class HBMFragment extends SettingsBasePreferenceFragment
         // AutoHBM
         mAutoHBMSwitch = (TwoStatePreference) findPreference(AUTO_HBM_SWITCH_KEY);
         mAutoHBMSwitch.setOnPreferenceChangeListener(this);
-        mAutoHBMSwitch.setChecked(prefs.getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false));
+        mAutoHBMSwitch.setChecked(prefs.getBoolean(AUTO_HBM_SWITCH_KEY, false));
 
         // HBM turn off on screen off
         mHBMScreenOffSwitch = (TwoStatePreference) findPreference(HBM_TURN_OFF_ON_SCREEN_OFF_KEY);
@@ -71,16 +86,37 @@ public class HBMFragment extends SettingsBasePreferenceFragment
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        prefs.registerOnSharedPreferenceChangeListener(mPrefsListener);
+        mHBMModeSwitch.setChecked(prefs.getBoolean(HBM_SWITCH_KEY, false));
+        mAutoHBMSwitch.setChecked(prefs.getBoolean(AUTO_HBM_SWITCH_KEY, false));
+        if (mHBMScreenOffSwitch != null) {
+            mHBMScreenOffSwitch.setChecked(prefs.getBoolean(HBM_TURN_OFF_ON_SCREEN_OFF_KEY, false));
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        PreferenceManager.getDefaultSharedPreferences(getContext())
+                .unregisterOnSharedPreferenceChangeListener(mPrefsListener);
+    }
+
     public static boolean isAUTOHBMEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(HBMFragment.AUTO_HBM_SWITCH_KEY, false);
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(AUTO_HBM_SWITCH_KEY, false);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mAutoHBMSwitch) {
             Boolean enabled = (Boolean) newValue;
-            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-            prefChange.putBoolean(AUTO_HBM_SWITCH_KEY, enabled).commit();
+            PreferenceManager.getDefaultSharedPreferences(getContext())
+                    .edit()
+                    .putBoolean(AUTO_HBM_SWITCH_KEY, enabled)
+                    .commit();
             FileUtils.enableService(getContext());
             return true;
         }

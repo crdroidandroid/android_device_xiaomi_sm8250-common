@@ -21,6 +21,13 @@ public class HBMModeTileService extends TileService {
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT_NODE = "/sys/class/backlight/panel0-backlight/brightness";
 
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener =
+            (prefs, key) -> {
+                if (HBM_KEY.equals(key)) {
+                    updateUI(prefs.getBoolean(HBM_KEY, false));
+                }
+            };
+
     private BroadcastReceiver mScreenOffReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -47,8 +54,6 @@ public class HBMModeTileService extends TileService {
                             .remove("last_brightness")
                             .remove("last_brightness_mode")
                             .apply();
-
-                    updateUI(false);
                 }
             }
         }
@@ -56,20 +61,26 @@ public class HBMModeTileService extends TileService {
 
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
-        tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
-        tile.updateTile();
+        if (tile != null) {
+            tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+            tile.updateTile();
+        }
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         registerReceiver(mScreenOffReceiver, new IntentFilter(Intent.ACTION_SCREEN_OFF));
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         unregisterReceiver(mScreenOffReceiver);
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
@@ -160,6 +171,5 @@ public class HBMModeTileService extends TileService {
         }
 
         sharedPrefs.edit().putBoolean(HBM_KEY, enabled).apply();
-        updateUI(enabled);
     }
 }

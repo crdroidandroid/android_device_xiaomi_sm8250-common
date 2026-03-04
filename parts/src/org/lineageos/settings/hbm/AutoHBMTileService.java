@@ -31,20 +31,33 @@ public class AutoHBMTileService extends TileService {
 
     private static final String AUTO_HBM_KEY = "auto_hbm";
 
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener =
+            (prefs, key) -> {
+                if (AUTO_HBM_KEY.equals(key)) {
+                    updateUI(prefs.getBoolean(AUTO_HBM_KEY, false));
+                }
+            };
+
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
-        tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
-        tile.updateTile();
+        if (tile != null) {
+            tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+            tile.updateTile();
+        }
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
@@ -71,6 +84,5 @@ public class AutoHBMTileService extends TileService {
 
         sharedPrefs.edit().putBoolean(AUTO_HBM_KEY, enabled).apply();
         FileUtils.enableService(this);
-        updateUI(enabled);
     }
 }

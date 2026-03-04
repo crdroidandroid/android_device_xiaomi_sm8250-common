@@ -23,7 +23,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 import android.widget.Toast;
 
 import androidx.preference.SwitchPreferenceCompat;
@@ -44,6 +44,13 @@ public class DcDimmingSettingsFragment extends SettingsBasePreferenceFragment im
     private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure";
     private static final String HBM_KEY = "hbm";
 
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener =
+            (prefs, key) -> {
+                if (DC_DIMMING_KEY.equals(key)) {
+                    mDcDimmingPreference.setChecked(prefs.getBoolean(DC_DIMMING_KEY, false));
+                }
+            };
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.dcdimming_settings, rootKey);
@@ -55,6 +62,21 @@ public class DcDimmingSettingsFragment extends SettingsBasePreferenceFragment im
             mDcDimmingPreference.setSummary(R.string.dc_dimming_enable_summary_not_supported);
             mDcDimmingPreference.setEnabled(false);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
+        prefs.registerOnSharedPreferenceChangeListener(mPrefsListener);
+        mDcDimmingPreference.setChecked(prefs.getBoolean(DC_DIMMING_KEY, false));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        PreferenceManager.getDefaultSharedPreferences(getContext())
+                .unregisterOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override

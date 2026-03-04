@@ -39,20 +39,33 @@ public class DcDimmingTileService extends TileService {
     private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure";
     private static final String HBM_KEY = "hbm";
 
+    private SharedPreferences.OnSharedPreferenceChangeListener mPrefsListener =
+            (prefs, key) -> {
+                if (DC_DIMMING_KEY.equals(key)) {
+                    updateUI(prefs.getBoolean(DC_DIMMING_KEY, false));
+                }
+            };
+
     private void updateUI(boolean enabled) {
         final Tile tile = getQsTile();
-        tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
-        tile.updateTile();
+        if (tile != null) {
+            tile.setState(enabled ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
+            tile.updateTile();
+        }
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .registerOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this)
+                .unregisterOnSharedPreferenceChangeListener(mPrefsListener);
     }
 
     @Override
@@ -85,11 +98,10 @@ public class DcDimmingTileService extends TileService {
             return;
         }
 
-        final boolean enabled =
-                !sharedPrefs.getBoolean(DC_DIMMING_KEY, false);
+        final boolean enabled = !sharedPrefs.getBoolean(DC_DIMMING_KEY, false);
 
         FileUtils.writeLine(DC_DIMMING_NODE, enabled ? "1" : "0");
+        // putBoolean sẽ trigger mPrefsListener -> updateUI tự động
         sharedPrefs.edit().putBoolean(DC_DIMMING_KEY, enabled).apply();
-        updateUI(enabled);
     }
 }
