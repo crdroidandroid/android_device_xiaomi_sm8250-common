@@ -20,7 +20,7 @@ import android.app.AlertDialog;
 import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 import org.lineageos.settings.R;
 
 public class ChargeSettingsFragment extends PreferenceFragmentCompat 
@@ -29,7 +29,7 @@ public class ChargeSettingsFragment extends PreferenceFragmentCompat
     private static final String KEY_BYPASS_CHARGE = "bypass_charge";
 
     private ChargeUtils chargeUtils;
-    private SwitchPreference bypassChargePreference;
+    private SwitchPreferenceCompat bypassChargePreference;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
