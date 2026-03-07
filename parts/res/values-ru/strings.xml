@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Xiaomi Settings -->
+    <string name="app_title">Настройки Xiaomi</string>
+    <string name="tile_add">Добавить плитку</string>
+    <string name="tile_added">Плитка добавлена</string>
+    <string name="tile_not_added">Плитка не добавлена</string>
+    <string name="tile_already_added">Плитка уже добавлена</string>
+    <string name="tile_on">Вкл.</string>
+    <string name="tile_off">Выкл.</string>
+    
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Термальные профили</string>
+    <string name="thermal_summary">Настройка температурных профилей для каждого приложения для оптимальной производительности</string>
+    <string name="thermal_default">По умолчанию</string>
+    <string name="thermal_benchmark">Бенчмарк</string>
+    <string name="thermal_browser">Браузер</string>
+    <string name="thermal_camera">Камера</string>
+    <string name="thermal_dialer">Телефон</string>
+    <string name="thermal_gaming">Игровой</string>
+    <string name="thermal_streaming">Стриминг</string>
+    
+    <!-- Per-app refresh rate -->
+    <string name="refresh_title">Частота обновления для приложений</string>
+    <string name="refresh_summary">Установка максимальной частоты обновления для конкретных приложений</string>
+    <string name="refresh_default">По умолчанию</string>
+    <string name="refresh_standard">60 Гц</string>    
+    <string name="refresh_extreme">120 Гц</string>    
+    <string name="refresh_land">60 Гц в альбомном режиме</string>
+    
+    <!-- Touch Control Settings -->
+    <string name="touch_control_title">Управление касанием</string>
+    <string name="touch_game_mode_title">Включить</string>
+    <string name="touch_response_title">Скорость отклика</string>
+    <string name="touch_response_summary">Настройка скорости реакции на касание</string>
+    <string name="touch_sensitivity_title">Чувствительность</string>
+    <string name="touch_sensitivity_summary">Настройка чувствительности для повторных касаний</string>
+    <string name="touch_resistant_title">Предотвращение нажатий</string>
+    <string name="touch_resistant_summary">Снижение чувствительности по краям экрана для защиты от случайных нажатий</string>
+    
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Очистка динамика</string>
+    <string name="clear_speaker_summary">Воспроизведение 30-секундного звука для очистки динамика</string>
+    <string name="clear_speaker_description">Запустите эту функцию один или два раза, если динамик забился пылью. Установите громкость мультимедиа на максимум.\n\nЕсли динамик сильно загрязнен, запустите функцию 2–5 раз, встряхивая устройство и удерживая его динамиком вниз.\n\nВНИМАНИЕ: убедитесь, что наушники отключены.</string>
+    
+    <!-- Dirac settings -->
+    <string name="dirac_enable">Включить MiSound</string>
+    <string name="dirac_title">Улучшение звука Mi</string>
+    <string name="dirac_summary">Оптимизация качества звука с помощью MiSound и Hi-Fi</string>
+    <string name="dirac_headset_title">Тип наушников</string>
+    <string name="dirac_hifi_enable_title">Включить Hi-Fi</string>
+    <string name="dirac_preset_title">Пресет звука</string>
+
+    <string name="dirac_hifi_title">Hi-Fi</string>
+    <string name="dirac_hifi_summary">Уменьшение шума и искажений для повышения качества звука</string>
+    
+    <string name="dirac_preset_default">По умолчанию</string>
+    <string name="dirac_preset_rock">Рок</string>
+    <string name="dirac_preset_jazz">Джаз</string>
+    <string name="dirac_preset_pop">Поп</string>
+    <string name="dirac_preset_classical">Классика</string>
+    <string name="dirac_preset_hiphop">Хип-хоп</string>
+    <string name="dirac_preset_blues">Блюз</string>
+    <string name="dirac_preset_electronic">Электроника</string>
+    <string name="dirac_preset_country">Кантри</string>
+    <string name="dirac_preset_dance">Танцевальная</string>
+    <string name="dirac_preset_metal">Метал</string>
+    <string name="dirac_preset_bass_booster">Усиление баса</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_live">Живой звук</string>
+    <string name="dirac_preset_balanced">Сбалансированный</string>
+    <string name="dirac_preset_bass_reduction">Уменьшение баса</string>
+    <string name="dirac_preset_treble_reduction">Уменьшение высоких частот</string>
+    <string name="dirac_preset_soft_bass">Мягкий бас</string>
+    <string name="dirac_preset_soft_treble">Мягкие высокие частоты</string>
+
+    <!-- Scene Selection -->
+    <string name="music_headset_scenario_select">Выбор сценария</string>
+    <string name="music_headset_scenario_intelligent">Автоматический</string>
+    <string name="music_headset_scenario_music">Музыка</string>
+    <string name="music_headset_scenario_video">Видео</string>
+    <string name="music_headset_scenario_vocal">Голос</string>
+    
+    <!-- GameBar -->
+    <string name="game_bar_title">GameBar</string>
+    <string name="game_bar_summary">Включение системного оверлея (FPS, температура и др.)</string>
+    <string name="overlay_permission_required">Требуется разрешение на отображение поверх других окон</string>
+    <string name="overlay_permission_granted">Разрешение предоставлено</string>
+    <string name="overlay_permission_denied">В разрешении отказано</string>
+    <string name="game_bar_tile_label">GameBar</string>
+    <string name="game_bar_tile_description">Переключить игровой оверлей</string>
+    
+    <string name="game_bar_enable_title">Включить оверлей GameBar</string>
+    <string name="game_bar_enable_summary">Показывать панель со статистикой производительности в реальном времени во время игры</string>
+    
+    <string name="game_bar_overlay_features_title">Функции оверлея</string>
+    <string name="game_bar_fps_enable_title">Счетчик FPS</string>
+    <string name="game_bar_fps_enable_summary">Показывать текущую частоту кадров на экране</string>
+    <string name="game_bar_temp_enable_title">Температура устройства</string>
+    <string name="game_bar_temp_enable_summary">Показывать температуру устройства (аккумулятора)</string>
+    <string name="game_bar_cpu_usage_enable_title">Загрузка ЦП</string>
+    <string name="game_bar_cpu_usage_enable_summary">Показывать процент загрузки центрального процессора</string>
+    <string name="game_bar_cpu_clock_enable_title">Частота ЦП</string>
+    <string name="game_bar_cpu_clock_enable_summary">Показывать текущую частоту каждого ядра ЦП</string>
+    <string name="game_bar_cpu_temp_enable_title">Температура ЦП</string>
+    <string name="game_bar_cpu_temp_enable_summary">Показывать температуру ЦП (thermal_zone0)</string>
+    <string name="game_bar_ram_enable_title">Использование ОЗУ</string>
+    <string name="game_bar_ram_enable_summary">Показывать использование оперативной памяти в МБ</string>
+    <string name="game_bar_gpu_usage_enable_title">Загрузка ГП</string>
+    <string name="game_bar_gpu_usage_enable_summary">Показывать процент загрузки графического процессора</string>
+    <string name="game_bar_gpu_clock_enable_title">Частота ГП</string>
+    <string name="game_bar_gpu_clock_enable_summary">Показывать текущую частоту графического процессора</string>
+    <string name="game_bar_gpu_temp_enable_title">Температура ГП</string>
+    <string name="game_bar_gpu_temp_enable_summary">Показывать текущую температуру графического процессора</string>
+    
+    <string name="game_bar_fps_method_category_title">Метод измерения FPS</string>
+    <string name="game_bar_fps_method_title">Выбор метода</string>
+    <string name="game_bar_fps_method_summary">Выберите между новым API (по умолчанию) и устаревшим Sysfs</string>
+    
+    <string name="game_bar_customization_title">Персонализация</string>
+    <string name="game_bar_text_size_title">Размер текста</string>
+    <string name="game_bar_text_size_summary">Настройка размера текста в оверлее</string>
+    <string name="game_bar_background_alpha_title">Прозрачность фона</string>
+    <string name="game_bar_background_alpha_summary">Настройка прозрачности подложки оверлея</string>
+    <string name="game_bar_corner_radius_title">Радиус скругления</string>
+    <string name="game_bar_corner_radius_summary">Настройка скругления углов панели оверлея</string>
+    <string name="game_bar_padding_title">Отступы оверлея</string>
+    <string name="game_bar_padding_summary">Настройка свободного пространства вокруг текста</string>
+    <string name="game_bar_item_spacing_title">Интервал между строками</string>
+    <string name="game_bar_item_spacing_summary">Настройка расстояния между строками статистики</string>
+    <string name="game_bar_update_interval_title">Интервал обновления</string>
+    <string name="game_bar_update_interval_summary">Частота обновления данных в оверлее</string>
+    <string name="game_bar_title_color_title">Цвет заголовков</string>
+    <string name="game_bar_title_color_summary">Цвет для названий параметров (\'FPS\', \'ЦП\' и т.д.)</string>
+    <string name="game_bar_value_color_title">Цвет значений</string>
+    <string name="game_bar_value_color_summary">Цвет числовых показателей (напр. \'60\', \'35.0°C\')</string>
+    <string name="game_bar_position_title">Положение оверлея</string>
+    <string name="game_bar_position_summary">Выберите расположение оверлея на экране</string>
+    <string name="game_bar_format_title">Формат отображения</string>
+    <string name="game_bar_format_summary">Выберите между полным и минималистичным видом</string>
+    
+    <string name="game_bar_split_config_title">Раздельная конфигурация</string>
+    <string name="game_bar_split_mode_title">Режим разделения</string>
+    <string name="game_bar_split_mode_summary">Выберите расположение элементов: рядом или друг над другом</string>
+    
+    <string name="game_bar_gesture_controls_title">Жесты управления</string>
+    <string name="game_bar_single_tap_toggle_title">Смена вида по нажатию</string>
+    <string name="game_bar_single_tap_toggle_summary">Одиночное нажатие меняет формат между полным и минимальным</string>
+    <string name="game_bar_doubletap_capture_title">Запись логов по двойному нажатию</string>
+    <string name="game_bar_doubletap_capture_summary">Двойное нажатие начинает или останавливает сбор данных производительности</string>
+    <string name="game_bar_longpress_enable_title">Удержание для настроек</string>
+    <string name="game_bar_longpress_enable_summary">Долгое нажатие открывает настройки GameBar</string>
+    <string name="game_bar_longpress_timeout_title">Длительность удержания</string>
+    <string name="game_bar_longpress_timeout_summary">Настройка времени, необходимого для срабатывания долгого нажатия</string>
+    
+    <string name="game_bar_capture_logs_title">Запись логов</string>
+    <string name="game_bar_capture_start_title">Начать запись</string>
+    <string name="game_bar_capture_start_summary">Начать сбор данных о FPS и производительности в реальном времени</string>
+    <string name="game_bar_capture_stop_title">Остановить запись</string>
+    <string name="game_bar_capture_stop_summary">Завершить сбор данных производительности</string>
+    <string name="game_bar_capture_export_title">Экспорт данных лога</string>
+    <string name="game_bar_capture_export_summary">Сохранить собранные данные в формате CSV</string>
+    <string name="game_bar_capture_stopped">Запись остановлена</string>
+    <string name="game_bar_capture_started">Запись начата</string>
+    <string name="game_bar_capture_exported">Лог экспортирован в файл</string>
+    
+    <string name="game_bar_auto_enable_title">Автоматическое включение</string>
+    <string name="game_bar_auto_enable_switch_title">Включать для выбранных приложений</string>
+    <string name="game_bar_auto_enable_switch_summary">GameBar будет запускаться автоматически в выбранных приложениях, даже если основной переключатель выключен</string>
+    <string name="game_bar_app_selector_title">Выбрать приложения</string>
+    <string name="game_bar_app_selector_summary">Добавить приложения для автозапуска GameBar</string>
+    <string name="game_bar_app_remover_title">Удалить приложения</string>
+    <string name="game_bar_app_remover_summary">Удалить приложения из списка автозапуска</string>
+
+    <string name="game_bar_update_interval_500ms">Каждые 500 мс</string>
+    <string name="game_bar_update_interval_1000ms">Каждую секунду</string>
+    <string name="game_bar_update_interval_2000ms">Каждые 2 секунды</string>
+    <string name="game_bar_update_interval_5000ms">Каждые 5 секунд</string>
+
+    <string name="game_bar_position_top_left">Сверху слева</string>
+    <string name="game_bar_position_top_center">Сверху по центру</string>
+    <string name="game_bar_position_top_right">Сверху справа</string>
+    <string name="game_bar_position_bottom_left">Снизу слева</string>
+    <string name="game_bar_position_bottom_center">Снизу по центру</string>
+    <string name="game_bar_position_bottom_right">Снизу справа</string>
+    <string name="game_bar_position_draggable">Произвольное (перетаскивание)</string>
+
+     <string name="game_bar_color_white">Белый</string>
+     <string name="game_bar_color_crimson">Малиновый</string>
+     <string name="game_bar_color_fruit_salad">Зеленый (Fruit Salad)</string>
+     <string name="game_bar_color_royal_blue">Королевский синий</string>
+     <string name="game_bar_color_amber">Янтарный</string>
+     <string name="game_bar_color_teal">Бирюзовый</string>
+     <string name="game_bar_color_electric_violet">Ярко-фиолетовый</string>
+     <string name="game_bar_color_magenta">Пурпурный</string>
+
+     <string name="game_bar_format_full">Полный</string>
+     <string name="game_bar_format_minimal">Минимальный</string>
+
+     <string name="game_bar_split_side_by_side">Рядом</string>
+     <string name="game_bar_split_stacked">Стопкой</string>
+
+     <string name="game_bar_longpress_1s">1 секунда</string>
+     <string name="game_bar_longpress_3s">3 секунды</string>
+     <string name="game_bar_longpress_5s">5 секунд</string>
+     <string name="game_bar_longpress_10s">10 секунд</string>
+     
+    <!-- High touch polling rate -->
+    <string name="htsr_title">Отклик сенсора</string>
+    <string name="htsr_enable_title">Улучшенный отклик</string>
+    <string name="htsr_enable_summary">Увеличение частоты опроса сенсора для снижения задержки</string>
+    
+    <!-- Bypass charge -->
+    <string name="charge_bypass_title">Обходная зарядка</string>
+    <string name="charge_bypass_summary">Питание напрямую от сети в обход аккумулятора</string>
+    <string name="charge_bypass_warning">ВНИМАНИЕ: Обходная зарядка может привести к перегреву устройства или повреждению аккумулятора. Используйте с осторожностью.</string>
+    <string name="charge_bypass_unavailable">Обходная зарядка не поддерживается на этом устройстве</string>
+    <string name="charge_bypass_safety_failed">Не удалось включить обходную зарядку: %s</string>
+    
+    <!-- Saturation -->
+    <string name="saturation_title">Насыщенность экрана</string>
+    <string name="saturation_summary">Настройка уровня насыщенности цветов дисплея</string>
+    <string name="saturation_footer_summary">Изменение цветового режима в настройках экрана сбросит уровень насыщенности, и его потребуется применить заново.</string>
+
+    <string name="custom_seekbar_value">Значение: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">по умолчанию</string>
+    <string name="custom_seekbar_default_value_to_set">Значение по умолчанию: <xliff:g id="v">%s</xliff:g>\nУдерживайте для установки</string>
+    <string name="custom_seekbar_default_value_is_set">Установлено значение по умолчанию</string>
+
+    <string name="image_preview_content_description">Предпросмотр</string>
+    <string name="image_preview_next_page_content_description">Вперед</string>
+    <string name="image_preview_previous_page_content_description">Назад</string>
+    
+    <!-- HBM -->
+    <string name="hbm_fragment_title">Режим высокой яркости</string>
+    <string name="hbm_fragment_summary">Настройки режима HBM</string>
+    <string name="hbm_mode_title">HBM</string>
+    <string name="hbm_mode_summary">Включение пиковой яркости</string>
+    <string name="auto_hbm_title">Автоматический HBM</string>
+    <string name="auto_hbm_summary">Включение пиковой яркости при солнечном свете</string>
+    <string name="auto_hbm_threshold_title">Порог активации</string>
+    <string name="auto_hbm_threshold_summary">порог (люкс)</string>
+    <string name="hbm_disable_time_title">Задержка выключения</string>
+    <string name="hbm_disable_time_summary">задержка (секунды)</string>
+    <string name="hbm_mode_warning">Длительное использование режима высокой яркости может повредить дисплей</string>
+    <string name="hbm_disable_dc_dimming_first">Отключите DC Dimming, чтобы включить режим высокой яркости (HBM)</string>
+ 
+    <!-- DC Dimming -->
+    <string name="dc_dimming_enable_title">DC Dimming</string>
+    <string name="dc_dimming_enable_summary">Снижение нагрузки на глаза в условиях низкой освещенности</string>
+    <string name="dc_dimming_enable_summary_not_supported">DC Dimming не поддерживается текущим ядром</string>
+    <string name="dc_dimming_disable_hbm_first">Отключите HBM, чтобы включить DC Dimming</string>
+</resources>
