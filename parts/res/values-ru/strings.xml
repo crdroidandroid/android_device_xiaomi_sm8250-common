@@ -233,6 +233,12 @@
     <string name="charge_bypass_unavailable">Обходная зарядка не поддерживается на этом устройстве</string>
     <string name="charge_bypass_safety_failed">Не удалось включить обходную зарядку: %s</string>
     
+    <string name="charge_safety_not_supported">Обходная зарядка не поддерживается на этом устройстве</string>
+    <string name="charge_safety_no_charger">Сетевое зарядное устройство не подключено</string>
+    <string name="charge_safety_temp_high">Температура батареи слишком высокая (%1$.1f°C)</string>
+    <string name="charge_safety_low_level">Низкий уровень заряда батареи (%1$d%%)</string>
+    <string name="charge_safety_ok">Все проверки безопасности пройдены</string>
+    
     <!-- Saturation -->
     <string name="saturation_title">Насыщенность экрана</string>
     <string name="saturation_summary">Настройка уровня насыщенности цветов дисплея</string>

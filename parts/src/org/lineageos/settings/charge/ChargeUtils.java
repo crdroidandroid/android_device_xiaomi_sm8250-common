@@ -23,6 +23,8 @@ import android.content.SharedPreferences;
 import android.os.BatteryManager;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
+
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 public class ChargeUtils {
@@ -80,26 +82,29 @@ public class ChargeUtils {
 
     public SafetyCheckResult performSafetyChecks() {
         if (!isBypassChargeSupported()) {
-            return new SafetyCheckResult(false, "Bypass charging not supported on this device");
+            return new SafetyCheckResult(false, 
+                context.getString(R.string.charge_safety_not_supported));
         }
 
         if (!isACChargerConnected()) {
-            return new SafetyCheckResult(false, "AC charger not connected");
+            return new SafetyCheckResult(false, 
+                context.getString(R.string.charge_safety_no_charger));
         }
 
         int batteryTemp = getBatteryTemperature();
         if (batteryTemp >= MAX_BATTERY_TEMP) {
             return new SafetyCheckResult(false, 
-                String.format("Battery temperature too high (%.1f°C)", batteryTemp / 10.0f));
+                context.getString(R.string.charge_safety_temp_high, batteryTemp / 10.0f));
         }
 
         int batteryLevel = getBatteryCapacity();
         if (batteryLevel < MIN_BATTERY_CAPACITY) {
             return new SafetyCheckResult(false, 
-                String.format("Battery level too low (%d%%)", batteryLevel));
+                context.getString(R.string.charge_safety_low_level, batteryLevel));
         }
 
-        return new SafetyCheckResult(true, "All safety checks passed");
+        return new SafetyCheckResult(true, 
+            context.getString(R.string.charge_safety_ok));
     }
 
     private boolean isACChargerConnected() {

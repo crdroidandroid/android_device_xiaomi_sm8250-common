@@ -265,6 +265,13 @@
     <string name="charge_bypass_unavailable">Bypass charging is not supported on this device</string>
     <string name="charge_bypass_safety_failed">Cannot enable bypass charging: %s</string>
     
+    <string name="charge_safety_not_supported">Bypass charging not supported on this device</string>
+    <string name="charge_safety_no_charger">AC charger not connected</string>
+    <string name="charge_safety_temp_high">Battery temperature too high (%1$.1f°C)</string>
+    <string name="charge_safety_low_level">Battery level too low (%1$d%%)</string>
+    <string name="charge_safety_ok">All safety checks passed</string>
+
+    
     <!-- Saturation -->
     <string name="saturation_title">Display Saturation</string>
     <string name="saturation_summary">Control the saturation level of the display</string>
