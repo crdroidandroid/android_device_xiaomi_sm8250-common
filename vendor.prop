@@ -205,7 +205,6 @@ persist.vendor.hvdcp_opti.disallowed=1
 ro.hardware.keystore_desede=true
 
 # Media
-debug.stagefright.c2inputsurface=-1
 ro.odm.build.media_performance_class=30
 
 # NFC
