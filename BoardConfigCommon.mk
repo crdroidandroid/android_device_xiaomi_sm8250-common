@@ -143,6 +143,11 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 
 # Partitions - reserved size
 -include vendor/infinity/config/BoardConfigReservedSize.mk
 
+# Reserve space for GApps 
+ifneq ($(WITH_GMS),true)
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1610612736 
+endif
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
