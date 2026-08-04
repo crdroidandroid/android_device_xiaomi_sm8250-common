@@ -347,7 +347,7 @@ public class ThermalSettingsFragment extends SettingsBasePreferenceFragment
                     bundle.putString("appName", entry.label);
                     bundle.putString("packageName", entry.info.packageName);
                     touchSettingsFragment.setArguments(bundle);
-                    getActivity().getFragmentManager().beginTransaction()
+                    getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, touchSettingsFragment, "touchSettingsFragment")
                             .addToBackStack(null)
                             .commit();
