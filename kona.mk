@@ -147,17 +147,25 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Device-specific settings
+include hardware/xiaomi/dolby/dolby.mk
+
 PRODUCT_PACKAGES += \
     XiaomiDolby \
     XiaomiParts \
     DSPVolumeSynchronizer
 
+# Dolby DAP capabilities for the preserved QDSP effect. HAL 6.0 is not
+# platform spatial audio; products opt in to verified optional tuning IDs.
 # Dolby Props
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.dax.version=DAX3_3.6.1.6_r1 \
     ro.vendor.audio.dolby.dax.version=DAX3_3.6 \
     ro.vendor.audio.dolby.dax.support=true \
-    ro.vendor.audio.dolby.surround.enable=true
+    ro.vendor.audio.dolby.surround.enable=true \
+    ro.vendor.audio.dolby.dap.control=qdsp \
+    ro.vendor.audio.dolby.spatializer.support?=false \
+    ro.vendor.audio.dolby.speaker_tuning.support?=false \
+    vendor.audio.dolby.control.tunning.by.volume.support?=false
 
 # Dolby MediaCodecs Dependenices
 PRODUCT_PACKAGES += \
