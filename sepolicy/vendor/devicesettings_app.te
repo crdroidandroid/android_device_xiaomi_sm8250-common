@@ -14,3 +14,6 @@ allow devicesettings_app vendor_sysfs_graphics:file rw_file_perms;
 
 # Allow devicesettings_app to r/w livedisplay_tuneable
 allow devicesettings_app sysfs_livedisplay_tuneable:file rw_file_perms;
+
+# XiaomiParts checks the HAL Hi-Fi capability before exposing its control.
+get_prop(devicesettings_app, vendor_audio_prop)

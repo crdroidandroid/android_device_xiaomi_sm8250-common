@@ -18,3 +18,8 @@ ro.product.marketname                                                           
 
 # SettingsLib
 settingsdebug.instant.packages u:object_r:settingslib_prop:s0
+
+# Framework ViewRootImpl / InputConsumer properties read by application processes.
+viewroot.ipc_rendering_packages u:object_r:exported_default_prop:s0 exact string
+viewroot.profile_rendering u:object_r:exported_default_prop:s0 exact bool
+ro.input.resampling u:object_r:exported_default_prop:s0 exact bool
