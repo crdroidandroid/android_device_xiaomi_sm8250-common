@@ -243,6 +243,10 @@ PRODUCT_PACKAGES += \
     uinput-fpc.idc \
     uinput-goodix.idc
 
+# KGSL diagnostic tracing: pair Unix permissions with system_ext labels.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.kgsl-tracing.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.kgsl-tracing.rc
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 

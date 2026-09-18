@@ -154,3 +154,7 @@ genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/f0_value u:object_r
 
 # Class attribute: this is not a power_supply device symlink.
 genfscon sysfs /class/qcom-battery/restrict_chg u:object_r:vendor_sysfs_charging_speed:s0
+
+# Two names for the same aggregate counter; do not label the proc subtree.
+genfscon sysfs /devices/virtual/kgsl/kgsl/page_alloc u:object_r:vendor_sysfs_gpu_memory:s0
+genfscon sysfs /kernel/gpu/gpu_memory u:object_r:vendor_sysfs_gpu_memory:s0

@@ -1,0 +1,2 @@
+# Allow GPU capability queries to discover the legacy same-process mapper HAL.
+allow gpuservice hal_graphics_mapper_hwservice:hwservice_manager find;

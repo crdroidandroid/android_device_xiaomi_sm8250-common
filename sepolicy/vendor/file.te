@@ -29,3 +29,6 @@ type vendor_sysfs_f0_value, fs_type, sysfs_type;
 
 # Lineage charging-speed preference (restrict_chg only).
 type vendor_sysfs_charging_speed, fs_type, sysfs_type;
+
+# Read-only, aggregate KGSL allocation statistic, never per-process data.
+type vendor_sysfs_gpu_memory, fs_type, sysfs_type;

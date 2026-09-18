@@ -1,0 +1,18 @@
+# Selected KGSL scheduling, fault and allocation-accounting events.
+# On user builds, debugfs_tracing_debug is intentionally inaccessible to Perfetto.
+# Use the normal tracing label only for these known event subtrees; do not grant
+# traced_probes blanket access to debug-only events, raw GPU memory or debugfs.
+# Existing platform traced_probes permissions and consumer authorization apply.
+# No event is enabled at boot by these labels. Keep the system_ext boundary.
+genfscon tracefs /events/kgsl/kgsl_mmu_pagefault/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_issueibcmds/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_mem_alloc/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_mem_map/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_mem_free/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_pwrlevel/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/kgsl_gpubusy/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/adreno_cmdbatch_queued/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/adreno_cmdbatch_retired/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/adreno_cmdbatch_fault/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/adreno_cmdbatch_recovery/ u:object_r:debugfs_tracing:s0
+genfscon tracefs /events/kgsl/adreno_gpu_fault/ u:object_r:debugfs_tracing:s0

@@ -1,0 +1,34 @@
+# Copyright (C) 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Companion to the selected KGSL labels in system_ext private policy.
+# traced_probes runs as nobody with supplementary group readtracefs. Its
+# DAC_READ_SEARCH capability does not permit writing root-owned 0644 files.
+# Install on system_ext so these commands run as init, not vendor_init.
+# Keep ownership at root, grant only the existing tracing group write access,
+# and leave every event disabled until an authorized trace requests it.
+on boot
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_mmu_pagefault/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_mmu_pagefault/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_issueibcmds/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_issueibcmds/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_mem_alloc/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_mem_alloc/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_mem_map/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_mem_map/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_mem_free/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_mem_free/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_pwrlevel/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_pwrlevel/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/kgsl_gpubusy/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/kgsl_gpubusy/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_queued/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_queued/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_retired/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_retired/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_fault/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_fault/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_recovery/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/adreno_cmdbatch_recovery/enable
+    chown root readtracefs /sys/kernel/tracing/events/kgsl/adreno_gpu_fault/enable
+    chmod 0664 /sys/kernel/tracing/events/kgsl/adreno_gpu_fault/enable

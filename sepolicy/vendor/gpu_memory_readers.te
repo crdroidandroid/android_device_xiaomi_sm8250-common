@@ -1,0 +1,5 @@
+# Aggregate byte count only. Isolated apps must not read device sysfs.
+# Do not grant access to per-process mappings, addresses or GPU controls.
+allow { appdomain -isolated_app_all shell } vendor_sysfs_gpu_memory:file { getattr open read };
+allow { appdomain -isolated_app_all shell } vendor_sysfs_gpu_memory:lnk_file { getattr read };
+allow { appdomain -isolated_app_all shell } vendor_sysfs_kgsl:dir search;
