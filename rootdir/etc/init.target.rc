@@ -377,37 +377,3 @@ on property:sys.lmkd.memory.start_reclaim_in_capture=1
     setprop sys.lmkd.memory.start_reclaim_in_capture 0
     write /sys/kernel/cam_reclaim/config "120 0 0 400000 1000 0 0 2000000000"
     write /sys/kernel/cam_reclaim/event 1
-
-#####copy megvii files#####
-on property:sys.boot_completed=1
-    mkdir /data/vendor/camera/model 0777 cameraserver audio
-    mkdir /data/vendor/camera/model/rt_model 0777 cameraserver audio
-    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
-    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_model
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_model
-    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
-    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_cache
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_cache
-    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
-    chown cameraserver audio  /data/vendor/camera/model/rt_model/preview_policy
-    chmod 0777 /data/vendor/camera/model/rt_model/preview_policy
-    mkdir /data/vendor/camera/model/dof_model 0777 cameraserver audio
-    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
-    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_cache
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_cache
-    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
-    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_model
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_model
-    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
-    chown cameraserver audio  /data/vendor/camera/model/dof_model/capture_policy
-    chmod 0777 /data/vendor/camera/model/dof_model/capture_policy
-    mkdir /data/vendor/camera/model/ldc_model 0777 cameraserver audio
-    copy /vendor/etc/camera/model/ldc_model/ldc_cap_cache /data/vendor/camera/model/ldc_model/ldc_cap_cache
-    chown cameraserver audio  /data/vendor/camera/model/ldc_model/ldc_cap_cache
-    chmod 0777 /data/vendor/camera/model/ldc_model/ldc_cap_cache
-    copy /vendor/etc/camera/model/ldc_model/ldc_cap_model /data/vendor/camera/model/ldc_model/ldc_cap_model
-    chown cameraserver audio  /data/vendor/camera/model/ldc_model/ldc_cap_model
-    chmod 0777 /data/vendor/camera/model/ldc_model/ldc_cap_model
-    copy /vendor/etc/camera/model/ldc_model/ldc_cap_policy /data/vendor/camera/model/ldc_model/ldc_cap_policy
-    chown cameraserver audio  /data/vendor/camera/model/ldc_model/ldc_cap_policy
-    chmod 0777 /data/vendor/camera/model/ldc_model/ldc_cap_policy
