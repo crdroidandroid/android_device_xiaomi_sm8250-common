@@ -44,6 +44,8 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    # Zram swap-in needs no disk read-ahead; vendor_init owns this sysctl.
+    write /proc/sys/vm/page-cluster 0
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -51,13 +53,6 @@ on init
 
     # Mipi Display feature
     chmod 0777 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_dsi_clock
-
-    # Create cgroup mount point for memory
-    mkdir /sys/fs/cgroup/memory/bg 0750 root system
-    write /sys/fs/cgroup/memory/bg/memory.swappiness 140
-    write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
-    chown root system /sys/fs/cgroup/memory/bg/tasks
-    chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
     # Allow both charger and hal_light to access panel0 backlight
     chown system system /sys/class/backlight/panel0-backlight/brightness

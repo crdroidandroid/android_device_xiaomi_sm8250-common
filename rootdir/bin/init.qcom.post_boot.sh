@@ -812,60 +812,57 @@ KernelVersionA=${KernelVersionStr:0:1}
 KernelVersionB=${KernelVersionS%.*}
 
 function configure_zram_parameters() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+    # Never change the compressor or reformat an initialized ZRAM device.
+    [ -r /sys/block/zram0/disksize ] || return 0
+    disksize=$(cat /sys/block/zram0/disksize) || return 1
+    case "$disksize" in
+        ''|*[!0-9]*) return 1 ;;
+    esac
+    [ "$disksize" -eq 0 ] || return 0
 
-    # Zram disk - 75% for Go devices.
-    # For 512MB Go device, size = 384MB, set same for Non-Go.
-    # For 1GB Go device, size = 768MB, set same for Non-Go.
-    # For 2GB Go device, size = 1536MB, set same for Non-Go.
-    # For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-    # And enable lz4 zram compression for Go targets.
-
-    let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-    diskSizeUnit=M
-    if [ $RamSizeGB -le 2 ]; then
-        let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-    else
-        let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
-    fi
-
-    # use MB avoid 32 bit overflow
-    if [ $zRamSizeMB -gt 4096 ]; then
-        let zRamSizeMB=4096
-    fi
-
-    # And enable lz4 zram compression
-	echo lz4 > /sys/block/zram0/comp_algorithm
-
-    if [ -f /sys/block/zram0/disksize ]; then
-        disksize=`cat /sys/block/zram0/disksize`
-        if [ $disksize -eq 0 ]; then
-            if [ -f /sys/block/zram0/use_dedup ]; then
-                echo 1 > /sys/block/zram0/use_dedup
-            fi
-            if [ $MemTotal -le 524288 ]; then
-                echo 402653184 > /sys/block/zram0/disksize
-            elif [ $MemTotal -le 1048576 ]; then
-                echo 805306368 > /sys/block/zram0/disksize
-            else
-                zramDiskSize=$zRamSizeMB$diskSizeUnit
-                echo $zramDiskSize > /sys/block/zram0/disksize
-            fi
-
-            # ZRAM may use more memory than it saves if SLAB_STORE_USER
-            # debug option is enabled.
-            if [ -e /sys/kernel/slab/zs_handle ]; then
-                echo 0 > /sys/kernel/slab/zs_handle/store_user
-            fi
-            if [ -e /sys/kernel/slab/zspage ]; then
-                echo 0 > /sys/kernel/slab/zspage/store_user
-            fi
-
-            mkswap /dev/block/zram0
-            swapon /dev/block/zram0 -p 32758
+    # Parse the value, not a fixed-width slice of /proc/meminfo.
+    MemTotal=
+    while read -r key value unit; do
+        if [ "$key" = "MemTotal:" ]; then
+            MemTotal=$value
+            break
         fi
+    done < /proc/meminfo
+    case "$MemTotal" in
+        ''|*[!0-9]*) return 1 ;;
+    esac
+    [ "$MemTotal" -gt 0 ] || return 1
+
+    # Preserve the existing capacity policy: 75% at <=2 GiB, otherwise
+    # half the rounded RAM tier, capped at 4 GiB (3/4 GiB on 6/8 GiB phones).
+    RamSizeGB=$((MemTotal / 1048576 + 1))
+    if [ "$RamSizeGB" -le 2 ]; then
+        zRamSizeMB=$((RamSizeGB * 1024 * 3 / 4))
+    else
+        zRamSizeMB=$((RamSizeGB * 1024 / 2))
     fi
+    [ "$zRamSizeMB" -le 4096 ] || zRamSizeMB=4096
+
+    echo lz4 > /sys/block/zram0/comp_algorithm || return 1
+    if [ -f /sys/block/zram0/use_dedup ]; then
+        echo 1 > /sys/block/zram0/use_dedup
+    fi
+    if [ "$MemTotal" -le 524288 ]; then
+        echo 402653184 > /sys/block/zram0/disksize || return 1
+    elif [ "$MemTotal" -le 1048576 ]; then
+        echo 805306368 > /sys/block/zram0/disksize || return 1
+    else
+        echo "${zRamSizeMB}M" > /sys/block/zram0/disksize || return 1
+    fi
+
+    # Retain the existing debug-SLAB mitigation on kernels that expose it.
+    for slab in zs_handle zspage; do
+        if [ -e /sys/kernel/slab/$slab/store_user ]; then
+            echo 0 > /sys/kernel/slab/$slab/store_user
+        fi
+    done
+    mkswap /dev/block/zram0 || return 1
+    swapon /dev/block/zram0 -p 32758
 }
 
 function configure_read_ahead_kb_values() {
@@ -952,8 +949,6 @@ function configure_memory_parameters() {
     low_ram=`getprop ro.config.low_ram`
 
     if true; then
-        echo 0 > /proc/sys/vm/page-cluster
-
         #add memory limit to camera cgroup
         MemTotalStr=`cat /proc/meminfo | grep MemTotal`
         MemTotal=${MemTotalStr:16:8}
@@ -963,7 +958,10 @@ function configure_memory_parameters() {
             let LimitSize=524288000
         fi
 
-        echo $LimitSize > /dev/memcg/camera/memory.soft_limit_in_bytes
+        # This limit is a cgroup v1 interface; newer releases use cgroup v2.
+        if [ -f /dev/memcg/camera/memory.soft_limit_in_bytes ]; then
+            echo $LimitSize > /dev/memcg/camera/memory.soft_limit_in_bytes
+        fi
     else
 
         # Read adj series and set adj threshold for PPR and ALMK.
