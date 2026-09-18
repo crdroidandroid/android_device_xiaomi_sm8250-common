@@ -14,3 +14,6 @@ allow hal_audio_default system_suspend_hwservice:hwservice_manager find;
 # Dolby
 allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
 binder_call(hal_audio_default, hal_dms_default)
+
+# Read the haptic resonance calibration without granting generic sysfs access.
+allow hal_audio_default vendor_sysfs_f0_value:file r_file_perms;
