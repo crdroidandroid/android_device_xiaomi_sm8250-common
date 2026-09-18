@@ -26,3 +26,6 @@ type mdm_tombstone_data_file, data_file_type, file_type;
 
 # Awinic haptic resonance calibration, read by the vendor audio HAL.
 type vendor_sysfs_f0_value, fs_type, sysfs_type;
+
+# Lineage charging-speed preference (restrict_chg only).
+type vendor_sysfs_charging_speed, fs_type, sysfs_type;

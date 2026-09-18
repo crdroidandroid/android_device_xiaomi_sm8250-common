@@ -1,0 +1,2 @@
+# Only the configured fast-charge preference, not the whole qcom-battery class.
+allow hal_lineage_health_default vendor_sysfs_charging_speed:file rw_file_perms;
