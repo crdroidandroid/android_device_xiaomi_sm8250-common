@@ -108,6 +108,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libaudiopreprocessing \
+    libbatterylistener \
     libbundlewrapper \
     libdownmix \
     libdynproc \
