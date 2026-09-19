@@ -17,3 +17,8 @@ allow devicesettings_app sysfs_livedisplay_tuneable:file rw_file_perms;
 
 # XiaomiParts checks the HAL Hi-Fi capability before exposing its control.
 get_prop(devicesettings_app, vendor_audio_prop)
+
+
+# XiaomiParts selects the runtime mi_thermald map override.
+get_prop(devicesettings_app, vendor_thermal_profile_prop)
+set_prop(devicesettings_app, vendor_thermal_profile_prop)
