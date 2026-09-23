@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Yn ol</string>
+    <string name="parts_search_apps">Chwilio apiau</string>
+    <string name="touch_controls_active_summary">Wedi\'i gymhwyso tra bod yr ap hwn yn y blaendir. Mae gadael yr app neu droi\'r sgrin i ffwrdd yn adfer ymddygiad cyffwrdd arferol.</string>
+    <string name="touch_controls_active_title">Mae tiwnio fesul ap wedi\'i alluogi</string>
+    <string name="touch_controls_advanced_group">Modd llaw · mân addasiadau</string>
+    <string name="touch_controls_aim_summary">Addaswch sensitifrwydd ystumiau anelu dim ond os oes angen. Mae gwerth o 0 yn adfer y gosodiad firmware rhagosodedig.</string>
+    <string name="touch_controls_edge_group">Annibynnol · amddiffyn ymyl</string>
+    <string name="touch_controls_edge_summary">0 yn analluogi hidlo ymyl; mae lefelau 1-3 yn cynyddu amddiffyniad rhag cyffyrddiadau ymyl damweiniol. Gall hidlo cryfach wneud cyffyrddiadau ymyl bwriadol yn galetach.</string>
+    <string name="touch_controls_global_summary">Mae\'r opsiwn ymatebolrwydd byd-eang yn cael blaenoriaeth. Mae eich gosodiadau fesul ap yn cael eu cadw ond wedi\'u seibio. Tapiwch yma i reoli\'r opsiwn byd-eang.</string>
+    <string name="touch_controls_global_title">Mae gwrthwneud cyffwrdd byd-eang yn weithredol</string>
+    <string name="touch_controls_help">Dechreuwch gyda rhagosodiadau llaw. Galluogi tiwnio dim ond ar gyfer apiau sydd ei angen.\n\nDewisiadau amgen yw rhagosodiadau ac addasiadau â llaw, nid effeithiau stac. Mae rhagosodiadau 1–3 yn broffiliau cadarnwedd; nid graddau ansawdd mohonynt.\n\nYn y modd llaw, mae 0 yn adfer y rhagosodiad firmware. Mae lefelau uwch yn newid yr ymddygiad cyffwrdd a gallant deimlo\'n waeth mewn rhai gemau. Addaswch ymateb neu sensitifrwydd yn gyntaf; defnyddio nod a sefydlogrwydd yn unig ar gyfer tiwnio manylach.\n\nMae hidlo ymyl yn annibynnol. Gall amddiffyniad cryfach hefyd wrthod cyffyrddiadau bwriadol ger ymyl y sgrin.\n\nMae\'r opsiwn ymatebolrwydd byd-eang yn cael blaenoriaeth dros diwnio fesul ap. Nid yw\'r rheolyddion hyn yn newid cyfradd adnewyddu\'r arddangosfa.</string>
+    <string name="touch_controls_help_title">Sut mae tiwnio cyffwrdd yn gweithio</string>
+    <string name="touch_controls_manual">Modd llaw · dechreuwch gyda\'r gosodiadau firmware diofyn</string>
+    <string name="touch_controls_manual_group">Modd llaw · prif addasiadau</string>
+    <string name="touch_controls_mode_group">Prif leoliad</string>
+    <string name="touch_controls_mode_help">Mae rhagosodiad yn disodli ymateb, sensitifrwydd, nod a sefydlogrwydd tap gyda\'i gilydd. Mae gosodiadau llaw yn cael eu cadw yn ddiweddarach. Mae amddiffyn ymyl yn gweithio ar wahân yn y naill fodd neu\'r llall.</string>
+    <string name="touch_controls_mode_help_title">Dewiswch un dull tiwnio</string>
+    <string name="touch_controls_mode_title">Modd addasu cyffwrdd</string>
+    <string name="touch_controls_preset_one">Rhagosodiad cadarnwedd 1</string>
+    <string name="touch_controls_preset_three">Rhagosodiad cadarnwedd 3</string>
+    <string name="touch_controls_preset_two">Rhagosodiad cadarnwedd 2</string>
+    <string name="touch_controls_reset_summary">Dychwelwch i ragosodiadau firmware â llaw a\'r amddiffyniad ymyl rhagosodedig. Cadwch switsh galluogi\'r ap heb ei newid.</string>
+    <string name="touch_controls_reset_title">Ailosod tiwnio\'r ap hwn</string>
+    <string name="touch_controls_response_summary">Addasu ymateb sgrin gyffwrdd i dapiau. Mae gwerth o 0 yn adfer y gosodiad firmware rhagosodedig. Newidiwch un gosodiad ar y tro a rhowch gynnig arno yn eich gêm.</string>
+    <string name="touch_controls_screen_title">Rheolaethau cyffwrdd</string>
+    <string name="touch_controls_sensitivity_summary">Addaswch sensitifrwydd cyffwrdd. 0 yn adfer y rhagosodiad firmware; nid yw lefel uwch yn well yn awtomatig ar gyfer pob gêm.</string>
+    <string name="touch_controls_stability_summary">Addaswch sefydlogrwydd tapiau sgrin gyffwrdd dro ar ôl tro dim ond os oes angen. Mae gwerth o 0 yn adfer y gosodiad firmware rhagosodedig.</string>
+    <string name="touch_controls_start_summary">Galluogi rheolyddion ar gyfer yr ap hwn, yna dewiswch ragosodiad neu diwniwch osodiadau unigol. Nid oes angen i chi godi pob llithrydd.</string>
+    <string name="touch_controls_start_title">Dechreuwch gyda\'r rhagosodiadau</string>
+    <string name="touch_controls_unavailable_summary">Nid oedd y gwasanaeth cyffwrdd yn darparu ystodau rheoli dilys. Ailagor y dudalen hon i roi cynnig arall arni.</string>
+    <string name="touch_controls_unavailable_title">Nid yw rheolyddion cyffwrdd ar gael</string>
+</resources>

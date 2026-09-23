@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Enrere</string>
+    <string name="parts_search_apps">Cerca aplicacions</string>
+    <string name="touch_controls_active_summary">S\'aplica mentre aquesta aplicació està en primer pla. Sortir de l\'aplicació o apagar la pantalla restaura el comportament tàctil normal.</string>
+    <string name="touch_controls_active_title">L\'ajustament per aplicació està activat</string>
+    <string name="touch_controls_advanced_group">Mode manual · ajustos fins</string>
+    <string name="touch_controls_aim_summary">Ajusteu la sensibilitat dels gestos de punteria només si cal. Un valor de 0 restaura la configuració predeterminada del microprogramari.</string>
+    <string name="touch_controls_edge_group">Independent · protecció de vora</string>
+    <string name="touch_controls_edge_summary">0 desactiva el filtratge de vora; els nivells 1-3 augmenten la protecció contra tocs accidentals de vora. Un filtratge més fort pot fer que els tocs de vora intencionats siguin més difícils.</string>
+    <string name="touch_controls_global_summary">L\'opció de resposta global té prioritat. La vostra configuració per aplicació es desa però s\'atura. Toqueu aquí per gestionar l\'opció global.</string>
+    <string name="touch_controls_global_title">La substitució tàctil global està activa</string>
+    <string name="touch_controls_help">Comenceu amb els valors predeterminats manuals. Activeu la sintonització només per a les aplicacions que ho necessitin.\n\nEls preajustos i els ajustos manuals són alternatives, no efectes per apilar. Els valors predefinits 1–3 són perfils de microprogramari; no són qualificacions de qualitat.\n\nEn mode manual, 0 restaura el firmware predeterminat. Els nivells més alts canvien el comportament tàctil i poden sentir-se pitjor en alguns jocs. Ajusteu primer la resposta o la sensibilitat; utilitzeu l\'objectiu i l\'estabilitat només per a una afinació més fina.\n\nEl filtratge de vora és independent. Una protecció més forta també pot rebutjar els tocs intencionats a prop de la vora de la pantalla.\n\nL\'opció de resposta global té prioritat sobre l\'ajustament per aplicació. Aquests controls no canvien la freqüència d\'actualització de la pantalla.</string>
+    <string name="touch_controls_help_title">Com funciona l\'afinació tàctil</string>
+    <string name="touch_controls_manual">Mode manual · començar amb la configuració del microprogramari predeterminada</string>
+    <string name="touch_controls_manual_group">Mode manual · ajustos principals</string>
+    <string name="touch_controls_mode_group">Configuració principal</string>
+    <string name="touch_controls_mode_help">Un preajust substitueix la resposta, la sensibilitat, l\'objectiu i l\'estabilitat del toc. La configuració manual es desa per a més endavant. La protecció de vora funciona per separat en qualsevol dels dos modes.</string>
+    <string name="touch_controls_mode_help_title">Trieu un mètode d\'afinació</string>
+    <string name="touch_controls_mode_title">Mode d\'ajust tàctil</string>
+    <string name="touch_controls_preset_one">Preestablert de firmware 1</string>
+    <string name="touch_controls_preset_three">Preestablert de firmware 3</string>
+    <string name="touch_controls_preset_two">Preestablert de firmware 2</string>
+    <string name="touch_controls_reset_summary">Tornar als valors predeterminats del firmware manual i a la protecció de vora predeterminada. Manteniu l\'interruptor d\'activació de l\'aplicació sense canvis.</string>
+    <string name="touch_controls_reset_title">Restableix l\'ajustament d\'aquesta aplicació</string>
+    <string name="touch_controls_response_summary">Ajusta la resposta de la pantalla tàctil als tocs. Un valor de 0 restaura la configuració predeterminada del microprogramari. Canvia una configuració alhora i prova-ho al teu joc.</string>
+    <string name="touch_controls_screen_title">Controls tàctils</string>
+    <string name="touch_controls_sensitivity_summary">Ajusteu la sensibilitat tàctil. 0 restaura el firmware predeterminat; un nivell superior no és automàticament millor per a cada joc.</string>
+    <string name="touch_controls_stability_summary">Ajusteu l\'estabilitat dels tocs repetits de la pantalla tàctil només si cal. Un valor de 0 restaura la configuració predeterminada del microprogramari.</string>
+    <string name="touch_controls_start_summary">Activeu els controls d\'aquesta aplicació i, a continuació, trieu una configuració predeterminada o ajusteu els paràmetres individuals. No cal que aixequeu tots els controls lliscants.</string>
+    <string name="touch_controls_start_title">Comenceu amb els valors predeterminats</string>
+    <string name="touch_controls_unavailable_summary">El servei tàctil no proporcionava intervals de control vàlids. Torneu a obrir aquesta pàgina per tornar-ho a provar.</string>
+    <string name="touch_controls_unavailable_title">Els controls tàctils no estan disponibles</string>
+</resources>

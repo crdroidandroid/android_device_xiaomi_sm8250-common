@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Werom</string>
+    <string name="parts_search_apps">Sykje apps</string>
+    <string name="touch_controls_active_summary">Tapast wylst dizze app op \'e foargrûn is. It ferlitten fan de app of it útskeakeljen fan it skerm herstelt normaal oanraakgedrach.</string>
+    <string name="touch_controls_active_title">Per-app tuning is ynskeakele</string>
+    <string name="touch_controls_advanced_group">Hânliedingmodus · fyn oanpassingen</string>
+    <string name="touch_controls_aim_summary">Pas de gefoelichheid fan rjochte gebaren allinich oan as it nedich is. In wearde fan 0 herstelt de standert firmware-ynstelling.</string>
+    <string name="touch_controls_edge_group">Unôfhinklik · râne beskerming</string>
+    <string name="touch_controls_edge_summary">0 skeakelet rânefiltering út; nivo 1-3 fergrutsje beskerming tsjin tafallige râne touches. Sterker filterjen kin opsetlike râneberekkeningen hurder meitsje.</string>
+    <string name="touch_controls_global_summary">De opsje foar globale responsiveness nimt prioriteit. Jo ynstellings per app wurde bewarre mar ûnderbrutsen. Tik hjir om de globale opsje te behearjen.</string>
+    <string name="touch_controls_global_title">Globale touch-override is aktyf</string>
+    <string name="touch_controls_help">Begjin mei hânmjittich standerts. Ynskeakelje tuning allinich foar apps dy\'t it nedich binne.\n\nPresets en hânmjittige oanpassingen binne alternativen, gjin effekten om te stapeljen. Presets 1-3 binne firmwareprofilen; se binne gjin kwaliteit wurdearrings.\n\nYn hânmjittich modus, 0 herstelt de firmware standert. Hegere nivo\'s feroarje it touchgedrach en kinne yn guon spultsjes slimmer fiele. Pas antwurd of gefoelichheid earst oan; brûke doel en stabiliteit allinich foar fynere tuning.\n\nRânefiltering is ûnôfhinklik. Sterkere beskerming kin ek opsetlike oanrekkingen by de skermrâne ôfwize.\n\nDe opsje foar globale responsiveness nimt prioriteit boppe tuning per app. Dizze kontrôles feroarje de ferfarskingsfrekwinsje fan it display net.</string>
+    <string name="touch_controls_help_title">Hoe touch tuning wurket</string>
+    <string name="touch_controls_manual">Hânlieding modus · begjinne mei de standert firmware ynstellings</string>
+    <string name="touch_controls_manual_group">Hânliedingmodus · haadoanpassingen</string>
+    <string name="touch_controls_mode_group">Main ynstelling</string>
+    <string name="touch_controls_mode_help">In preset ferfangt reaksje, gefoelichheid, doel en tapstabiliteit tegearre. Hânlieding ynstellings bliuwe bewarre foar letter. Rânebeskerming wurket apart yn beide modus.</string>
+    <string name="touch_controls_mode_help_title">Kies ien tuning metoade</string>
+    <string name="touch_controls_mode_title">Touch oanpassing modus</string>
+    <string name="touch_controls_preset_one">Firmware preset 1</string>
+    <string name="touch_controls_preset_three">Firmware preset 3</string>
+    <string name="touch_controls_preset_two">Firmware preset 2</string>
+    <string name="touch_controls_reset_summary">Werom nei hânmjittich firmware standerts en de standert râne beskerming. Hâld de ynskeakelje-skeakel fan \'e app ûnferoare.</string>
+    <string name="touch_controls_reset_title">Reset de tuning fan dizze app</string>
+    <string name="touch_controls_response_summary">Oanpasse de reaksje fan it touchscreen op kranen. In wearde fan 0 herstelt de standert firmware-ynstelling. Feroarje ien ynstelling tagelyk en besykje it yn jo spultsje.</string>
+    <string name="touch_controls_screen_title">Touch kontrôles</string>
+    <string name="touch_controls_sensitivity_summary">Oanreitsje gefoelichheid oanpasse. 0 herstelt de firmware standert; in heger nivo is net automatysk better foar eltse wedstriid.</string>
+    <string name="touch_controls_stability_summary">Pas de stabiliteit fan werhelle touchscreen-kranen allinich oan as it nedich is. In wearde fan 0 herstelt de standert firmware-ynstelling.</string>
+    <string name="touch_controls_start_summary">Skeakelje kontrôles foar dizze app yn, kies dan in foarynstelling of ôfstimme yndividuele ynstellings. Jo hoege net elke slider te ferheegjen.</string>
+    <string name="touch_controls_start_title">Begjin mei de standertynstellingen</string>
+    <string name="touch_controls_unavailable_summary">De touch tsjinst levere gjin jildich kontrôle berik. Iepenje dizze side opnij om te besykjen.</string>
+    <string name="touch_controls_unavailable_title">Touchkontrôles binne net beskikber</string>
+</resources>

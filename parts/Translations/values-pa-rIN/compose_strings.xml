@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ਪਿੱਛੇ</string>
+    <string name="parts_search_apps">ਐਪਸ ਖੋਜੋ</string>
+    <string name="touch_controls_active_summary">ਇਸ ਐਪ ਦੇ ਫੋਰਗਰਾਉਂਡ ਵਿੱਚ ਹੋਣ \'ਤੇ ਲਾਗੂ ਕੀਤਾ ਗਿਆ। ਐਪ ਨੂੰ ਛੱਡਣ ਜਾਂ ਸਕ੍ਰੀਨ ਨੂੰ ਬੰਦ ਕਰਨ ਨਾਲ ਸਧਾਰਣ ਸਪਰਸ਼ ਵਿਵਹਾਰ ਨੂੰ ਬਹਾਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।</string>
+    <string name="touch_controls_active_title">ਪ੍ਰਤੀ-ਐਪ ਟਿਊਨਿੰਗ ਸਮਰਥਿਤ ਹੈ</string>
+    <string name="touch_controls_advanced_group">ਮੈਨੁਅਲ ਮੋਡ · ਵਧੀਆ ਵਿਵਸਥਾਵਾਂ</string>
+    <string name="touch_controls_aim_summary">ਜੇ ਲੋੜ ਹੋਵੇ ਤਾਂ ਹੀ ਨਿਸ਼ਾਨਾ ਸੰਕੇਤਾਂ ਦੀ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ। 0 ਦਾ ਮੁੱਲ ਡਿਫੌਲਟ ਫਰਮਵੇਅਰ ਸੈਟਿੰਗ ਨੂੰ ਰੀਸਟੋਰ ਕਰਦਾ ਹੈ।</string>
+    <string name="touch_controls_edge_group">ਸੁਤੰਤਰ · ਕਿਨਾਰੇ ਦੀ ਸੁਰੱਖਿਆ</string>
+    <string name="touch_controls_edge_summary">0 ਕਿਨਾਰੇ ਫਿਲਟਰਿੰਗ ਨੂੰ ਅਯੋਗ ਕਰਦਾ ਹੈ; ਪੱਧਰ 1-3 ਦੁਰਘਟਨਾ ਦੇ ਕਿਨਾਰੇ ਨੂੰ ਛੂਹਣ ਤੋਂ ਸੁਰੱਖਿਆ ਵਧਾਉਂਦੇ ਹਨ। ਮਜ਼ਬੂਤ ​​ਫਿਲਟਰਿੰਗ ਜਾਣਬੁੱਝ ਕੇ ਕਿਨਾਰੇ ਨੂੰ ਸਖ਼ਤ ਬਣਾ ਸਕਦੀ ਹੈ।</string>
+    <string name="touch_controls_global_summary">ਗਲੋਬਲ ਜਵਾਬਦੇਹੀ ਵਿਕਲਪ ਨੂੰ ਤਰਜੀਹ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ। ਤੁਹਾਡੀਆਂ ਪ੍ਰਤੀ-ਐਪ ਸੈਟਿੰਗਾਂ ਰੱਖਿਅਤ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ ਪਰ ਰੋਕੀਆਂ ਗਈਆਂ ਹਨ। ਗਲੋਬਲ ਵਿਕਲਪ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ ਇੱਥੇ ਟੈਪ ਕਰੋ।</string>
+    <string name="touch_controls_global_title">ਗਲੋਬਲ ਟੱਚ ਓਵਰਰਾਈਡ ਕਿਰਿਆਸ਼ੀਲ ਹੈ</string>
+    <string name="touch_controls_help">ਮੈਨੁਅਲ ਡਿਫੌਲਟ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ। ਸਿਰਫ਼ ਉਹਨਾਂ ਐਪਾਂ ਲਈ ਟਿਊਨਿੰਗ ਚਾਲੂ ਕਰੋ ਜਿਨ੍ਹਾਂ ਨੂੰ ਇਸਦੀ ਲੋੜ ਹੈ।\n\nਪ੍ਰੀਸੈੱਟ ਅਤੇ ਮੈਨੂਅਲ ਐਡਜਸਟਮੈਂਟ ਵਿਕਲਪ ਹਨ, ਸਟੈਕ ਲਈ ਪ੍ਰਭਾਵ ਨਹੀਂ। ਪ੍ਰੀਸੈੱਟ 1-3 ਫਰਮਵੇਅਰ ਪ੍ਰੋਫਾਈਲ ਹਨ; ਉਹ ਗੁਣਵੱਤਾ ਰੇਟਿੰਗ ਨਹੀਂ ਹਨ।\n\nਮੈਨੂਅਲ ਮੋਡ ਵਿੱਚ, 0 ਫਰਮਵੇਅਰ ਡਿਫੌਲਟ ਨੂੰ ਰੀਸਟੋਰ ਕਰਦਾ ਹੈ। ਉੱਚ ਪੱਧਰਾਂ ਛੋਹਣ ਵਾਲੇ ਵਿਵਹਾਰ ਨੂੰ ਬਦਲਦੀਆਂ ਹਨ ਅਤੇ ਕੁਝ ਗੇਮਾਂ ਵਿੱਚ ਬੁਰਾ ਮਹਿਸੂਸ ਕਰ ਸਕਦੀਆਂ ਹਨ। ਜਵਾਬ ਜਾਂ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਨੂੰ ਪਹਿਲਾਂ ਵਿਵਸਥਿਤ ਕਰੋ; ਸਿਰਫ ਵਧੀਆ ਟਿਊਨਿੰਗ ਲਈ ਉਦੇਸ਼ ਅਤੇ ਸਥਿਰਤਾ ਦੀ ਵਰਤੋਂ ਕਰੋ।\n\nਕਿਨਾਰੇ ਫਿਲਟਰਿੰਗ ਸੁਤੰਤਰ ਹੈ। ਮਜ਼ਬੂਤ ​​ਸੁਰੱਖਿਆ ਸਕ੍ਰੀਨ ਦੇ ਕਿਨਾਰੇ ਦੇ ਨੇੜੇ ਜਾਣਬੁੱਝ ਕੇ ਛੂਹਣ ਨੂੰ ਵੀ ਅਸਵੀਕਾਰ ਕਰ ਸਕਦੀ ਹੈ।\n\nਗਲੋਬਲ ਜਵਾਬਦੇਹੀ ਵਿਕਲਪ ਪ੍ਰਤੀ-ਐਪ ਟਿਊਨਿੰਗ ਨੂੰ ਤਰਜੀਹ ਦਿੰਦਾ ਹੈ। ਇਹ ਨਿਯੰਤਰਣ ਡਿਸਪਲੇਅ ਰਿਫਰੈਸ਼ ਦਰ ਨੂੰ ਨਹੀਂ ਬਦਲਦੇ ਹਨ।</string>
+    <string name="touch_controls_help_title">ਟਚ ਟਿਊਨਿੰਗ ਕਿਵੇਂ ਕੰਮ ਕਰਦੀ ਹੈ</string>
+    <string name="touch_controls_manual">ਮੈਨੁਅਲ ਮੋਡ · ਡਿਫੌਲਟ ਫਰਮਵੇਅਰ ਸੈਟਿੰਗਾਂ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="touch_controls_manual_group">ਮੈਨੁਅਲ ਮੋਡ · ਮੁੱਖ ਵਿਵਸਥਾਵਾਂ</string>
+    <string name="touch_controls_mode_group">ਮੁੱਖ ਸੈਟਿੰਗ</string>
+    <string name="touch_controls_mode_help">ਇੱਕ ਪ੍ਰੀਸੈੱਟ ਜਵਾਬ, ਸੰਵੇਦਨਸ਼ੀਲਤਾ, ਉਦੇਸ਼ ਅਤੇ ਟੈਪ ਸਥਿਰਤਾ ਨੂੰ ਇਕੱਠੇ ਬਦਲਦਾ ਹੈ। ਮੈਨੁਅਲ ਸੈਟਿੰਗਾਂ ਬਾਅਦ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੀਆਂ ਹਨ। ਕਿਨਾਰੇ ਦੀ ਸੁਰੱਖਿਆ ਕਿਸੇ ਵੀ ਮੋਡ ਵਿੱਚ ਵੱਖਰੇ ਤੌਰ \'ਤੇ ਕੰਮ ਕਰਦੀ ਹੈ।</string>
+    <string name="touch_controls_mode_help_title">ਇੱਕ ਟਿਊਨਿੰਗ ਢੰਗ ਚੁਣੋ</string>
+    <string name="touch_controls_mode_title">ਐਡਜਸਟਮੈਂਟ ਮੋਡ ਨੂੰ ਛੋਹਵੋ</string>
+    <string name="touch_controls_preset_one">ਫਰਮਵੇਅਰ ਪ੍ਰੀਸੈਟ 1</string>
+    <string name="touch_controls_preset_three">ਫਰਮਵੇਅਰ ਪ੍ਰੀਸੈਟ 3</string>
+    <string name="touch_controls_preset_two">ਫਰਮਵੇਅਰ ਪ੍ਰੀਸੈਟ 2</string>
+    <string name="touch_controls_reset_summary">ਮੈਨੂਅਲ ਫਰਮਵੇਅਰ ਡਿਫੌਲਟ ਅਤੇ ਡਿਫੌਲਟ ਕਿਨਾਰੇ ਸੁਰੱਖਿਆ \'ਤੇ ਵਾਪਸ ਜਾਓ। ਐਪ ਦੇ ਸਮਰੱਥ ਸਵਿੱਚ ਨੂੰ ਬਿਨਾਂ ਕਿਸੇ ਬਦਲਾਅ ਦੇ ਰੱਖੋ।</string>
+    <string name="touch_controls_reset_title">ਇਸ ਐਪ ਦੀ ਟਿਊਨਿੰਗ ਨੂੰ ਰੀਸੈਟ ਕਰੋ</string>
+    <string name="touch_controls_response_summary">ਟੂਟੀਆਂ ਲਈ ਟੱਚਸਕ੍ਰੀਨ ਜਵਾਬ ਵਿਵਸਥਿਤ ਕਰੋ। 0 ਦਾ ਮੁੱਲ ਡਿਫੌਲਟ ਫਰਮਵੇਅਰ ਸੈਟਿੰਗ ਨੂੰ ਰੀਸਟੋਰ ਕਰਦਾ ਹੈ। ਇੱਕ ਸਮੇਂ ਵਿੱਚ ਇੱਕ ਸੈਟਿੰਗ ਬਦਲੋ ਅਤੇ ਇਸਨੂੰ ਆਪਣੀ ਗੇਮ ਵਿੱਚ ਅਜ਼ਮਾਓ।</string>
+    <string name="touch_controls_screen_title">ਟਚ ਕੰਟਰੋਲ</string>
+    <string name="touch_controls_sensitivity_summary">ਸਪਰਸ਼ ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ। 0 ਫਰਮਵੇਅਰ ਡਿਫੌਲਟ ਰੀਸਟੋਰ ਕਰਦਾ ਹੈ; ਉੱਚ ਪੱਧਰ ਹਰ ਗੇਮ ਲਈ ਆਪਣੇ ਆਪ ਬਿਹਤਰ ਨਹੀਂ ਹੁੰਦਾ।</string>
+    <string name="touch_controls_stability_summary">ਜੇਕਰ ਲੋੜ ਹੋਵੇ ਤਾਂ ਹੀ ਵਾਰ-ਵਾਰ ਟੱਚਸਕ੍ਰੀਨ ਟੈਪਾਂ ਦੀ ਸਥਿਰਤਾ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ। 0 ਦਾ ਮੁੱਲ ਡਿਫੌਲਟ ਫਰਮਵੇਅਰ ਸੈਟਿੰਗ ਨੂੰ ਰੀਸਟੋਰ ਕਰਦਾ ਹੈ।</string>
+    <string name="touch_controls_start_summary">ਇਸ ਐਪ ਲਈ ਨਿਯੰਤਰਣ ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ, ਫਿਰ ਇੱਕ ਪ੍ਰੀਸੈਟ ਚੁਣੋ ਜਾਂ ਵਿਅਕਤੀਗਤ ਸੈਟਿੰਗਾਂ ਨੂੰ ਟਿਊਨ ਕਰੋ। ਤੁਹਾਨੂੰ ਹਰ ਸਲਾਈਡਰ ਨੂੰ ਵਧਾਉਣ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ।</string>
+    <string name="touch_controls_start_title">ਡਿਫਾਲਟ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="touch_controls_unavailable_summary">ਟੱਚ ਸੇਵਾ ਨੇ ਵੈਧ ਨਿਯੰਤਰਣ ਰੇਂਜ ਪ੍ਰਦਾਨ ਨਹੀਂ ਕੀਤੀ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰਨ ਲਈ ਇਸ ਪੰਨੇ ਨੂੰ ਦੁਬਾਰਾ ਖੋਲ੍ਹੋ।</string>
+    <string name="touch_controls_unavailable_title">ਟਚ ਕੰਟਰੋਲ ਉਪਲਬਧ ਨਹੀਂ ਹਨ</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Takaisin</string>
+    <string name="parts_search_apps">Hae sovelluksia</string>
+    <string name="touch_controls_active_summary">Käytetty, kun tämä sovellus on etualalla. Sovelluksesta poistuminen tai näytön sammuttaminen palauttaa normaalin kosketuskäyttäytymisen.</string>
+    <string name="touch_controls_active_title">Sovelluskohtainen viritys on käytössä</string>
+    <string name="touch_controls_advanced_group">Manuaalinen tila · hienosäädöt</string>
+    <string name="touch_controls_aim_summary">Säädä tähtäyseleiden herkkyyttä vain tarvittaessa. Arvo 0 palauttaa laiteohjelmiston oletusasetuksen.</string>
+    <string name="touch_controls_edge_group">Riippumaton · reunasuojaus</string>
+    <string name="touch_controls_edge_summary">0 poistaa reunasuodatuksen käytöstä; tasot 1–3 lisäävät suojaa satunnaisia ​​reunakosketuksia vastaan. Vahvempi suodatus voi tehdä tahallisista reunakosketuksista vaikeampia.</string>
+    <string name="touch_controls_global_summary">Globaali reagointivaihtoehto on etusijalla. Sovelluskohtaiset asetuksesi on tallennettu, mutta keskeytetty. Napauta tätä hallitaksesi yleistä vaihtoehtoa.</string>
+    <string name="touch_controls_global_title">Globaali kosketuksen ohitus on aktiivinen</string>
+    <string name="touch_controls_help">Aloita manuaalisista oletusasetuksista. Ota viritys käyttöön vain sovelluksille, jotka tarvitsevat sitä.\n\nEsiasetukset ja manuaaliset säädöt ovat vaihtoehtoja, eivät pinottavia tehosteita. Esiasetukset 1–3 ovat laiteohjelmistoprofiileja; ne eivät ole laatuluokituksia.\n\nManuaalisessa tilassa 0 palauttaa laiteohjelmiston oletusasetuksen. Korkeammat tasot muuttavat kosketuskäyttäytymistä ja voivat tuntua huonommilta joissakin peleissä. Säädä vaste tai herkkyys ensin; käytä tavoitetta ja vakautta vain hienosäätöön.\n\nReunasuodatus on riippumaton. Vahvempi suoja voi myös torjua tahalliset kosketukset lähellä näytön reunaa.\n\nGlobaali reagointivaihtoehto on etusijalla sovelluskohtaiseen viritykseen verrattuna. Nämä säätimet eivät muuta näytön virkistystaajuutta.</string>
+    <string name="touch_controls_help_title">Kuinka kosketusviritys toimii</string>
+    <string name="touch_controls_manual">Manuaalinen tila · aloita laiteohjelmiston oletusasetuksista</string>
+    <string name="touch_controls_manual_group">Manuaalinen tila · pääsäädöt</string>
+    <string name="touch_controls_mode_group">Pääasetus</string>
+    <string name="touch_controls_mode_help">Esiasetus korvaa vasteen, herkkyyden, tähtäyksen ja napautusvakauden yhdessä. Manuaaliset asetukset tallennetaan myöhempää käyttöä varten. Reunasuojaus toimii erikseen kummassakin tilassa.</string>
+    <string name="touch_controls_mode_help_title">Valitse yksi viritystapa</string>
+    <string name="touch_controls_mode_title">Kosketussäätötila</string>
+    <string name="touch_controls_preset_one">Laiteohjelmiston esiasetus 1</string>
+    <string name="touch_controls_preset_three">Laiteohjelmiston esiasetus 3</string>
+    <string name="touch_controls_preset_two">Laiteohjelmiston esiasetus 2</string>
+    <string name="touch_controls_reset_summary">Palaa manuaalisiin laiteohjelmiston oletusasetuksiin ja oletusreunasuojaukseen. Pidä sovelluksen käyttöönottokytkin ennallaan.</string>
+    <string name="touch_controls_reset_title">Nollaa tämän sovelluksen viritys</string>
+    <string name="touch_controls_response_summary">Säädä kosketusnäytön vastetta napautuksiin. Arvo 0 palauttaa laiteohjelmiston oletusasetuksen. Muuta asetusta kerrallaan ja kokeile sitä pelissäsi.</string>
+    <string name="touch_controls_screen_title">Kosketusohjaimet</string>
+    <string name="touch_controls_sensitivity_summary">Säädä kosketusherkkyyttä. 0 palauttaa laiteohjelmiston oletusasetukset; korkeampi taso ei ole automaattisesti parempi jokaisessa pelissä.</string>
+    <string name="touch_controls_stability_summary">Säädä toistuvien kosketusnäytön napautusten vakautta vain tarvittaessa. Arvo 0 palauttaa laiteohjelmiston oletusasetuksen.</string>
+    <string name="touch_controls_start_summary">Ota ohjaimet käyttöön tässä sovelluksessa ja valitse sitten esiasetus tai säädä yksittäisiä asetuksia. Sinun ei tarvitse nostaa jokaista liukusäädintä.</string>
+    <string name="touch_controls_start_title">Aloita oletusasetuksista</string>
+    <string name="touch_controls_unavailable_summary">Kosketuspalvelu ei tarjonnut kelvollisia ohjausalueita. Yritä uudelleen avaamalla tämä sivu.</string>
+    <string name="touch_controls_unavailable_title">Kosketusohjaimet eivät ole käytettävissä</string>
+</resources>

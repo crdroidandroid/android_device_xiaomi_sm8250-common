@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">برگشت</string>
+    <string name="parts_search_apps">جستجوی اپلیکیشن ها</string>
+    <string name="touch_controls_active_summary">زمانی که این برنامه در پیش زمینه است اعمال می شود. خروج از برنامه یا خاموش کردن صفحه نمایش، رفتار لمسی عادی را بازیابی می کند.</string>
+    <string name="touch_controls_active_title">تنظیم هر برنامه فعال است</string>
+    <string name="touch_controls_advanced_group">حالت دستی · تنظیمات خوب</string>
+    <string name="touch_controls_aim_summary">حساسیت ژست های نشانه گیری را فقط در صورت لزوم تنظیم کنید. مقدار 0 تنظیمات سیستم عامل پیش فرض را بازیابی می کند.</string>
+    <string name="touch_controls_edge_group">مستقل · حفاظت از لبه</string>
+    <string name="touch_controls_edge_summary">0 فیلتر لبه را غیرفعال می کند. سطوح 1-3 محافظت در برابر لمس تصادفی لبه را افزایش می دهد. فیلتر کردن قوی‌تر می‌تواند لمس عمدی لبه را سخت‌تر کند.</string>
+    <string name="touch_controls_global_summary">گزینه پاسخگویی جهانی اولویت دارد. تنظیمات هر برنامه شما ذخیره شده اما موقتاً متوقف شده است. برای مدیریت گزینه جهانی، اینجا را ضربه بزنید.</string>
+    <string name="touch_controls_global_title">لغو جهانی لمس فعال است</string>
+    <string name="touch_controls_help">با پیش فرض های دستی شروع کنید. تنظیم را فقط برای برنامه هایی که به آن نیاز دارند فعال کنید.\n\nتنظیمات پیش‌تنظیمی و دستی جایگزین هستند، نه افکت‌های پشته. تنظیمات از پیش تعیین شده 1-3 پروفایل های سیستم عامل هستند. آنها رتبه بندی کیفیت نیستند.\n\nدر حالت دستی، 0 پیش فرض سیستم عامل را بازیابی می کند. سطوح بالاتر رفتار لمس را تغییر می دهد و ممکن است در برخی بازی ها احساس بدتری داشته باشد. ابتدا پاسخ یا حساسیت را تنظیم کنید. از هدف و ثبات فقط برای تنظیم دقیق تر استفاده کنید.\n\nفیلتر لبه مستقل است. محافظت قوی تر همچنین می تواند لمس های عمدی نزدیک لبه صفحه نمایش را رد کند.\n\nگزینه پاسخگویی جهانی بر تنظیم هر برنامه اولویت دارد. این کنترل ها نرخ تازه سازی نمایشگر را تغییر نمی دهند.</string>
+    <string name="touch_controls_help_title">تنظیم لمسی چگونه کار می کند</string>
+    <string name="touch_controls_manual">حالت دستی · با تنظیمات سیستم عامل پیش فرض شروع کنید</string>
+    <string name="touch_controls_manual_group">حالت دستی · تنظیمات اصلی</string>
+    <string name="touch_controls_mode_group">تنظیم اصلی</string>
+    <string name="touch_controls_mode_help">یک پیش تنظیم جایگزین پاسخ، حساسیت، هدف و ثبات ضربه زدن با هم می شود. تنظیمات دستی برای بعد ذخیره می شود. حفاظت لبه در هر دو حالت به طور جداگانه کار می کند.</string>
+    <string name="touch_controls_mode_help_title">یک روش تنظیم را انتخاب کنید</string>
+    <string name="touch_controls_mode_title">حالت تنظیم را لمس کنید</string>
+    <string name="touch_controls_preset_one">از پیش تعیین شده سیستم عامل 1</string>
+    <string name="touch_controls_preset_three">از پیش تعیین شده سیستم عامل 3</string>
+    <string name="touch_controls_preset_two">از پیش تعیین شده سیستم عامل 2</string>
+    <string name="touch_controls_reset_summary">به پیش‌فرض‌های میان‌افزار دستی و حفاظت پیش‌فرض لبه‌ها برگردید. کلید فعال کردن برنامه را بدون تغییر نگه دارید.</string>
+    <string name="touch_controls_reset_title">تنظیم این برنامه را بازنشانی کنید</string>
+    <string name="touch_controls_response_summary">پاسخ صفحه لمسی را به ضربه ها تنظیم کنید. مقدار 0 تنظیمات سیستم عامل پیش فرض را بازیابی می کند. هر بار تنظیمات را تغییر دهید و آن را در بازی خود امتحان کنید.</string>
+    <string name="touch_controls_screen_title">کنترل های لمسی</string>
+    <string name="touch_controls_sensitivity_summary">حساسیت لمسی را تنظیم کنید. 0 سیستم عامل پیش فرض را بازیابی می کند. سطح بالاتر به طور خودکار برای هر بازی بهتر نیست.</string>
+    <string name="touch_controls_stability_summary">ثبات ضربه های مکرر صفحه لمسی را فقط در صورت لزوم تنظیم کنید. مقدار 0 تنظیمات سیستم عامل پیش فرض را بازیابی می کند.</string>
+    <string name="touch_controls_start_summary">کنترل‌های این برنامه را فعال کنید، سپس تنظیمات فردی را از پیش تعیین شده یا تنظیم کنید. لازم نیست هر نوار لغزنده را بالا ببرید.</string>
+    <string name="touch_controls_start_title">با پیش فرض ها شروع کنید</string>
+    <string name="touch_controls_unavailable_summary">سرویس لمسی محدوده های کنترل معتبری را ارائه نمی دهد. برای امتحان مجدد این صفحه را دوباره باز کنید.</string>
+    <string name="touch_controls_unavailable_title">کنترل‌های لمسی در دسترس نیستند</string>
+</resources>

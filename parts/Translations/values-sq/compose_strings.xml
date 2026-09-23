@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Mbrapa</string>
+    <string name="parts_search_apps">Kërko aplikacione</string>
+    <string name="touch_controls_active_summary">Zbatohet ndërsa ky aplikacion është në plan të parë. Largimi nga aplikacioni ose fikja e ekranit rikthen sjelljen normale të prekjes.</string>
+    <string name="touch_controls_active_title">Akordimi për çdo aplikacion është aktivizuar</string>
+    <string name="touch_controls_advanced_group">Modaliteti manual · rregullime të imta</string>
+    <string name="touch_controls_aim_summary">Rregulloni ndjeshmërinë e gjesteve të synimit vetëm nëse është e nevojshme. Një vlerë prej 0 rikthen cilësimin e paracaktuar të firmuerit.</string>
+    <string name="touch_controls_edge_group">Mbrojtje e pavarur · buzë</string>
+    <string name="touch_controls_edge_summary">0 çaktivizon filtrimin e skajeve; nivelet 1–3 rrisin mbrojtjen kundër prekjeve aksidentale të skajeve. Filtrimi më i fortë mund t\'i bëjë më të vështira prekjet e qëllimshme të skajeve.</string>
+    <string name="touch_controls_global_summary">Opsioni i reagimit global ka përparësi. Cilësimet e tua për aplikacion ruhen por janë vendosur në pauzë. Trokit këtu për të menaxhuar opsionin global.</string>
+    <string name="touch_controls_global_title">Mbështetja globale e prekjes është aktive</string>
+    <string name="touch_controls_help">Filloni me parazgjedhjet manuale. Aktivizo akordimin vetëm për aplikacionet që kanë nevojë për të.\n\nParacaktimet dhe rregullimet manuale janë alternativa, jo efekte për grumbullim. Paracaktimet 1–3 janë profile firmware; ato nuk janë vlerësime cilësore.\n\nNë modalitetin manual, 0 rikthen standardin e firmuerit. Nivelet më të larta ndryshojnë sjelljen e prekjes dhe mund të ndihen më keq në disa lojëra. Rregulloni fillimisht përgjigjen ose ndjeshmërinë; përdorni synimin dhe stabilitetin vetëm për akordim më të mirë.\n\nFiltrimi i skajeve është i pavarur. Mbrojtja më e fortë mund të refuzojë gjithashtu prekjet e qëllimshme pranë skajit të ekranit.\n\nOpsioni i reagimit global ka përparësi ndaj akordimit për aplikacion. Këto kontrolle nuk e ndryshojnë shpejtësinë e rifreskimit të ekranit.</string>
+    <string name="touch_controls_help_title">Si funksionon akordimi me prekje</string>
+    <string name="touch_controls_manual">Modaliteti manual · filloni me cilësimet e paracaktuar të firmuerit</string>
+    <string name="touch_controls_manual_group">Modaliteti manual · rregullimet kryesore</string>
+    <string name="touch_controls_mode_group">Cilësimi kryesor</string>
+    <string name="touch_controls_mode_help">Një paracaktim zëvendëson përgjigjen, ndjeshmërinë, synimin dhe stabilitetin e prekjes së bashku. Cilësimet manuale mbeten të ruajtura për më vonë. Mbrojtja e skajeve funksionon veçmas në secilin modalitet.</string>
+    <string name="touch_controls_mode_help_title">Zgjidhni një metodë akordimi</string>
+    <string name="touch_controls_mode_title">Modaliteti i rregullimit me prekje</string>
+    <string name="touch_controls_preset_one">Paracaktimi i firmuerit 1</string>
+    <string name="touch_controls_preset_three">Paracaktimi i firmuerit 3</string>
+    <string name="touch_controls_preset_two">Paracaktimi i firmuerit 2</string>
+    <string name="touch_controls_reset_summary">Kthehuni te standardet manuale të firmuerit dhe mbrojtja e parazgjedhur e skajeve. Mbajeni çelësin e aktivizimit të aplikacionit të pandryshuar.</string>
+    <string name="touch_controls_reset_title">Rivendos akordimin e këtij aplikacioni</string>
+    <string name="touch_controls_response_summary">Rregulloni përgjigjen e ekranit me prekje ndaj prekjeve. Një vlerë prej 0 rikthen cilësimin e paracaktuar të firmuerit. Ndryshoni një cilësim në një kohë dhe provojeni në lojën tuaj.</string>
+    <string name="touch_controls_screen_title">Kontrollet me prekje</string>
+    <string name="touch_controls_sensitivity_summary">Rregulloni ndjeshmërinë e prekjes. 0 rikthen parazgjedhjen e firmuerit; një nivel më i lartë nuk është automatikisht më i mirë për çdo lojë.</string>
+    <string name="touch_controls_stability_summary">Rregulloni qëndrueshmërinë e prekjeve të përsëritura të ekranit me prekje vetëm nëse është e nevojshme. Një vlerë prej 0 rikthen cilësimin e paracaktuar të firmuerit.</string>
+    <string name="touch_controls_start_summary">Aktivizo kontrollet për këtë aplikacion, më pas zgjidh një paracaktuar ose sintonizoj cilësimet individuale. Ju nuk keni nevojë të ngrini çdo rrëshqitës.</string>
+    <string name="touch_controls_start_title">Filloni me parazgjedhjet</string>
+    <string name="touch_controls_unavailable_summary">Shërbimi me prekje nuk ofroi diapazon të vlefshëm kontrolli. Rihap këtë faqe për të riprovuar.</string>
+    <string name="touch_controls_unavailable_title">Kontrollet me prekje nuk janë të disponueshme</string>
+</resources>

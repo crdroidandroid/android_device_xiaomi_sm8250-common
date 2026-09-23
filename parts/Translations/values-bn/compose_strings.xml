@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ব্যাক</string>
+    <string name="parts_search_apps">অ্যাপস অনুসন্ধান করুন</string>
+    <string name="touch_controls_active_summary">এই অ্যাপটি অগ্রভাগে থাকাকালীন প্রয়োগ করা হয়েছে৷ অ্যাপ ত্যাগ করা বা স্ক্রিন বন্ধ করা স্বাভাবিক স্পর্শ আচরণ পুনরুদ্ধার করে।</string>
+    <string name="touch_controls_active_title">প্রতি-অ্যাপ টিউনিং সক্ষম করা হয়েছে৷</string>
+    <string name="touch_controls_advanced_group">ম্যানুয়াল মোড · সূক্ষ্ম সমন্বয়</string>
+    <string name="touch_controls_aim_summary">যদি প্রয়োজন হয় তবেই লক্ষ্য করার অঙ্গভঙ্গির সংবেদনশীলতা সামঞ্জস্য করুন। 0 এর মান ডিফল্ট ফার্মওয়্যার সেটিং পুনরুদ্ধার করে।</string>
+    <string name="touch_controls_edge_group">স্বাধীন · প্রান্ত সুরক্ষা</string>
+    <string name="touch_controls_edge_summary">0 প্রান্ত ফিল্টারিং নিষ্ক্রিয় করে; মাত্রা 1-3 দুর্ঘটনাজনিত প্রান্ত স্পর্শের বিরুদ্ধে সুরক্ষা বাড়ায়। শক্তিশালী ফিল্টারিং ইচ্ছাকৃত প্রান্ত স্পর্শ কঠিন করতে পারে.</string>
+    <string name="touch_controls_global_summary">বিশ্বব্যাপী প্রতিক্রিয়াশীলতার বিকল্পটি অগ্রাধিকার দেয়। আপনার প্রতি-অ্যাপ সেটিংস সংরক্ষণ করা হয়েছে কিন্তু বিরতি দেওয়া হয়েছে। বিশ্বব্যাপী বিকল্প পরিচালনা করতে এখানে আলতো চাপুন।</string>
+    <string name="touch_controls_global_title">গ্লোবাল টাচ ওভাররাইড সক্রিয়</string>
+    <string name="touch_controls_help">ম্যানুয়াল ডিফল্ট দিয়ে শুরু করুন। টিউনিং সক্ষম করুন শুধুমাত্র যে অ্যাপগুলির জন্য এটি প্রয়োজন৷\n\nপ্রিসেট এবং ম্যানুয়াল সামঞ্জস্যগুলি বিকল্প, স্ট্যাকের জন্য প্রভাব নয়। প্রিসেট 1-3 হল ফার্মওয়্যার প্রোফাইল; তারা মান রেটিং না.\n\nম্যানুয়াল মোডে, 0 ফার্মওয়্যার ডিফল্ট পুনরুদ্ধার করে। উচ্চ মাত্রা স্পর্শ আচরণ পরিবর্তন করে এবং কিছু গেম খারাপ বোধ হতে পারে. প্রথমে প্রতিক্রিয়া বা সংবেদনশীলতা সামঞ্জস্য করুন; শুধুমাত্র সূক্ষ্ম টিউনিংয়ের জন্য লক্ষ্য এবং স্থিতিশীলতা ব্যবহার করুন।\n\nএজ ফিল্টারিং স্বাধীন। শক্তিশালী সুরক্ষা পর্দার প্রান্তের কাছে ইচ্ছাকৃত স্পর্শ প্রত্যাখ্যান করতে পারে।\n\nগ্লোবাল রেসপন্সিভনেস বিকল্পটি প্রতি-অ্যাপ টিউনিংয়ের চেয়ে অগ্রাধিকার দেয়। এই নিয়ন্ত্রণগুলি ডিসপ্লে রিফ্রেশ রেট পরিবর্তন করে না।</string>
+    <string name="touch_controls_help_title">টাচ টিউনিং কিভাবে কাজ করে</string>
+    <string name="touch_controls_manual">ম্যানুয়াল মোড · ডিফল্ট ফার্মওয়্যার সেটিংস দিয়ে শুরু করুন</string>
+    <string name="touch_controls_manual_group">ম্যানুয়াল মোড · প্রধান সমন্বয়</string>
+    <string name="touch_controls_mode_group">প্রধান সেটিং</string>
+    <string name="touch_controls_mode_help">একটি প্রিসেট প্রতিক্রিয়া, সংবেদনশীলতা, লক্ষ্য এবং ট্যাপ স্থায়িত্ব একসাথে প্রতিস্থাপন করে। ম্যানুয়াল সেটিংস পরবর্তী সময়ের জন্য সংরক্ষিত থাকে। প্রান্ত সুরক্ষা উভয় মোডে আলাদাভাবে কাজ করে।</string>
+    <string name="touch_controls_mode_help_title">একটি টিউনিং পদ্ধতি বেছে নিন</string>
+    <string name="touch_controls_mode_title">টাচ অ্যাডজাস্টমেন্ট মোড</string>
+    <string name="touch_controls_preset_one">ফার্মওয়্যার প্রিসেট 1</string>
+    <string name="touch_controls_preset_three">ফার্মওয়্যার প্রিসেট 3</string>
+    <string name="touch_controls_preset_two">ফার্মওয়্যার প্রিসেট 2</string>
+    <string name="touch_controls_reset_summary">ম্যানুয়াল ফার্মওয়্যার ডিফল্ট এবং ডিফল্ট প্রান্ত সুরক্ষায় ফিরে যান। অ্যাপের সক্ষম সুইচ অপরিবর্তিত রাখুন।</string>
+    <string name="touch_controls_reset_title">এই অ্যাপের টিউনিং রিসেট করুন</string>
+    <string name="touch_controls_response_summary">ট্যাপগুলিতে টাচস্ক্রিন প্রতিক্রিয়া সামঞ্জস্য করুন। 0 এর মান ডিফল্ট ফার্মওয়্যার সেটিং পুনরুদ্ধার করে। একবারে একটি সেটিং পরিবর্তন করুন এবং আপনার গেমে এটি চেষ্টা করুন।</string>
+    <string name="touch_controls_screen_title">স্পর্শ নিয়ন্ত্রণ</string>
+    <string name="touch_controls_sensitivity_summary">স্পর্শ সংবেদনশীলতা সামঞ্জস্য করুন. 0 ফার্মওয়্যার ডিফল্ট পুনরুদ্ধার করে; প্রতিটি খেলার জন্য একটি উচ্চ স্তর স্বয়ংক্রিয়ভাবে ভাল নয়।</string>
+    <string name="touch_controls_stability_summary">প্রয়োজন হলেই বারবার টাচস্ক্রিন ট্যাপের স্থায়িত্ব সামঞ্জস্য করুন। 0 এর মান ডিফল্ট ফার্মওয়্যার সেটিং পুনরুদ্ধার করে।</string>
+    <string name="touch_controls_start_summary">এই অ্যাপের জন্য নিয়ন্ত্রণ সক্ষম করুন, তারপরে একটি প্রিসেট চয়ন করুন বা পৃথক সেটিংস টিউন করুন৷ আপনাকে প্রতিটি স্লাইডার বাড়াতে হবে না।</string>
+    <string name="touch_controls_start_title">ডিফল্ট দিয়ে শুরু করুন</string>
+    <string name="touch_controls_unavailable_summary">স্পর্শ পরিষেবা বৈধ নিয়ন্ত্রণ রেঞ্জ প্রদান করেনি৷ পুনরায় চেষ্টা করতে এই পৃষ্ঠাটি আবার খুলুন।</string>
+    <string name="touch_controls_unavailable_title">স্পর্শ নিয়ন্ত্রণ অনুপলব্ধ</string>
+</resources>

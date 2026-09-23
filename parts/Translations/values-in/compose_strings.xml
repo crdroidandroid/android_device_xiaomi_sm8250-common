@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Kembali</string>
+    <string name="parts_search_apps">Cari aplikasi</string>
+    <string name="touch_controls_active_summary">Diterapkan saat aplikasi ini berada di latar depan. Meninggalkan aplikasi atau mematikan layar akan memulihkan perilaku sentuhan normal.</string>
+    <string name="touch_controls_active_title">Penyetelan per aplikasi diaktifkan</string>
+    <string name="touch_controls_advanced_group">Mode manual · penyesuaian halus</string>
+    <string name="touch_controls_aim_summary">Sesuaikan sensitivitas gerakan membidik hanya jika diperlukan. Nilai 0 mengembalikan pengaturan firmware default.</string>
+    <string name="touch_controls_edge_group">Independen · perlindungan tepi</string>
+    <string name="touch_controls_edge_summary">0 menonaktifkan pemfilteran tepi; level 1–3 meningkatkan perlindungan terhadap sentuhan tepi yang tidak disengaja. Pemfilteran yang lebih kuat dapat membuat sentuhan tepi yang disengaja menjadi lebih sulit.</string>
+    <string name="touch_controls_global_summary">Opsi daya tanggap global menjadi prioritas. Setelan per aplikasi Anda disimpan tetapi dijeda. Ketuk di sini untuk mengelola opsi global.</string>
+    <string name="touch_controls_global_title">Penggantian sentuhan global aktif</string>
+    <string name="touch_controls_help">Mulailah dengan default manual. Aktifkan penyetelan hanya untuk aplikasi yang memerlukannya.\n\nPreset dan penyesuaian manual adalah alternatif, bukan efek yang ditumpuk. Preset 1–3 adalah profil firmware; itu bukan peringkat kualitas.\n\nDalam mode manual, 0 mengembalikan default firmware. Level yang lebih tinggi mengubah perilaku sentuhan dan mungkin terasa lebih buruk di beberapa game. Sesuaikan respon atau sensitivitas terlebih dahulu; gunakan tujuan dan stabilitas hanya untuk penyetelan yang lebih baik.\n\nPemfilteran tepi bersifat independen. Perlindungan yang lebih kuat juga dapat menolak sentuhan yang disengaja di dekat tepi layar.\n\nOpsi responsivitas global lebih diprioritaskan dibandingkan penyesuaian per aplikasi. Kontrol ini tidak mengubah kecepatan refresh tampilan.</string>
+    <string name="touch_controls_help_title">Cara kerja penyetelan sentuh</string>
+    <string name="touch_controls_manual">Mode manual · mulai dengan pengaturan firmware default</string>
+    <string name="touch_controls_manual_group">Mode manual · penyesuaian utama</string>
+    <string name="touch_controls_mode_group">Pengaturan utama</string>
+    <string name="touch_controls_mode_help">Prasetel menggantikan respons, sensitivitas, bidikan, dan stabilitas ketukan secara bersamaan. Pengaturan manual tetap disimpan untuk nanti. Perlindungan tepi berfungsi secara terpisah di salah satu mode.</string>
+    <string name="touch_controls_mode_help_title">Pilih satu metode penyetelan</string>
+    <string name="touch_controls_mode_title">Mode penyesuaian sentuh</string>
+    <string name="touch_controls_preset_one">Prasetel firmware 1</string>
+    <string name="touch_controls_preset_three">Prasetel firmware 3</string>
+    <string name="touch_controls_preset_two">Prasetel firmware 2</string>
+    <string name="touch_controls_reset_summary">Kembali ke default firmware manual dan perlindungan tepi default. Jaga agar tombol pengaktifan aplikasi tidak berubah.</string>
+    <string name="touch_controls_reset_title">Setel ulang penyetelan aplikasi ini</string>
+    <string name="touch_controls_response_summary">Sesuaikan respons layar sentuh terhadap ketukan. Nilai 0 mengembalikan pengaturan firmware default. Ubah satu pengaturan pada satu waktu dan coba di game Anda.</string>
+    <string name="touch_controls_screen_title">Kontrol sentuh</string>
+    <string name="touch_controls_sensitivity_summary">Sesuaikan sensitivitas sentuhan. 0 mengembalikan firmware default; level yang lebih tinggi tidak otomatis lebih baik untuk setiap permainan.</string>
+    <string name="touch_controls_stability_summary">Sesuaikan stabilitas ketukan berulang pada layar sentuh hanya jika diperlukan. Nilai 0 mengembalikan pengaturan firmware default.</string>
+    <string name="touch_controls_start_summary">Aktifkan kontrol untuk aplikasi ini, lalu pilih preset atau sesuaikan pengaturan individual. Anda tidak perlu menaikkan setiap penggeser.</string>
+    <string name="touch_controls_start_title">Mulailah dengan default</string>
+    <string name="touch_controls_unavailable_summary">Layanan sentuh tidak memberikan rentang kendali yang valid. Buka kembali halaman ini untuk mencoba lagi.</string>
+    <string name="touch_controls_unavailable_title">Kontrol sentuh tidak tersedia</string>
+</resources>

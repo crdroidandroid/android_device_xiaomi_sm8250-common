@@ -1,0 +1,8 @@
+<resources>
+    <string name="alioth_touch_aim">Чутливість прицілювання</string>
+    <string name="alioth_touch_aim_summary">0: значення прошивки. Рівні 1–5 змінюють відгук під час прицілювання.</string>
+    <string name="alioth_touch_stability">Стабільність дотиків</string>
+    <string name="alioth_touch_stability_summary">0: значення прошивки. Рівні 1–5 змінюють стабільність дотиків.</string>
+    <string name="alioth_touch_expert">Профіль дотиків</string>
+    <string name="alioth_touch_expert_summary">0: окремі налаштування. Профілі 1–3 замінюють відгук, чутливість, прицілювання та стабільність дотиків; фільтрація країв налаштовується окремо.</string>
+</resources>

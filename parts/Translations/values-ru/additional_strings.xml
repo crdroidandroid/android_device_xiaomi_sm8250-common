@@ -1,0 +1,8 @@
+<resources>
+    <string name="alioth_touch_aim">Чувствительность прицеливания</string>
+    <string name="alioth_touch_aim_summary">0: значение прошивки. Уровни 1–5 изменяют отклик при прицеливании.</string>
+    <string name="alioth_touch_stability">Стабильность касаний</string>
+    <string name="alioth_touch_stability_summary">0: значение прошивки. Уровни 1–5 изменяют стабильность касаний.</string>
+    <string name="alioth_touch_expert">Профиль касаний</string>
+    <string name="alioth_touch_expert_summary">0: отдельные настройки. Профили 1–3 заменяют отклик, чувствительность, прицеливание и стабильность касаний; фильтрация краёв настраивается отдельно.</string>
+</resources>

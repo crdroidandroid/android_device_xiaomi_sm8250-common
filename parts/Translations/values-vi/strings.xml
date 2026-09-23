@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">Cài đặt thiết bị</string>
+    <string name="dirac_preset_blues">Blue</string>
+    <string name="dirac_preset_classical">Cổ điển</string>
+    <string name="dirac_preset_country">Quê hương</string>
+    <string name="dirac_preset_dance">Khiêu vũ</string>
+    <string name="dirac_preset_electronic">Điện tử</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_metal">Kim loại</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_headset_title">Loại tai nghe</string>
+    <string name="dirac_preset_title">Cài đặt sẵn</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">পিছলৈ ঘূৰি আহিল</string>
+    <string name="parts_search_apps">এপসমূহ সন্ধান কৰক</string>
+    <string name="touch_controls_active_summary">এই এপটো অগ্ৰভূমিত থকাৰ সময়ত প্ৰয়োগ কৰা হৈছে। এপটো এৰিলে বা পৰ্দা বন্ধ কৰিলে স্বাভাৱিক স্পৰ্শ আচৰণ পুনৰুদ্ধাৰ হয়।</string>
+    <string name="touch_controls_active_title">প্ৰতি-এপ টিউনিং সক্ৰিয় কৰা হৈছে</string>
+    <string name="touch_controls_advanced_group">মেনুৱেল মোড · সূক্ষ্ম সামঞ্জস্য</string>
+    <string name="touch_controls_aim_summary">প্ৰয়োজন হ’লেহে লক্ষ্য নিৰ্ধাৰণৰ ইংগিতৰ সংবেদনশীলতা সামঞ্জস্য কৰক। 0 ৰ এটা মান অবিকল্পিত ফাৰ্মৱেৰ সংহতি পুনৰুদ্ধাৰ কৰে ।</string>
+    <string name="touch_controls_edge_group">স্বতন্ত্ৰ · প্ৰান্ত সুৰক্ষা</string>
+    <string name="touch_controls_edge_summary">0 এ প্ৰান্ত ফিল্টাৰিং নিষ্ক্ৰিয় কৰে; স্তৰ ১–৩ য়ে আকস্মিকভাৱে প্ৰান্তৰ স্পৰ্শৰ বিৰুদ্ধে সুৰক্ষা বৃদ্ধি কৰে। শক্তিশালী ফিল্টাৰিঙে ইচ্ছাকৃতভাৱে প্ৰান্ত স্পৰ্শ কৰাটো কঠিন কৰি তুলিব পাৰে।</string>
+    <string name="touch_controls_global_summary">গ্ল’বেল ৰেচপন্সিভনেছ বিকল্পই অগ্ৰাধিকাৰ লয়। আপোনাৰ প্ৰতি-এপ ছেটিংছ সংৰক্ষণ কৰা হয় কিন্তু স্থগিত ৰখা হয়। গ্লোবেল বিকল্প পৰিচালনা কৰিবলৈ ইয়াত টেপ কৰক।</string>
+    <string name="touch_controls_global_title">গ্লোবেল টাচ অভাৰৰাইড সক্ৰিয়</string>
+    <string name="touch_controls_help">হস্তচালিত অবিকল্পিতসমূহৰ সৈতে আৰম্ভ কৰক। কেৱল ইয়াৰ প্ৰয়োজনীয় এপসমূহৰ বাবে টিউনিং সক্ষম কৰক।\n\nপ্ৰিছেট আৰু হস্তচালিত সামঞ্জস্যসমূহ বিকল্প, ষ্টেক কৰিবলে প্ৰভাৱ নহয়। প্ৰিছেট 1–3 হৈছে ফাৰ্মৱেৰ আলেখ্যন; সেইবোৰ গুণগত মানৰ ৰেটিং নহয়।\n\nহস্তচালিত অৱস্থাত, 0 এ ফাৰ্মৱেৰ অবিকল্পিত পুনৰুদ্ধাৰ কৰে । উচ্চ মাত্ৰাই স্পৰ্শৰ আচৰণ সলনি কৰে আৰু কিছুমান খেলত বেয়া অনুভৱ কৰিব পাৰে। প্ৰথমে সঁহাৰি বা সংবেদনশীলতা সামঞ্জস্য কৰক; কেৱল সূক্ষ্ম টিউনিঙৰ বাবে লক্ষ্য আৰু স্থিৰতা ব্যৱহাৰ কৰক।\n\nএজ ফিল্টাৰিং স্বাধীন। শক্তিশালী সুৰক্ষাই পৰ্দাৰ প্ৰান্তৰ ওচৰত ইচ্ছাকৃতভাৱে স্পৰ্শ কৰাটোও নাকচ কৰিব পাৰে।\n\nগ্লোবেল ৰেচপন্সিভনেছ বিকল্পই প্ৰতি-এপ টিউনিঙতকৈ অগ্ৰাধিকাৰ লয়। এই নিয়ন্ত্ৰণসমূহে প্ৰদৰ্শন সতেজ হাৰ সলনি নকৰে।</string>
+    <string name="touch_controls_help_title">টাচ টিউনিঙে কেনেকৈ কাম কৰে</string>
+    <string name="touch_controls_manual">হস্তচালিত ধৰণ · অবিকল্পিত ফাৰ্মৱেৰ সংহতিসমূহৰ সৈতে আৰম্ভ কৰক</string>
+    <string name="touch_controls_manual_group">মেনুৱেল মোড · মূল সামঞ্জস্যসমূহ</string>
+    <string name="touch_controls_mode_group">মূল ছেটিং</string>
+    <string name="touch_controls_mode_help">এটা প্ৰিছেটে সঁহাৰি, সংবেদনশীলতা, লক্ষ্য আৰু টেপ স্থিৰতাক একেলগে সলনি কৰে। হস্তচালিত সংহতিসমূহ পিছৰ বাবে সংৰক্ষিত হৈ থাকে। প্ৰান্ত সুৰক্ষাই যিকোনো এটা ধৰণতে পৃথকে কাম কৰে।</string>
+    <string name="touch_controls_mode_help_title">এটা টিউনিং পদ্ধতি বাছক</string>
+    <string name="touch_controls_mode_title">টাচ এডজাষ্টমেণ্ট মোড</string>
+    <string name="touch_controls_preset_one">ফাৰ্মৱেৰ প্ৰিছেট 1</string>
+    <string name="touch_controls_preset_three">ফাৰ্মৱেৰ প্ৰিছেট 3</string>
+    <string name="touch_controls_preset_two">ফাৰ্মৱেৰ প্ৰিছেট 2</string>
+    <string name="touch_controls_reset_summary">হস্তচালিত ফাৰ্মৱেৰ অবিকল্পিতসমূহ আৰু অবিকল্পিত প্ৰান্ত সুৰক্ষালৈ উভতি যাওক। এপটোৰ সক্ষম চুইচটো অপৰিৱৰ্তিত ৰাখক৷</string>
+    <string name="touch_controls_reset_title">এই এপটোৰ টিউনিং ৰিছেট কৰক৷</string>
+    <string name="touch_controls_response_summary">টেপসমূহৰ প্ৰতি টাচস্ক্ৰীণৰ সঁহাৰি সামঞ্জস্য কৰক। 0 ৰ এটা মান অবিকল্পিত ফাৰ্মৱেৰ সংহতি পুনৰুদ্ধাৰ কৰে । এটা এটাকৈ ছেটিং সলনি কৰক আৰু আপোনাৰ খেলত চেষ্টা কৰক।</string>
+    <string name="touch_controls_screen_title">স্পৰ্শ নিয়ন্ত্ৰণসমূহ</string>
+    <string name="touch_controls_sensitivity_summary">স্পৰ্শ সংবেদনশীলতা সামঞ্জস্য কৰক। 0 এ ফাৰ্মৱেৰ অবিকল্পিত পুনৰুদ্ধাৰ কৰে; প্ৰতিখন খেলৰ বাবে উচ্চ স্তৰ স্বয়ংক্ৰিয়ভাৱে ভাল নহয়।</string>
+    <string name="touch_controls_stability_summary">প্ৰয়োজন হ’লেহে বাৰে বাৰে টাচস্ক্ৰীণ টেপৰ স্থিৰতা সামঞ্জস্য কৰক। 0 ৰ এটা মান অবিকল্পিত ফাৰ্মৱেৰ সংহতি পুনৰুদ্ধাৰ কৰে ।</string>
+    <string name="touch_controls_start_summary">এই এপৰ বাবে নিয়ন্ত্ৰণসমূহ সামৰ্থবান কৰক, তাৰ পিছত এটা প্ৰিছেট বাছক বা ব্যক্তিগত ছেটিংছ টিউন কৰক। আপুনি প্ৰতিটো স্লাইডাৰ ওপৰলৈ তুলিব নালাগে।</string>
+    <string name="touch_controls_start_title">অবিকল্পিতসমূহৰ পৰা আৰম্ভ কৰক</string>
+    <string name="touch_controls_unavailable_summary">টাচ্চ সেৱাই বৈধ নিয়ন্ত্ৰণ ৰেঞ্জ প্ৰদান কৰা নাছিল। পুনৰ চেষ্টা কৰিবলৈ এই পৃষ্ঠাটো পুনৰ খোলক।</string>
+    <string name="touch_controls_unavailable_title">টাচ কন্ট্ৰল উপলব্ধ নহয়</string>
+</resources>

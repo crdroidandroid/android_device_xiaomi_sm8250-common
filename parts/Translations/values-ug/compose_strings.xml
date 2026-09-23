@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">قايتىش</string>
+    <string name="parts_search_apps">ئەپلەرنى ئىزدەش</string>
+    <string name="touch_controls_active_summary">بۇ ئەپ ئالدىنقى ئورۇندا تۇرغاندا قوللىنىلىدۇ. ئەپتىن ئايرىلىش ياكى ئېكراننى ئېتىۋېتىش نورمال چەكمە ھەرىكىتىنى ئەسلىگە كەلتۈرىدۇ.</string>
+    <string name="touch_controls_active_title">ھەر بىر ئەپنى تەڭشەش ئىقتىدارى قوزغىتىلغان</string>
+    <string name="touch_controls_advanced_group">قول ھالىتى · ئىنچىكە تەڭشەش</string>
+    <string name="touch_controls_aim_summary">زۆرۈر تېپىلغاندا نىشان بەلگىلەشنىڭ سەزگۈرلۈكىنى تەڭشەڭ. 0 قىممىتى سۈكۈتتىكى يۇمشاق دېتال تەڭشىكىنى ئەسلىگە كەلتۈرىدۇ.</string>
+    <string name="touch_controls_edge_group">مۇستەقىل قوغداش</string>
+    <string name="touch_controls_edge_summary">0 قىر سۈزۈشنى چەكلەيدۇ. 1-3 سەۋىيىسى تاسادىپىي قىرغاقتىن مۇداپىئەلىنىشنى ئاشۇرىدۇ. كۈچلۈك سۈزۈش قەستەن قىرغاقنى تېخىمۇ قاتتىقلاشتۇرىدۇ.</string>
+    <string name="touch_controls_global_summary">يەرشارىنىڭ ئىنكاس قايتۇرۇش تاللىشى مۇھىم ئورۇنغا قويۇلغان. ھەر بىر ئەپ تەڭشىكىڭىز ساقلىنىدۇ ، ئەمما توختىتىلىدۇ. بۇ يەرنى چېكىپ دۇنياۋى تاللاشنى باشقۇرۇڭ.</string>
+    <string name="touch_controls_global_title">يەرشارى سېزىمچان قاپلاش ئاكتىپ</string>
+    <string name="touch_controls_help">قولدا سۈكۈتتىكى ھالەتتىن باشلاڭ. پەقەت لازىملىق ئەپلەر ئۈچۈنلا تەڭشەشنى قوزغىتىڭ.\n\nئالدىن زاكاس قىلىش ۋە قولدا تەڭشەش باشقا تاللاشلار بولۇپ ، تىزىشنىڭ ئۈنۈمى ئەمەس. ئالدىن بەلگىلەش 1-3 بولسا يۇمشاق دېتال ئارخىپى. ئۇلار سۈپەت دەرىجىسى ئەمەس.\n\nقولدا ، 0 يۇمشاق دېتال سۈكۈتتىكى ھالىتىنى ئەسلىگە كەلتۈرىدۇ. تېخىمۇ يۇقىرى قاتلاملار چەكمە ھەرىكىتىنى ئۆزگەرتىدۇ ، بەزى ئويۇنلاردا تېخىمۇ ناچاردەك ھېس قىلىشى مۇمكىن. ئالدى بىلەن ئىنكاس ياكى سەزگۈرلۈكنى تەڭشەش نىشان ۋە مۇقىملىقنى پەقەت ئىنچىكە تەڭشەش ئۈچۈن ئىشلىتىڭ.\n\nقىر سۈزۈش مۇستەقىل. كۈچلۈك قوغداش ئېكران گىرۋىكىگە يېقىن قەستەن تېگىشنىمۇ رەت قىلالايدۇ.\n\nيەر شارىنىڭ ئىنكاس قايتۇرۇش ئىقتىدارى ھەر بىر ئەپنى تەڭشەشتىن مۇھىم ئورۇندا تۇرىدۇ. بۇ كونتروللار ئېكراننىڭ يېڭىلاش نىسبىتىنى ئۆزگەرتمەيدۇ.</string>
+    <string name="touch_controls_help_title">سېزىمچان تەڭشەش قانداق ئىشلەيدۇ</string>
+    <string name="touch_controls_manual">قول ھالىتى · سۈكۈتتىكى يۇمشاق دېتال تەڭشىكىدىن باشلاڭ</string>
+    <string name="touch_controls_manual_group">قول ھالىتى · ئاساسلىق تەڭشەش</string>
+    <string name="touch_controls_mode_group">ئاساسلىق تەڭشەك</string>
+    <string name="touch_controls_mode_help">ئالدىنئالا ئىنكاس ، سەزگۈرلۈك ، نىشان ۋە چېكىشنىڭ مۇقىملىقىنى ئالماشتۇرىدۇ. قولدا تەڭشەش كېيىن ساقلىنىدۇ. قىرغاقنى قوغداش ھەر ئىككى ھالەتتە ئايرىم ئىشلەيدۇ.</string>
+    <string name="touch_controls_mode_help_title">بىر تەڭشەش ئۇسۇلىنى تاللاڭ</string>
+    <string name="touch_controls_mode_title">چەكمە تەڭشەش ھالىتى</string>
+    <string name="touch_controls_preset_one">Firmware preset 1</string>
+    <string name="touch_controls_preset_three">Firmware preset 3</string>
+    <string name="touch_controls_preset_two">Firmware preset 2</string>
+    <string name="touch_controls_reset_summary">قولدا يۇمشاق دېتال سۈكۈتتىكى ھالىتى ۋە سۈكۈتتىكى قىر قوغداش ھالىتىگە قايتىڭ. ئەپنىڭ قوزغىتىش ئىقتىدارىنى ئۆزگەرتمەڭ.</string>
+    <string name="touch_controls_reset_title">بۇ دېتالنىڭ تەڭشىلىشىنى ئەسلىگە كەلتۈرۈڭ</string>
+    <string name="touch_controls_response_summary">سېزىمچان ئېكراننىڭ ئىنكاسىنى تەڭشەش. 0 قىممىتى سۈكۈتتىكى يۇمشاق دېتال تەڭشىكىنى ئەسلىگە كەلتۈرىدۇ. بىر تەڭشەكنى بىر قېتىمدا ئۆزگەرتىپ ئويۇنىڭىزدا سىناپ بېقىڭ.</string>
+    <string name="touch_controls_screen_title">چەكمە كونترول</string>
+    <string name="touch_controls_sensitivity_summary">سېزىمچانلىقىنى تەڭشەش. 0 يۇمشاق دېتال سۈكۈتتىكى ھالىتىنى ئەسلىگە كەلتۈرىدۇ. تېخىمۇ يۇقىرى سەۋىيە ھەر بىر ئويۇن ئۈچۈن ئاپتوماتىك ياخشى ئەمەس.</string>
+    <string name="touch_controls_stability_summary">زۆرۈر تېپىلغاندا تەكرار سېزىمچان ئېكراننىڭ مۇقىملىقىنى تەڭشەڭ. 0 قىممىتى سۈكۈتتىكى يۇمشاق دېتال تەڭشىكىنى ئەسلىگە كەلتۈرىدۇ.</string>
+    <string name="touch_controls_start_summary">بۇ ئەپنىڭ كونتروللىرىنى قوزغىتىڭ ، ئاندىن ئالدىن تەڭشەش ياكى ئايرىم تەڭشەكلەرنى تەڭشەڭ. ھەر بىر سىيرىلغۇچنى ئۆستۈرۈشىڭىزنىڭ ھاجىتى يوق.</string>
+    <string name="touch_controls_start_title">سۈكۈتتىكى ھالەتتىن باشلاڭ</string>
+    <string name="touch_controls_unavailable_summary">سېزىمچان مۇلازىمەت ئۈنۈملۈك كونترول دائىرىسى بىلەن تەمىنلىمىدى. قايتا سىناپ بېقىش ئۈچۈن بۇ بەتنى قايتا ئېچىڭ.</string>
+    <string name="touch_controls_unavailable_title">سېزىمچان كونترولنى ئىشلەتكىلى بولمايدۇ</string>
+</resources>

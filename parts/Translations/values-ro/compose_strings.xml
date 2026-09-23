@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Înapoi</string>
+    <string name="parts_search_apps">Căutați aplicații</string>
+    <string name="touch_controls_active_summary">Se aplică în timp ce această aplicație este în prim-plan. Părăsirea aplicației sau oprirea ecranului restabilește comportamentul tactil normal.</string>
+    <string name="touch_controls_active_title">Reglarea per aplicație este activată</string>
+    <string name="touch_controls_advanced_group">Mod manual · ajustări fine</string>
+    <string name="touch_controls_aim_summary">Reglați sensibilitatea gesturilor de țintire numai dacă este necesar. O valoare de 0 restabilește setarea implicită de firmware.</string>
+    <string name="touch_controls_edge_group">Independent · protecția marginilor</string>
+    <string name="touch_controls_edge_summary">0 dezactivează filtrarea marginilor; nivelurile 1–3 măresc protecția împotriva atingerilor accidentale ale marginilor. Filtrarea mai puternică poate face atingerile intenționate ale marginilor mai dificile.</string>
+    <string name="touch_controls_global_summary">Opțiunea de reacție globală are prioritate. Setările tale per aplicație sunt salvate, dar întrerupte. Atingeți aici pentru a gestiona opțiunea globală.</string>
+    <string name="touch_controls_global_title">Suprascrierea globală a atingerii este activă</string>
+    <string name="touch_controls_help">Începeți cu setările implicite manuale. Activați reglarea numai pentru aplicațiile care au nevoie de el.\n\nPresetările și ajustările manuale sunt alternative, nu efecte de stivă. Presetățile 1–3 sunt profile de firmware; nu sunt evaluări de calitate.\n\nÎn modul manual, 0 restabilește firmware-ul implicit. Nivelurile mai înalte schimbă comportamentul la atingere și se pot simți mai rău în unele jocuri. Ajustați mai întâi răspunsul sau sensibilitatea; utilizați ținta și stabilitatea numai pentru o reglare mai fină.\n\nFiltrarea marginilor este independentă. O protecție mai puternică poate respinge și atingerile intenționate în apropierea marginii ecranului.\n\nOpțiunea de răspuns globală are prioritate față de reglarea per aplicație. Aceste comenzi nu modifică rata de reîmprospătare a afișajului.</string>
+    <string name="touch_controls_help_title">Cum funcționează reglarea tactilă</string>
+    <string name="touch_controls_manual">Modul manual · începe cu setările implicite de firmware</string>
+    <string name="touch_controls_manual_group">Mod manual · ajustări principale</string>
+    <string name="touch_controls_mode_group">Setarea principală</string>
+    <string name="touch_controls_mode_help">O presetare înlocuiește răspunsul, sensibilitatea, țintirea și stabilitatea atingerii împreună. Setările manuale rămân salvate pentru mai târziu. Protecția marginilor funcționează separat în ambele moduri.</string>
+    <string name="touch_controls_mode_help_title">Alegeți o metodă de reglare</string>
+    <string name="touch_controls_mode_title">Modul de ajustare la atingere</string>
+    <string name="touch_controls_preset_one">Firmware presetat 1</string>
+    <string name="touch_controls_preset_three">Firmware presetat 3</string>
+    <string name="touch_controls_preset_two">Firmware presetat 2</string>
+    <string name="touch_controls_reset_summary">Reveniți la setările implicite ale firmware-ului manual și la protecția implicită a marginilor. Păstrați comutatorul de activare al aplicației neschimbat.</string>
+    <string name="touch_controls_reset_title">Resetați reglarea acestei aplicații</string>
+    <string name="touch_controls_response_summary">Ajustați răspunsul ecranului tactil la atingeri. O valoare de 0 restabilește setarea implicită de firmware. Schimbați câte o setare și încercați-l în jocul dvs.</string>
+    <string name="touch_controls_screen_title">Comenzi tactile</string>
+    <string name="touch_controls_sensitivity_summary">Reglați sensibilitatea la atingere. 0 restabilește firmware-ul implicit; un nivel superior nu este automat mai bun pentru fiecare joc.</string>
+    <string name="touch_controls_stability_summary">Reglați stabilitatea atingerilor repetate ale ecranului tactil numai dacă este necesar. O valoare de 0 restabilește setarea implicită de firmware.</string>
+    <string name="touch_controls_start_summary">Activați comenzile pentru această aplicație, apoi alegeți o presetare sau reglați setările individuale. Nu trebuie să ridicați fiecare glisor.</string>
+    <string name="touch_controls_start_title">Începeți cu valorile implicite</string>
+    <string name="touch_controls_unavailable_summary">Serviciul tactil nu a oferit intervale de control valide. Redeschideți această pagină pentru a reîncerca.</string>
+    <string name="touch_controls_unavailable_title">Comenzile tactile nu sunt disponibile</string>
+</resources>

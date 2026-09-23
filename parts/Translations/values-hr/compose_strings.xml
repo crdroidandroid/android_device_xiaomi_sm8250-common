@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">natrag</string>
+    <string name="parts_search_apps">Traži aplikacije</string>
+    <string name="touch_controls_active_summary">Primijenjeno dok je ova aplikacija u prvom planu. Napuštanje aplikacije ili isključivanje zaslona vraća normalno ponašanje dodira.</string>
+    <string name="touch_controls_active_title">Omogućeno je podešavanje po aplikaciji</string>
+    <string name="touch_controls_advanced_group">Ručni način rada · fina podešavanja</string>
+    <string name="touch_controls_aim_summary">Podesite osjetljivost pokreta ciljanja samo ako je potrebno. Vrijednost 0 vraća zadanu postavku firmvera.</string>
+    <string name="touch_controls_edge_group">Samostalna · zaštita rubova</string>
+    <string name="touch_controls_edge_summary">0 onemogućuje rubno filtriranje; razine 1–3 povećavaju zaštitu od slučajnih dodira rubova. Jače filtriranje može otežati namjerno dodirivanje rubova.</string>
+    <string name="touch_controls_global_summary">Opcija globalnog odziva ima prioritet. Vaše postavke po aplikaciji su spremljene, ali pauzirane. Dodirnite ovdje za upravljanje globalnom opcijom.</string>
+    <string name="touch_controls_global_title">Globalno nadjačavanje dodira je aktivno</string>
+    <string name="touch_controls_help">Počnite s ručnim zadanim postavkama. Omogućite podešavanje samo za aplikacije koje ga trebaju.\n\nUnaprijed postavljene postavke i ručne prilagodbe su alternative, a ne efekti za slaganje. Unaprijed postavljene postavke 1–3 su profili firmvera; nisu ocjene kvalitete.\n\nU ručnom načinu rada, 0 vraća zadane postavke firmvera. Više razine mijenjaju ponašanje dodira i mogu se pogoršati u nekim igrama. Prvo podesite odgovor ili osjetljivost; koristite ciljanje i stabilnost samo za finije ugađanje.\n\nRubno filtriranje je neovisno. Jača zaštita također može odbiti namjerne dodire blizu ruba zaslona.\n\nOpcija globalnog odziva ima prioritet nad podešavanjem po aplikaciji. Ove kontrole ne mijenjaju brzinu osvježavanja zaslona.</string>
+    <string name="touch_controls_help_title">Kako funkcionira podešavanje dodirom</string>
+    <string name="touch_controls_manual">Ručni način rada · započnite sa zadanim postavkama firmvera</string>
+    <string name="touch_controls_manual_group">Ručni način rada · glavna podešavanja</string>
+    <string name="touch_controls_mode_group">Glavna postavka</string>
+    <string name="touch_controls_mode_help">Unaprijed postavljena zamjenjuje odziv, osjetljivost, ciljanje i stabilnost dodira zajedno. Ručne postavke ostaju spremljene za kasnije. Zaštita rubova radi zasebno u oba načina.</string>
+    <string name="touch_controls_mode_help_title">Odaberite jedan način ugađanja</string>
+    <string name="touch_controls_mode_title">Način podešavanja dodira</string>
+    <string name="touch_controls_preset_one">Unaprijed postavljeni firmver 1</string>
+    <string name="touch_controls_preset_three">Unaprijed postavljeni firmver 3</string>
+    <string name="touch_controls_preset_two">Unaprijed postavljeni firmver 2</string>
+    <string name="touch_controls_reset_summary">Povratak na ručne zadane postavke firmvera i zadanu zaštitu rubova. Ostavite prekidač za uključivanje aplikacije nepromijenjenim.</string>
+    <string name="touch_controls_reset_title">Resetirajte podešavanje ove aplikacije</string>
+    <string name="touch_controls_response_summary">Prilagodite odziv dodirnog zaslona na dodir. Vrijednost 0 vraća zadanu postavku firmvera. Promijenite jednu po jednu postavku i isprobajte je u svojoj igri.</string>
+    <string name="touch_controls_screen_title">Kontrole na dodir</string>
+    <string name="touch_controls_sensitivity_summary">Podesite osjetljivost na dodir. 0 vraća zadane postavke firmvera; viša razina nije automatski bolja za svaku igru.</string>
+    <string name="touch_controls_stability_summary">Podesite stabilnost ponovljenih dodirivanja dodirnog zaslona samo ako je potrebno. Vrijednost 0 vraća zadanu postavku firmvera.</string>
+    <string name="touch_controls_start_summary">Omogućite kontrole za ovu aplikaciju, a zatim odaberite unaprijed ili podesite pojedinačne postavke. Ne morate podići svaki klizač.</string>
+    <string name="touch_controls_start_title">Počnite sa zadanim postavkama</string>
+    <string name="touch_controls_unavailable_summary">Usluga dodira nije pružila važeće raspone upravljanja. Ponovno otvorite ovu stranicu za ponovni pokušaj.</string>
+    <string name="touch_controls_unavailable_title">Dodirne kontrole nisu dostupne</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ກັບຄືນໄປບ່ອນ</string>
+    <string name="parts_search_apps">ຄົ້ນຫາແອັບຯ</string>
+    <string name="touch_controls_active_summary">ນຳໃຊ້ໃນຂະນະທີ່ແອັບນີ້ຢູ່ເບື້ອງໜ້າ. ການອອກຈາກແອັບ ຫຼື ການປິດໜ້າຈໍຈະຟື້ນຟູພຶດຕິກຳການສຳຜັດປົກກະຕິ.</string>
+    <string name="touch_controls_active_title">ເປີດໃຊ້ການປັບແຕ່ງຕໍ່ແອັບ</string>
+    <string name="touch_controls_advanced_group">ໂຫມດຄູ່ມື · ການປັບຕົວທີ່ດີ</string>
+    <string name="touch_controls_aim_summary">ປັບຄວາມອ່ອນໄຫວຂອງທ່າທາງໃນການແນມເບິ່ງຫາກຈຳເປັນເທົ່ານັ້ນ. ຄ່າຂອງ 0 ຟື້ນຟູການຕັ້ງຄ່າເຟີມແວເລີ່ມຕົ້ນ.</string>
+    <string name="touch_controls_edge_group">ເອກະລາດ·ປ້ອງກັນຂອບ</string>
+    <string name="touch_controls_edge_summary">0 ປິດການກັ່ນຕອງຂອບ; ລະດັບ 1-3 ເພີ່ມການປົກປ້ອງຈາກການສໍາຜັດຂອບໂດຍບັງເອີນ. ການກັ່ນຕອງທີ່ເຂັ້ມແຂງສາມາດເຮັດໃຫ້ການສໍາພັດຂອບໂດຍເຈດຕະນາ harder.</string>
+    <string name="touch_controls_global_summary">ທາງເລືອກການຕອບສະຫນອງທົ່ວໂລກຖືຄວາມສໍາຄັນ. ການຕັ້ງຄ່າຕໍ່ແອັບຯຂອງທ່ານຖືກບັນທຶກໄວ້ແຕ່ຖືກຢຸດຊົ່ວຄາວ. ແຕະບ່ອນນີ້ເພື່ອຈັດການຕົວເລືອກທົ່ວໂລກ.</string>
+    <string name="touch_controls_global_title">ການຍົກເລີກການສໍາພັດທົ່ວໂລກແມ່ນເຮັດວຽກຢູ່</string>
+    <string name="touch_controls_help">ເລີ່ມຕົ້ນດ້ວຍຄ່າເລີ່ມຕົ້ນດ້ວຍມື. ເປີດໃຊ້ການປັບແຕ່ງສະເພາະແອັບຯທີ່ຕ້ອງການ.\n\nPresets ແລະການປັບດ້ວຍມືແມ່ນທາງເລືອກ, ບໍ່ແມ່ນຜົນກະທົບທີ່ຈະ stack. Presets 1–3 ແມ່ນໂປຣໄຟລເຟີມແວ; ພວກເຂົາບໍ່ແມ່ນການຈັດອັນດັບທີ່ມີຄຸນນະພາບ.\n\nໃນໂຫມດຄູ່ມື, 0 ຟື້ນຟູຄ່າເລີ່ມຕົ້ນຂອງເຟີມແວ. ລະດັບທີ່ສູງຂຶ້ນປ່ຽນພຶດຕິກໍາການສໍາຜັດແລະອາດຈະມີຄວາມຮູ້ສຶກຮ້າຍແຮງກວ່າເກົ່າໃນບາງເກມ. ປັບການຕອບສະໜອງ ຫຼືຄວາມອ່ອນໄຫວກ່ອນ; ໃຊ້ຈຸດປະສົງແລະຄວາມຫມັ້ນຄົງພຽງແຕ່ສໍາລັບການປັບລະອຽດ.\n\nການກັ່ນຕອງຂອບແມ່ນເອກະລາດ. ການປົກປ້ອງທີ່ເຂັ້ມແຂງຍັງສາມາດປະຕິເສດການສໍາພັດໂດຍເຈດຕະນາຢູ່ໃກ້ກັບຂອບຂອງຫນ້າຈໍໄດ້.\n\nຕົວເລືອກການຕອບສະ ໜອງ ທົ່ວໂລກແມ່ນມີຄວາມ ສຳ ຄັນກວ່າການປັບແຕ່ງຕໍ່ແອັບ. ການຄວບຄຸມເຫຼົ່ານີ້ບໍ່ປ່ຽນແປງອັດຕາການໂຫຼດຫນ້າຈໍຄືນ.</string>
+    <string name="touch_controls_help_title">ວິທີການປັບການສໍາພັດເຮັດວຽກ</string>
+    <string name="touch_controls_manual">ໂໝດຄູ່ມື · ເລີ່ມຕົ້ນດ້ວຍການຕັ້ງຄ່າເຟີມແວເລີ່ມຕົ້ນ</string>
+    <string name="touch_controls_manual_group">ໂໝດຄູ່ມື · ການປັບຕົວຫຼັກ</string>
+    <string name="touch_controls_mode_group">ການຕັ້ງຄ່າຕົ້ນຕໍ</string>
+    <string name="touch_controls_mode_help">ການຕັ້ງຄ່າລ່ວງໜ້າຈະປ່ຽນແທນການຕອບສະໜອງ, ຄວາມອ່ອນໄຫວ, ຈຸດໝາຍ ແລະ ແຕະຄວາມໝັ້ນຄົງຮ່ວມກັນ. ການຕັ້ງຄ່າຄູ່ມືຈະຖືກບັນທຶກໄວ້ໃນພາຍຫຼັງ. ການປົກປ້ອງຂອບເຮັດວຽກແຍກຕ່າງຫາກໃນທັງສອງໂຫມດ.</string>
+    <string name="touch_controls_mode_help_title">ເລືອກ​ວິ​ທີ​ການ​ປັບ​ຫນຶ່ງ​</string>
+    <string name="touch_controls_mode_title">ແຕະຮູບແບບການປັບ</string>
+    <string name="touch_controls_preset_one">ເຟີມແວທີ່ຕັ້ງໄວ້ລ່ວງໜ້າ 1</string>
+    <string name="touch_controls_preset_three">ເຟີມແວທີ່ຕັ້ງໄວ້ລ່ວງໜ້າ 3</string>
+    <string name="touch_controls_preset_two">ເຟີມແວທີ່ຕັ້ງໄວ້ລ່ວງໜ້າ 2</string>
+    <string name="touch_controls_reset_summary">ກັບຄືນໄປຫາຄ່າເລີ່ມຕົ້ນຂອງເຟີມແວຄູ່ມື ແລະການປົກປ້ອງຂອບເລີ່ມຕົ້ນ. ຮັກສາປຸ່ມເປີດໃຊ້ງານຂອງແອັບໄວ້ບໍ່ປ່ຽນແປງ.</string>
+    <string name="touch_controls_reset_title">ຣີເຊັດການປັບແອັບນີ້</string>
+    <string name="touch_controls_response_summary">ປັບ​ການ​ຕອບ​ສະ​ຫນອງ​ຫນ້າ​ຈໍ​ສໍາ​ພັດ​ເປັນ​ການ​ແຕະ​. ຄ່າຂອງ 0 ຟື້ນຟູການຕັ້ງຄ່າເຟີມແວເລີ່ມຕົ້ນ. ປ່ຽນການຕັ້ງຄ່າເທື່ອລະອັນ ແລະລອງມັນໃນເກມຂອງເຈົ້າ.</string>
+    <string name="touch_controls_screen_title">ແຕະຄວບຄຸມ</string>
+    <string name="touch_controls_sensitivity_summary">ປັບຄວາມອ່ອນໄຫວສໍາຜັດ. 0 ຟື້ນຟູຄ່າເລີ່ມຕົ້ນຂອງເຟີມແວ; ລະດັບທີ່ສູງກວ່າແມ່ນບໍ່ດີກວ່າອັດຕະໂນມັດສໍາລັບທຸກໆເກມ.</string>
+    <string name="touch_controls_stability_summary">ປັບຄວາມສະຖຽນຂອງການແຕະໜ້າຈໍສຳຜັດຊ້ຳໆ ຖ້າຈຳເປັນເທົ່ານັ້ນ. ຄ່າຂອງ 0 ຟື້ນຟູການຕັ້ງຄ່າເຟີມແວເລີ່ມຕົ້ນ.</string>
+    <string name="touch_controls_start_summary">ເປີດໃຊ້ການຄວບຄຸມສຳລັບແອັບນີ້, ຈາກນັ້ນເລືອກການຕັ້ງຄ່າທີ່ຕັ້ງໄວ້ລ່ວງໜ້າ ຫຼືປັບແຕ່ງການຕັ້ງຄ່າສ່ວນຕົວ. ທ່ານບໍ່ຈໍາເປັນຕ້ອງຍົກທຸກ slider.</string>
+    <string name="touch_controls_start_title">ເລີ່ມຕົ້ນດ້ວຍຄ່າເລີ່ມຕົ້ນ</string>
+    <string name="touch_controls_unavailable_summary">ບໍລິການສໍາຜັດບໍ່ໄດ້ໃຫ້ຂອບເຂດການຄວບຄຸມທີ່ຖືກຕ້ອງ. ເປີດໜ້ານີ້ຄືນໃໝ່ເພື່ອລອງອີກຄັ້ງ.</string>
+    <string name="touch_controls_unavailable_title">ການຄວບຄຸມການສໍາພັດບໍ່ສາມາດໃຊ້ໄດ້</string>
+</resources>

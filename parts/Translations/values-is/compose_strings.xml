@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Til baka</string>
+    <string name="parts_search_apps">Leitaðu að forritum</string>
+    <string name="touch_controls_active_summary">Notað á meðan þetta app er í forgrunni. Ef þú yfirgefur forritið eða slökktir á skjánum endurheimtir það eðlilega snertihegðun.</string>
+    <string name="touch_controls_active_title">Stilling fyrir hvert forrit er virkjuð</string>
+    <string name="touch_controls_advanced_group">Handvirk stilling · fínstillingar</string>
+    <string name="touch_controls_aim_summary">Stilltu næmni miðunarbendinga aðeins ef þörf krefur. Gildi 0 endurheimtir sjálfgefna fastbúnaðarstillingu.</string>
+    <string name="touch_controls_edge_group">Sjálfstæð · brúnvörn</string>
+    <string name="touch_controls_edge_summary">0 slekkur á brúnsíun; stig 1–3 auka vörn gegn brún snertingu fyrir slysni. Sterkari síun getur gert vísvitandi kantsnertingu erfiðari.</string>
+    <string name="touch_controls_global_summary">Alheimsviðbragðsvalkosturinn hefur forgang. Stillingar þínar fyrir hvert forrit eru vistaðar en í bið. Pikkaðu hér til að hafa umsjón með alþjóðlegum valkostinum.</string>
+    <string name="touch_controls_global_title">Alþjóðleg snertihnekking er virk</string>
+    <string name="touch_controls_help">Byrjaðu með handvirkum sjálfgefnum stillingum. Virkjaðu stillingu aðeins fyrir forrit sem þurfa á því að halda.\n\nForstillingar og handvirkar stillingar eru val, ekki áhrif til að stafla. Forstillingar 1–3 eru fastbúnaðarsnið; þær eru ekki gæðamat.\n\nÍ handvirkri stillingu endurheimtir 0 sjálfgefið fastbúnaðarkerfi. Hærri stig breyta snertihegðuninni og gæti liðið verra í sumum leikjum. Stilltu svörun eða næmi fyrst; notaðu markmið og stöðugleika aðeins til að fínstilla.\n\nKantsíun er óháð. Sterkari vörn getur einnig hafnað viljandi snertingu nálægt brún skjásins.\n\nAlþjóðlegi svörunarvalkosturinn hefur forgang fram yfir stillingar fyrir hvert forrit. Þessar stýringar breyta ekki endurnýjunartíðni skjásins.</string>
+    <string name="touch_controls_help_title">Hvernig snertistilling virkar</string>
+    <string name="touch_controls_manual">Handvirk stilling · Byrjaðu með sjálfgefnum fastbúnaðarstillingum</string>
+    <string name="touch_controls_manual_group">Handvirk stilling · aðalstillingar</string>
+    <string name="touch_controls_mode_group">Aðalstilling</string>
+    <string name="touch_controls_mode_help">Forstilling kemur í staðinn fyrir svörun, næmni, miða og slá stöðugleika saman. Handvirkar stillingar eru vistaðar síðar. Kantvörn virkar sérstaklega í báðum stillingum.</string>
+    <string name="touch_controls_mode_help_title">Veldu eina stillingaraðferð</string>
+    <string name="touch_controls_mode_title">Snertistillingarstilling</string>
+    <string name="touch_controls_preset_one">Fastbúnaðarforstilling 1</string>
+    <string name="touch_controls_preset_three">Fastbúnaðarforstilling 3</string>
+    <string name="touch_controls_preset_two">Fastbúnaðarforstilling 2</string>
+    <string name="touch_controls_reset_summary">Fara aftur í handvirkar sjálfgefnar fastbúnaðarstillingar og sjálfgefna brúnvörn. Haltu virkjunarrofa forritsins óbreyttum.</string>
+    <string name="touch_controls_reset_title">Endurstilltu stillingu þessa forrits</string>
+    <string name="touch_controls_response_summary">Stilltu svörun snertiskjásins við snertingu. Gildi 0 endurheimtir sjálfgefna fastbúnaðarstillingu. Breyttu einni stillingu í einu og prófaðu hana í leiknum þínum.</string>
+    <string name="touch_controls_screen_title">Snertistýringar</string>
+    <string name="touch_controls_sensitivity_summary">Stilltu snertinæmi. 0 endurheimtir sjálfgefið fastbúnaðarkerfi; hærra stig er ekki sjálfkrafa betra fyrir hvern leik.</string>
+    <string name="touch_controls_stability_summary">Stilltu stöðugleika endurtekinna snertiskjás ef nauðsyn krefur. Gildi 0 endurheimtir sjálfgefna fastbúnaðarstillingu.</string>
+    <string name="touch_controls_start_summary">Virkjaðu stýringar fyrir þetta forrit, veldu síðan forstillingu eða stilltu einstakar stillingar. Þú þarft ekki að hækka hverja rennibraut.</string>
+    <string name="touch_controls_start_title">Byrjaðu á sjálfgefnum stillingum</string>
+    <string name="touch_controls_unavailable_summary">Snertiþjónustan gaf ekki upp gild stýrisvið. Opnaðu þessa síðu aftur til að reyna aftur.</string>
+    <string name="touch_controls_unavailable_title">Snertistýringar eru ekki tiltækar</string>
+</resources>

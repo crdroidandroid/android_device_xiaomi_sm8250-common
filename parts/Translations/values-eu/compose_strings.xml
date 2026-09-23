@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Itzuli</string>
+    <string name="parts_search_apps">Bilatu aplikazioak</string>
+    <string name="touch_controls_active_summary">Aplikazio hau lehen planoan dagoen bitartean aplikatzen da. Aplikaziotik irten edo pantaila itzaltzeak ukipen-jokaera normala berreskuratzen du.</string>
+    <string name="touch_controls_active_title">Aplikazio bakoitzeko sintonizazioa gaituta dago</string>
+    <string name="touch_controls_advanced_group">Eskuzko modua · doikuntza finak</string>
+    <string name="touch_controls_aim_summary">Doitu zuzentzeko keinuen sentikortasuna behar izanez gero soilik. 0 balioak firmware ezarpen lehenetsia berrezartzen du.</string>
+    <string name="touch_controls_edge_group">Independentea · ertzaren babesa</string>
+    <string name="touch_controls_edge_summary">0-k ertz-iragazkia desgaitzen du; 1-3 mailak ertz-ukipenen aurkako babesa areagotzen du. Iragazki indartsuagoek nahita ertz ukituak gogorrago egin ditzake.</string>
+    <string name="touch_controls_global_summary">Erantzunkortasun globalaren aukerak lehentasuna du. Zure aplikazio bakoitzeko ezarpenak gordetzen dira baina pausatu egiten dira. Sakatu hemen aukera globala kudeatzeko.</string>
+    <string name="touch_controls_global_title">Ukipenaren baliogabetze globala aktibo dago</string>
+    <string name="touch_controls_help">Hasi eskuzko lehenetsiekin. Gaitu sintonizazioa behar duten aplikazioetarako soilik.\n\nAurrezarpenak eta eskuzko doikuntzak alternatibak dira, ez pilatzeko efektuak. 1-3 aurrezarpenak firmware profilak dira; ez dira kalitate balorazioak.\n\nEskuzko moduan, 0-k firmware lehenetsia berrezartzen du. Maila altuagoek ukimenaren portaera aldatzen dute eta okerragoa izan daiteke joko batzuetan. Egokitu erantzuna edo sentsibilitatea lehenik; erabili helburua eta egonkortasuna afinazio finagoetarako soilik.\n\nErtz-iragazkia independentea da. Babes sendoagoak pantailaren ertzetik gertu dauden nahitako ukituak ere bazter ditzake.\n\nErantzunkortasun globalaren aukerak lehentasuna du aplikazio bakoitzeko sintonizazioaren aurrean. Kontrol hauek ez dute pantailaren freskatze tasa aldatzen.</string>
+    <string name="touch_controls_help_title">Nola funtzionatzen duen ukipen-sintonizazioa</string>
+    <string name="touch_controls_manual">Eskuzko modua · hasi firmware ezarpen lehenetsiekin</string>
+    <string name="touch_controls_manual_group">Eskuzko modua · doikuntza nagusiak</string>
+    <string name="touch_controls_mode_group">Ezarpen nagusia</string>
+    <string name="touch_controls_mode_help">Aurrez ezarritako batek erantzuna, sentikortasuna, helburua eta kolpearen egonkortasuna batera ordezkatzen ditu. Eskuzko ezarpenak gerorako gordetzen dira. Ertz babesak modu batean zein bestean funtzionatzen du.</string>
+    <string name="touch_controls_mode_help_title">Aukeratu sintonizazio metodo bat</string>
+    <string name="touch_controls_mode_title">Ukitu doikuntza modua</string>
+    <string name="touch_controls_preset_one">Firmwarearen aurrezarpena 1</string>
+    <string name="touch_controls_preset_three">Firmwarearen aurrezarpena 3</string>
+    <string name="touch_controls_preset_two">Firmwarearen aurrezarpena 2</string>
+    <string name="touch_controls_reset_summary">Itzuli eskuzko firmware lehenetsietara eta ertz babes lehenetsietara. Mantendu aplikazioaren gaitzeko etengailua aldatu gabe.</string>
+    <string name="touch_controls_reset_title">Berrezarri aplikazio honen doikuntza</string>
+    <string name="touch_controls_response_summary">Doitu ukipen-pantailaren erantzuna ukituei. 0 balioak firmware ezarpen lehenetsia berrezartzen du. Aldatu ezarpen bat aldi berean eta saiatu zure jokoan.</string>
+    <string name="touch_controls_screen_title">Ukipen-kontrolak</string>
+    <string name="touch_controls_sensitivity_summary">Doitu ukipen-sentsibilitatea. 0 firmware lehenetsia berrezartzen du; maila altuagoa ez da automatikoki hobea joko guztietarako.</string>
+    <string name="touch_controls_stability_summary">Doitu ukipen-pantaila errepikatzen diren ukituen egonkortasuna behar izanez gero soilik. 0 balioak firmware ezarpen lehenetsia berrezartzen du.</string>
+    <string name="touch_controls_start_summary">Gaitu aplikazio honen kontrolak eta, ondoren, aukeratu aurrezartutako bat edo egokitu banakako ezarpenak. Ez duzu graduatzaile guztiak igo beharrik.</string>
+    <string name="touch_controls_start_title">Hasi lehenetsiekin</string>
+    <string name="touch_controls_unavailable_summary">Ukipen-zerbitzuak ez du baliozko kontrol-barrutirik eman. Ireki orri hau berriro saiatzeko.</string>
+    <string name="touch_controls_unavailable_title">Ukipen-kontrolak ez daude erabilgarri</string>
+</resources>

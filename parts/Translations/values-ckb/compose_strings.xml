@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">گەڕانەوە</string>
+    <string name="parts_search_apps">گەڕان بەدوای ئەپەکاندا</string>
+    <string name="touch_controls_active_summary">لەکاتێکدا ئەم ئەپە لە پێشەوەیە جێبەجێ دەکرێت. جێهێشتنی ئەپەکە یان کوژاندنەوەی شاشەکە ڕەفتاری ئاسایی دەست لێدان دەگەڕێنێتەوە.</string>
+    <string name="touch_controls_active_title">کۆکردنەوەی هەر ئەپێک چالاک کراوە</string>
+    <string name="touch_controls_advanced_group">دۆخی دەستی · ڕێکخستنی ورد</string>
+    <string name="touch_controls_aim_summary">هەستیاری ئاماژەکانی ئامانجکردن تەنها لەکاتی پێویستدا ڕێکبخە. بەهای 0 ڕێکخستنی فیرموێری پێشوەختە دەگەڕێنێتەوە.</string>
+    <string name="touch_controls_edge_group">سەربەخۆ · پاراستنی لێوارەکان</string>
+    <string name="touch_controls_edge_summary">0 فلتەرکردنی لێوارەکان لەکاردەخات؛ ئاستەکانی 1-3 پاراستن لە بەرامبەر دەست لێدانی لێوارەکانی بەڕێکەوت زیاد دەکەن. فلتەرکردنی بەهێزتر دەتوانێت دەست لێدانی لێوارە بە ئەنقەستەکان قورستر بکات.</string>
+    <string name="touch_controls_global_summary">بژاردەی وەڵامدانەوەی جیهانی لە پێشینەیە. ڕێکخستنەکانی هەر ئەپێکتان هەڵدەگیرێن بەڵام وەستاون. بۆ بەڕێوەبردنی بژاردەی جیهانی لێرە پەنجە بنێ.</string>
+    <string name="touch_controls_global_title">جێبەجێکردنی تاچ جیهانی چالاکە</string>
+    <string name="touch_controls_help">بە شێوازی پێشوەختەی دەستی دەست پێ بکە. تەنها بۆ ئەو ئەپانەی کە پێویستیان پێیەتی کۆکردنەوە چالاک بکە.\n\nپێشبڕکێ و ڕێکخستنی دەستی بەدیلن نەک کاریگەری بۆ ستاککردن. پێشبڕکێکانی 1-3 پرۆفایلی فیرموێرین؛ ئەوان هەڵسەنگاندنی کوالیتی نین.\n\nلە دۆخی دەستیدا، 0 پێشوەختەی فیرموێری دەگەڕێنێتەوە. ئاستی بەرزتر ڕەفتاری دەست لێدان دەگۆڕێت و لەوانەیە لە هەندێک یاریدا هەست بە خراپتر بکات. سەرەتا وەڵامدانەوە یان هەستیاری ڕێکبخە؛ ئامانج و سەقامگیری تەنها بۆ وردتر کۆکردنەوە بەکاربهێنە.\n\nفلتەرکردنی لێوار سەربەخۆیە. هەروەها پاراستنی بەهێزتر دەتوانێت دەست لێدانی بە ئەنقەست لە نزیک لێواری شاشەکە ڕەت بکاتەوە.\n\nبژاردەی وەڵامدانەوەی جیهانی لە پێشینەی خۆیدایە بەسەر کۆکردنەوەی هەر ئەپێکدا. ئەم کۆنتڕۆڵانە ڕێژەی نوێبوونەوەی شاشەکە ناگۆڕن.</string>
+    <string name="touch_controls_help_title">چۆن تاچ تیونینگ کاردەکات</string>
+    <string name="touch_controls_manual">دۆخی دەستی · بە ڕێکخستنەکانی فیرموێری پێشوەختە دەست پێ بکە</string>
+    <string name="touch_controls_manual_group">دۆخی دەستی · ڕێکخستنی سەرەکی</string>
+    <string name="touch_controls_mode_group">ڕێکخستنی سەرەکی</string>
+    <string name="touch_controls_mode_help">پێشبڕکێیەک جێگەی وەڵامدانەوە، هەستیاری، ئامانج و سەقامگیری لێدان پێکەوە دەگرێتەوە. ڕێکخستنە دەستییەکان بۆ دواتر هەڵگیراو دەمێننەوە. پاراستنی لێوارەکان لە هەریەک لەم دوو دۆخەدا بە جیا کاردەکات.</string>
+    <string name="touch_controls_mode_help_title">یەک شێوازی کۆکردنەوە هەڵبژێرە</string>
+    <string name="touch_controls_mode_title">دۆخی ڕێکخستنی دەست لێدان</string>
+    <string name="touch_controls_preset_one">پێشوەختەی فیرموێری 1</string>
+    <string name="touch_controls_preset_three">پێشوەختەی فیرموێری 3</string>
+    <string name="touch_controls_preset_two">پێشوەختەی فیرموێری 2</string>
+    <string name="touch_controls_reset_summary">گەڕانەوە بۆ پێشوەختە فیرموێری دەستی و پاراستنی لێوارەکانی پێشوەختە. سویچی چالاککردنی ئەپەکە وەک خۆی بهێڵەرەوە.</string>
+    <string name="touch_controls_reset_title">ڕێکخستنی ئەم ئەپە ڕێست بکە</string>
+    <string name="touch_controls_response_summary">وەڵامی شاشەی تاچ ڕێکبخە بۆ لێدانەکان. بەهای 0 ڕێکخستنی فیرموێری پێشوەختە دەگەڕێنێتەوە. یەک ڕێکخستن لە یەک کاتدا بگۆڕە و لە یارییەکەتدا تاقی بکەرەوە.</string>
+    <string name="touch_controls_screen_title">کۆنتڕۆڵەکانی تاچ</string>
+    <string name="touch_controls_sensitivity_summary">هەستیاری دەست لێدان ڕێکبخە. 0 پێشوەختەی فیرموێری دەگەڕێنێتەوە؛ ئاستێکی بەرزتر بە شێوەیەکی ئۆتۆماتیکی باشتر نییە بۆ هەموو یارییەک.</string>
+    <string name="touch_controls_stability_summary">سەقامگیری دووبارە لێدانی شاشەی تاچ تەنها ئەگەر پێویست بوو ڕێکبخە. بەهای 0 ڕێکخستنی فیرموێری پێشوەختە دەگەڕێنێتەوە.</string>
+    <string name="touch_controls_start_summary">کۆنتڕۆڵەکان بۆ ئەم ئەپە چالاک بکە، پاشان پێشوەختەیەک هەڵبژێرە یان ڕێکخستنە تاکەکەسییەکان ڕێکبخە. پێویست ناکات هەموو خلیسکەرێک بەرز بکەیتەوە.</string>
+    <string name="touch_controls_start_title">لە پێشوەختەکانەوە دەست پێ بکە</string>
+    <string name="touch_controls_unavailable_summary">خزمەتگوزاری تاچ مەودای کۆنترۆڵکردنی دروستی دابین نەکرد. ئەم لاپەڕەیە بکەرەوە بۆ ئەوەی هەوڵی دووبارە بدەیتەوە.</string>
+    <string name="touch_controls_unavailable_title">کۆنترۆڵی تاچ بەردەست نییە</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Geri</string>
+    <string name="parts_search_apps">Uygulamaları arayın</string>
+    <string name="touch_controls_active_summary">Bu uygulama ön plandayken uygulanır. Uygulamadan çıkmak veya ekranı kapatmak normal dokunma davranışını geri yükler.</string>
+    <string name="touch_controls_active_title">Uygulama başına ayarlama etkin</string>
+    <string name="touch_controls_advanced_group">Manuel mod · ince ayarlar</string>
+    <string name="touch_controls_aim_summary">Nişan alma hareketlerinin hassasiyetini yalnızca gerekiyorsa ayarlayın. 0 değeri, varsayılan donanım yazılımı ayarını geri yükler.</string>
+    <string name="touch_controls_edge_group">Bağımsız · kenar koruması</string>
+    <string name="touch_controls_edge_summary">0 kenar filtrelemeyi devre dışı bırakır; seviye 1-3, yanlışlıkla kenar dokunuşlarına karşı korumayı artırır. Daha güçlü filtreleme, kasıtlı kenar dokunuşlarını zorlaştırabilir.</string>
+    <string name="touch_controls_global_summary">Küresel yanıt verme seçeneği önceliklidir. Uygulamaya özel ayarlarınız kaydedilir ancak duraklatılır. Genel seçeneği yönetmek için buraya dokunun.</string>
+    <string name="touch_controls_global_title">Genel dokunma geçersiz kılma etkin</string>
+    <string name="touch_controls_help">Manuel varsayılanlarla başlayın. Yalnızca buna ihtiyaç duyan uygulamalar için ayarlamayı etkinleştirin.\n\nÖn ayarlar ve manuel ayarlamalar alternatiftir, yığının etkisi değildir. 1-3 arası ön ayarlar ürün yazılımı profilleridir; bunlar kalite derecelendirmeleri değildir.\n\nManuel modda 0, donanım yazılımı varsayılanını geri yükler. Daha yüksek seviyeler dokunma davranışını değiştirir ve bazı oyunlarda daha kötü hissedilebilir. Önce tepkiyi veya duyarlılığı ayarlayın; Nişan alma ve dengeyi yalnızca daha ince ayar için kullanın.\n\nKenar filtreleme bağımsızdır. Daha güçlü koruma, ekranın kenarına yapılan kasıtlı dokunuşları da reddedebilir.\n\nKüresel yanıt verme seçeneği, uygulama başına ayarlamaya göre önceliklidir. Bu kontroller ekranın yenileme hızını değiştirmez.</string>
+    <string name="touch_controls_help_title">Dokunma ayarı nasıl çalışır?</string>
+    <string name="touch_controls_manual">Manuel mod · varsayılan donanım yazılımı ayarlarıyla başlayın</string>
+    <string name="touch_controls_manual_group">Manuel mod · ana ayarlar</string>
+    <string name="touch_controls_mode_group">Ana ayar</string>
+    <string name="touch_controls_mode_help">Bir ön ayar, tepkinin, hassasiyetin, nişan almanın ve dokunma kararlılığının yerine geçer. Manuel ayarlar daha sonra kullanılmak üzere kayıtlı kalır. Kenar koruması her iki modda da ayrı ayrı çalışır.</string>
+    <string name="touch_controls_mode_help_title">Bir ayarlama yöntemi seçin</string>
+    <string name="touch_controls_mode_title">Dokunmatik ayar modu</string>
+    <string name="touch_controls_preset_one">Firmware ön ayarı 1</string>
+    <string name="touch_controls_preset_three">Firmware ön ayarı 3</string>
+    <string name="touch_controls_preset_two">Firmware ön ayarı 2</string>
+    <string name="touch_controls_reset_summary">Manuel donanım yazılımı varsayılanlarına ve varsayılan kenar korumasına dönün. Uygulamanın etkinleştirme anahtarını değiştirmeden bırakın.</string>
+    <string name="touch_controls_reset_title">Bu uygulamanın ayarlamasını sıfırlayın</string>
+    <string name="touch_controls_response_summary">Dokunmalara dokunmatik ekranın tepkisini ayarlayın. 0 değeri, varsayılan donanım yazılımı ayarını geri yükler. Her seferinde bir ayarı değiştirin ve oyununuzda deneyin.</string>
+    <string name="touch_controls_screen_title">Dokunmatik kontroller</string>
+    <string name="touch_controls_sensitivity_summary">Dokunma hassasiyetini ayarlayın. 0 ürün yazılımı varsayılanını geri yükler; Daha yüksek bir seviye her oyun için otomatik olarak daha iyi değildir.</string>
+    <string name="touch_controls_stability_summary">Tekrarlanan dokunmatik ekrana dokunmaların stabilitesini yalnızca gerekirse ayarlayın. 0 değeri, varsayılan donanım yazılımı ayarını geri yükler.</string>
+    <string name="touch_controls_start_summary">Bu uygulama için kontrolleri etkinleştirin, ardından bir ön ayar seçin veya ayarları tek tek yapın. Her kaydırıcıyı kaldırmanıza gerek yoktur.</string>
+    <string name="touch_controls_start_title">Varsayılanlarla başlayın</string>
+    <string name="touch_controls_unavailable_summary">Dokunmatik hizmeti geçerli kontrol aralıkları sağlamadı. Yeniden denemek için bu sayfayı yeniden açın.</string>
+    <string name="touch_controls_unavailable_title">Dokunmatik kontroller kullanılamıyor</string>
+</resources>

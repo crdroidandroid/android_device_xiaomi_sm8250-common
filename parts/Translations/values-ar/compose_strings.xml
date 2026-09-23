@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">العودة</string>
+    <string name="parts_search_apps">تطبيقات البحث</string>
+    <string name="touch_controls_active_summary">يتم تطبيقه أثناء وجود هذا التطبيق في المقدمة. يؤدي ترك التطبيق أو إيقاف تشغيل الشاشة إلى استعادة سلوك اللمس الطبيعي.</string>
+    <string name="touch_controls_active_title">تم تمكين الضبط لكل تطبيق</string>
+    <string name="touch_controls_advanced_group">الوضع اليدوي · التعديلات الدقيقة</string>
+    <string name="touch_controls_aim_summary">اضبط حساسية إيماءات التصويب فقط إذا لزم الأمر. تعمل القيمة 0 على استعادة إعداد البرنامج الثابت الافتراضي.</string>
+    <string name="touch_controls_edge_group">مستقلة · حماية الحافة</string>
+    <string name="touch_controls_edge_summary">0 يعطل تصفية الحواف؛ تزيد المستويات 1-3 من الحماية ضد اللمسات العرضية للحافة. يمكن أن تؤدي التصفية الأقوى إلى جعل لمسات الحواف المتعمدة أكثر صعوبة.</string>
+    <string name="touch_controls_global_summary">يأخذ خيار الاستجابة العالمية الأولوية. يتم حفظ الإعدادات الخاصة بكل تطبيق ولكن يتم إيقافها مؤقتًا. انقر هنا لإدارة الخيار العام.</string>
+    <string name="touch_controls_global_title">تجاوز اللمس العالمي نشط</string>
+    <string name="touch_controls_help">ابدأ بالإعدادات الافتراضية اليدوية. قم بتمكين الضبط فقط للتطبيقات التي تحتاج إليه.\n\nتعد الإعدادات المسبقة والتعديلات اليدوية بدائل وليست تأثيرات للتكديس. الإعدادات المسبقة 1–3 هي ملفات تعريف البرامج الثابتة؛ فهي ليست تقييمات الجودة.\n\nفي الوضع اليدوي، يستعيد 0 الإعداد الافتراضي للبرنامج الثابت. تؤدي المستويات الأعلى إلى تغيير سلوك اللمس وقد تشعر بالسوء في بعض الألعاب. اضبط الاستجابة أو الحساسية أولاً؛ استخدم الهدف والاستقرار فقط من أجل الضبط الدقيق.\n\nتصفية الحافة مستقلة. يمكن للحماية الأقوى أيضًا رفض اللمسات المتعمدة بالقرب من حافة الشاشة.\n\nيحظى خيار الاستجابة العالمية بالأولوية على الضبط لكل تطبيق. لا تغير عناصر التحكم هذه معدل تحديث العرض.</string>
+    <string name="touch_controls_help_title">كيف يعمل ضبط اللمس</string>
+    <string name="touch_controls_manual">الوضع اليدوي · ابدأ بإعدادات البرامج الثابتة الافتراضية</string>
+    <string name="touch_controls_manual_group">الوضع اليدوي · التعديلات الرئيسية</string>
+    <string name="touch_controls_mode_group">الإعداد الرئيسي</string>
+    <string name="touch_controls_mode_help">يحل الإعداد المسبق محل الاستجابة والحساسية والهدف والاستفادة من الاستقرار معًا. تبقى الإعدادات اليدوية محفوظة لوقت لاحق. تعمل حماية الحافة بشكل منفصل في أي من الوضعين.</string>
+    <string name="touch_controls_mode_help_title">اختر طريقة ضبط واحدة</string>
+    <string name="touch_controls_mode_title">وضع التعديل باللمس</string>
+    <string name="touch_controls_preset_one">البرامج الثابتة المسبقة 1</string>
+    <string name="touch_controls_preset_three">البرامج الثابتة المسبقة 3</string>
+    <string name="touch_controls_preset_two">البرامج الثابتة المسبقة 2</string>
+    <string name="touch_controls_reset_summary">العودة إلى الإعدادات الافتراضية للبرامج الثابتة اليدوية وحماية الحافة الافتراضية. احتفظ بمفتاح تمكين التطبيق دون تغيير.</string>
+    <string name="touch_controls_reset_title">إعادة ضبط ضبط هذا التطبيق</string>
+    <string name="touch_controls_response_summary">اضبط استجابة الشاشة للمسات الأصابع. تعيد القيمة 0 الإعداد الافتراضي للبرنامج الثابت. غيّر إعدادًا واحدًا في كل مرة وجرّبه في لعبتك.</string>
+    <string name="touch_controls_screen_title">الضوابط التي تعمل باللمس</string>
+    <string name="touch_controls_sensitivity_summary">ضبط حساسية اللمس. 0 يستعيد الإعداد الافتراضي للبرامج الثابتة؛ المستوى الأعلى لا يكون أفضل تلقائيًا في كل لعبة.</string>
+    <string name="touch_controls_stability_summary">اضبط استقرار لمسات الأصابع المتكررة عند الحاجة فقط. تعيد القيمة 0 الإعداد الافتراضي للبرنامج الثابت.</string>
+    <string name="touch_controls_start_summary">قم بتمكين عناصر التحكم لهذا التطبيق، ثم اختر إعدادًا مسبقًا أو قم بضبط الإعدادات الفردية. لا تحتاج إلى رفع كل شريط التمرير.</string>
+    <string name="touch_controls_start_title">ابدأ بالافتراضيات</string>
+    <string name="touch_controls_unavailable_summary">لم توفر خدمة اللمس نطاقات تحكم صالحة. أعد فتح هذه الصفحة لإعادة المحاولة.</string>
+    <string name="touch_controls_unavailable_title">عناصر التحكم باللمس غير متوفرة</string>
+</resources>

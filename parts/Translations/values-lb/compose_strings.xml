@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Zréck</string>
+    <string name="parts_search_apps">Sich Apps</string>
+    <string name="touch_controls_active_summary">Applizéiert während dëser App am Virdergrond ass. D\'App verloossen oder den Ecran ausschalten restauréiert normal Touch Verhalen.</string>
+    <string name="touch_controls_active_title">Per-App Tuning ass aktivéiert</string>
+    <string name="touch_controls_advanced_group">Manuell Modus · Finanpassungen</string>
+    <string name="touch_controls_aim_summary">Ajustéiert d\'Sensibilitéit vun de Zilgesten nëmmen wann néideg. E Wäert vun 0 restauréiert d\'Default Firmware Astellung.</string>
+    <string name="touch_controls_edge_group">Onofhängeg · Randschutz</string>
+    <string name="touch_controls_edge_summary">0 deaktivéiert Randfilter; Niveauen 1-3 erhéijen de Schutz géint zoufälleg Randberührungen. Méi staark Filteren kënne virsiichteg Randberäicher méi haart maachen.</string>
+    <string name="touch_controls_global_summary">Déi global Reaktiounsfäegkeet Optioun huet Prioritéit. Är Per-App Astellunge gi gespäichert awer gepaust. Tippen hei fir déi global Optioun ze managen.</string>
+    <string name="touch_controls_global_title">Global Touch Override ass aktiv</string>
+    <string name="touch_controls_help">Start mat manuelle Defaults. Aktivéiert Tuning nëmme fir Apps déi et brauchen.\n\nPresets a manuell Upassunge sinn Alternativen, net Effekter fir ze stackelen. Presets 1-3 sinn Firmware Profiler; si sinn net Qualitéit Bewäertungen.\n\nAm manuelle Modus restauréiert 0 d\'Firmware Default. Méi héich Niveauen änneren d\'Touchverhalen a kënne sech an e puer Spiller méi schlecht fillen. Ajustéieren d\'Äntwert oder d\'Sensibilitéit als éischt; benotzt Zil a Stabilitéit nëmme fir méi fein Tuning.\n\nEdge Filterung ass onofhängeg. Méi staark Schutz kann och virsiichteg Touchen no bei der Écrankante refuséieren.\n\nDéi global Reaktiounsfäegkeet Optioun hëlt Prioritéit iwwer Per-App Tuning. Dës Kontrollen änneren net den Affichage Erfrëschungsrate.</string>
+    <string name="touch_controls_help_title">Wéi Touch Tuning funktionnéiert</string>
+    <string name="touch_controls_manual">Manuell Modus · Start mat de Standard Firmware Astellungen</string>
+    <string name="touch_controls_manual_group">Manuell Modus · Haaptrei Upassungen</string>
+    <string name="touch_controls_mode_group">Haaptastellung</string>
+    <string name="touch_controls_mode_help">E Preset ersetzt d\'Äntwert, d\'Sensibilitéit, d\'Ziel an d\'Tapstabilitéit zesummen. Manuell Astellunge bleiwen fir spéider gespäichert. Randschutz funktionnéiert separat an all Modus.</string>
+    <string name="touch_controls_mode_help_title">Wielt eng Tuningmethod</string>
+    <string name="touch_controls_mode_title">Touch Upassung Modus</string>
+    <string name="touch_controls_preset_one">Firmware Preset 1</string>
+    <string name="touch_controls_preset_three">Firmware Preset 3</string>
+    <string name="touch_controls_preset_two">Firmware Preset 2</string>
+    <string name="touch_controls_reset_summary">Zréck op manuell Firmware Defaults an de Standard Randschutz. Halt den Aktivéierungsschalter vun der App onverännert.</string>
+    <string name="touch_controls_reset_title">Reset den Tuning vun dëser App</string>
+    <string name="touch_controls_response_summary">Ajustéieren Touchscreen Äntwert op Krunn. E Wäert vun 0 restauréiert d\'Default Firmware Astellung. Ännert eng Astellung zur Zäit a probéiert et an Ärem Spill.</string>
+    <string name="touch_controls_screen_title">Touch Kontrollen</string>
+    <string name="touch_controls_sensitivity_summary">Ajustéieren Touch Sensibilitéit. 0 restauréiert d\'Firmware Standard; e méi héije Niveau ass net automatesch besser fir all Spill.</string>
+    <string name="touch_controls_stability_summary">Passt d\'Stabilitéit vun widderholl Touchscreen Krunn nëmmen wann néideg. E Wäert vun 0 restauréiert d\'Default Firmware Astellung.</string>
+    <string name="touch_controls_start_summary">Aktivéiert d\'Kontrollen fir dës App, wielt dann e Preset oder setzt individuell Astellungen un. Dir musst net all Schieber erhéijen.</string>
+    <string name="touch_controls_start_title">Start mat den Defaults</string>
+    <string name="touch_controls_unavailable_summary">Den Touch Service huet keng valabel Kontrollberäicher geliwwert. Reouverture dës Säit fir erëm ze probéieren.</string>
+    <string name="touch_controls_unavailable_title">Touch Kontrollen sinn net verfügbar</string>
+</resources>

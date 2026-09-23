@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Indietro</string>
+    <string name="parts_search_apps">Cerca app</string>
+    <string name="touch_controls_active_summary">Applicato mentre l\'app è in primo piano. Uscendo dall\'app o spegnendo lo schermo si ripristina il normale comportamento tattile.</string>
+    <string name="touch_controls_active_title">L\'ottimizzazione per app è abilitata</string>
+    <string name="touch_controls_advanced_group">Modalità manuale · regolazioni fini</string>
+    <string name="touch_controls_aim_summary">Regola la sensibilità dei gesti di mira solo se necessario. Un valore pari a 0 ripristina l\'impostazione predefinita del firmware.</string>
+    <string name="touch_controls_edge_group">Indipendente · Protezione dei bordi</string>
+    <string name="touch_controls_edge_summary">0 disabilita il filtraggio dei bordi; i livelli 1–3 aumentano la protezione contro i tocchi accidentali dei bordi. Un filtraggio più forte può rendere più difficili i tocchi intenzionali dei bordi.</string>
+    <string name="touch_controls_global_summary">L\'opzione di reattività globale ha la priorità. Le tue impostazioni per app vengono salvate ma messe in pausa. Tocca qui per gestire l\'opzione globale.</string>
+    <string name="touch_controls_global_title">L\'override del tocco globale è attivo</string>
+    <string name="touch_controls_help">Inizia con le impostazioni predefinite manuali. Abilita l\'ottimizzazione solo per le app che ne hanno bisogno.\n\nLe preimpostazioni e le regolazioni manuali sono alternative, non effetti da impilare. Le preimpostazioni 1–3 sono profili firmware; non sono valutazioni di qualità.\n\nIn modalità manuale, 0 ripristina le impostazioni predefinite del firmware. Livelli più alti modificano il comportamento del tocco e potrebbero peggiorare in alcuni giochi. Regolare prima la risposta o la sensibilità; utilizzare mira e stabilità solo per una messa a punto più precisa.\n\nIl filtraggio dei bordi è indipendente. Una protezione più forte può anche respingere i tocchi intenzionali vicino al bordo dello schermo.\n\nL\'opzione di reattività globale ha la priorità rispetto all\'ottimizzazione per app. Questi controlli non modificano la frequenza di aggiornamento del display.</string>
+    <string name="touch_controls_help_title">Come funziona la sintonizzazione tramite tocco</string>
+    <string name="touch_controls_manual">Modalità manuale · iniziare con le impostazioni predefinite del firmware</string>
+    <string name="touch_controls_manual_group">Modalità manuale · principali regolazioni</string>
+    <string name="touch_controls_mode_group">Impostazione principale</string>
+    <string name="touch_controls_mode_help">Un preset sostituisce insieme risposta, sensibilità, mira e stabilità del tocco. Le impostazioni manuali rimangono salvate per dopo. La protezione dei bordi funziona separatamente in entrambe le modalità.</string>
+    <string name="touch_controls_mode_help_title">Scegli un metodo di accordatura</string>
+    <string name="touch_controls_mode_title">Modalità di regolazione del tocco</string>
+    <string name="touch_controls_preset_one">Preimpostazione del firmware 1</string>
+    <string name="touch_controls_preset_three">Preimpostazione del firmware 3</string>
+    <string name="touch_controls_preset_two">Preimpostazione del firmware 2</string>
+    <string name="touch_controls_reset_summary">Ritorna alle impostazioni predefinite del firmware manuale e alla protezione dei bordi predefinita. Mantieni invariato l\'interruttore di abilitazione dell\'app.</string>
+    <string name="touch_controls_reset_title">Reimposta l\'ottimizzazione di questa app</string>
+    <string name="touch_controls_response_summary">Regola la risposta del touchscreen ai tocchi. Un valore pari a 0 ripristina l\'impostazione predefinita del firmware. Cambia un\'impostazione alla volta e provala nel tuo gioco.</string>
+    <string name="touch_controls_screen_title">Controlli tattili</string>
+    <string name="touch_controls_sensitivity_summary">Regola la sensibilità al tocco. 0 ripristina le impostazioni predefinite del firmware; un livello più alto non è automaticamente migliore per ogni gioco.</string>
+    <string name="touch_controls_stability_summary">Regolare la stabilità dei tocchi ripetuti del touchscreen solo se necessario. Un valore pari a 0 ripristina l\'impostazione predefinita del firmware.</string>
+    <string name="touch_controls_start_summary">Abilita i controlli per questa app, quindi scegli una preimpostazione o ottimizza le singole impostazioni. Non è necessario alzare tutti i cursori.</string>
+    <string name="touch_controls_start_title">Inizia con le impostazioni predefinite</string>
+    <string name="touch_controls_unavailable_summary">Il servizio touch non ha fornito intervalli di controllo validi. Riapri questa pagina per riprovare.</string>
+    <string name="touch_controls_unavailable_title">I controlli touch non sono disponibili</string>
+</resources>

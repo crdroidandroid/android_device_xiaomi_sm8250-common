@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">უკან</string>
+    <string name="parts_search_apps">მოძებნეთ აპები</string>
+    <string name="touch_controls_active_summary">გამოიყენება სანამ ეს აპი წინა პლანზეა. აპლიკაციის დატოვება ან ეკრანის გამორთვა აღადგენს შეხების ნორმალურ ქცევას.</string>
+    <string name="touch_controls_active_title">თითო აპლიკაციის დარეგულირება ჩართულია</string>
+    <string name="touch_controls_advanced_group">მექანიკური რეჟიმი · ჯარიმა კორექტირება</string>
+    <string name="touch_controls_aim_summary">დაარეგულირეთ დამიზნების ჟესტების მგრძნობელობა მხოლოდ საჭიროების შემთხვევაში. 0-ის მნიშვნელობა აღადგენს პროგრამული უზრუნველყოფის ნაგულისხმევ პარამეტრს.</string>
+    <string name="touch_controls_edge_group">დამოუკიდებელი · კიდეების დაცვა</string>
+    <string name="touch_controls_edge_summary">0 გამორთავს კიდეების ფილტრაციას; დონე 1–3 ზრდის დაცვას კიდეზე შემთხვევითი შეხებისგან. უფრო ძლიერმა ფილტრაციამ შეიძლება გაართულოს კიდეზე მიზანმიმართული შეხება.</string>
+    <string name="touch_controls_global_summary">გლობალური რეაგირების ვარიანტი პრიორიტეტულია. თქვენი თითო აპის პარამეტრები შენახულია, მაგრამ დაპაუზებულია. შეეხეთ აქ გლობალური ვარიანტის სამართავად.</string>
+    <string name="touch_controls_global_title">გლობალური შეხების უგულებელყოფა აქტიურია</string>
+    <string name="touch_controls_help">დაიწყეთ ხელით ნაგულისხმევი პარამეტრებით. ჩართეთ დარეგულირება მხოლოდ იმ აპებისთვის, რომლებსაც ეს სჭირდებათ.\n\nწინასწარ დაყენებული და ხელით კორექტირება არის ალტერნატივა და არა ეფექტები დაწყობისთვის. წინასწარ დაყენებული 1–3 არის firmware პროფილები; ისინი არ არიან ხარისხის რეიტინგები.\n\nხელით რეჟიმში, 0 აღადგენს პროგრამული უზრუნველყოფის ნაგულისხმევს. უფრო მაღალი დონეები ცვლის შეხების ქცევას და შესაძლოა ზოგიერთ თამაშში თავი გაუარესდეს. პირველ რიგში დაარეგულირეთ პასუხი ან მგრძნობელობა; გამოიყენეთ მიზანი და სტაბილურობა მხოლოდ დახვეწილი რეგულირებისთვის.\n\nკიდეების ფილტრაცია დამოუკიდებელია. უფრო ძლიერ დაცვას ასევე შეუძლია უარყოს განზრახ შეხება ეკრანის კიდესთან.\n\nგლობალური რეაგირების ვარიანტი პრიორიტეტს ანიჭებს თითო აპის ტუნინგს. ეს კონტროლი არ ცვლის ეკრანის განახლების სიჩქარეს.</string>
+    <string name="touch_controls_help_title">როგორ მუშაობს შეხების დარეგულირება</string>
+    <string name="touch_controls_manual">მექანიკური რეჟიმი · დაიწყეთ ნაგულისხმევი პროგრამული უზრუნველყოფის პარამეტრები</string>
+    <string name="touch_controls_manual_group">მექანიკური რეჟიმი · ძირითადი კორექტირება</string>
+    <string name="touch_controls_mode_group">მთავარი პარამეტრი</string>
+    <string name="touch_controls_mode_help">წინასწარ დაყენებული ცვლის პასუხს, მგრძნობელობას, მიზანს და შეხების სტაბილურობას ერთად. მექანიკური პარამეტრები შენახული რჩება მოგვიანებით. კიდეების დაცვა მუშაობს ცალ-ცალკე ორივე რეჟიმში.</string>
+    <string name="touch_controls_mode_help_title">აირჩიეთ ერთი დაკონფიგურაციის მეთოდი</string>
+    <string name="touch_controls_mode_title">შეხების რეგულირების რეჟიმი</string>
+    <string name="touch_controls_preset_one">Firmware წინასწარ დაყენებული 1</string>
+    <string name="touch_controls_preset_three">Firmware წინასწარ დაყენებული 3</string>
+    <string name="touch_controls_preset_two">პროგრამული უზრუნველყოფის წინასწარ დაყენება 2</string>
+    <string name="touch_controls_reset_summary">დაბრუნდით მექანიკური პროგრამული უზრუნველყოფის ნაგულისხმევ პარამეტრებზე და ნაგულისხმევი კიდეების დაცვაზე. შეინახეთ აპის ჩართვის ჩამრთველი უცვლელი.</string>
+    <string name="touch_controls_reset_title">ამ აპის დარეგულირების გადატვირთვა</string>
+    <string name="touch_controls_response_summary">დაარეგულირეთ სენსორული ეკრანის პასუხი შეხებაზე. 0-ის მნიშვნელობა აღადგენს პროგრამული უზრუნველყოფის ნაგულისხმევ პარამეტრს. შეცვალეთ თითო პარამეტრი და სცადეთ თქვენს თამაშში.</string>
+    <string name="touch_controls_screen_title">შეხების კონტროლი</string>
+    <string name="touch_controls_sensitivity_summary">შეხების მგრძნობელობის დარეგულირება. 0 აღადგენს firmware ნაგულისხმევს; უმაღლესი დონე არ არის ავტომატურად უკეთესი ყველა თამაშისთვის.</string>
+    <string name="touch_controls_stability_summary">დაარეგულირეთ სენსორული ეკრანის განმეორებითი შეხების სტაბილურობა მხოლოდ საჭიროების შემთხვევაში. 0-ის მნიშვნელობა აღადგენს პროგრამული უზრუნველყოფის ნაგულისხმევ პარამეტრს.</string>
+    <string name="touch_controls_start_summary">ჩართეთ მართვის საშუალებები ამ აპისთვის, შემდეგ აირჩიეთ წინასწარ დაყენებული ან დაარეგულირეთ ინდივიდუალური პარამეტრები. თქვენ არ გჭირდებათ ყველა სლაიდერის აწევა.</string>
+    <string name="touch_controls_start_title">დაიწყეთ ნაგულისხმევი</string>
+    <string name="touch_controls_unavailable_summary">სენსორულმა სერვისმა არ უზრუნველყო სწორი კონტროლის დიაპაზონები. ხელახლა გახსენით ეს გვერდი ხელახლა საცდელად.</string>
+    <string name="touch_controls_unavailable_title">სენსორული კონტროლი მიუწვდომელია</string>
+</resources>

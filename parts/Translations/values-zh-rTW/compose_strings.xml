@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">返回</string>
+    <string name="parts_search_apps">搜尋應用程式</string>
+    <string name="touch_controls_active_summary">當此應用程式位於前台時應用。離開應用程式或關閉螢幕會恢復正常的觸控行為。</string>
+    <string name="touch_controls_active_title">已啟用按應用程式調整</string>
+    <string name="touch_controls_advanced_group">手動模式·微調</string>
+    <string name="touch_controls_aim_summary">僅在必要時調整瞄準手勢的靈敏度。值為 0 將恢復預設韌體設定。</string>
+    <string name="touch_controls_edge_group">獨立·邊緣保護</string>
+    <string name="touch_controls_edge_summary">0 停用邊緣過濾； 1-3 級可增強防止意外邊緣接觸的保護。更強的過濾可以使有意的邊緣觸摸變得更加困難。</string>
+    <string name="touch_controls_global_summary">全域響應選項優先。您的每個應用程式設定已儲存但已暫停。點擊此處管理全域選項。</string>
+    <string name="touch_controls_global_title">全域觸控覆蓋已激活</string>
+    <string name="touch_controls_help">從手動預設值開始。僅對需要的應用程式啟用調整。\n\n預設和手動調整是替代方案，而不是疊加效果。預設 1–3 是韌體設定檔；它們不是品質評級。\n\n在手動模式下，0 恢復韌體預設值。更高的等級會改變觸摸行為，並且在某些遊戲中可能會感覺更糟。先調整響應或靈敏度；僅使用目標和穩定性進行微調。\n\n邊緣過濾是獨立的。更強的保護還可以阻止螢幕邊緣附近的故意觸摸。\n\n全域響應選項優先於每個應用程式調整。這些控制項不會變更顯示更新率。</string>
+    <string name="touch_controls_help_title">觸摸調音的工作原理</string>
+    <string name="touch_controls_manual">手動模式·以預設韌體設定啟動</string>
+    <string name="touch_controls_manual_group">手動模式·主要調整</string>
+    <string name="touch_controls_mode_group">主要設定</string>
+    <string name="touch_controls_mode_help">預設取代了響應、靈敏度、瞄準和點擊穩定性。儲存手動設定以供日後使用。邊緣保護在任一模式下均單獨工作。</string>
+    <string name="touch_controls_mode_help_title">選擇一種調整方法</string>
+    <string name="touch_controls_mode_title">觸摸調節方式</string>
+    <string name="touch_controls_preset_one">韌體預設1</string>
+    <string name="touch_controls_preset_three">韌體預設3</string>
+    <string name="touch_controls_preset_two">韌體預設2</string>
+    <string name="touch_controls_reset_summary">返回手動韌體預設值和預設邊緣保護。保持應用程式的啟用開關不變。</string>
+    <string name="touch_controls_reset_title">重置此應用程式的調音</string>
+    <string name="touch_controls_response_summary">調整觸控螢幕對點擊的反應。值為 0 將恢復預設韌體設定。一次更改一項設定並在遊戲中嘗試。</string>
+    <string name="touch_controls_screen_title">觸控控制</string>
+    <string name="touch_controls_sensitivity_summary">調整觸控靈敏度。 0 恢復韌體預設值；更高的等級並不意味著每場比賽都會更好。</string>
+    <string name="touch_controls_stability_summary">僅在必要時調整重複觸控螢幕點擊的穩定性。值為 0 將恢復預設韌體設定。</string>
+    <string name="touch_controls_start_summary">啟用此應用程式的控件，然後選擇預設或調整個別設定。您不需要抬起每個滑塊。</string>
+    <string name="touch_controls_start_title">從預設值開始</string>
+    <string name="touch_controls_unavailable_summary">觸控服務未提供有效的控制範圍。重新開啟此頁面以重試。</string>
+    <string name="touch_controls_unavailable_title">觸控控制不可用</string>
+</resources>

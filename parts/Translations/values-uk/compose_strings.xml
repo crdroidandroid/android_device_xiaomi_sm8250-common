@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Назад</string>
+    <string name="parts_search_apps">Пошук програм</string>
+    <string name="touch_controls_active_summary">Застосовується, поки ця програма відкрита на передньому плані. Перехід до іншої програми або вимкнення екрана відновлює звичайну поведінку сенсора.</string>
+    <string name="touch_controls_active_title">Налаштування для програми ввімкнено</string>
+    <string name="touch_controls_advanced_group">Вручну · точне налаштування</string>
+    <string name="touch_controls_aim_summary">За потреби точно налаштуйте жести прицілювання. 0 відновлює стандартне значення прошивки.</string>
+    <string name="touch_controls_edge_group">Окремо · захист країв</string>
+    <string name="touch_controls_edge_summary">0 вимикає фільтрацію країв; рівні 1–3 посилюють захист від випадкових дотиків біля країв. Посилена фільтрація може ускладнювати навмисні дотики біля країв.</string>
+    <string name="touch_controls_global_summary">Глобальне налаштування відгуку має пріоритет. Налаштування для цієї програми збережено, але призупинено. Торкніться тут, щоб змінити глобальне налаштування.</string>
+    <string name="touch_controls_global_title">Глобальне налаштування дотиків активне</string>
+    <string name="touch_controls_help">Почніть зі стандартних ручних налаштувань. Увімкніть налаштування лише для програм, яким це потрібно.\n\nПресети й ручні налаштування — альтернативні способи, а не ефекти, які слід поєднувати. Пресети 1–3 — це профілі прошивки, а не оцінки якості.\n\nУ ручному режимі 0 відновлює стандартне значення прошивки. Вищі рівні змінюють поведінку сенсора й можуть погіршувати керування в деяких іграх. Спочатку налаштуйте відгук або чутливість; прицілювання та стабільність використовуйте лише для точного налаштування.\n\nФільтрація країв працює окремо. Посилений захист також може відхиляти навмисні дотики біля краю екрана.\n\nГлобальне налаштування відгуку має пріоритет над налаштуваннями для програми. Ці елементи керування не змінюють частоту оновлення екрана.</string>
+    <string name="touch_controls_help_title">Як працює налаштування дотиків</string>
+    <string name="touch_controls_manual">Вручну · почніть зі стандартних значень прошивки</string>
+    <string name="touch_controls_manual_group">Вручну · основні налаштування</string>
+    <string name="touch_controls_mode_group">Основне налаштування</string>
+    <string name="touch_controls_mode_help">Пресет одночасно замінює відгук, чутливість, прицілювання та стабільність дотиків. Ручні налаштування зберігаються для подальшого використання. Захист країв працює окремо в обох режимах.</string>
+    <string name="touch_controls_mode_help_title">Виберіть один спосіб налаштування</string>
+    <string name="touch_controls_mode_title">Режим налаштування</string>
+    <string name="touch_controls_preset_one">Пресет прошивки 1</string>
+    <string name="touch_controls_preset_three">Пресет прошивки 3</string>
+    <string name="touch_controls_preset_two">Пресет прошивки 2</string>
+    <string name="touch_controls_reset_summary">Повернутися до стандартних ручних налаштувань прошивки та стандартного захисту країв. Стан перемикача цієї програми не змінюється.</string>
+    <string name="touch_controls_reset_title">Скинути налаштування цієї програми</string>
+    <string name="touch_controls_response_summary">Налаштуйте відгук дотику. 0 відновлює стандартне значення прошивки; змінюйте по одному налаштуванню та перевіряйте його в грі.</string>
+    <string name="touch_controls_screen_title">Керування дотиками</string>
+    <string name="touch_controls_sensitivity_summary">Налаштуйте чутливість сенсора. 0 відновлює стандартне значення прошивки; вищий рівень не обов’язково кращий для кожної гри.</string>
+    <string name="touch_controls_stability_summary">За потреби точно налаштуйте стабільність повторних дотиків. 0 відновлює стандартне значення прошивки.</string>
+    <string name="touch_controls_start_summary">Увімкніть керування для цієї програми, а потім виберіть пресет або налаштуйте окремі параметри. Не потрібно підвищувати всі значення повзунків.</string>
+    <string name="touch_controls_start_title">Почніть зі стандартних значень</string>
+    <string name="touch_controls_unavailable_summary">Служба сенсора не надала допустимих діапазонів керування. Відкрийте цю сторінку знову, щоб повторити спробу.</string>
+    <string name="touch_controls_unavailable_title">Керування дотиками недоступне</string>
+</resources>

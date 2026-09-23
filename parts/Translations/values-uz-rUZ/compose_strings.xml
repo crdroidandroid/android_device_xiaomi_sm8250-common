@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Orqaga</string>
+    <string name="parts_search_apps">Ilovalarni qidirish</string>
+    <string name="touch_controls_active_summary">Bu ilova oldingi planda boʻlganda qoʻllaniladi. Ilovani tark etish yoki ekranni o\'chirish normal teginish harakatini tiklaydi.</string>
+    <string name="touch_controls_active_title">Har bir ilova uchun sozlash yoqilgan</string>
+    <string name="touch_controls_advanced_group">Manuel rejim · nozik sozlashlar</string>
+    <string name="touch_controls_aim_summary">Maqsadli imo-ishoralarning sezgirligini faqat kerak bo\'lganda sozlang. 0 qiymati standart mikrodastur sozlamalarini tiklaydi.</string>
+    <string name="touch_controls_edge_group">Mustaqil · chekka himoyasi</string>
+    <string name="touch_controls_edge_summary">0 chekka filtrlashni o\'chiradi; 1-3 darajalari tasodifiy chekka teginishdan himoyani oshiradi. Kuchli filtrlash qasddan chekka teginishni qiyinlashtirishi mumkin.</string>
+    <string name="touch_controls_global_summary">Global sezgirlik varianti ustuvor hisoblanadi. Har bir ilova sozlamalari saqlanadi, lekin pauza qilinadi. Global parametrni boshqarish uchun bu yerga bosing.</string>
+    <string name="touch_controls_global_title">Global teginishni bekor qilish faol</string>
+    <string name="touch_controls_help">Qo\'lda standart sozlamalar bilan boshlang. Faqat kerakli ilovalar uchun sozlashni yoqing.\n\nOldindan o\'rnatish va qo\'lda sozlash - bu stack effektlari emas, balki muqobildir. Oldindan o\'rnatilgan 1–3 - proshivka profillari; ular sifat ko\'rsatkichlari emas.\n\nQo\'lda rejimda 0 standart dasturiy ta\'minotni tiklaydi. Yuqori darajalar teginish xatti-harakatlarini o\'zgartiradi va ba\'zi o\'yinlarda yomonroq bo\'lishi mumkin. Avval javob yoki sezgirlikni sozlang; maqsad va barqarorlikni faqat nozik sozlash uchun foydalaning.\n\nYon filtrlash mustaqildir. Kuchli himoya ekran chetiga yaqin qasddan teginishni ham rad qilishi mumkin.\n\nGlobal sezgirlik opsiyasi har bir ilovani sozlashdan ustun turadi. Ushbu boshqaruv elementlari displeyni yangilash tezligini o\'zgartirmaydi.</string>
+    <string name="touch_controls_help_title">Sensorli sozlash qanday ishlaydi</string>
+    <string name="touch_controls_manual">Manual rejimi · standart mikrodastur sozlamalaridan boshlang</string>
+    <string name="touch_controls_manual_group">Manuel rejim · asosiy sozlashlar</string>
+    <string name="touch_controls_mode_group">Asosiy sozlash</string>
+    <string name="touch_controls_mode_help">Oldindan o\'rnatilgan javob, sezgirlik, nishon va tegish barqarorligini birgalikda almashtiradi. Qo\'lda sozlamalar keyinroq uchun saqlanadi. Chetlarni himoya qilish har ikkala rejimda ham alohida ishlaydi.</string>
+    <string name="touch_controls_mode_help_title">Bir sozlash usulini tanlang</string>
+    <string name="touch_controls_mode_title">Sensorni sozlash rejimi</string>
+    <string name="touch_controls_preset_one">Mikrodastur oldindan o\'rnatilgan 1</string>
+    <string name="touch_controls_preset_three">Mikrodastur oldindan o\'rnatilgan 3</string>
+    <string name="touch_controls_preset_two">Mikrodastur oldindan o\'rnatilgan 2</string>
+    <string name="touch_controls_reset_summary">Mikrodasturning qo\'lda standart sozlamalariga va standart chekka himoyasiga qayting. Ilovani yoqish tugmachasini o\'zgarmagan holda saqlang.</string>
+    <string name="touch_controls_reset_title">Ushbu ilovani sozlashni asliga qaytaring</string>
+    <string name="touch_controls_response_summary">Bosish uchun sensorli ekran javobini sozlang. 0 qiymati standart mikrodastur sozlamalarini tiklaydi. Bir vaqtning o\'zida bitta sozlamani o\'zgartiring va uni o\'yiningizda sinab ko\'ring.</string>
+    <string name="touch_controls_screen_title">Sensorli boshqaruvlar</string>
+    <string name="touch_controls_sensitivity_summary">Tegish sezgirligini sozlang. 0 proshivka standartini tiklaydi; yuqori daraja har bir o\'yin uchun avtomatik ravishda yaxshiroq emas.</string>
+    <string name="touch_controls_stability_summary">Agar kerak bo\'lsa, sensorli ekranni qayta-qayta bosish barqarorligini sozlang. 0 qiymati standart mikrodastur sozlamalarini tiklaydi.</string>
+    <string name="touch_controls_start_summary">Ushbu ilova uchun boshqaruv elementlarini yoqing, so‘ngra oldindan o‘rnatilganni tanlang yoki individual sozlamalarni sozlang. Har bir slayderni ko\'tarish shart emas.</string>
+    <string name="touch_controls_start_title">Standartlardan boshlang</string>
+    <string name="touch_controls_unavailable_summary">Sensorli xizmat tegishli boshqaruv diapazonlarini taqdim etmadi. Qayta urinish uchun ushbu sahifani qayta oching.</string>
+    <string name="touch_controls_unavailable_title">Sensorli boshqaruvlar mavjud emas</string>
+</resources>

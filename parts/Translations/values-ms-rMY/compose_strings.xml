@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">belakang</string>
+    <string name="parts_search_apps">Cari apl</string>
+    <string name="touch_controls_active_summary">Digunakan semasa apl ini berada di latar depan. Meninggalkan apl atau mematikan skrin memulihkan gelagat sentuhan biasa.</string>
+    <string name="touch_controls_active_title">Penalaan setiap apl didayakan</string>
+    <string name="touch_controls_advanced_group">Mod manual · pelarasan halus</string>
+    <string name="touch_controls_aim_summary">Laraskan sensitiviti gerak isyarat bertujuan hanya jika perlu. Nilai 0 memulihkan tetapan perisian tegar lalai.</string>
+    <string name="touch_controls_edge_group">Bebas · perlindungan tepi</string>
+    <string name="touch_controls_edge_summary">0 melumpuhkan penapisan tepi; tahap 1–3 meningkatkan perlindungan terhadap sentuhan tepi yang tidak disengajakan. Penapisan yang lebih kuat boleh menjadikan sentuhan tepi yang disengajakan lebih sukar.</string>
+    <string name="touch_controls_global_summary">Pilihan responsif global diutamakan. Tetapan setiap apl anda disimpan tetapi dijeda. Ketik di sini untuk mengurus pilihan global.</string>
+    <string name="touch_controls_global_title">Penggantian sentuhan global aktif</string>
+    <string name="touch_controls_help">Mulakan dengan lalai manual. Dayakan penalaan hanya untuk apl yang memerlukannya.\n\nPratetap dan pelarasan manual adalah alternatif, bukan kesan untuk tindanan. Pratetap 1–3 ialah profil perisian tegar; mereka bukan penilaian kualiti.\n\nDalam mod manual, 0 memulihkan lalai perisian tegar. Tahap yang lebih tinggi mengubah tingkah laku sentuhan dan mungkin berasa lebih teruk dalam beberapa permainan. Laraskan tindak balas atau sensitiviti terlebih dahulu; gunakan matlamat dan kestabilan hanya untuk penalaan yang lebih halus.\n\nPenapisan tepi adalah bebas. Perlindungan yang lebih kuat juga boleh menolak sentuhan yang disengajakan berhampiran tepi skrin.\n\nPilihan responsif global diutamakan berbanding penalaan setiap apl. Kawalan ini tidak mengubah kadar penyegaran paparan.</string>
+    <string name="touch_controls_help_title">Cara penalaan sentuh berfungsi</string>
+    <string name="touch_controls_manual">Mod manual · mulakan dengan tetapan perisian tegar lalai</string>
+    <string name="touch_controls_manual_group">Mod manual · pelarasan utama</string>
+    <string name="touch_controls_mode_group">Tetapan utama</string>
+    <string name="touch_controls_mode_help">Pratetap menggantikan tindak balas, kepekaan, matlamat dan kestabilan ketik bersama-sama. Tetapan manual kekal disimpan untuk kemudian. Perlindungan tepi berfungsi secara berasingan dalam mana-mana mod.</string>
+    <string name="touch_controls_mode_help_title">Pilih satu kaedah penalaan</string>
+    <string name="touch_controls_mode_title">Mod pelarasan sentuh</string>
+    <string name="touch_controls_preset_one">Pratetap perisian tegar 1</string>
+    <string name="touch_controls_preset_three">Pratetap perisian tegar 3</string>
+    <string name="touch_controls_preset_two">Pratetap perisian tegar 2</string>
+    <string name="touch_controls_reset_summary">Kembali ke lalai perisian tegar manual dan perlindungan tepi lalai. Pastikan suis daya apl tidak berubah.</string>
+    <string name="touch_controls_reset_title">Tetapkan semula penalaan apl ini</string>
+    <string name="touch_controls_response_summary">Laraskan tindak balas skrin sentuh kepada ketik. Nilai 0 memulihkan tetapan perisian tegar lalai. Tukar satu tetapan pada satu masa dan cuba dalam permainan anda.</string>
+    <string name="touch_controls_screen_title">Kawalan sentuh</string>
+    <string name="touch_controls_sensitivity_summary">Laraskan kepekaan sentuhan. 0 memulihkan lalai perisian tegar; tahap yang lebih tinggi tidak secara automatik lebih baik untuk setiap permainan.</string>
+    <string name="touch_controls_stability_summary">Laraskan kestabilan ketukan skrin sentuh berulang hanya jika perlu. Nilai 0 memulihkan tetapan perisian tegar lalai.</string>
+    <string name="touch_controls_start_summary">Dayakan kawalan untuk apl ini, kemudian pilih pratetap atau tala tetapan individu. Anda tidak perlu menaikkan setiap gelangsar.</string>
+    <string name="touch_controls_start_title">Mulakan dengan lalai</string>
+    <string name="touch_controls_unavailable_summary">Perkhidmatan sentuhan tidak menyediakan julat kawalan yang sah. Buka semula halaman ini untuk mencuba semula.</string>
+    <string name="touch_controls_unavailable_title">Kawalan sentuh tidak tersedia</string>
+</resources>

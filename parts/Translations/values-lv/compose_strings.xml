@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Atpakaļ</string>
+    <string name="parts_search_apps">Meklēt lietotnes</string>
+    <string name="touch_controls_active_summary">Lietots, kamēr šī lietotne ir priekšplānā. Izejot no lietotnes vai izslēdzot ekrānu, tiek atjaunota normāla pieskāriena darbība.</string>
+    <string name="touch_controls_active_title">Katrai lietotnei ir iespējota regulēšana</string>
+    <string name="touch_controls_advanced_group">Manuālais režīms · precīzi regulējumi</string>
+    <string name="touch_controls_aim_summary">Pielāgojiet mērķēšanas žestu jutīgumu tikai tad, ja nepieciešams. Vērtība 0 atjauno noklusējuma programmaparatūras iestatījumu.</string>
+    <string name="touch_controls_edge_group">Neatkarīga · malu aizsardzība</string>
+    <string name="touch_controls_edge_summary">0 atspējo malu filtrēšanu; 1.–3. līmenis palielina aizsardzību pret nejaušu malu pieskārienu. Spēcīgāka filtrēšana var padarīt apzinātu malu pieskārienu grūtāku.</string>
+    <string name="touch_controls_global_summary">Prioritāte ir globālās reaģēšanas iespējai. Jūsu katras lietotnes iestatījumi ir saglabāti, bet apturēti. Pieskarieties šeit, lai pārvaldītu globālo opciju.</string>
+    <string name="touch_controls_global_title">Globālā pieskāriena ignorēšana ir aktīva</string>
+    <string name="touch_controls_help">Sāciet ar manuālajiem noklusējuma iestatījumiem. Iespējojiet regulēšanu tikai tām lietotnēm, kurām tā ir nepieciešama.\n\nSākotnējie iestatījumi un manuālās korekcijas ir alternatīvas, nevis efekti, ko kraut. Sākotnējie iestatījumi 1–3 ir programmaparatūras profili; tie nav kvalitātes vērtējumi.\n\nManuālajā režīmā 0 atjauno programmaparatūras noklusējuma iestatījumus. Augstāks līmenis maina pieskārienu uzvedību un dažās spēlēs var justies sliktāk. Vispirms noregulējiet reakciju vai jutību; izmantojiet mērķi un stabilitāti tikai precīzākai noregulēšanai.\n\nMalu filtrēšana ir neatkarīga. Spēcīgāka aizsardzība var arī novērst tīšus pieskārienus ekrāna malai.\n\nGlobālās reaģēšanas opcijai ir prioritāte salīdzinājumā ar katras lietotnes regulēšanu. Šīs vadīklas nemaina displeja atsvaidzes intensitāti.</string>
+    <string name="touch_controls_help_title">Kā darbojas pieskārienu regulēšana</string>
+    <string name="touch_controls_manual">Manuālais režīms · sāciet ar noklusējuma programmaparatūras iestatījumiem</string>
+    <string name="touch_controls_manual_group">Manuālais režīms · galvenie regulējumi</string>
+    <string name="touch_controls_mode_group">Galvenais iestatījums</string>
+    <string name="touch_controls_mode_help">Sākotnējais iestatījums aizstāj reakciju, jutīgumu, mērķēšanu un pieskārienu stabilitāti. Manuālie iestatījumi tiek saglabāti vēlākam laikam. Malu aizsardzība darbojas atsevišķi jebkurā režīmā.</string>
+    <string name="touch_controls_mode_help_title">Izvēlieties vienu regulēšanas metodi</string>
+    <string name="touch_controls_mode_title">Pieskāriena regulēšanas režīms</string>
+    <string name="touch_controls_preset_one">Programmaparatūras priekšiestatījums 1</string>
+    <string name="touch_controls_preset_three">Programmaparatūras priekšiestatījums 3</string>
+    <string name="touch_controls_preset_two">Programmaparatūras priekšiestatījums 2</string>
+    <string name="touch_controls_reset_summary">Atgriezieties pie manuālās programmaparatūras noklusējuma iestatījumiem un noklusējuma malu aizsardzības. Nemainītu lietotnes iespējošanas slēdzi.</string>
+    <string name="touch_controls_reset_title">Atiestatiet šīs lietotnes regulēšanu</string>
+    <string name="touch_controls_response_summary">Pielāgojiet skārienekrāna reakciju uz pieskārieniem. Vērtība 0 atjauno noklusējuma programmaparatūras iestatījumu. Mainiet vienu iestatījumu vienlaikus un izmēģiniet to savā spēlē.</string>
+    <string name="touch_controls_screen_title">Pieskāriena vadīklas</string>
+    <string name="touch_controls_sensitivity_summary">Pielāgojiet skārienjutību. 0 atjauno programmaparatūras noklusējuma iestatījumus; augstāks līmenis nav automātiski labāks katrai spēlei.</string>
+    <string name="touch_controls_stability_summary">Pielāgojiet atkārtotu skārienekrāna pieskārienu stabilitāti tikai tad, ja nepieciešams. Vērtība 0 atjauno noklusējuma programmaparatūras iestatījumu.</string>
+    <string name="touch_controls_start_summary">Iespējojiet šīs lietotnes vadīklas, pēc tam izvēlieties iepriekš iestatītu vai pielāgojiet atsevišķus iestatījumus. Jums nav jāpaceļ katrs slīdnis.</string>
+    <string name="touch_controls_start_title">Sāciet ar noklusējuma iestatījumiem</string>
+    <string name="touch_controls_unavailable_summary">Skārienpakalpojums nenodrošināja derīgus vadības diapazonus. Atkārtoti atveriet šo lapu, lai mēģinātu vēlreiz.</string>
+    <string name="touch_controls_unavailable_title">Skārienvadības ierīces nav pieejamas</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ପଛକୁ</string>
+    <string name="parts_search_apps">ଆପ୍ଲିକେସନ୍ ସନ୍ଧାନ କରନ୍ତୁ |</string>
+    <string name="touch_controls_active_summary">ଏହି ଆପ୍ ଅଗ୍ରଭାଗରେ ଥିବାବେଳେ ପ୍ରୟୋଗ କରାଯାଏ | ଆପ୍ ଛାଡିବା କିମ୍ବା ସ୍କ୍ରିନ୍ ବନ୍ଦ କରିବା ସାଧାରଣ ସ୍ପର୍ଶ ଆଚରଣକୁ ପୁନ ores ସ୍ଥାପନ କରେ |</string>
+    <string name="touch_controls_active_title">ପ୍ରତି ଆପ୍ ଟ୍ୟୁନିଂ ସକ୍ଷମ ହୋଇଛି |</string>
+    <string name="touch_controls_advanced_group">ମାନୁଆଲ୍ ମୋଡ୍ · ସୂକ୍ଷ୍ମ ଆଡଜଷ୍ଟେସନ୍ |</string>
+    <string name="touch_controls_aim_summary">ଆବଶ୍ୟକ ହେଲେ ଅଙ୍ଗଭଙ୍ଗୀକୁ ଲକ୍ଷ୍ୟ କରିବାର ସମ୍ବେଦନଶୀଳତା ଆଡଜଷ୍ଟ କରନ୍ତୁ | 0 ର ମୂଲ୍ୟ ଡିଫଲ୍ଟ ଫର୍ମୱେର୍ ସେଟିଂକୁ ପୁନ ores ସ୍ଥାପନ କରେ |</string>
+    <string name="touch_controls_edge_group">ସ୍ୱାଧୀନ · ଧାର ସୁରକ୍ଷା |</string>
+    <string name="touch_controls_edge_summary">0 ଧାର ଫିଲ୍ଟରିଂକୁ ଅକ୍ଷମ କରିଥାଏ; ସ୍ତର –- ଆକସ୍ମିକ ଧାର ସ୍ପର୍ଶରୁ ସୁରକ୍ଷା ବୃଦ୍ଧି କରେ | ଶକ୍ତିଶାଳୀ ଫିଲ୍ଟରିଂ ଉଦ୍ଦେଶ୍ୟମୂଳକ ଧାରକୁ ସ୍ପର୍ଶ କରିପାରେ |</string>
+    <string name="touch_controls_global_summary">ସର୍ବଭାରତୀୟ ପ୍ରତିକ୍ରିୟାଶୀଳତା ବିକଳ୍ପକୁ ପ୍ରାଧାନ୍ୟ ଦିଆଯାଏ | ଆପଣଙ୍କର ପ୍ରତି ଆପ୍ ସେଟିଂସମୂହ ସଞ୍ଚୟ ହୋଇଛି କିନ୍ତୁ ବିରାମ | ଗ୍ଲୋବାଲ୍ ଅପ୍ସନ୍ ପରିଚାଳନା କରିବାକୁ ଏଠାରେ ଟ୍ୟାପ୍ କରନ୍ତୁ |</string>
+    <string name="touch_controls_global_title">ଗ୍ଲୋବାଲ୍ ଟଚ୍ ଓଭର୍ରାଇଡ୍ ସକ୍ରିୟ ଅଛି |</string>
+    <string name="touch_controls_help">ମାନୁଆଲ୍ ଡିଫଲ୍ଟରୁ ଆରମ୍ଭ କରନ୍ତୁ | କେବଳ ଆବଶ୍ୟକ କରୁଥିବା ଆପ୍ ପାଇଁ ଟ୍ୟୁନିଂ ସକ୍ଷମ କରନ୍ତୁ |\n\nପ୍ରିସେଟ୍ ଏବଂ ମାନୁଆଲ୍ ଆଡଜଷ୍ଟେସନ୍ ହେଉଛି ବିକଳ୍ପ, ଷ୍ଟାକ ପାଇଁ ପ୍ରଭାବ ନୁହେଁ | ପ୍ରିସେଟ୍ 1–3 ହେଉଛି ଫର୍ମୱେୟାର ପ୍ରୋଫାଇଲ୍; ସେଗୁଡ଼ିକ ଗୁଣାତ୍ମକ ମୂଲ୍ୟାୟନ ନୁହେଁ |\n\nମାନୁଆଲ୍ ମୋଡ୍ ରେ, 0 ଫର୍ମୱେୟାର ଡିଫଲ୍ଟକୁ ପୁନ ores ସ୍ଥାପନ କରେ | ଉଚ୍ଚ ସ୍ତରଗୁଡିକ ସ୍ପର୍ଶ ଆଚରଣକୁ ପରିବର୍ତ୍ତନ କରେ ଏବଂ କିଛି ଖେଳରେ ଖରାପ ଅନୁଭବ କରିପାରନ୍ତି | ପ୍ରଥମେ ପ୍ରତିକ୍ରିୟା କିମ୍ବା ସମ୍ବେଦନଶୀଳତା ଆଡଜଷ୍ଟ କରନ୍ତୁ; କେବଳ ସୂକ୍ଷ୍ମ ଟ୍ୟୁନିଂ ପାଇଁ ଲକ୍ଷ୍ୟ ଏବଂ ସ୍ଥିରତା ବ୍ୟବହାର କରନ୍ତୁ |\n\nଧାର ଫିଲ୍ଟରିଂ ସ୍ୱାଧୀନ ଅଟେ | ଶକ୍ତିଶାଳୀ ସୁରକ୍ଷା ସ୍କ୍ରିନ ଧାର ନିକଟରେ ଉଦ୍ଦେଶ୍ୟମୂଳକ ସ୍ପର୍ଶକୁ ମଧ୍ୟ ପ୍ରତ୍ୟାଖ୍ୟାନ କରିପାରିବ |\n\nବିଶ୍ app ର ପ୍ରତିକ୍ରିୟାଶୀଳତା ବିକଳ୍ପ ପ୍ରତି ଆପ୍ ଟ୍ୟୁନିଂ ଉପରେ ପ୍ରାଧାନ୍ୟ ଦେଇଥାଏ | ଏହି ନିୟନ୍ତ୍ରଣଗୁଡ଼ିକ ପ୍ରଦର୍ଶନ ସତେଜ ହାରକୁ ପରିବର୍ତ୍ତନ କରେ ନାହିଁ |</string>
+    <string name="touch_controls_help_title">କିପରି ସ୍ପର୍ଶ ଟ୍ୟୁନିଂ କାମ କରେ |</string>
+    <string name="touch_controls_manual">ମାନୁଆଲ୍ ମୋଡ୍ · ଡିଫଲ୍ଟ ଫର୍ମୱେୟାର ସେଟିଂସମୂହରୁ ଆରମ୍ଭ କରନ୍ତୁ |</string>
+    <string name="touch_controls_manual_group">ମାନୁଆଲ୍ ମୋଡ୍ · ମୁଖ୍ୟ ଆଡଜଷ୍ଟମେଣ୍ଟ୍ |</string>
+    <string name="touch_controls_mode_group">ମୁଖ୍ୟ ସେଟିଂ</string>
+    <string name="touch_controls_mode_help">ଏକ ପ୍ରିସେଟ୍ ପ୍ରତିକ୍ରିୟା, ସମ୍ବେଦନଶୀଳତା, ଲକ୍ଷ୍ୟ ଏବଂ ଟ୍ୟାପ୍ ସ୍ଥିରତାକୁ ଏକତ୍ର କରେ | ମାନୁଆଲ୍ ସେଟିଂସମୂହ ପରବର୍ତ୍ତୀ ସମୟରେ ସଞ୍ଚୟ ହୋଇ ରହିଥାଏ | ଧାର ସୁରକ୍ଷା ଉଭୟ ମୋଡରେ ପୃଥକ ଭାବରେ କାର୍ଯ୍ୟ କରେ |</string>
+    <string name="touch_controls_mode_help_title">ଗୋଟିଏ ଟ୍ୟୁନିଂ ପଦ୍ଧତି ବାଛନ୍ତୁ |</string>
+    <string name="touch_controls_mode_title">ଆଡଜଷ୍ଟମେଣ୍ଟ୍ ମୋଡ୍ ସ୍ପର୍ଶ କରନ୍ତୁ |</string>
+    <string name="touch_controls_preset_one">ଫର୍ମୱେୟାର ପ୍ରିସେଟ୍ 1 |</string>
+    <string name="touch_controls_preset_three">ଫର୍ମୱେୟାର ପ୍ରିସେଟ୍ 3 |</string>
+    <string name="touch_controls_preset_two">ଫର୍ମୱେୟାର ପ୍ରିସେଟ୍ 2 |</string>
+    <string name="touch_controls_reset_summary">ମାନୁଆଲ୍ ଫର୍ମୱେର୍ ଡିଫଲ୍ଟ ଏବଂ ଡିଫଲ୍ଟ ଧାର ସୁରକ୍ଷାକୁ ଫେରନ୍ତୁ | ଆପ୍ ର ସକ୍ଷମ ସୁଇଚ୍ ଅପରିବର୍ତ୍ତିତ ରଖନ୍ତୁ |</string>
+    <string name="touch_controls_reset_title">ଏହି ଆପର ଟ୍ୟୁନିଂ ପୁନ Res ସେଟ୍ କରନ୍ତୁ |</string>
+    <string name="touch_controls_response_summary">ଟ୍ୟାପ୍ ଉପରେ ଟଚ୍ ସ୍କ୍ରିନ୍ ପ୍ରତିକ୍ରିୟା ଆଡଜଷ୍ଟ୍ କରନ୍ତୁ | 0 ର ମୂଲ୍ୟ ଡିଫଲ୍ଟ ଫର୍ମୱେର୍ ସେଟିଂକୁ ପୁନ ores ସ୍ଥାପନ କରେ | ଗୋଟିଏ ଥରରେ ଗୋଟିଏ ସେଟିଂ ପରିବର୍ତ୍ତନ କରନ୍ତୁ ଏବଂ ଏହାକୁ ଆପଣଙ୍କ ଖେଳରେ ଚେଷ୍ଟା କରନ୍ତୁ |</string>
+    <string name="touch_controls_screen_title">ସ୍ପର୍ଶ ନିୟନ୍ତ୍ରଣଗୁଡିକ |</string>
+    <string name="touch_controls_sensitivity_summary">ସ୍ପର୍ଶ ସମ୍ବେଦନଶୀଳତା ଆଡଜଷ୍ଟ କରନ୍ତୁ | 0 ଫର୍ମୱେର୍ ଡିଫଲ୍ଟ ପୁନ ores ସ୍ଥାପନ କରେ; ପ୍ରତ୍ୟେକ ଖେଳ ପାଇଁ ଏକ ଉଚ୍ଚ ସ୍ତର ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଭଲ ନୁହେଁ |</string>
+    <string name="touch_controls_stability_summary">ଆବଶ୍ୟକ ହେଲେ ବାରମ୍ବାର ଟଚସ୍କ୍ରିନ ଟ୍ୟାପଗୁଡ଼ିକର ସ୍ଥିରତା ଆଡଜଷ୍ଟ କରନ୍ତୁ | 0 ର ମୂଲ୍ୟ ଡିଫଲ୍ଟ ଫର୍ମୱେର୍ ସେଟିଂକୁ ପୁନ ores ସ୍ଥାପନ କରେ |</string>
+    <string name="touch_controls_start_summary">ଏହି ଆପ୍ ପାଇଁ କଣ୍ଟ୍ରୋଲ୍ ସକ୍ଷମ କରନ୍ତୁ, ତାପରେ ଏକ ପ୍ରିସେଟ୍ ବାଛନ୍ତୁ କିମ୍ବା ବ୍ୟକ୍ତିଗତ ସେଟିଙ୍ଗ୍ ଟ୍ୟୁନ୍ କରନ୍ତୁ | ଆପଣ ପ୍ରତ୍ୟେକ ସ୍ଲାଇଡର୍ ବ raise ାଇବାକୁ ଆବଶ୍ୟକ କରନ୍ତି ନାହିଁ |</string>
+    <string name="touch_controls_start_title">ଡିଫଲ୍ଟ ସହିତ ଆରମ୍ଭ କରନ୍ତୁ |</string>
+    <string name="touch_controls_unavailable_summary">ଟଚ୍ ସେବା ବ valid ଧ ନିୟନ୍ତ୍ରଣ ପରିସର ପ୍ରଦାନ କରିନାହିଁ | ପୁନ ry ଚେଷ୍ଟା କରିବାକୁ ଏହି ପୃଷ୍ଠା ଖୋଲନ୍ତୁ |</string>
+    <string name="touch_controls_unavailable_title">ଟଚ୍ ନିୟନ୍ତ୍ରଣ ଉପଲବ୍ଧ ନାହିଁ |</string>
+</resources>

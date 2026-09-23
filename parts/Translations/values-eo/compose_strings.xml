@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Reen</string>
+    <string name="parts_search_apps">Serĉu apojn</string>
+    <string name="touch_controls_active_summary">Aplikita dum ĉi tiu programo estas en la malfono. Forlasi la apon aŭ malŝalti la ekranon restarigas normalan tuŝan konduton.</string>
+    <string name="touch_controls_active_title">Per-agordo estas ebligita</string>
+    <string name="touch_controls_advanced_group">Mana reĝimo · fajnaj alĝustigoj</string>
+    <string name="touch_controls_aim_summary">Alĝustigu la sentemon de celaj gestoj nur se necese. Valoro de 0 restarigas la defaŭltan firmvaran agordon.</string>
+    <string name="touch_controls_edge_group">Sendependa · rando protekto</string>
+    <string name="touch_controls_edge_summary">0 malŝaltas randan filtradon; niveloj 1–3 pliigas protekton kontraŭ hazardaj randtuŝoj. Pli forta filtrado povas malmolaj intencitaj randtuŝoj.</string>
+    <string name="touch_controls_global_summary">La tutmonda respondema opcio havas prioritaton. Viaj agordoj por apo estas konservitaj sed paŭzitaj. Frapu ĉi tie por administri la tutmondan opcion.</string>
+    <string name="touch_controls_global_title">Tutmonda tuŝo superregado estas aktiva</string>
+    <string name="touch_controls_help">Komencu per manaj defaŭltoj. Ebligu agordon nur por aplikaĵoj, kiuj bezonas ĝin.\n\nAntaŭagordoj kaj manaj alĝustigoj estas alternativoj, ne efikoj por stakigi. Antaŭagordoj 1–3 estas firmware-profiloj; ili ne estas kvalitaj taksoj.\n\nEn mana reĝimo, 0 restarigas la defaŭltan firmware. Pli altaj niveloj ŝanĝas la tuŝan konduton kaj povas sentiĝi pli malbona en iuj ludoj. Alĝustigu respondon aŭ sentemon unue; uzu celon kaj stabilecon nur por pli fajna agordado.\n\nRanda filtrado estas sendependa. Pli forta protekto ankaŭ povas malakcepti intencajn tuŝojn proksime de la ekranrando.\n\nLa tutmonda respondema opcio havas prioritaton super la agordado per apo. Ĉi tiuj kontroloj ne ŝanĝas la refreŝigan indicon de ekrano.</string>
+    <string name="touch_controls_help_title">Kiel funkcias tuŝagordado</string>
+    <string name="touch_controls_manual">Mana reĝimo · komencu kun la defaŭltaj firmware-agordoj</string>
+    <string name="touch_controls_manual_group">Mana reĝimo · ĉefaj alĝustigoj</string>
+    <string name="touch_controls_mode_group">Ĉefa agordo</string>
+    <string name="touch_controls_mode_help">Antaŭagordo anstataŭigas respondon, sentemon, celon kaj frapan stabilecon kune. Manaj agordoj restas konservitaj por poste. Edge-protekto funkcias aparte en ambaŭ reĝimoj.</string>
+    <string name="touch_controls_mode_help_title">Elektu unu agordan metodon</string>
+    <string name="touch_controls_mode_title">Tuŝa ĝustigreĝimo</string>
+    <string name="touch_controls_preset_one">Firmware antaŭgordita 1</string>
+    <string name="touch_controls_preset_three">Firmware antaŭgordita 3</string>
+    <string name="touch_controls_preset_two">Firmware antaŭgordita 2</string>
+    <string name="touch_controls_reset_summary">Revenu al manaj firmware-defaŭltoj kaj la defaŭlta rando-protekto. Konservu la ebligan ŝaltilon de la aplikaĵo senŝanĝa.</string>
+    <string name="touch_controls_reset_title">Restarigi la agordon de ĉi tiu programo</string>
+    <string name="touch_controls_response_summary">Alĝustigu tuŝekranan respondon al frapetoj. Valoro de 0 restarigas la defaŭltan firmvaran agordon. Ŝanĝu unu agordon samtempe kaj provu ĝin en via ludo.</string>
+    <string name="touch_controls_screen_title">Tuŝaj kontroloj</string>
+    <string name="touch_controls_sensitivity_summary">Alĝustigu tuŝan sentemon. 0 restarigas la defaŭltan firmware; pli alta nivelo ne estas aŭtomate pli bona por ĉiu ludo.</string>
+    <string name="touch_controls_stability_summary">Alĝustigu la stabilecon de ripetaj tuŝekranaj frapetoj nur se necese. Valoro de 0 restarigas la defaŭltan firmvaran agordon.</string>
+    <string name="touch_controls_start_summary">Ebligu kontrolojn por ĉi tiu programo, tiam elektu antaŭfiksitan aŭ agordu individuajn agordojn. Vi ne bezonas levi ĉiun glitilon.</string>
+    <string name="touch_controls_start_title">Komencu kun la defaŭltoj</string>
+    <string name="touch_controls_unavailable_summary">La tuŝservo ne disponigis validajn kontrolintervalojn. Remalfermu ĉi tiun paĝon por reprovi.</string>
+    <string name="touch_controls_unavailable_title">Tuŝaj kontroloj ne estas disponeblaj</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">Gailuaren ezarpenak</string>
+    <string name="dirac_preset_blues">Bluesa</string>
+    <string name="dirac_preset_classical">Klasikoa</string>
+    <string name="dirac_preset_country">Herrikoa</string>
+    <string name="dirac_preset_dance">Dantza</string>
+    <string name="dirac_preset_electronic">Elektronikoa</string>
+    <string name="dirac_preset_jazz">Jazza</string>
+    <string name="dirac_preset_metal">Metala</string>
+    <string name="dirac_preset_pop">Popa</string>
+    <string name="dirac_preset_rock">Rock-a</string>
+    <string name="dirac_headset_title">Entzungailu mota</string>
+    <string name="dirac_preset_title">Aurrez ezarritakoa</string>
+</resources>

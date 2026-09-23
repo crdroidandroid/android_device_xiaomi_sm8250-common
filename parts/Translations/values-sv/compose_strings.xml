@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Tillbaka</string>
+    <string name="parts_search_apps">Sök appar</string>
+    <string name="touch_controls_active_summary">Tillämpas medan den här appen är i förgrunden. Om du lämnar appen eller stänger av skärmen återställs normalt beröringsbeteende.</string>
+    <string name="touch_controls_active_title">Inställning per app är aktiverad</string>
+    <string name="touch_controls_advanced_group">Manuellt läge · finjusteringar</string>
+    <string name="touch_controls_aim_summary">Justera känsligheten för riktade gester endast om det behövs. Ett värde på 0 återställer standardinställningen för den fasta programvaran.</string>
+    <string name="touch_controls_edge_group">Oberoende · kantskydd</string>
+    <string name="touch_controls_edge_summary">0 inaktiverar kantfiltrering; nivåerna 1–3 ökar skyddet mot oavsiktlig kantberöring. Starkare filtrering kan göra avsiktliga kantberöringar svårare.</string>
+    <string name="touch_controls_global_summary">Alternativet för global respons har prioritet. Dina inställningar per app sparas men pausas. Tryck här för att hantera det globala alternativet.</string>
+    <string name="touch_controls_global_title">Global touch-överstyrning är aktiv</string>
+    <string name="touch_controls_help">Börja med manuella standardinställningar. Aktivera inställning endast för appar som behöver det.\n\nFörinställningar och manuella justeringar är alternativ, inte effekter att stapla. Förinställningar 1–3 är firmwareprofiler; de är inte kvalitetsbetyg.\n\nI manuellt läge återställer 0 den fasta programvarans standardinställning. Högre nivåer ändrar beröringsbeteendet och kan kännas sämre i vissa spel. Justera respons eller känslighet först; använd sikte och stabilitet endast för finjustering.\n\nKantfiltrering är oberoende. Starkare skydd kan också avvisa avsiktliga beröringar nära skärmens kant.\n\nAlternativet för global respons har prioritet framför justering per app. Dessa kontroller ändrar inte skärmens uppdateringsfrekvens.</string>
+    <string name="touch_controls_help_title">Hur touch tuning fungerar</string>
+    <string name="touch_controls_manual">Manuellt läge · börja med standardinställningarna för den fasta programvaran</string>
+    <string name="touch_controls_manual_group">Manuellt läge · huvudjusteringar</string>
+    <string name="touch_controls_mode_group">Huvudinställning</string>
+    <string name="touch_controls_mode_help">En förinställning ersätter respons, känslighet, sikte och tryckstabilitet tillsammans. Manuella inställningar sparas för senare. Kantskydd fungerar separat i båda lägena.</string>
+    <string name="touch_controls_mode_help_title">Välj en inställningsmetod</string>
+    <string name="touch_controls_mode_title">Pekjusteringsläge</string>
+    <string name="touch_controls_preset_one">Firmware förinställning 1</string>
+    <string name="touch_controls_preset_three">Firmware förinställning 3</string>
+    <string name="touch_controls_preset_two">Firmware förinställning 2</string>
+    <string name="touch_controls_reset_summary">Återgå till manuella standardinställningar för fast programvara och standard kantskydd. Håll appens aktiveringsknapp oförändrad.</string>
+    <string name="touch_controls_reset_title">Återställ appens inställning</string>
+    <string name="touch_controls_response_summary">Justera pekskärmens svar på tryck. Ett värde på 0 återställer standardinställningen för den fasta programvaran. Ändra en inställning i taget och prova det i ditt spel.</string>
+    <string name="touch_controls_screen_title">Pekkontroller</string>
+    <string name="touch_controls_sensitivity_summary">Justera beröringskänsligheten. 0 återställer den fasta programvarans standard; en högre nivå är inte automatiskt bättre för varje spel.</string>
+    <string name="touch_controls_stability_summary">Justera stabiliteten för upprepade tryckningar på pekskärmen endast om det behövs. Ett värde på 0 återställer standardinställningen för den fasta programvaran.</string>
+    <string name="touch_controls_start_summary">Aktivera kontroller för den här appen och välj sedan en förinställning eller ställ in individuella inställningar. Du behöver inte höja varje reglage.</string>
+    <string name="touch_controls_start_title">Börja med standardinställningarna</string>
+    <string name="touch_controls_unavailable_summary">Touchtjänsten tillhandahöll inte giltiga kontrollintervall. Öppna den här sidan igen för att försöka igen.</string>
+    <string name="touch_controls_unavailable_title">Pekkontroller är inte tillgängliga</string>
+</resources>

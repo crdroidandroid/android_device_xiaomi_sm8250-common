@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Tagasi</string>
+    <string name="parts_search_apps">Otsige rakendusi</string>
+    <string name="touch_controls_active_summary">Rakendatakse, kui see rakendus on esiplaanil. Rakendusest lahkumine või ekraani väljalülitamine taastab tavapärase puutekäitumise.</string>
+    <string name="touch_controls_active_title">Rakendusepõhine häälestamine on lubatud</string>
+    <string name="touch_controls_advanced_group">Käsirežiim · peenreguleerimine</string>
+    <string name="touch_controls_aim_summary">Reguleerige sihtimisžestide tundlikkust ainult vajaduse korral. Väärtus 0 taastab püsivara vaikesätte.</string>
+    <string name="touch_controls_edge_group">Sõltumatu · servakaitse</string>
+    <string name="touch_controls_edge_summary">0 keelab servade filtreerimise; tasemed 1–3 suurendavad kaitset juhuslike servade puudutamise eest. Tugevam filtreerimine võib muuta tahtliku serva puudutamise raskemaks.</string>
+    <string name="touch_controls_global_summary">Ülemaailmne reageerimisvõime on prioriteetne. Teie rakendusepõhised seaded on salvestatud, kuid peatatud. Globaalse valiku haldamiseks puudutage siin.</string>
+    <string name="touch_controls_global_title">Globaalne puutealistus on aktiivne</string>
+    <string name="touch_controls_help">Alustage käsitsi vaikeseadetega. Lubage häälestamine ainult nende rakenduste jaoks, mis seda vajavad.\n\nEelseaded ja käsitsi reguleerimised on alternatiivid, mitte virnastatavad efektid. Eelseaded 1–3 on püsivara profiilid; need ei ole kvaliteedihinnangud.\n\nKäsirežiimis taastab 0 püsivara vaikeseaded. Kõrgemad tasemed muudavad puutekäitumist ja võivad mõnes mängus end halvemini tunda. Reguleerige esmalt reaktsiooni või tundlikkust; kasutage sihti ja stabiilsust ainult täpsemaks häälestamiseks.\n\nServa filtreerimine on sõltumatu. Tugevam kaitse suudab tagasi lükata ka tahtlikud puudutused ekraani serva lähedal.\n\nGlobaalne reageerimisvalik on rakendusepõhise häälestamise ees prioriteet. Need juhtnupud ei muuda ekraani värskendussagedust.</string>
+    <string name="touch_controls_help_title">Kuidas puutetundlik häälestamine töötab</string>
+    <string name="touch_controls_manual">Käsitsirežiim · alustage püsivara vaikesätetega</string>
+    <string name="touch_controls_manual_group">Käsirežiim · peamised seadistused</string>
+    <string name="touch_controls_mode_group">Peamine seadistus</string>
+    <string name="touch_controls_mode_help">Eelseadistus asendab koos reageerimise, tundlikkuse, sihtimise ja puudutuse stabiilsuse. Käsitsi seaded salvestatakse hilisemaks ajaks. Servakaitse töötab mõlemas režiimis eraldi.</string>
+    <string name="touch_controls_mode_help_title">Valige üks häälestusmeetod</string>
+    <string name="touch_controls_mode_title">Puudutuse reguleerimise režiim</string>
+    <string name="touch_controls_preset_one">Püsivara eelseadistus 1</string>
+    <string name="touch_controls_preset_three">Püsivara eelseadistus 3</string>
+    <string name="touch_controls_preset_two">Püsivara eelseadistus 2</string>
+    <string name="touch_controls_reset_summary">Naaske püsivara käsitsi vaikeseadete ja servade vaikekaitse juurde. Hoidke rakenduse lubamise lüliti muutmata.</string>
+    <string name="touch_controls_reset_title">Lähtestage selle rakenduse häälestus</string>
+    <string name="touch_controls_response_summary">Reguleerige puuteekraani reageerimist puudutustele. Väärtus 0 taastab püsivara vaikesätte. Muutke üks seade korraga ja proovige seda oma mängus.</string>
+    <string name="touch_controls_screen_title">Puutetundlikud juhtnupud</string>
+    <string name="touch_controls_sensitivity_summary">Reguleerige puutetundlikkust. 0 taastab püsivara vaikeseaded; kõrgem tase ei ole automaatselt parem iga mängu jaoks.</string>
+    <string name="touch_controls_stability_summary">Reguleerige korduvate puuteekraani puudutuste stabiilsust ainult vajaduse korral. Väärtus 0 taastab püsivara vaikesätte.</string>
+    <string name="touch_controls_start_summary">Lubage selle rakenduse juhtelemendid, seejärel valige eelseadistus või häälestage individuaalseid seadeid. Te ei pea iga liugurit tõstma.</string>
+    <string name="touch_controls_start_title">Alusta vaikeseadetest</string>
+    <string name="touch_controls_unavailable_summary">Puuteteenus ei pakkunud kehtivaid juhtimisvahemikke. Uuesti proovimiseks avage see leht uuesti.</string>
+    <string name="touch_controls_unavailable_title">Puutetundlikud juhtnupud pole saadaval</string>
+</resources>

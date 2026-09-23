@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dirac_preset_blues">Блюз</string>
+    <string name="dirac_preset_classical">Классикалық</string>
+    <string name="dirac_preset_country">Кантри</string>
+    <string name="dirac_preset_dance">Би</string>
+    <string name="dirac_preset_electronic">Электро</string>
+    <string name="dirac_preset_jazz">Джаз</string>
+    <string name="dirac_preset_metal">Металл</string>
+    <string name="dirac_preset_pop">Поп</string>
+    <string name="dirac_preset_rock">Рок</string>
+    <string name="dirac_headset_title">Гарнитура түрі</string>
+    <string name="dirac_preset_title">Алдын ала орнатылған баптаулар</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ត្រឡប់មកវិញ</string>
+    <string name="parts_search_apps">ស្វែងរកកម្មវិធី</string>
+    <string name="touch_controls_active_summary">បានអនុវត្តខណៈពេលដែលកម្មវិធីនេះនៅខាងមុខ។ ការចាកចេញពីកម្មវិធី ឬបិទអេក្រង់ ស្តារឥរិយាបថប៉ះធម្មតា។</string>
+    <string name="touch_controls_active_title">ការលៃតម្រូវកម្មវិធីនីមួយៗត្រូវបានបើក</string>
+    <string name="touch_controls_advanced_group">របៀបដោយដៃ · ការកែតម្រូវដ៏ល្អ</string>
+    <string name="touch_controls_aim_summary">កែតម្រូវ​ភាពប្រែប្រួល​នៃ​កាយវិការ​ដែល​មាន​គោលដៅ​បាន​លុះត្រាតែ​ចាំបាច់។ តម្លៃ 0 ស្ដារការកំណត់កម្មវិធីបង្កប់លំនាំដើម។</string>
+    <string name="touch_controls_edge_group">ឯករាជ្យ · ការការពារគែម</string>
+    <string name="touch_controls_edge_summary">0 បិទការច្រោះគែម; កម្រិត 1-3 បង្កើនការការពារប្រឆាំងនឹងការប៉ះគែមដោយចៃដន្យ។ ការច្រោះខ្លាំងជាងមុនអាចធ្វើឱ្យប៉ះគែមដោយចេតនាកាន់តែពិបាក។</string>
+    <string name="touch_controls_global_summary">ជម្រើសនៃការឆ្លើយតបជាសកលមានអាទិភាព។ ការកំណត់ក្នុងមួយកម្មវិធីរបស់អ្នកត្រូវបានរក្សាទុក ប៉ុន្តែបានផ្អាក។ ចុចទីនេះដើម្បីគ្រប់គ្រងជម្រើសសកល។</string>
+    <string name="touch_controls_global_title">ការបដិសេធការប៉ះសកលគឺសកម្ម</string>
+    <string name="touch_controls_help">ចាប់ផ្តើមជាមួយលំនាំដើមដោយដៃ។ បើកការលៃតម្រូវសម្រាប់តែកម្មវិធីដែលត្រូវការវា។\n\nការកំណត់ជាមុន និងការកែតម្រូវដោយដៃគឺជាជម្រើស មិនមែនជាផលប៉ះពាល់សម្រាប់ជង់ទេ។ ការកំណត់ជាមុន 1-3 គឺជាទម្រង់កម្មវិធីបង្កប់; ពួកគេមិនមែនជាការវាយតម្លៃគុណភាពទេ។\n\nនៅក្នុងរបៀបដោយដៃ 0 ស្ដារលំនាំដើមកម្មវិធីបង្កប់។ កម្រិតកាន់តែខ្ពស់ផ្លាស់ប្តូរឥរិយាបថប៉ះ ហើយអាចមានអារម្មណ៍កាន់តែអាក្រក់នៅក្នុងហ្គេមមួយចំនួន។ កែតម្រូវការឆ្លើយតប ឬភាពប្រែប្រួលជាមុនសិន; ប្រើគោលបំណង និងស្ថេរភាពសម្រាប់តែការលៃតម្រូវកាន់តែប្រសើរ។\n\nតម្រងគែមគឺឯករាជ្យ។ ការការពារដ៏រឹងមាំក៏អាចបដិសេធការប៉ះដោយចេតនានៅជិតគែមអេក្រង់ផងដែរ។\n\nជម្រើសនៃការឆ្លើយតបជាសកលមានអាទិភាពជាងការកែតម្រូវតាមកម្មវិធីនីមួយៗ។ ការគ្រប់គ្រងទាំងនេះមិនផ្លាស់ប្តូរអត្រាធ្វើឱ្យស្រស់អេក្រង់ទេ។</string>
+    <string name="touch_controls_help_title">របៀបដែលការលៃតម្រូវការប៉ះដំណើរការ</string>
+    <string name="touch_controls_manual">របៀបដោយដៃ · ចាប់ផ្តើមជាមួយនឹងការកំណត់កម្មវិធីបង្កប់លំនាំដើម</string>
+    <string name="touch_controls_manual_group">របៀបដោយដៃ · ការកែតម្រូវសំខាន់ៗ</string>
+    <string name="touch_controls_mode_group">ការកំណត់សំខាន់</string>
+    <string name="touch_controls_mode_help">ការកំណត់ជាមុនជំនួសការឆ្លើយតប ភាពរសើប គោលបំណង និងស្ថេរភាពប៉ះជាមួយគ្នា។ ការកំណត់ដោយដៃត្រូវបានរក្សាទុកសម្រាប់ពេលក្រោយ។ ការការពារគែមដំណើរការដោយឡែកពីគ្នានៅក្នុងរបៀបទាំងពីរ។</string>
+    <string name="touch_controls_mode_help_title">ជ្រើសរើសវិធីសាស្រ្តលៃតម្រូវមួយ។</string>
+    <string name="touch_controls_mode_title">ប៉ះរបៀបលៃតម្រូវ</string>
+    <string name="touch_controls_preset_one">ការកំណត់កម្មវិធីបង្កប់ជាមុន 1</string>
+    <string name="touch_controls_preset_three">ការកំណត់កម្មវិធីបង្កប់ជាមុន 3</string>
+    <string name="touch_controls_preset_two">កម្មវិធីបង្កប់ជាមុន 2</string>
+    <string name="touch_controls_reset_summary">ត្រលប់ទៅការកំណត់កម្មវិធីបង្កប់ដោយដៃ និងការការពារគែមលំនាំដើម។ រក្សាការបិទបើករបស់កម្មវិធីមិនផ្លាស់ប្តូរ។</string>
+    <string name="touch_controls_reset_title">កំណត់ការលៃតម្រូវកម្មវិធីនេះឡើងវិញ</string>
+    <string name="touch_controls_response_summary">លៃតម្រូវការឆ្លើយតបអេក្រង់ប៉ះទៅនឹងការប៉ះ។ តម្លៃ 0 ស្ដារការកំណត់កម្មវិធីបង្កប់លំនាំដើម។ ផ្លាស់ប្តូរការកំណត់មួយក្នុងពេលតែមួយ ហើយសាកល្បងវានៅក្នុងហ្គេមរបស់អ្នក។</string>
+    <string name="touch_controls_screen_title">ប៉ះវត្ថុបញ្ជា</string>
+    <string name="touch_controls_sensitivity_summary">កែតម្រូវការប៉ះ។ 0 ស្តារកម្មវិធីបង្កប់លំនាំដើមឡើងវិញ; កម្រិត​ខ្ពស់​គឺ​មិន​ប្រសើរ​ដោយ​ស្វ័យ​ប្រវត្តិ​សម្រាប់​រាល់​ការ​ប្រកួត។</string>
+    <string name="touch_controls_stability_summary">កែតម្រូវស្ថេរភាពនៃការប៉ះអេក្រង់ប៉ះម្តងហើយម្តងទៀតលុះត្រាតែចាំបាច់។ តម្លៃ 0 ស្ដារការកំណត់កម្មវិធីបង្កប់លំនាំដើម។</string>
+    <string name="touch_controls_start_summary">បើកការគ្រប់គ្រងសម្រាប់កម្មវិធីនេះ បន្ទាប់មកជ្រើសរើសការកំណត់ជាមុន ឬលៃតម្រូវការកំណត់បុគ្គល។ អ្នកមិនចាំបាច់លើកគ្រាប់រំកិលនីមួយៗទេ។</string>
+    <string name="touch_controls_start_title">ចាប់ផ្តើមជាមួយលំនាំដើម</string>
+    <string name="touch_controls_unavailable_summary">សេវាកម្មប៉ះមិនបានផ្តល់នូវជួរត្រួតពិនិត្យត្រឹមត្រូវទេ។ បើកទំព័រនេះឡើងវិញដើម្បីព្យាយាមម្តងទៀត។</string>
+    <string name="touch_controls_unavailable_title">ការគ្រប់គ្រងការប៉ះមិនអាចប្រើបានទេ។</string>
+</resources>

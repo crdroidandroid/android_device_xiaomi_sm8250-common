@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">ಸಾಧನ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="dirac_preset_blues">ಬ್ಲೂಸ್</string>
+    <string name="dirac_preset_classical">ಕ್ಲಾಸಿಕಲ್‌</string>
+    <string name="dirac_preset_country">ದೇಶೀಯ</string>
+    <string name="dirac_preset_dance">ಡ್ಯಾನ್ಸ್</string>
+    <string name="dirac_preset_electronic">ಎಲೆಕ್ಟ್ರಾನಿಕ್</string>
+    <string name="dirac_preset_jazz">ಜಾಝ್</string>
+    <string name="dirac_preset_metal">ಮೆಟಲ್‌</string>
+    <string name="dirac_preset_pop">ಪಾಪ್</string>
+    <string name="dirac_preset_rock">ರಾಕ್</string>
+    <string name="dirac_headset_title">ಹೆಡ್ಸೆಟ್ ಪ್ರಕಾರ</string>
+    <string name="dirac_preset_title">ಪ್ರೀಸೆಟ್</string>
+</resources>

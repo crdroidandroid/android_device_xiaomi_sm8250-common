@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Nazaj</string>
+    <string name="parts_search_apps">Iskanje aplikacij</string>
+    <string name="touch_controls_active_summary">Uporabljeno, ko je ta aplikacija v ospredju. Če zapustite aplikacijo ali izklopite zaslon, se ponovno vzpostavi normalno vedenje dotika.</string>
+    <string name="touch_controls_active_title">Omogočeno je prilagajanje posameznih aplikacij</string>
+    <string name="touch_controls_advanced_group">Ročni način · fine nastavitve</string>
+    <string name="touch_controls_aim_summary">Prilagodite občutljivost potez za ciljanje le, če je potrebno. Vrednost 0 obnovi privzeto nastavitev vdelane programske opreme.</string>
+    <string name="touch_controls_edge_group">Neodvisna · zaščita robov</string>
+    <string name="touch_controls_edge_summary">0 onemogoči filtriranje robov; stopnje 1–3 povečujejo zaščito pred naključnimi dotiki robov. Močnejše filtriranje lahko oteži namerno dotikanje robov.</string>
+    <string name="touch_controls_global_summary">Možnost globalne odzivnosti ima prednost. Vaše nastavitve posamezne aplikacije so shranjene, vendar začasno ustavljene. Tapnite tukaj za upravljanje globalne možnosti.</string>
+    <string name="touch_controls_global_title">Globalna preglasitev dotika je aktivna</string>
+    <string name="touch_controls_help">Začnite z ročnimi privzetimi nastavitvami. Omogočite nastavitev samo za aplikacije, ki jo potrebujejo.\n\nPrednastavitve in ročne prilagoditve so alternative, ne učinki za zlaganje. Prednastavitve 1–3 so profili vdelane programske opreme; niso ocene kakovosti.\n\nV ročnem načinu 0 obnovi privzeto vdelano programsko opremo. Višje ravni spremenijo vedenje dotika in se lahko v nekaterih igrah počutijo slabše. Najprej prilagodite odziv ali občutljivost; uporabite cilj in stabilnost samo za natančnejšo nastavitev.\n\nFiltriranje robov je neodvisno. Močnejša zaščita lahko zavrne tudi namerne dotike ob robu zaslona.\n\nMožnost globalne odzivnosti ima prednost pred prilagajanjem posamezne aplikacije. Ti kontrolniki ne spremenijo hitrosti osveževanja zaslona.</string>
+    <string name="touch_controls_help_title">Kako deluje nastavitev na dotik</string>
+    <string name="touch_controls_manual">Ročni način · začnite s privzetimi nastavitvami vdelane programske opreme</string>
+    <string name="touch_controls_manual_group">Ročni način · glavne nastavitve</string>
+    <string name="touch_controls_mode_group">Glavna nastavitev</string>
+    <string name="touch_controls_mode_help">Prednastavitev nadomešča odziv, občutljivost, ciljanje in stabilnost dotika skupaj. Ročne nastavitve ostanejo shranjene za pozneje. Zaščita robov deluje ločeno v obeh načinih.</string>
+    <string name="touch_controls_mode_help_title">Izberite eno metodo uglaševanja</string>
+    <string name="touch_controls_mode_title">Način prilagajanja na dotik</string>
+    <string name="touch_controls_preset_one">Prednastavitev vdelane programske opreme 1</string>
+    <string name="touch_controls_preset_three">Prednastavitev vdelane programske opreme 3</string>
+    <string name="touch_controls_preset_two">Prednastavitev vdelane programske opreme 2</string>
+    <string name="touch_controls_reset_summary">Vrnitev na ročne privzete nastavitve vdelane programske opreme in privzeto zaščito robov. Stikalo za omogočanje aplikacije naj ostane nespremenjeno.</string>
+    <string name="touch_controls_reset_title">Ponastavite nastavitev te aplikacije</string>
+    <string name="touch_controls_response_summary">Prilagodite odziv zaslona na dotik na dotike. Vrednost 0 obnovi privzeto nastavitev vdelane programske opreme. Spremenite eno nastavitev naenkrat in jo preizkusite v svoji igri.</string>
+    <string name="touch_controls_screen_title">Kontrole na dotik</string>
+    <string name="touch_controls_sensitivity_summary">Prilagodite občutljivost na dotik. 0 obnovi privzeto vdelano programsko opremo; višja raven ni samodejno boljša za vsako igro.</string>
+    <string name="touch_controls_stability_summary">Prilagodite stabilnost ponavljajočih se dotikov zaslona na dotik le, če je potrebno. Vrednost 0 obnovi privzeto nastavitev vdelane programske opreme.</string>
+    <string name="touch_controls_start_summary">Omogočite kontrolnike za to aplikacijo, nato izberite prednastavitev ali prilagodite posamezne nastavitve. Ni vam treba dvigniti vsakega drsnika.</string>
+    <string name="touch_controls_start_title">Začnite s privzetimi nastavitvami</string>
+    <string name="touch_controls_unavailable_summary">Storitev na dotik ni zagotovila veljavnih nadzornih razponov. Ponovno odprite to stran, da poskusite znova.</string>
+    <string name="touch_controls_unavailable_title">Kontrole na dotik niso na voljo</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Atrás</string>
+    <string name="parts_search_apps">Buscar aplicaciones</string>
+    <string name="touch_controls_active_summary">Aplícase mentanto esta aplicación ta en primer planu. Salir de la aplicación o apagar la pantalla restaura\'l comportamientu táctil normal.</string>
+    <string name="touch_controls_active_title">L\'axuste por aplicación ta activáu</string>
+    <string name="touch_controls_advanced_group">Mou manual · axustes finos</string>
+    <string name="touch_controls_aim_summary">Axusta los xestos d\'apuntar namái si fai falta. 0 restaura\'l valor predetermináu del firmware.</string>
+    <string name="touch_controls_edge_group">Independiente · proteición de los cantos</string>
+    <string name="touch_controls_edge_summary">0 desactiva\'l filtráu de los cantos; los niveles 1–3 aumenten la proteición escontra toques accidentales nos cantos. Un filtráu más fuerte pue dificultar los toques intencionaos nos cantos.</string>
+    <string name="touch_controls_global_summary">La opción global de respuesta tien prioridá. Los axustes por aplicación tán guardaos, pero en pausa. Toca equí pa xestionar la opción global.</string>
+    <string name="touch_controls_global_title">L\'axuste táctil global ta activu</string>
+    <string name="touch_controls_help">Entama colos axustes manuales predeterminaos. Activa l\'axuste namái pa les aplicaciones que lo precisen.\n\nLos preaxustes y los axustes manuales son alternatives, non efeutos pa combinar. Los preaxustes 1–3 son perfiles del firmware, non valoraciones de calidá.\n\nNel mou manual, 0 restaura\'l valor predetermináu del firmware. Los niveles más altos cambien el comportamientu táctil y puen funcionar peor en dellos xuegos. Axusta primero la respuesta o la sensibilidá; usa los axustes d\'apuntar y d\'estabilidá namái pa un axuste más finu.\n\nEl filtráu de los cantos ye independiente. Una proteición más fuerte tamién pue refugar toques intencionaos cerca del cantu de la pantalla.\n\nLa opción global de respuesta tien prioridá sobre l\'axuste por aplicación. Estos controles nun cambien la frecuencia d\'actualización de la pantalla.</string>
+    <string name="touch_controls_help_title">Cómo funciona l\'axuste táctil</string>
+    <string name="touch_controls_manual">Mou manual · entama colos valores predeterminaos del firmware</string>
+    <string name="touch_controls_manual_group">Mou manual · axustes principales</string>
+    <string name="touch_controls_mode_group">Axuste principal</string>
+    <string name="touch_controls_mode_help">Un preaxuste reemplaza la respuesta, la sensibilidá, l\'axuste d\'apuntar y l\'estabilidá de los toques a la vez. Los axustes manuales queden guardaos pa más tarde. La proteición de los cantos funciona por separao en dambos moos.</string>
+    <string name="touch_controls_mode_help_title">Escueyi un métodu d\'axuste</string>
+    <string name="touch_controls_mode_title">Mou d\'axuste</string>
+    <string name="touch_controls_preset_one">Preaxuste del firmware 1</string>
+    <string name="touch_controls_preset_three">Preaxuste del firmware 3</string>
+    <string name="touch_controls_preset_two">Preaxuste del firmware 2</string>
+    <string name="touch_controls_reset_summary">Volver a los axustes manuales predeterminaos del firmware y a la proteición predeterminada de los cantos. L\'interruptor de la aplicación nun cambia.</string>
+    <string name="touch_controls_reset_title">Restablecer los axustes d\'esta aplicación</string>
+    <string name="touch_controls_response_summary">Axusta la respuesta a los toques. 0 restaura\'l valor predetermináu del firmware; cambia un axuste cada vez y pruébalu nel xuegu.</string>
+    <string name="touch_controls_screen_title">Controles táctiles</string>
+    <string name="touch_controls_sensitivity_summary">Axusta la sensibilidá táctil. 0 restaura\'l valor predetermináu del firmware; un nivel más altu nun ye necesariamente meyor pa cada xuegu.</string>
+    <string name="touch_controls_stability_summary">Axusta l\'estabilidá de los toques repetíos namái si fai falta. 0 restaura\'l valor predetermináu del firmware.</string>
+    <string name="touch_controls_start_summary">Activa los controles pa esta aplicación y dempués escueyi un preaxuste o axusta los parámetros. Nun fai falta xubir tolos controles eslizantes.</string>
+    <string name="touch_controls_start_title">Entama colos valores predeterminaos</string>
+    <string name="touch_controls_unavailable_summary">El serviciu táctil nun proporcionó rangos de control válidos. Vuelve abrir esta páxina pa intentalo otra vez.</string>
+    <string name="touch_controls_unavailable_title">Los controles táctiles nun tán disponibles</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Air ais</string>
+    <string name="parts_search_apps">Lorg aplacaidean</string>
+    <string name="touch_controls_active_summary">Air a chuir an sàs fhad ‘s a tha an aplacaid seo ri aghaidh na deilbh. Le bhith a’ fàgail na h-aplacaid no a’ tionndadh an sgrion dheth bidh sin ag ath-nuadhachadh giùlan suathaidh àbhaisteach.</string>
+    <string name="touch_controls_active_title">Tha gleusadh per-app air a chomasachadh</string>
+    <string name="touch_controls_advanced_group">Modh làimhe · atharrachaidhean grinn</string>
+    <string name="touch_controls_aim_summary">Atharraich cugallachd gluasadan amas a-mhàin ma tha sin riatanach. Bidh luach 0 ag ath-nuadhachadh an t-suidheachaidh firmware bunaiteach.</string>
+    <string name="touch_controls_edge_group">Neo-eisimeileach · dìon iomall</string>
+    <string name="touch_controls_edge_summary">0 a’ cuir à comas sìoladh iomall; Bidh ìrean 1-3 a’ meudachadh dìon an aghaidh suathadh oir tubaisteach. Faodaidh sìoladh nas làidire suathadh a dh’aona ghnothach a dhèanamh nas duilghe.</string>
+    <string name="touch_controls_global_summary">Tha prìomhachas aig an roghainn freagairteachd cruinneil. Tha na roghainnean per-app agad air an sàbhaladh ach air an stad. Tap an seo gus an roghainn cruinne a riaghladh.</string>
+    <string name="touch_controls_global_title">Tha cuir thairis suathadh cruinneil gnìomhach</string>
+    <string name="touch_controls_help">Tòisich le roghainnean bunaiteach làimhe. Dèan comas air gleusadh a-mhàin airson aplacaidean a tha feumach air.\n\nTha ro-òrdughan agus atharrachaidhean làimhe nan roghainnean eile, chan e buaidhean an àite cruachan. Tha presets 1-3 nam pròifilean firmware; chan e rangachadh càileachd a th’ annta.\n\nAnn am modh làimhe, bidh 0 ag ath-nuadhachadh am bunait firmware. Bidh ìrean nas àirde ag atharrachadh giùlan suathaidh agus faodaidh iad a bhith a’ faireachdainn nas miosa ann an cuid de gheamannan. Atharraich freagairt no cugallachd an toiseach; cleachd amas agus seasmhachd a-mhàin airson gleusadh nas mionaidiche.\n\nTha sìoladh iomall neo-eisimeileach. Faodaidh dìon nas làidire cuideachd suathadh a dh’aona ghnothach faisg air oir an sgrion a dhiùltadh.\n\nTha an roghainn freagairteachd cruinneil a’ faighinn prìomhachas thairis air gleusadh per-app. Cha bhith na smachdan sin ag atharrachadh ìre ùrachaidh an taisbeanaidh.</string>
+    <string name="touch_controls_help_title">Mar a tha suathadh tuning ag obair</string>
+    <string name="touch_controls_manual">Modh làimhe · tòisich leis na roghainnean firmware bunaiteach</string>
+    <string name="touch_controls_manual_group">Modh làimhe · prìomh atharrachaidhean</string>
+    <string name="touch_controls_mode_group">Prìomh shuidheachadh</string>
+    <string name="touch_controls_mode_help">Bidh ro-aithris a’ dol an àite freagairt, cugallachd, amas agus seasmhachd tap còmhla. Bidh roghainnean làimhe air an sàbhaladh airson nas fhaide air adhart. Bidh dìon iomall ag obair air leth anns gach modh.</string>
+    <string name="touch_controls_mode_help_title">Tagh aon dòigh tuning</string>
+    <string name="touch_controls_mode_title">Modh rèiteachaidh suathaidh</string>
+    <string name="touch_controls_preset_one">Firmware ro-shuidhichte 1</string>
+    <string name="touch_controls_preset_three">Firmware ro-shuidhichte 3</string>
+    <string name="touch_controls_preset_two">Firmware ro-shuidhichte 2 a-nuas</string>
+    <string name="touch_controls_reset_summary">Till gu bunaitean firmware làimhe agus an dìon oir bunaiteach. Cùm tionndadh comas na h-aplacaid gun atharrachadh.</string>
+    <string name="touch_controls_reset_title">Ath-shuidhich gleusadh an aplacaid seo</string>
+    <string name="touch_controls_response_summary">Atharraich freagairt touchscreen gu tapan. Bidh luach 0 ag ath-nuadhachadh an t-suidheachaidh firmware bunaiteach. Atharraich aon suidheachadh aig aon àm agus feuch e sa gheama agad.</string>
+    <string name="touch_controls_screen_title">Smachdan suathaidh</string>
+    <string name="touch_controls_sensitivity_summary">Atharraich cugallachd suathaidh. 0 ag ath-nuadhachadh am bunait firmware; chan eil ìre nas àirde gu fèin-ghluasadach nas fheàrr airson a h-uile geama.</string>
+    <string name="touch_controls_stability_summary">Atharraich seasmhachd taps touchscreen a-rithist a-mhàin ma tha sin riatanach. Bidh luach 0 ag ath-nuadhachadh an t-suidheachaidh firmware bunaiteach.</string>
+    <string name="touch_controls_start_summary">Dèan comas air smachdan airson an aplacaid seo, an uairsin tagh ro-shuidhichte no gleus roghainnean fa leth. Chan fheum thu a h-uile sleamhnag àrdachadh.</string>
+    <string name="touch_controls_start_title">Tòisich leis na roghainnean bunaiteach</string>
+    <string name="touch_controls_unavailable_summary">Cha tug an t-seirbheis suathaidh seachad raointean smachd dligheach. Fosgail an duilleag seo a-rithist gus feuchainn a-rithist.</string>
+    <string name="touch_controls_unavailable_title">Chan eil smachdan suathaidh rim faighinn</string>
+</resources>

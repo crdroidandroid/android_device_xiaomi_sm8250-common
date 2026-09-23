@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">ကျော</string>
+    <string name="parts_search_apps">အက်ပ်များကို ရှာဖွေပါ။</string>
+    <string name="touch_controls_active_summary">ဤအက်ပ်သည် နောက်ခံတွင် ရှိနေစဉ်တွင် အသုံးပြုထားသည်။ အက်ပ်မှထွက်ခြင်း သို့မဟုတ် စခရင်ကိုပိတ်ခြင်းသည် ပုံမှန်ထိတွေ့မှုအပြုအမူကို ပြန်လည်ရရှိစေသည်။</string>
+    <string name="touch_controls_active_title">အက်ပ်အလိုက် ချိန်ညှိခြင်းကို ဖွင့်ထားသည်။</string>
+    <string name="touch_controls_advanced_group">လူကိုယ်တိုင်မုဒ် · ကောင်းမွန်သော ချိန်ညှိချက်များ</string>
+    <string name="touch_controls_aim_summary">လိုအပ်မှသာ ချိန်ရွယ်ထားသော လက်ဟန်များ၏ အာရုံခံနိုင်စွမ်းကို ချိန်ညှိပါ။ 0 တန်ဖိုးသည် ပုံသေဖမ်ဝဲဆက်တင်ကို ပြန်ပေးသည်။</string>
+    <string name="touch_controls_edge_group">လွတ်လပ်သော · အစွန်းကာကွယ်မှု</string>
+    <string name="touch_controls_edge_summary">0 edge filtering ကို ပိတ်ထားသည် ။ အဆင့် 1-3 သည် မတော်တဆ အစွန်းများကို ထိခြင်းမှ ကာကွယ်မှုကို တိုးမြင့်စေသည်။ ပိုမိုအားကောင်းသော စစ်ထုတ်မှုသည် ရည်ရွယ်ချက်ရှိရှိ အစွန်းများကို ထိရန် ပိုမိုခက်ခဲစေသည်။</string>
+    <string name="touch_controls_global_summary">ကမ္ဘာလုံးဆိုင်ရာ တုံ့ပြန်မှုရွေးချယ်မှုသည် ဦးစားပေးဖြစ်သည်။ သင့်အက်ပ်တစ်ခုစီဆက်တင်များကို သိမ်းဆည်းထားသော်လည်း ခေတ္တရပ်ထားသည်။ ကမ္ဘာလုံးဆိုင်ရာ ရွေးချယ်မှုကို စီမံခန့်ခွဲရန် ဤနေရာကို တို့ပါ။</string>
+    <string name="touch_controls_global_title">Global touch override သည် အသက်ဝင်ပါသည်။</string>
+    <string name="touch_controls_help">စိတ်ကြိုက်မူရင်းများဖြင့် စတင်ပါ။ လိုအပ်သောအက်ပ်များအတွက်သာ ချိန်ညှိခြင်းကို ဖွင့်ပါ။\n\nကြိုတင်သတ်မှတ်မှုများနှင့် လူကိုယ်တိုင် ချိန်ညှိမှုများသည် အစုအဝေးအတွက် အကျိုးသက်ရောက်မှုများမဟုတ်ဘဲ အခြားရွေးချယ်စရာများဖြစ်သည်။ ကြိုတင်သတ်မှတ်ချက်များ 1-3 သည် firmware ပရိုဖိုင်များဖြစ်သည်။ ၎င်းတို့သည် အရည်အသွေး အဆင့်သတ်မှတ်ချက်များ မဟုတ်ပါ။\n\nလက်စွဲမုဒ်တွင်၊ 0 သည် firmware မူရင်းကို ပြန်လည်ရယူသည်။ မြင့်မားသောအဆင့်များသည် ထိတွေ့မှုအပြုအမူကို ပြောင်းလဲစေပြီး အချို့ဂိမ်းများတွင် ပိုဆိုးသည်ဟု ခံစားရနိုင်သည်။ တုံ့ပြန်မှု သို့မဟုတ် အာရုံခံနိုင်စွမ်းကို ဦးစွာ ချိန်ညှိပါ။ ပိုမိုကောင်းမွန်သော ချိန်ညှိမှုများအတွက်သာ ရည်မှန်းချက်နှင့် တည်ငြိမ်မှုကို အသုံးပြုပါ။\n\nEdge filtering သည် သီးခြားဖြစ်သည်။ ပိုမိုအားကောင်းသောအကာအကွယ်သည် စခရင်အစွန်းအနီးတွင် ရည်ရွယ်ချက်ရှိရှိထိတွေ့မှုများကို ငြင်းပယ်နိုင်သည်။\n\nကမ္ဘာလုံးဆိုင်ရာ တုံ့ပြန်မှု ရွေးချယ်မှုသည် အက်ပ်တစ်ခုချင်း ချိန်ညှိခြင်းထက် ဦးစားပေးသည်။ ဤထိန်းချုပ်မှုများသည် မျက်နှာပြင် မြှင့်တင်မှုနှုန်းကို မပြောင်းလဲပါ။</string>
+    <string name="touch_controls_help_title">Touch Tuning အလုပ်လုပ်ပုံ</string>
+    <string name="touch_controls_manual">လူကိုယ်တိုင်မုဒ် · ပုံသေဖမ်ဝဲဆက်တင်များဖြင့် စတင်ပါ။</string>
+    <string name="touch_controls_manual_group">လူကိုယ်တိုင်မုဒ် · အဓိက ချိန်ညှိချက်များ</string>
+    <string name="touch_controls_mode_group">အဓိက ဆက်တင်</string>
+    <string name="touch_controls_mode_help">ကြိုတင်သတ်မှတ်မှုသည် တုံ့ပြန်မှု၊ အာရုံခံနိုင်စွမ်း၊ ဦးတည်ချက်နှင့် တည်ငြိမ်မှုကို အတူတကွ အစားထိုးသည်။ လူကိုယ်တိုင် ဆက်တင်များကို နောင်တွင် သိမ်းဆည်းထားပါ။ Edge ကာကွယ်ရေးသည် မုဒ်နှစ်ခုစလုံးတွင် သီးခြားအလုပ်လုပ်သည်။</string>
+    <string name="touch_controls_mode_help_title">ချိန်ညှိနည်းတစ်ခုကို ရွေးပါ။</string>
+    <string name="touch_controls_mode_title">ထိပြီး ချိန်ညှိမှုမုဒ်</string>
+    <string name="touch_controls_preset_one">Firmware ကြိုတင်သတ်မှတ်ခြင်း ၁</string>
+    <string name="touch_controls_preset_three">Firmware ကြိုတင်သတ်မှတ်ခြင်း ၃</string>
+    <string name="touch_controls_preset_two">Firmware ကြိုတင်သတ်မှတ်ခြင်း ၂</string>
+    <string name="touch_controls_reset_summary">Manual Firmware Default နှင့် Default Edge Protection သို့ ပြန်သွားပါ။ အက်ပ်၏ဖွင့်ရန်ခလုတ်ကို မပြောင်းလဲထားပါ။</string>
+    <string name="touch_controls_reset_title">ဤအက်ပ်၏ ချိန်ညှိမှုကို ပြန်လည်သတ်မှတ်ပါ။</string>
+    <string name="touch_controls_response_summary">နှိပ်ရန်အတွက် ထိတွေ့မျက်နှာပြင်တုံ့ပြန်မှုကို ချိန်ညှိပါ။ 0 တန်ဖိုးသည် ပုံသေဖမ်ဝဲဆက်တင်ကို ပြန်ပေးသည်။ တစ်ကြိမ်လျှင် ဆက်တင်တစ်ခုကို ပြောင်းပြီး သင့်ဂိမ်းတွင် စမ်းကြည့်ပါ။</string>
+    <string name="touch_controls_screen_title">ထိတွေ့ထိန်းချုပ်မှုများ</string>
+    <string name="touch_controls_sensitivity_summary">ထိတွေ့မှု အာရုံခံနိုင်စွမ်းကို ချိန်ညှိပါ။ 0 သည် firmware မူရင်းကို ပြန်လည်ရယူသည်။ မြင့်မားသောအဆင့်သည် ဂိမ်းတိုင်းအတွက် အလိုအလျောက် ပိုမိုကောင်းမွန်သည်မဟုတ်ပါ။</string>
+    <string name="touch_controls_stability_summary">လိုအပ်မှသာ ထပ်ခါတလဲလဲ ထိတွေ့မျက်နှာပြင်ကို နှိပ်ခြင်းများ၏ တည်ငြိမ်မှုကို ချိန်ညှိပါ။ 0 တန်ဖိုးသည် ပုံသေဖမ်ဝဲဆက်တင်ကို ပြန်ပေးသည်။</string>
+    <string name="touch_controls_start_summary">ဤအက်ပ်အတွက် ထိန်းချုပ်မှုများကို ဖွင့်ပါ၊ ထို့နောက် ကြိုတင်သတ်မှတ်မှုတစ်ခုကို ရွေးချယ်ပါ သို့မဟုတ် တစ်ဦးချင်းဆက်တင်များကို ချိန်ညှိပါ။ slider တိုင်းကို မြှင့်တင်ရန် မလိုအပ်ပါ။</string>
+    <string name="touch_controls_start_title">ပုံသေများဖြင့် စတင်ပါ။</string>
+    <string name="touch_controls_unavailable_summary">ထိကိုင်ခြင်းဝန်ဆောင်မှုသည် မှန်ကန်သောထိန်းချုပ်မှုအပိုင်းအခြားများကို ပေးဆောင်ခြင်းမရှိပါ။ ထပ်ကြိုးစားရန် ဤစာမျက်နှာကို ပြန်ဖွင့်ပါ။</string>
+    <string name="touch_controls_unavailable_title">ထိတွေ့ထိန်းချုပ်မှုများကို မရနိုင်ပါ။</string>
+</resources>

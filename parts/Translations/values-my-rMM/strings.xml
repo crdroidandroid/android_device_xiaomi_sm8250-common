@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="dirac_preset_blues">ဘလူးစ်ဂီတ</string>
+    <string name="dirac_preset_classical">ဂန္ထဝင်ဂီတ</string>
+    <string name="dirac_preset_country">ကျေးလက်ဂီတ</string>
+    <string name="dirac_preset_dance">ဒန့်စ်</string>
+    <string name="dirac_preset_electronic">အီလက်ထရွန်နစ် ဂီတ</string>
+    <string name="dirac_preset_jazz">ဂျတ်ဇ်ဂီတ</string>
+    <string name="dirac_preset_metal">မက်တယ်လ် ဂီတ</string>
+    <string name="dirac_preset_pop">ပေါ့ပ်</string>
+    <string name="dirac_preset_rock">ရော့ခ်</string>
+    <string name="dirac_headset_title">နားကြပ်အမျိုးအစား</string>
+    <string name="dirac_preset_title">ကြိုသတ်မှတ်ခြင်း</string>
+</resources>

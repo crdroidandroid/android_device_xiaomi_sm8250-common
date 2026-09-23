@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Ar ais</string>
+    <string name="parts_search_apps">Cuardaigh apps</string>
+    <string name="touch_controls_active_summary">Curtha i bhfeidhm fad is atá an aip seo sa tulra. Má fhágann tú an aip nó má dhéantar an scáileán a chasadh as, déanfar gnáthiompar tadhaill a athbhunú.</string>
+    <string name="touch_controls_active_title">Tá tiúnadh per-app cumasaithe</string>
+    <string name="touch_controls_advanced_group">Modh láimhe · coigeartuithe fíneáil</string>
+    <string name="touch_controls_aim_summary">Coigeartaigh íogaireacht gothaí arb é is aidhm leo ach amháin más gá. Athshlánóidh luach 0 an socrú firmware réamhshocraithe.</string>
+    <string name="touch_controls_edge_group">Neamhspleách · cosaint imeall</string>
+    <string name="touch_controls_edge_summary">0 díchumasaítear scagadh imeall; méadaíonn leibhéil 1-3 an chosaint ar tadhaill chiumhais thimpiste. Is féidir le scagadh níos déine tadhaill imeall d\'aon ghnó a dhéanamh níos deacra.</string>
+    <string name="touch_controls_global_summary">Tugtar tús áite don rogha freagrúlachta domhanda. Sábháiltear do shocruithe in aghaidh an aip ach cuirtear ar sos iad. Tapáil anseo chun an rogha domhanda a bhainistiú.</string>
+    <string name="touch_controls_global_title">Tá sáraíocht dteagmháil dhomhanda gníomhach</string>
+    <string name="touch_controls_help">Tosaigh le mainneachtainí láimhe. Cumasaigh tiúnadh d\'aipeanna a bhfuil sé de dhíth orthu amháin.\n\nIs roghanna eile iad réamhshocruithe agus coigeartuithe láimhe, ní éifeachtaí le cruachta. Is próifílí firmware iad réamhshocruithe 1–3; ní rátálacha cáilíochta iad.\n\nI mód láimhe, athshocróidh 0 an réamhshocrú firmware. Athraíonn leibhéil níos airde an t-iompar tadhaill agus d\'fhéadfadh go n-aireoidh siad níos measa i roinnt cluichí. Coigeartaigh freagra nó íogaireacht ar dtús; bain úsáid as aidhm agus cobhsaíocht ach amháin le haghaidh tiúnadh níos míne.\n\nTá scagadh imeall neamhspleách. Is féidir le cosaint níos láidre freisin baint d\'aon ghnó gar d\'imeall an scáileáin a dhiúltú.\n\nTugtar tús áite don rogha freagrúlachta domhanda thar thiúnadh in aghaidh an aip. Ní athraíonn na rialuithe seo an ráta athnuachana taispeána.</string>
+    <string name="touch_controls_help_title">Conas a oibríonn tiúnadh tadhaill</string>
+    <string name="touch_controls_manual">Modh láimhe · tosaigh leis na socruithe firmware réamhshocraithe</string>
+    <string name="touch_controls_manual_group">Modh láimhe · príomhchoigeartuithe</string>
+    <string name="touch_controls_mode_group">Príomhshuíomh</string>
+    <string name="touch_controls_mode_help">Cuirtear réamhshocrú in ionad freagra, íogaireacht, aidhm agus cobhsaíocht sconna le chéile. Fanann socruithe láimhe sábháilte go ceann níos déanaí. Oibríonn cosaint imeall ar leithligh i gceachtar mhodh.</string>
+    <string name="touch_controls_mode_help_title">Roghnaigh modh tiúnta amháin</string>
+    <string name="touch_controls_mode_title">Modh coigeartaithe tadhaill</string>
+    <string name="touch_controls_preset_one">Firmware réamhshocraithe 1</string>
+    <string name="touch_controls_preset_three">Firmware réamhshocraithe 3</string>
+    <string name="touch_controls_preset_two">Firmware réamhshocraithe 2</string>
+    <string name="touch_controls_reset_summary">Fill ar na mainneachtainí firmware láimhe agus an chosaint imeall réamhshocraithe. Coinnigh athrú cumasaithe na haipe gan athrú.</string>
+    <string name="touch_controls_reset_title">Athshocraigh tiúnadh na haipe seo</string>
+    <string name="touch_controls_response_summary">Coigeartaigh freagra scáileáin tadhaill ar sconnaí. Athshlánóidh luach 0 an socrú firmware réamhshocraithe. Athraigh socrú amháin ag an am agus bain triail as i do chluiche.</string>
+    <string name="touch_controls_screen_title">Rialuithe tadhaill</string>
+    <string name="touch_controls_sensitivity_summary">Coigeartaigh íogaireacht dteagmháil. 0 restores an réamhshocraithe firmware; níl leibhéal níos airde níos fearr go huathoibríoch do gach cluiche.</string>
+    <string name="touch_controls_stability_summary">Coigeartaigh cobhsaíocht na sconnaí scáileáin tadhaill arís agus arís eile ach amháin más gá. Athshlánóidh luach 0 an socrú firmware réamhshocraithe.</string>
+    <string name="touch_controls_start_summary">Cumasaigh rialuithe don aip seo, ansin roghnaigh réamhshocrú nó tiúin socruithe aonair. Ní gá duit gach sleamhnán a ardú.</string>
+    <string name="touch_controls_start_title">Tosaigh leis na mainneachtainí</string>
+    <string name="touch_controls_unavailable_summary">Níor chuir an tseirbhís tadhaill raonta rialaithe bailí ar fáil. Oscail an leathanach seo arís chun triail eile a bhaint as.</string>
+    <string name="touch_controls_unavailable_title">Níl rialuithe tadhaill ar fáil</string>
+</resources>

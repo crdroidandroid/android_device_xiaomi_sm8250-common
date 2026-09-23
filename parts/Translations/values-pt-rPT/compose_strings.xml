@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Voltar</string>
+    <string name="parts_search_apps">Pesquisar aplicações</string>
+    <string name="touch_controls_active_summary">Aplicado enquanto esta aplicação está em primeiro plano. Sair da aplicação ou desligar o ecrã restaura o comportamento normal do toque.</string>
+    <string name="touch_controls_active_title">Ajuste por aplicação ativado</string>
+    <string name="touch_controls_advanced_group">Manual · ajustes finos</string>
+    <string name="touch_controls_aim_summary">Ajuste os gestos de mira apenas se necessário. 0 restaura o valor predefinido do firmware.</string>
+    <string name="touch_controls_edge_group">Independente · proteção das margens</string>
+    <string name="touch_controls_edge_summary">0 desativa a filtragem das margens; os níveis 1–3 aumentam a proteção contra toques acidentais nas margens. Uma filtragem mais forte pode dificultar os toques intencionais nas margens.</string>
+    <string name="touch_controls_global_summary">A opção global de resposta tem prioridade. As definições por aplicação estão guardadas, mas suspensas. Toque aqui para gerir a opção global.</string>
+    <string name="touch_controls_global_title">Ajuste global do toque ativo</string>
+    <string name="touch_controls_help">Comece com as definições manuais predefinidas. Ative o ajuste apenas nas aplicações que precisam dele.\n\nAs predefinições e os ajustes manuais são alternativas, não efeitos a combinar. As predefinições 1–3 são perfis do firmware, não classificações de qualidade.\n\nNo modo manual, 0 restaura o valor predefinido do firmware. Os níveis mais elevados alteram o comportamento do toque e podem piorar o controlo em alguns jogos. Ajuste primeiro a resposta ou a sensibilidade; use a mira e a estabilidade apenas para ajustes mais finos.\n\nA filtragem das margens é independente. Uma proteção mais forte também pode rejeitar toques intencionais perto da margem do ecrã.\n\nA opção global de resposta tem prioridade sobre o ajuste por aplicação. Estes controlos não alteram a taxa de atualização do ecrã.</string>
+    <string name="touch_controls_help_title">Como funciona o ajuste do toque</string>
+    <string name="touch_controls_manual">Manual · comece com os valores predefinidos do firmware</string>
+    <string name="touch_controls_manual_group">Manual · ajustes principais</string>
+    <string name="touch_controls_mode_group">Definição principal</string>
+    <string name="touch_controls_mode_help">Uma predefinição substitui a resposta, a sensibilidade, a mira e a estabilidade dos toques em conjunto. As definições manuais ficam guardadas para mais tarde. A proteção das margens funciona separadamente em ambos os modos.</string>
+    <string name="touch_controls_mode_help_title">Escolha um método de ajuste</string>
+    <string name="touch_controls_mode_title">Modo de ajuste</string>
+    <string name="touch_controls_preset_one">Predefinição do firmware 1</string>
+    <string name="touch_controls_preset_three">Predefinição do firmware 3</string>
+    <string name="touch_controls_preset_two">Predefinição do firmware 2</string>
+    <string name="touch_controls_reset_summary">Voltar aos valores manuais predefinidos do firmware e à proteção predefinida das margens. O interruptor de ativação da aplicação permanece inalterado.</string>
+    <string name="touch_controls_reset_title">Repor o ajuste desta aplicação</string>
+    <string name="touch_controls_response_summary">Ajuste a resposta aos toques. 0 restaura o valor predefinido do firmware; altere uma definição de cada vez e teste-a no jogo.</string>
+    <string name="touch_controls_screen_title">Controlos de toque</string>
+    <string name="touch_controls_sensitivity_summary">Ajuste a sensibilidade ao toque. 0 restaura o valor predefinido do firmware; um nível mais elevado não é necessariamente melhor para todos os jogos.</string>
+    <string name="touch_controls_stability_summary">Ajuste a estabilidade dos toques repetidos apenas se necessário. 0 restaura o valor predefinido do firmware.</string>
+    <string name="touch_controls_start_summary">Ative os controlos para esta aplicação e escolha uma predefinição ou ajuste as definições individuais. Não é necessário aumentar todos os valores dos controlos deslizantes.</string>
+    <string name="touch_controls_start_title">Comece com os valores predefinidos</string>
+    <string name="touch_controls_unavailable_summary">O serviço de toque não forneceu intervalos de controlo válidos. Volte a abrir esta página para tentar novamente.</string>
+    <string name="touch_controls_unavailable_title">Os controlos de toque não estão disponíveis</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">પાછળ</string>
+    <string name="parts_search_apps">એપ્લિકેશન્સ શોધો</string>
+    <string name="touch_controls_active_summary">જ્યારે આ એપ્લિકેશન ફોરગ્રાઉન્ડમાં હોય ત્યારે લાગુ કરવામાં આવે છે. એપ્લિકેશન છોડવાથી અથવા સ્ક્રીનને બંધ કરવાથી સામાન્ય સ્પર્શ વર્તન પુનઃસ્થાપિત થાય છે.</string>
+    <string name="touch_controls_active_title">પ્રતિ-એપ્લિકેશન ટ્યુનિંગ સક્ષમ છે</string>
+    <string name="touch_controls_advanced_group">મેન્યુઅલ મોડ · દંડ ગોઠવણો</string>
+    <string name="touch_controls_aim_summary">જો જરૂરી હોય તો જ લક્ષ્ય હાવભાવની સંવેદનશીલતાને સમાયોજિત કરો. 0 નું મૂલ્ય ડિફૉલ્ટ ફર્મવેર સેટિંગને પુનઃસ્થાપિત કરે છે.</string>
+    <string name="touch_controls_edge_group">સ્વતંત્ર · ધાર રક્ષણ</string>
+    <string name="touch_controls_edge_summary">0 એજ ફિલ્ટરિંગને અક્ષમ કરે છે; સ્તર 1-3 આકસ્મિક ધાર સ્પર્શ સામે રક્ષણ વધારે છે. મજબૂત ફિલ્ટરિંગ ઇરાદાપૂર્વકની ધારને વધુ સખત બનાવી શકે છે.</string>
+    <string name="touch_controls_global_summary">વૈશ્વિક પ્રતિભાવ વિકલ્પ અગ્રતા લે છે. તમારી એપ્લિકેશન દીઠ સેટિંગ્સ સાચવવામાં આવી છે પરંતુ થોભાવવામાં આવી છે. વૈશ્વિક વિકલ્પનું સંચાલન કરવા માટે અહીં ટૅપ કરો.</string>
+    <string name="touch_controls_global_title">વૈશ્વિક ટચ ઓવરરાઇડ સક્રિય છે</string>
+    <string name="touch_controls_help">મેન્યુઅલ ડિફોલ્ટથી પ્રારંભ કરો. ફક્ત એપ્સ માટે જ ટ્યુનિંગ સક્ષમ કરો જેને તેની જરૂર છે.\n\nપ્રીસેટ્સ અને મેન્યુઅલ એડજસ્ટમેન્ટ એ વિકલ્પો છે, સ્ટેક માટે ઇફેક્ટ્સ નથી. પ્રીસેટ્સ 1-3 ફર્મવેર પ્રોફાઇલ્સ છે; તેઓ ગુણવત્તા રેટિંગ્સ નથી.\n\nમેન્યુઅલ મોડમાં, 0 ફર્મવેર ડિફોલ્ટને પુનઃસ્થાપિત કરે છે. ઉચ્ચ સ્તરો સ્પર્શ વર્તનમાં ફેરફાર કરે છે અને કેટલીક રમતોમાં વધુ ખરાબ લાગે છે. પહેલા પ્રતિભાવ અથવા સંવેદનશીલતાને સમાયોજિત કરો; માત્ર ફાઇનર ટ્યુનિંગ માટે ધ્યેય અને સ્થિરતાનો ઉપયોગ કરો.\n\nએજ ફિલ્ટરિંગ સ્વતંત્ર છે. મજબૂત સુરક્ષા સ્ક્રીનની કિનારી નજીકના ઇરાદાપૂર્વકના સ્પર્શને પણ નકારી શકે છે.\n\nવૈશ્વિક પ્રતિભાવ વિકલ્પ પ્રતિ-એપ ટ્યુનિંગ પર અગ્રતા લે છે. આ નિયંત્રણો ડિસ્પ્લે રિફ્રેશ રેટને બદલતા નથી.</string>
+    <string name="touch_controls_help_title">ટચ ટ્યુનિંગ કેવી રીતે કાર્ય કરે છે</string>
+    <string name="touch_controls_manual">મેન્યુઅલ મોડ · ડિફૉલ્ટ ફર્મવેર સેટિંગ્સથી પ્રારંભ કરો</string>
+    <string name="touch_controls_manual_group">મેન્યુઅલ મોડ · મુખ્ય ગોઠવણો</string>
+    <string name="touch_controls_mode_group">મુખ્ય સેટિંગ</string>
+    <string name="touch_controls_mode_help">પ્રીસેટ પ્રતિભાવ, સંવેદનશીલતા, લક્ષ્ય અને ટેપ સ્થિરતાને એકસાથે બદલે છે. મેન્યુઅલ સેટિંગ્સ પછીથી સાચવવામાં આવે છે. એજ પ્રોટેક્શન બંને મોડમાં અલગથી કામ કરે છે.</string>
+    <string name="touch_controls_mode_help_title">એક ટ્યુનિંગ પદ્ધતિ પસંદ કરો</string>
+    <string name="touch_controls_mode_title">ટચ એડજસ્ટમેન્ટ મોડ</string>
+    <string name="touch_controls_preset_one">ફર્મવેર પ્રીસેટ 1</string>
+    <string name="touch_controls_preset_three">ફર્મવેર પ્રીસેટ 3</string>
+    <string name="touch_controls_preset_two">ફર્મવેર પ્રીસેટ 2</string>
+    <string name="touch_controls_reset_summary">મેન્યુઅલ ફર્મવેર ડિફોલ્ટ્સ અને ડિફોલ્ટ એજ પ્રોટેક્શન પર પાછા ફરો. એપની સક્ષમ સ્વિચને યથાવત રાખો.</string>
+    <string name="touch_controls_reset_title">આ એપનું ટ્યુનિંગ રીસેટ કરો</string>
+    <string name="touch_controls_response_summary">ટૅપ્સ માટે ટચસ્ક્રીન પ્રતિસાદને સમાયોજિત કરો. 0 નું મૂલ્ય ડિફૉલ્ટ ફર્મવેર સેટિંગને પુનઃસ્થાપિત કરે છે. એક સમયે એક સેટિંગ બદલો અને તેને તમારી ગેમમાં અજમાવી જુઓ.</string>
+    <string name="touch_controls_screen_title">ટચ નિયંત્રણો</string>
+    <string name="touch_controls_sensitivity_summary">સ્પર્શ સંવેદનશીલતાને સમાયોજિત કરો. 0 ફર્મવેર ડિફોલ્ટને પુનઃસ્થાપિત કરે છે; દરેક રમત માટે ઉચ્ચ સ્તર આપમેળે વધુ સારું નથી.</string>
+    <string name="touch_controls_stability_summary">જો જરૂરી હોય તો જ પુનરાવર્તિત ટચસ્ક્રીન ટેપની સ્થિરતાને સમાયોજિત કરો. 0 નું મૂલ્ય ડિફૉલ્ટ ફર્મવેર સેટિંગને પુનઃસ્થાપિત કરે છે.</string>
+    <string name="touch_controls_start_summary">આ એપ્લિકેશન માટે નિયંત્રણો સક્ષમ કરો, પછી પ્રીસેટ પસંદ કરો અથવા વ્યક્તિગત સેટિંગ્સને ટ્યુન કરો. તમારે દરેક સ્લાઇડરને વધારવાની જરૂર નથી.</string>
+    <string name="touch_controls_start_title">ડિફૉલ્ટ્સ સાથે પ્રારંભ કરો</string>
+    <string name="touch_controls_unavailable_summary">ટચ સેવા માન્ય નિયંત્રણ શ્રેણી પ્રદાન કરતી નથી. ફરી પ્રયાસ કરવા માટે આ પૃષ્ઠ ફરીથી ખોલો.</string>
+    <string name="touch_controls_unavailable_title">ટચ નિયંત્રણો અનુપલબ્ધ છે</string>
+</resources>

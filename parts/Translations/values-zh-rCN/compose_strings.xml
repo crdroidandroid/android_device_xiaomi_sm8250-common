@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">返回</string>
+    <string name="parts_search_apps">搜索应用程序</string>
+    <string name="touch_controls_active_summary">当此应用程序位于前台时应用。离开应用程序或关闭屏幕会恢复正常的触摸行为。</string>
+    <string name="touch_controls_active_title">已启用按应用程序调整</string>
+    <string name="touch_controls_advanced_group">手动模式·微调</string>
+    <string name="touch_controls_aim_summary">仅在必要时调整瞄准手势的灵敏度。值为 0 将恢复默认固件设置。</string>
+    <string name="touch_controls_edge_group">独立·边缘保护</string>
+    <string name="touch_controls_edge_summary">0 禁用边缘过滤； 1-3 级可增强防止意外边缘接触的保护。更强的过滤可以使有意的边缘触摸变得更加困难。</string>
+    <string name="touch_controls_global_summary">全局响应选项优先。您的每个应用程序设置已保存但已暂停。点击此处管理全局选项。</string>
+    <string name="touch_controls_global_title">全局触摸覆盖已激活</string>
+    <string name="touch_controls_help">从手动默认值开始。仅对需要的应用程序启用调整。\n\n预设和手动调整是替代方案，而不是叠加效果。预设 1–3 是固件配置文件；它们不是质量评级。\n\n在手动模式下，0 恢复固件默认值。更高的级别会改变触摸行为，并且在某些游戏中可能会感觉更糟。先调整响应或灵敏度；仅使用目标和稳定性进行微调。\n\n边缘过滤是独立的。更强的保护还可以阻止屏幕边缘附近的故意触摸。\n\n全局响应选项优先于每个应用程序调整。这些控件不会更改显示刷新率。</string>
+    <string name="touch_controls_help_title">触摸调音的工作原理</string>
+    <string name="touch_controls_manual">手动模式·以默认固件设置启动</string>
+    <string name="touch_controls_manual_group">手动模式·主要调整</string>
+    <string name="touch_controls_mode_group">主要设定</string>
+    <string name="touch_controls_mode_help">预设取代了响应、灵敏度、瞄准和点击稳定性。保存手动设置供以后使用。边缘保护在任一模式下均单独工作。</string>
+    <string name="touch_controls_mode_help_title">选择一种调整方法</string>
+    <string name="touch_controls_mode_title">触摸调节方式</string>
+    <string name="touch_controls_preset_one">固件预设1</string>
+    <string name="touch_controls_preset_three">固件预设3</string>
+    <string name="touch_controls_preset_two">固件预设2</string>
+    <string name="touch_controls_reset_summary">返回手动固件默认值和默认边缘保护。保持应用程序的启用开关不变。</string>
+    <string name="touch_controls_reset_title">重置此应用程序的调音</string>
+    <string name="touch_controls_response_summary">调整触摸屏对点击的响应。值为 0 将恢复默认固件设置。一次更改一项设置并在游戏中尝试。</string>
+    <string name="touch_controls_screen_title">触摸控制</string>
+    <string name="touch_controls_sensitivity_summary">调整触摸灵敏度。 0 恢复固件默认值；更高的级别并不意味着每场比赛都会更好。</string>
+    <string name="touch_controls_stability_summary">仅在必要时调整重复触摸屏点击的稳定性。值为 0 将恢复默认固件设置。</string>
+    <string name="touch_controls_start_summary">启用此应用程序的控件，然后选择预设或调整个别设置。您不需要抬起每个滑块。</string>
+    <string name="touch_controls_start_title">从默认值开始</string>
+    <string name="touch_controls_unavailable_summary">触摸服务未提供有效的控制范围。重新打开此页面以重试。</string>
+    <string name="touch_controls_unavailable_title">触摸控制不可用</string>
+</resources>

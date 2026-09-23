@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Voltar</string>
+    <string name="parts_search_apps">Pesquisar aplicativos</string>
+    <string name="touch_controls_active_summary">Aplicado enquanto este aplicativo está em primeiro plano. Sair do aplicativo ou desligar a tela restaura o comportamento normal do toque.</string>
+    <string name="touch_controls_active_title">O ajuste por aplicativo está ativado</string>
+    <string name="touch_controls_advanced_group">Modo manual · ajustes finos</string>
+    <string name="touch_controls_aim_summary">Ajuste a sensibilidade dos gestos de mira somente se necessário. Um valor 0 restaura a configuração padrão do firmware.</string>
+    <string name="touch_controls_edge_group">Independente · proteção de borda</string>
+    <string name="touch_controls_edge_summary">0 desativa a filtragem de borda; os níveis 1–3 aumentam a proteção contra toques acidentais nas bordas. Uma filtragem mais forte pode dificultar os toques intencionais nas bordas.</string>
+    <string name="touch_controls_global_summary">A opção de capacidade de resposta global tem prioridade. Suas configurações por aplicativo são salvas, mas pausadas. Toque aqui para gerenciar a opção global.</string>
+    <string name="touch_controls_global_title">A substituição de toque global está ativa</string>
+    <string name="touch_controls_help">Comece com padrões manuais. Ative o ajuste apenas para aplicativos que precisam dele.\n\nPredefinições e ajustes manuais são alternativas, não efeitos a serem empilhados. As predefinições 1–3 são perfis de firmware; não são classificações de qualidade.\n\nNo modo manual, 0 restaura o padrão do firmware. Níveis mais altos alteram o comportamento do toque e podem piorar em alguns jogos. Ajuste primeiro a resposta ou a sensibilidade; use mira e estabilidade apenas para um ajuste mais preciso.\n\nA filtragem de borda é independente. Uma proteção mais forte também pode rejeitar toques intencionais próximos à borda da tela.\n\nA opção de capacidade de resposta global tem prioridade sobre o ajuste por aplicativo. Esses controles não alteram a taxa de atualização da tela.</string>
+    <string name="touch_controls_help_title">Como funciona o ajuste de toque</string>
+    <string name="touch_controls_manual">Modo manual · comece com as configurações padrão do firmware</string>
+    <string name="touch_controls_manual_group">Modo manual · principais ajustes</string>
+    <string name="touch_controls_mode_group">Configuração principal</string>
+    <string name="touch_controls_mode_help">Uma predefinição substitui resposta, sensibilidade, mira e estabilidade de toque juntas. As configurações manuais ficam salvas para uso posterior. A proteção de borda funciona separadamente em ambos os modos.</string>
+    <string name="touch_controls_mode_help_title">Escolha um método de ajuste</string>
+    <string name="touch_controls_mode_title">Modo de ajuste de toque</string>
+    <string name="touch_controls_preset_one">Predefinição de firmware 1</string>
+    <string name="touch_controls_preset_three">Predefinição de firmware 3</string>
+    <string name="touch_controls_preset_two">Predefinição de firmware 2</string>
+    <string name="touch_controls_reset_summary">Retorne aos padrões de firmware manuais e à proteção de borda padrão. Mantenha o botão de ativação do aplicativo inalterado.</string>
+    <string name="touch_controls_reset_title">Redefinir o ajuste deste app</string>
+    <string name="touch_controls_response_summary">Ajuste a resposta da tela sensível ao toque aos toques. Um valor 0 restaura a configuração padrão do firmware. Altere uma configuração de cada vez e experimente em seu jogo.</string>
+    <string name="touch_controls_screen_title">Controles de toque</string>
+    <string name="touch_controls_sensitivity_summary">Ajuste a sensibilidade ao toque. 0 restaura o padrão do firmware; um nível mais alto não é automaticamente melhor para todos os jogos.</string>
+    <string name="touch_controls_stability_summary">Ajuste a estabilidade de toques repetidos na tela sensível ao toque somente se necessário. Um valor 0 restaura a configuração padrão do firmware.</string>
+    <string name="touch_controls_start_summary">Ative os controles para este aplicativo e escolha uma predefinição ou ajuste as configurações individuais. Você não precisa levantar todos os controles deslizantes.</string>
+    <string name="touch_controls_start_title">Comece com os padrões</string>
+    <string name="touch_controls_unavailable_summary">O serviço de toque não forneceu faixas de controle válidas. Reabra esta página para tentar novamente.</string>
+    <string name="touch_controls_unavailable_title">Os controles de toque não estão disponíveis</string>
+</resources>

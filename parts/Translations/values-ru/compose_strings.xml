@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Назад</string>
+    <string name="parts_search_apps">Поиск приложений</string>
+    <string name="touch_controls_active_summary">Применяется, пока это приложение открыто на переднем плане. Переход в другое приложение или выключение экрана восстанавливает обычное поведение сенсора.</string>
+    <string name="touch_controls_active_title">Настройки для приложения включены</string>
+    <string name="touch_controls_advanced_group">Вручную · точная настройка</string>
+    <string name="touch_controls_aim_summary">При необходимости точно настройте жесты прицеливания. 0 восстанавливает стандартное значение прошивки.</string>
+    <string name="touch_controls_edge_group">Отдельно · защита краёв</string>
+    <string name="touch_controls_edge_summary">0 отключает фильтрацию краёв; уровни 1–3 усиливают защиту от случайных касаний у краёв. Усиленная фильтрация может затруднять намеренные касания у краёв.</string>
+    <string name="touch_controls_global_summary">Глобальная настройка отклика имеет приоритет. Настройки для этого приложения сохранены, но приостановлены. Нажмите здесь, чтобы изменить глобальную настройку.</string>
+    <string name="touch_controls_global_title">Глобальная настройка касаний активна</string>
+    <string name="touch_controls_help">Начните со стандартных ручных настроек. Включайте настройку только для приложений, которым она нужна.\n\nПресеты и ручные настройки — альтернативные способы, а не эффекты, которые нужно сочетать. Пресеты 1–3 — это профили прошивки, а не оценки качества.\n\nВ ручном режиме 0 восстанавливает стандартное значение прошивки. Более высокие уровни меняют поведение сенсора и могут ухудшать управление в некоторых играх. Сначала настройте отклик или чувствительность; прицеливание и стабильность используйте только для точной настройки.\n\nФильтрация краёв работает отдельно. Усиленная защита также может отклонять намеренные касания у края экрана.\n\nГлобальная настройка отклика имеет приоритет над настройками для приложения. Эти элементы управления не меняют частоту обновления экрана.</string>
+    <string name="touch_controls_help_title">Как работает настройка касаний</string>
+    <string name="touch_controls_manual">Вручную · начните со стандартных значений прошивки</string>
+    <string name="touch_controls_manual_group">Вручную · основные настройки</string>
+    <string name="touch_controls_mode_group">Основная настройка</string>
+    <string name="touch_controls_mode_help">Пресет одновременно заменяет отклик, чувствительность, прицеливание и стабильность касаний. Ручные настройки сохраняются для дальнейшего использования. Защита краёв работает отдельно в обоих режимах.</string>
+    <string name="touch_controls_mode_help_title">Выберите один способ настройки</string>
+    <string name="touch_controls_mode_title">Режим настройки</string>
+    <string name="touch_controls_preset_one">Пресет прошивки 1</string>
+    <string name="touch_controls_preset_three">Пресет прошивки 3</string>
+    <string name="touch_controls_preset_two">Пресет прошивки 2</string>
+    <string name="touch_controls_reset_summary">Вернуться к стандартным ручным настройкам прошивки и стандартной защите краёв. Состояние переключателя этого приложения не меняется.</string>
+    <string name="touch_controls_reset_title">Сбросить настройки этого приложения</string>
+    <string name="touch_controls_response_summary">Настройте отклик касания. 0 восстанавливает стандартное значение прошивки; меняйте по одной настройке и проверяйте её в игре.</string>
+    <string name="touch_controls_screen_title">Управление касаниями</string>
+    <string name="touch_controls_sensitivity_summary">Настройте чувствительность сенсора. 0 восстанавливает стандартное значение прошивки; более высокий уровень не обязательно лучше для каждой игры.</string>
+    <string name="touch_controls_stability_summary">При необходимости точно настройте стабильность повторных касаний. 0 восстанавливает стандартное значение прошивки.</string>
+    <string name="touch_controls_start_summary">Включите управление для этого приложения, затем выберите пресет или настройте отдельные параметры. Не нужно повышать все значения ползунков.</string>
+    <string name="touch_controls_start_title">Начните со стандартных значений</string>
+    <string name="touch_controls_unavailable_summary">Служба сенсора не предоставила допустимые диапазоны управления. Откройте эту страницу снова, чтобы повторить попытку.</string>
+    <string name="touch_controls_unavailable_title">Управление касаниями недоступно</string>
+</resources>

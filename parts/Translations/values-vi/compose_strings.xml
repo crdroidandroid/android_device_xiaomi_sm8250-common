@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Quay lại</string>
+    <string name="parts_search_apps">Tìm kiếm ứng dụng</string>
+    <string name="touch_controls_active_summary">Áp dụng khi ứng dụng này chạy ở nền trước. Rời khỏi ứng dụng hoặc tắt màn hình sẽ khôi phục hoạt động cảm ứng bình thường.</string>
+    <string name="touch_controls_active_title">Điều chỉnh trên mỗi ứng dụng được bật</string>
+    <string name="touch_controls_advanced_group">Chế độ thủ công · tinh chỉnh</string>
+    <string name="touch_controls_aim_summary">Chỉ điều chỉnh độ nhạy của cử chỉ ngắm nếu cần thiết. Giá trị 0 sẽ khôi phục cài đặt chương trình cơ sở mặc định.</string>
+    <string name="touch_controls_edge_group">Độc lập · bảo vệ cạnh</string>
+    <string name="touch_controls_edge_summary">0 vô hiệu hóa tính năng lọc cạnh; cấp độ 1–3 tăng khả năng bảo vệ chống lại các cú chạm vô tình vào cạnh. Khả năng lọc mạnh hơn có thể khiến việc chạm vào cạnh có chủ ý trở nên khó khăn hơn.</string>
+    <string name="touch_controls_global_summary">Tùy chọn đáp ứng toàn cầu được ưu tiên. Cài đặt cho mỗi ứng dụng của bạn được lưu nhưng bị tạm dừng. Nhấn vào đây để quản lý tùy chọn chung.</string>
+    <string name="touch_controls_global_title">Ghi đè cảm ứng chung đang hoạt động</string>
+    <string name="touch_controls_help">Bắt đầu với mặc định thủ công. Chỉ bật điều chỉnh cho các ứng dụng cần nó.\n\nCác cài đặt trước và điều chỉnh thủ công là những lựa chọn thay thế, không phải là hiệu ứng cho ngăn xếp. Các cài đặt trước 1–3 là cấu hình chương trình cơ sở; chúng không phải là xếp hạng chất lượng.\n\nỞ chế độ thủ công, 0 khôi phục mặc định phần sụn. Cấp độ cao hơn sẽ thay đổi hành vi cảm ứng và có thể khiến cảm giác tệ hơn trong một số trò chơi. Điều chỉnh phản hồi hoặc độ nhạy trước; chỉ sử dụng mục tiêu và độ ổn định để tinh chỉnh tốt hơn.\n\nLọc cạnh là độc lập. Khả năng bảo vệ mạnh mẽ hơn cũng có thể từ chối những cú chạm có chủ ý gần mép màn hình.\n\nTùy chọn phản hồi toàn cầu được ưu tiên hơn so với việc điều chỉnh trên mỗi ứng dụng. Các điều khiển này không thay đổi tốc độ làm mới màn hình.</string>
+    <string name="touch_controls_help_title">Cách điều chỉnh cảm ứng hoạt động</string>
+    <string name="touch_controls_manual">Chế độ thủ công · bắt đầu với cài đặt chương trình cơ sở mặc định</string>
+    <string name="touch_controls_manual_group">Chế độ thủ công · điều chỉnh chính</string>
+    <string name="touch_controls_mode_group">Cài đặt chính</string>
+    <string name="touch_controls_mode_help">Một cài đặt trước thay thế phản hồi, độ nhạy, mục tiêu và độ ổn định khi nhấn cùng nhau. Cài đặt thủ công được lưu lại để sử dụng sau này. Bảo vệ cạnh hoạt động riêng biệt ở cả hai chế độ.</string>
+    <string name="touch_controls_mode_help_title">Chọn một phương pháp điều chỉnh</string>
+    <string name="touch_controls_mode_title">Chế độ điều chỉnh cảm ứng</string>
+    <string name="touch_controls_preset_one">Firmware cài sẵn 1</string>
+    <string name="touch_controls_preset_three">Firmware cài sẵn 3</string>
+    <string name="touch_controls_preset_two">Firmware cài sẵn 2</string>
+    <string name="touch_controls_reset_summary">Quay lại mặc định chương trình cơ sở thủ công và bảo vệ cạnh mặc định. Giữ nguyên nút bật của ứng dụng.</string>
+    <string name="touch_controls_reset_title">Đặt lại điều chỉnh của ứng dụng này</string>
+    <string name="touch_controls_response_summary">Điều chỉnh phản ứng của màn hình cảm ứng với các thao tác chạm. Giá trị 0 sẽ khôi phục cài đặt chương trình cơ sở mặc định. Thay đổi từng cài đặt một và thử nó trong trò chơi của bạn.</string>
+    <string name="touch_controls_screen_title">Điều khiển cảm ứng</string>
+    <string name="touch_controls_sensitivity_summary">Điều chỉnh độ nhạy cảm ứng. 0 khôi phục mặc định phần sụn; cấp độ cao hơn không tự động tốt hơn cho mọi trò chơi.</string>
+    <string name="touch_controls_stability_summary">Chỉ điều chỉnh độ ổn định của các lần chạm lặp lại trên màn hình cảm ứng nếu cần thiết. Giá trị 0 sẽ khôi phục cài đặt chương trình cơ sở mặc định.</string>
+    <string name="touch_controls_start_summary">Bật điều khiển cho ứng dụng này, sau đó chọn cài đặt sẵn hoặc điều chỉnh cài đặt riêng lẻ. Bạn không cần phải nâng mọi thanh trượt lên.</string>
+    <string name="touch_controls_start_title">Bắt đầu với mặc định</string>
+    <string name="touch_controls_unavailable_summary">Dịch vụ cảm ứng không cung cấp phạm vi kiểm soát hợp lệ. Mở lại trang này để thử lại.</string>
+    <string name="touch_controls_unavailable_title">Điều khiển cảm ứng không khả dụng</string>
+</resources>

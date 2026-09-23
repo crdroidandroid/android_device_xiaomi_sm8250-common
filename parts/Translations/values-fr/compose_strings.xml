@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Retour</string>
+    <string name="parts_search_apps">Rechercher des applications</string>
+    <string name="touch_controls_active_summary">Appliqué lorsque cette application est au premier plan. Quitter l\'application ou éteindre l\'écran rétablit le comportement tactile normal.</string>
+    <string name="touch_controls_active_title">Le réglage par application est activé</string>
+    <string name="touch_controls_advanced_group">Mode manuel · réglages fins</string>
+    <string name="touch_controls_aim_summary">Ajustez la sensibilité des gestes de visée uniquement si nécessaire. Une valeur de 0 restaure le paramètre par défaut du micrologiciel.</string>
+    <string name="touch_controls_edge_group">Indépendant · protection des bords</string>
+    <string name="touch_controls_edge_summary">0 désactive le filtrage des bords ; les niveaux 1 à 3 augmentent la protection contre les contacts accidentels sur les bords. Un filtrage plus fort peut rendre les touches de bord intentionnelles plus difficiles.</string>
+    <string name="touch_controls_global_summary">L’option réactivité globale est prioritaire. Vos paramètres par application sont enregistrés mais mis en pause. Appuyez ici pour gérer l\'option globale.</string>
+    <string name="touch_controls_global_title">Le remplacement tactile global est actif</string>
+    <string name="touch_controls_help">Commencez par les valeurs par défaut manuelles. Activez le réglage uniquement pour les applications qui en ont besoin.\n\nLes préréglages et les ajustements manuels sont des alternatives et non des effets à empiler. Les préréglages 1 à 3 sont des profils de micrologiciel ; ce ne sont pas des évaluations de qualité.\n\nEn mode manuel, 0 restaure les valeurs par défaut du firmware. Des niveaux plus élevés modifient le comportement tactile et peuvent être pires dans certains jeux. Ajustez d\'abord la réponse ou la sensibilité ; utilisez la visée et la stabilité uniquement pour un réglage plus précis.\n\nLe filtrage des bords est indépendant. Une protection plus forte peut également rejeter les contacts intentionnels près du bord de l\'écran.\n\nL’option de réactivité globale est prioritaire sur le réglage par application. Ces commandes ne modifient pas le taux de rafraîchissement de l’affichage.</string>
+    <string name="touch_controls_help_title">Comment fonctionne le réglage tactile</string>
+    <string name="touch_controls_manual">Manuel · valeurs par défaut du micrologiciel</string>
+    <string name="touch_controls_manual_group">Mode manuel · principaux réglages</string>
+    <string name="touch_controls_mode_group">Paramètre principal</string>
+    <string name="touch_controls_mode_help">Un préréglage remplace ensemble la réponse, la sensibilité, la visée et la stabilité du toucher. Les paramètres manuels restent enregistrés pour plus tard. La protection des bords fonctionne séparément dans les deux modes.</string>
+    <string name="touch_controls_mode_help_title">Choisissez une méthode de réglage</string>
+    <string name="touch_controls_mode_title">Mode de réglage tactile</string>
+    <string name="touch_controls_preset_one">Préréglage du micrologiciel 1</string>
+    <string name="touch_controls_preset_three">Préréglage du micrologiciel 3</string>
+    <string name="touch_controls_preset_two">Préréglage du micrologiciel 2</string>
+    <string name="touch_controls_reset_summary">Revenez aux valeurs par défaut manuelles du micrologiciel et à la protection des bords par défaut. Gardez le commutateur d’activation de l’application inchangé.</string>
+    <string name="touch_controls_reset_title">Réinitialiser les paramètres de cette application</string>
+    <string name="touch_controls_response_summary">Réglez la réponse aux pressions sur l’écran. 0 restaure la valeur par défaut du micrologiciel. Modifiez un paramètre à la fois et testez-le dans votre jeu.</string>
+    <string name="touch_controls_screen_title">Commandes tactiles</string>
+    <string name="touch_controls_sensitivity_summary">Ajustez la sensibilité tactile. 0 restaure la valeur par défaut du micrologiciel ; un niveau plus élevé n’est pas automatiquement meilleur pour chaque jeu.</string>
+    <string name="touch_controls_stability_summary">Ajustez la stabilité des pressions répétées sur l’écran uniquement si nécessaire. 0 restaure la valeur par défaut du micrologiciel.</string>
+    <string name="touch_controls_start_summary">Activez les commandes pour cette application, puis choisissez un préréglage ou ajustez les paramètres individuels. Vous n\'avez pas besoin de relever chaque curseur.</string>
+    <string name="touch_controls_start_title">Commencez par les valeurs par défaut</string>
+    <string name="touch_controls_unavailable_summary">Le service tactile n\'a pas fourni de plages de contrôle valides. Rouvrez cette page pour réessayer.</string>
+    <string name="touch_controls_unavailable_title">Les commandes tactiles ne sont pas disponibles</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">กลับ</string>
+    <string name="parts_search_apps">ค้นหาแอพ</string>
+    <string name="touch_controls_active_summary">ใช้ในขณะที่แอปนี้อยู่เบื้องหน้า การออกจากแอปหรือการปิดหน้าจอจะเป็นการคืนค่าพฤติกรรมการสัมผัสตามปกติ</string>
+    <string name="touch_controls_active_title">เปิดใช้งานการปรับแต่งต่อแอปแล้ว</string>
+    <string name="touch_controls_advanced_group">โหมดแมนนวล · การปรับแบบละเอียด</string>
+    <string name="touch_controls_aim_summary">ปรับความไวของท่าทางการเล็งเฉพาะเมื่อจำเป็นเท่านั้น ค่า 0 จะคืนค่าการตั้งค่าเฟิร์มแวร์เริ่มต้น</string>
+    <string name="touch_controls_edge_group">อิสระ · การป้องกันขอบ</string>
+    <string name="touch_controls_edge_summary">0 ปิดใช้งานการกรองขอบ ระดับ 1–3 เพิ่มการป้องกันการสัมผัสขอบโดยไม่ตั้งใจ การกรองที่แข็งแกร่งยิ่งขึ้นอาจทำให้การสัมผัสขอบโดยเจตนายากขึ้น</string>
+    <string name="touch_controls_global_summary">ตัวเลือกการตอบสนองทั่วโลกมีความสำคัญ การตั้งค่าต่อแอปของคุณจะถูกบันทึกแต่หยุดชั่วคราว แตะที่นี่เพื่อจัดการตัวเลือกส่วนกลาง</string>
+    <string name="touch_controls_global_title">การแทนที่การสัมผัสส่วนกลางเปิดใช้งานอยู่</string>
+    <string name="touch_controls_help">เริ่มต้นด้วยค่าเริ่มต้นด้วยตนเอง เปิดใช้งานการปรับแต่งเฉพาะแอพที่ต้องการเท่านั้น\n\nการตั้งค่าล่วงหน้าและการปรับด้วยตนเองเป็นทางเลือก ไม่ใช่เอฟเฟกต์ในการซ้อน ค่าที่ตั้งล่วงหน้า 1–3 คือโปรไฟล์เฟิร์มแวร์ ไม่ใช่การให้คะแนนคุณภาพ\n\nในโหมดแมนนวล 0 จะคืนค่าเริ่มต้นของเฟิร์มแวร์ ระดับที่สูงขึ้นจะเปลี่ยนพฤติกรรมการสัมผัสและอาจรู้สึกแย่ลงในบางเกม ปรับการตอบสนองหรือความไวก่อน ใช้จุดมุ่งหมายและความมั่นคงเพื่อการปรับแต่งที่ละเอียดยิ่งขึ้นเท่านั้น\n\nการกรองขอบมีความเป็นอิสระ การป้องกันที่แข็งแกร่งยิ่งขึ้นยังสามารถปฏิเสธการสัมผัสโดยเจตนาใกล้กับขอบหน้าจอได้\n\nตัวเลือกการตอบสนองทั่วโลกมีความสำคัญมากกว่าการปรับแต่งต่อแอป การควบคุมเหล่านี้จะไม่เปลี่ยนอัตราการรีเฟรชการแสดงผล</string>
+    <string name="touch_controls_help_title">การปรับแต่งแบบสัมผัสทำงานอย่างไร</string>
+    <string name="touch_controls_manual">โหมดแมนนวล · เริ่มต้นด้วยการตั้งค่าเฟิร์มแวร์เริ่มต้น</string>
+    <string name="touch_controls_manual_group">โหมดแมนนวล · การปรับเปลี่ยนหลัก</string>
+    <string name="touch_controls_mode_group">การตั้งค่าหลัก</string>
+    <string name="touch_controls_mode_help">ค่าที่ตั้งล่วงหน้าจะเข้ามาแทนที่การตอบสนอง ความไว การเล็ง และความเสถียรของการแตะพร้อมกัน การตั้งค่าด้วยตนเองจะถูกบันทึกไว้เพื่อใช้ในภายหลัง การป้องกันขอบทำงานแยกกันในแต่ละโหมด</string>
+    <string name="touch_controls_mode_help_title">เลือกวิธีการปรับแต่งหนึ่งวิธี</string>
+    <string name="touch_controls_mode_title">โหมดการปรับแบบสัมผัส</string>
+    <string name="touch_controls_preset_one">เฟิร์มแวร์ที่ตั้งไว้ล่วงหน้า 1</string>
+    <string name="touch_controls_preset_three">เฟิร์มแวร์ที่ตั้งไว้ล่วงหน้า 3</string>
+    <string name="touch_controls_preset_two">เฟิร์มแวร์ที่ตั้งไว้ล่วงหน้า 2</string>
+    <string name="touch_controls_reset_summary">กลับสู่ค่าเริ่มต้นของเฟิร์มแวร์แบบแมนนวลและการป้องกัน Edge เริ่มต้น คงสวิตช์เปิดใช้งานของแอปไว้ไม่เปลี่ยนแปลง</string>
+    <string name="touch_controls_reset_title">รีเซ็ตการปรับแต่งของแอปนี้</string>
+    <string name="touch_controls_response_summary">ปรับการตอบสนองของหน้าจอสัมผัสต่อการแตะ ค่า 0 จะคืนค่าการตั้งค่าเฟิร์มแวร์เริ่มต้น เปลี่ยนการตั้งค่าทีละรายการแล้วลองใช้งานในเกมของคุณ</string>
+    <string name="touch_controls_screen_title">ระบบควบคุมแบบสัมผัส</string>
+    <string name="touch_controls_sensitivity_summary">ปรับความไวในการสัมผัส 0 คืนค่าเริ่มต้นของเฟิร์มแวร์ ระดับที่สูงกว่าไม่ได้ดีกว่าโดยอัตโนมัติสำหรับทุกเกม</string>
+    <string name="touch_controls_stability_summary">ปรับความเสถียรของการแตะบนหน้าจอสัมผัสซ้ำๆ หากจำเป็นเท่านั้น ค่า 0 จะคืนค่าการตั้งค่าเฟิร์มแวร์เริ่มต้น</string>
+    <string name="touch_controls_start_summary">เปิดใช้งานการควบคุมสำหรับแอปนี้ จากนั้นเลือกการตั้งค่าล่วงหน้าหรือปรับแต่งการตั้งค่าแต่ละรายการ คุณไม่จำเป็นต้องยกแถบเลื่อนทุกอัน</string>
+    <string name="touch_controls_start_title">เริ่มต้นด้วยค่าเริ่มต้น</string>
+    <string name="touch_controls_unavailable_summary">บริการสัมผัสไม่ได้ให้ช่วงการควบคุมที่ถูกต้อง เปิดหน้านี้อีกครั้งเพื่อลองอีกครั้ง</string>
+    <string name="touch_controls_unavailable_title">ระบบควบคุมแบบสัมผัสไม่พร้อมใช้งาน</string>
+</resources>

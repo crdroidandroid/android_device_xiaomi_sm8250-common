@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">Настройки на устройството</string>
+    <string name="dirac_preset_blues">Блус</string>
+    <string name="dirac_preset_classical">Класика</string>
+    <string name="dirac_preset_country">Кънтри</string>
+    <string name="dirac_preset_dance">Танцувална</string>
+    <string name="dirac_preset_electronic">Електронна</string>
+    <string name="dirac_preset_jazz">Джаз</string>
+    <string name="dirac_preset_metal">Метъл</string>
+    <string name="dirac_preset_pop">Поп</string>
+    <string name="dirac_preset_rock">Рок</string>
+    <string name="dirac_headset_title">Тип слушалка</string>
+    <string name="dirac_preset_title">Настройка</string>
+</resources>

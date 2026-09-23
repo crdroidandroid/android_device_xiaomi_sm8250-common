@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">पछाडि</string>
+    <string name="parts_search_apps">एपहरू खोज्नुहोस्</string>
+    <string name="touch_controls_active_summary">यो एप अग्रभूमिमा हुँदा लागू गरियो। एप छोड्दा वा स्क्रिन बन्द गर्दा सामान्य टच व्यवहार पुनर्स्थापित हुन्छ।</string>
+    <string name="touch_controls_active_title">प्रति-एप ट्युनिङ सक्षम छ</string>
+    <string name="touch_controls_advanced_group">म्यानुअल मोड · राम्रो समायोजन</string>
+    <string name="touch_controls_aim_summary">यदि आवश्यक भएमा मात्र लक्ष्य इशाराहरूको संवेदनशीलता समायोजन गर्नुहोस्। ० को मानले पूर्वनिर्धारित फर्मवेयर सेटिङलाई पुनर्स्थापना गर्छ।</string>
+    <string name="touch_controls_edge_group">स्वतन्त्र · किनारा संरक्षण</string>
+    <string name="touch_controls_edge_summary">० किनारा फिल्टरिङ असक्षम पार्छ; स्तर १–३ ले आकस्मिक किनारा छुने विरुद्ध सुरक्षा बढाउँछ। बलियो फिल्टरिङले जानाजानी किनारालाई अझ कडा बनाउन सक्छ।</string>
+    <string name="touch_controls_global_summary">विश्वव्यापी उत्तरदायित्व विकल्प प्राथमिकता लिन्छ। तपाइँको प्रति-एप सेटिङहरू बचत गरिएका छन् तर रोकिएका छन्। विश्वव्यापी विकल्प व्यवस्थापन गर्न यहाँ ट्याप गर्नुहोस्।</string>
+    <string name="touch_controls_global_title">ग्लोबल टच ओभरराइड सक्रिय छ</string>
+    <string name="touch_controls_help">म्यानुअल पूर्वनिर्धारित संग सुरु गर्नुहोस्। आवश्यक पर्ने एपहरूको लागि मात्र ट्युनिङ सक्षम गर्नुहोस्।\n\nप्रिसेटहरू र म्यानुअल समायोजनहरू विकल्प हुन्, स्ट्याकमा प्रभावहरू होइनन्। प्रिसेटहरू 1-3 फर्मवेयर प्रोफाइलहरू हुन्; तिनीहरू गुणस्तर मूल्याङ्कन होइनन्।\n\nम्यानुअल मोडमा, 0 ले फर्मवेयर पूर्वनिर्धारित पुनर्स्थापना गर्दछ। उच्च स्तरहरूले स्पर्श व्यवहार परिवर्तन गर्दछ र केहि खेलहरूमा खराब महसुस गर्न सक्छ। प्रतिक्रिया वा संवेदनशीलता पहिले समायोजन गर्नुहोस्; फाइन ट्युनिङको लागि मात्र लक्ष्य र स्थिरता प्रयोग गर्नुहोस्।\n\nकिनारा फिल्टरिङ स्वतन्त्र छ। बलियो सुरक्षाले स्क्रिनको छेउमा जानबूझेर टचहरूलाई पनि अस्वीकार गर्न सक्छ।\n\nविश्वव्यापी प्रतिक्रिया विकल्पले प्रति-एप ट्युनिङ भन्दा प्राथमिकता लिन्छ। यी नियन्त्रणहरूले प्रदर्शन रिफ्रेस दर परिवर्तन गर्दैनन्।</string>
+    <string name="touch_controls_help_title">टच ट्युनिङले कसरी काम गर्छ</string>
+    <string name="touch_controls_manual">म्यानुअल मोड · पूर्वनिर्धारित फर्मवेयर सेटिङहरूसँग सुरु गर्नुहोस्</string>
+    <string name="touch_controls_manual_group">म्यानुअल मोड · मुख्य समायोजन</string>
+    <string name="touch_controls_mode_group">मुख्य सेटिङ</string>
+    <string name="touch_controls_mode_help">एक प्रिसेट प्रतिक्रिया, संवेदनशीलता, लक्ष्य र ट्याप स्थिरता सँगै प्रतिस्थापन गर्दछ। म्यानुअल सेटिङहरू पछिको लागि सुरक्षित रहन्छन्। किनारा सुरक्षा दुवै मोडमा अलग काम गर्दछ।</string>
+    <string name="touch_controls_mode_help_title">एउटा ट्युनिङ विधि छान्नुहोस्</string>
+    <string name="touch_controls_mode_title">समायोजन मोड छुनुहोस्</string>
+    <string name="touch_controls_preset_one">फर्मवेयर प्रिसेट १</string>
+    <string name="touch_controls_preset_three">फर्मवेयर प्रिसेट 3</string>
+    <string name="touch_controls_preset_two">फर्मवेयर प्रिसेट २</string>
+    <string name="touch_controls_reset_summary">म्यानुअल फर्मवेयर पूर्वनिर्धारित र पूर्वनिर्धारित किनारा सुरक्षामा फर्कनुहोस्। एपको सक्षम स्विच अपरिवर्तित राख्नुहोस्।</string>
+    <string name="touch_controls_reset_title">यो एपको ट्युनिङ रिसेट गर्नुहोस्</string>
+    <string name="touch_controls_response_summary">ट्यापहरूमा टचस्क्रिन प्रतिक्रिया समायोजन गर्नुहोस्। ० को मानले पूर्वनिर्धारित फर्मवेयर सेटिङलाई पुनर्स्थापना गर्छ। एक पटकमा एउटा सेटिङ परिवर्तन गर्नुहोस् र आफ्नो खेलमा प्रयास गर्नुहोस्।</string>
+    <string name="touch_controls_screen_title">टच नियन्त्रणहरू</string>
+    <string name="touch_controls_sensitivity_summary">स्पर्श संवेदनशीलता समायोजन गर्नुहोस्। 0 फर्मवेयर पूर्वनिर्धारित पुनर्स्थापना; प्रत्येक खेलको लागि उच्च स्तर स्वचालित रूपमा राम्रो हुँदैन।</string>
+    <string name="touch_controls_stability_summary">आवश्यक भएमा मात्र बारम्बार टचस्क्रिन ट्यापहरूको स्थिरता समायोजन गर्नुहोस्। ० को मानले पूर्वनिर्धारित फर्मवेयर सेटिङलाई पुनर्स्थापना गर्छ।</string>
+    <string name="touch_controls_start_summary">यस एपका लागि नियन्त्रणहरू सक्षम गर्नुहोस्, त्यसपछि प्रिसेट छनौट गर्नुहोस् वा व्यक्तिगत सेटिङहरू ट्युन गर्नुहोस्। तपाईंले प्रत्येक स्लाइडर उठाउनु पर्दैन।</string>
+    <string name="touch_controls_start_title">पूर्वनिर्धारित संग सुरु गर्नुहोस्</string>
+    <string name="touch_controls_unavailable_summary">टच सेवाले मान्य नियन्त्रण दायराहरू प्रदान गर्दैन। पुन: प्रयास गर्न यो पृष्ठ पुन: खोल्नुहोस्।</string>
+    <string name="touch_controls_unavailable_title">टच नियन्त्रणहरू उपलब्ध छैनन्</string>
+</resources>

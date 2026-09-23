@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Zurück</string>
+    <string name="parts_search_apps">Apps suchen</string>
+    <string name="touch_controls_active_summary">Wird angewendet, während diese App im Vordergrund ist. Durch Verlassen der App oder Ausschalten des Bildschirms wird das normale Berührungsverhalten wiederhergestellt.</string>
+    <string name="touch_controls_active_title">Die Optimierung pro App ist aktiviert</string>
+    <string name="touch_controls_advanced_group">Manueller Modus · Feineinstellungen</string>
+    <string name="touch_controls_aim_summary">Passen Sie die Empfindlichkeit der Zielgesten nur bei Bedarf an. Ein Wert von 0 stellt die Standard-Firmware-Einstellung wieder her.</string>
+    <string name="touch_controls_edge_group">Unabhängiger · Kantenschutz</string>
+    <string name="touch_controls_edge_summary">0 deaktiviert die Kantenfilterung; Die Stufen 1–3 erhöhen den Schutz vor versehentlichen Kantenberührungen. Eine stärkere Filterung kann absichtliche Kantenberührungen erschweren.</string>
+    <string name="touch_controls_global_summary">Die Option „Globale Reaktionsfähigkeit“ hat Vorrang. Ihre Einstellungen pro App werden gespeichert, aber angehalten. Tippen Sie hier, um die globale Option zu verwalten.</string>
+    <string name="touch_controls_global_title">Global Touch Override ist aktiv</string>
+    <string name="touch_controls_help">Beginnen Sie mit manuellen Standardeinstellungen. Aktivieren Sie die Optimierung nur für Apps, die sie benötigen.\n\nVoreinstellungen und manuelle Anpassungen sind Alternativen, keine zu stapelnden Effekte. Die Voreinstellungen 1–3 sind Firmware-Profile; es handelt sich nicht um Qualitätsbewertungen.\n\nIm manuellen Modus stellt 0 die Firmware-Standardeinstellung wieder her. Höhere Stufen verändern das Berührungsverhalten und fühlen sich in manchen Spielen möglicherweise schlechter an. Passen Sie zuerst die Reaktion oder Empfindlichkeit an; Verwenden Sie Zielgenauigkeit und Stabilität nur zur Feinabstimmung.\n\nDie Kantenfilterung ist unabhängig. Ein stärkerer Schutz kann auch absichtliche Berührungen in der Nähe des Bildschirmrandes abwehren.\n\nDie globale Reaktionsfähigkeitsoption hat Vorrang vor der Optimierung pro App. Diese Steuerelemente ändern nicht die Aktualisierungsrate der Anzeige.</string>
+    <string name="touch_controls_help_title">So funktioniert Touch-Tuning</string>
+    <string name="touch_controls_manual">Manuell · Firmware-Standardwerte</string>
+    <string name="touch_controls_manual_group">Manueller Modus · Haupteinstellungen</string>
+    <string name="touch_controls_mode_group">Haupteinstellung</string>
+    <string name="touch_controls_mode_help">Eine Voreinstellung ersetzt Reaktion, Empfindlichkeit, Ziel und Tippstabilität zusammen. Manuelle Einstellungen bleiben für später gespeichert. Der Kantenschutz funktioniert in beiden Modi separat.</string>
+    <string name="touch_controls_mode_help_title">Wählen Sie eine Tuning-Methode</string>
+    <string name="touch_controls_mode_title">Modus der Touch-Anpassung</string>
+    <string name="touch_controls_preset_one">Firmware-Voreinstellung 1</string>
+    <string name="touch_controls_preset_three">Firmware-Voreinstellung 3</string>
+    <string name="touch_controls_preset_two">Firmware-Voreinstellung 2</string>
+    <string name="touch_controls_reset_summary">Kehren Sie zu den manuellen Firmware-Standardeinstellungen und dem standardmäßigen Kantenschutz zurück. Lassen Sie den Aktivierungsschalter der App unverändert.</string>
+    <string name="touch_controls_reset_title">Setzen Sie die Optimierung dieser App zurück</string>
+    <string name="touch_controls_response_summary">Passen Sie die Reaktion des Touchscreens auf Berührungen an. Ein Wert von 0 stellt die Standard-Firmware-Einstellung wieder her. Ändern Sie jeweils eine Einstellung und probieren Sie sie in Ihrem Spiel aus.</string>
+    <string name="touch_controls_screen_title">Touch-Steuerung</string>
+    <string name="touch_controls_sensitivity_summary">Passen Sie die Berührungsempfindlichkeit an. 0 stellt die Firmware-Standardeinstellungen wieder her; Ein höheres Level ist nicht automatisch für jedes Spiel besser.</string>
+    <string name="touch_controls_stability_summary">Passen Sie die Stabilität wiederholter Berührungen des Touchscreens nur bei Bedarf an. Ein Wert von 0 stellt die Standard-Firmware-Einstellung wieder her.</string>
+    <string name="touch_controls_start_summary">Aktivieren Sie die Steuerelemente für diese App und wählen Sie dann eine Voreinstellung aus oder passen Sie einzelne Einstellungen an. Sie müssen nicht jeden Schieberegler anheben.</string>
+    <string name="touch_controls_start_title">Beginnen Sie mit den Standardeinstellungen</string>
+    <string name="touch_controls_unavailable_summary">Der Touch-Dienst hat keine gültigen Kontrollbereiche bereitgestellt. Öffnen Sie diese Seite erneut, um es erneut zu versuchen.</string>
+    <string name="touch_controls_unavailable_title">Touch-Steuerung ist nicht verfügbar</string>
+</resources>

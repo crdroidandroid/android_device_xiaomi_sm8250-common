@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">חזרה</string>
+    <string name="parts_search_apps">חיפוש אפליקציות</string>
+    <string name="touch_controls_active_summary">הוחל בזמן שהאפליקציה הזו נמצאת בחזית. עזיבת האפליקציה או כיבוי המסך משחזרת את התנהגות המגע הרגילה.</string>
+    <string name="touch_controls_active_title">כוונון לכל אפליקציה מופעל</string>
+    <string name="touch_controls_advanced_group">מצב ידני · התאמות עדינות</string>
+    <string name="touch_controls_aim_summary">התאם את הרגישות של מחוות הכוונה רק במידת הצורך. ערך 0 משחזר את הגדרת הקושחה המוגדרת כברירת מחדל.</string>
+    <string name="touch_controls_edge_group">עצמאי · הגנת קצה</string>
+    <string name="touch_controls_edge_summary">0 משבית את סינון הקצוות; רמות 1-3 מגבירות את ההגנה מפני נגיעות קצה מקריות. סינון חזק יותר יכול להקשות על נגיעות קצה מכוונות.</string>
+    <string name="touch_controls_global_summary">אפשרות ההיענות הגלובלית מקבלת עדיפות. ההגדרות שלך לכל אפליקציה נשמרות אך מושהות. הקש כאן כדי לנהל את האפשרות הגלובלית.</string>
+    <string name="touch_controls_global_title">עקיפה גלובלית של מגע פעילה</string>
+    <string name="touch_controls_help">התחל עם ברירות מחדל ידניות. אפשר כוונון רק עבור אפליקציות שזקוקות לכך.\n\nהגדרות קבועות מראש והתאמות ידניות הן חלופות, לא אפקטים לערימה. קביעות מוגדרות מראש 1-3 הן פרופילי קושחה; הם לא דירוגי איכות.\n\nבמצב ידני, 0 משחזר את ברירת המחדל של הקושחה. רמות גבוהות יותר משנות את התנהגות המגע ועשויות להרגיש גרוע יותר במשחקים מסוימים. התאם את התגובה או הרגישות תחילה; השתמש במטרה וביציבות רק לכוונון עדין יותר.\n\nסינון הקצה הוא עצמאי. הגנה חזקה יותר יכולה גם לדחות נגיעות מכוונות ליד קצה המסך.\n\nאפשרות התגובה הגלובלית מקבלת עדיפות על פני כוונון לכל אפליקציה. פקדים אלה אינם משנים את קצב הרענון של התצוגה.</string>
+    <string name="touch_controls_help_title">איך עובד כוונון מגע</string>
+    <string name="touch_controls_manual">מצב ידני · התחל עם הגדרות הקושחה המוגדרות כברירת מחדל</string>
+    <string name="touch_controls_manual_group">מצב ידני · התאמות עיקריות</string>
+    <string name="touch_controls_mode_group">הגדרה ראשית</string>
+    <string name="touch_controls_mode_help">הגדרה מראש מחליפה את התגובה, הרגישות, הכוונה והיציבות יחד. הגדרות ידניות נשארות נשמרות למועד מאוחר יותר. הגנת קצה פועלת בנפרד בכל אחד מהמצבים.</string>
+    <string name="touch_controls_mode_help_title">בחר שיטת כוונון אחת</string>
+    <string name="touch_controls_mode_title">מצב כוונון מגע</string>
+    <string name="touch_controls_preset_one">קביעת קושחה מראש 1</string>
+    <string name="touch_controls_preset_three">קביעת קושחה מראש 3</string>
+    <string name="touch_controls_preset_two">קביעת קושחה מראש 2</string>
+    <string name="touch_controls_reset_summary">חזור לברירות המחדל של קושחה ידניות ולהגנה על קצה ברירת המחדל. השאר את מתג ההפעלה של האפליקציה ללא שינוי.</string>
+    <string name="touch_controls_reset_title">אפס את הכוונון של האפליקציה הזו</string>
+    <string name="touch_controls_response_summary">התאם את תגובת מסך המגע להקשות. ערך 0 משחזר את הגדרת הקושחה המוגדרת כברירת מחדל. שנה הגדרה אחת בכל פעם ונסה אותה במשחק שלך.</string>
+    <string name="touch_controls_screen_title">פקדי מגע</string>
+    <string name="touch_controls_sensitivity_summary">התאם את רגישות המגע. 0 משחזר את ברירת המחדל של הקושחה; רמה גבוהה יותר אינה אוטומטית טובה יותר עבור כל משחק.</string>
+    <string name="touch_controls_stability_summary">התאם את היציבות של הקשות חוזרות ונשנות על מסך המגע רק במידת הצורך. ערך 0 משחזר את הגדרת הקושחה המוגדרת כברירת מחדל.</string>
+    <string name="touch_controls_start_summary">הפעל פקדים עבור אפליקציה זו, ולאחר מכן בחר הגדרה מראש או כוונן הגדרות בודדות. אתה לא צריך להרים כל מחוון.</string>
+    <string name="touch_controls_start_title">התחל עם ברירות המחדל</string>
+    <string name="touch_controls_unavailable_summary">שירות המגע לא סיפק טווחי בקרה חוקיים. פתח מחדש את הדף הזה כדי לנסות שוב.</string>
+    <string name="touch_controls_unavailable_title">פקדי המגע אינם זמינים</string>
+</resources>

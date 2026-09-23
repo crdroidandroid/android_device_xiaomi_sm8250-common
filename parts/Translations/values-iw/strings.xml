@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">הגדרות המכשיר</string>
+    <string name="dirac_preset_blues">בלוז</string>
+    <string name="dirac_preset_classical">קלאסית</string>
+    <string name="dirac_preset_country">קאנטרי</string>
+    <string name="dirac_preset_dance">דאנס</string>
+    <string name="dirac_preset_electronic">אלקטרונית</string>
+    <string name="dirac_preset_jazz">"ג'אז"</string>
+    <string name="dirac_preset_metal">מטאל</string>
+    <string name="dirac_preset_pop">פופ</string>
+    <string name="dirac_preset_rock">רוק</string>
+    <string name="dirac_headset_title">סוג אוזניות</string>
+    <string name="dirac_preset_title">קבוע מראש</string>
+</resources>

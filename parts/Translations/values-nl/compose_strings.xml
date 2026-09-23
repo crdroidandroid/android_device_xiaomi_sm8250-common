@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Terug</string>
+    <string name="parts_search_apps">Zoek apps</string>
+    <string name="touch_controls_active_summary">Toegepast terwijl deze app op de voorgrond staat. Als u de app verlaat of het scherm uitschakelt, wordt het normale aanraakgedrag hersteld.</string>
+    <string name="touch_controls_active_title">Afstemming per app is ingeschakeld</string>
+    <string name="touch_controls_advanced_group">Handmatige modus · fijnafstelling</string>
+    <string name="touch_controls_aim_summary">Pas de gevoeligheid van richtgebaren alleen aan als dat nodig is. Een waarde van 0 herstelt de standaardfirmware-instelling.</string>
+    <string name="touch_controls_edge_group">Onafhankelijke · randbescherming</string>
+    <string name="touch_controls_edge_summary">0 schakelt randfiltering uit; niveaus 1–3 verhogen de bescherming tegen onbedoelde aanrakingen van de randen. Sterkere filtering kan opzettelijke randaanrakingen moeilijker maken.</string>
+    <string name="touch_controls_global_summary">De optie voor mondiaal reactievermogen heeft prioriteit. Uw instellingen per app worden opgeslagen maar onderbroken. Tik hier om de globale optie te beheren.</string>
+    <string name="touch_controls_global_title">Global Touch Override is actief</string>
+    <string name="touch_controls_help">Begin met handmatige standaardinstellingen. Schakel afstemming alleen in voor apps die dit nodig hebben.\n\nVoorinstellingen en handmatige aanpassingen zijn alternatieven, geen effecten om te stapelen. Voorinstellingen 1–3 zijn firmwareprofielen; het zijn geen kwaliteitsbeoordelingen.\n\nIn de handmatige modus herstelt 0 de standaardfirmware. Hogere niveaus veranderen het aanraakgedrag en kunnen in sommige games slechter aanvoelen. Pas eerst de respons of gevoeligheid aan; gebruik doel en stabiliteit alleen voor een fijnere afstemming.\n\nRandfiltering is onafhankelijk. Een sterkere bescherming kan ook opzettelijke aanrakingen nabij de schermrand afwijzen.\n\nDe optie voor globale responsiviteit heeft voorrang op afstemming per app. Deze bedieningselementen veranderen de vernieuwingsfrequentie van het beeldscherm niet.</string>
+    <string name="touch_controls_help_title">Hoe aanraakafstemming werkt</string>
+    <string name="touch_controls_manual">Handmatige modus · begin met de standaardfirmware-instellingen</string>
+    <string name="touch_controls_manual_group">Handmatige modus · belangrijkste aanpassingen</string>
+    <string name="touch_controls_mode_group">Hoofdinstelling</string>
+    <string name="touch_controls_mode_help">Een preset vervangt respons, gevoeligheid, richt- en tikstabiliteit samen. Handmatige instellingen blijven bewaard voor later. Randbeveiliging werkt in beide modi afzonderlijk.</string>
+    <string name="touch_controls_mode_help_title">Kies één afstemmingsmethode</string>
+    <string name="touch_controls_mode_title">Aanraakaanpassingsmodus</string>
+    <string name="touch_controls_preset_one">Firmware-voorinstelling 1</string>
+    <string name="touch_controls_preset_three">Firmware-voorinstelling 3</string>
+    <string name="touch_controls_preset_two">Firmware-voorinstelling 2</string>
+    <string name="touch_controls_reset_summary">Keer terug naar handmatige firmware-standaardinstellingen en de standaard randbescherming. Laat de inschakelschakelaar van de app ongewijzigd.</string>
+    <string name="touch_controls_reset_title">Reset de afstemming van deze app</string>
+    <string name="touch_controls_response_summary">Pas de reactie van het touchscreen op tikken aan. Een waarde van 0 herstelt de standaardfirmware-instelling. Verander één instelling tegelijk en probeer het in je game.</string>
+    <string name="touch_controls_screen_title">Aanraakbediening</string>
+    <string name="touch_controls_sensitivity_summary">Aanraakgevoeligheid aanpassen. 0 herstelt de standaardfirmware; een hoger niveau is niet automatisch beter voor elk spel.</string>
+    <string name="touch_controls_stability_summary">Pas de stabiliteit van herhaalde aanrakingen op het touchscreen alleen aan als dat nodig is. Een waarde van 0 herstelt de standaardfirmware-instelling.</string>
+    <string name="touch_controls_start_summary">Schakel bedieningselementen voor deze app in en kies vervolgens een voorinstelling of stem individuele instellingen af. U hoeft niet elke schuifregelaar omhoog te brengen.</string>
+    <string name="touch_controls_start_title">Begin met de standaardinstellingen</string>
+    <string name="touch_controls_unavailable_summary">De aanraakservice bood geen geldige controlebereiken. Open deze pagina opnieuw om het opnieuw te proberen.</string>
+    <string name="touch_controls_unavailable_title">Aanraakbedieningen zijn niet beschikbaar</string>
+</resources>

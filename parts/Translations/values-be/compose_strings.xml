@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Назад</string>
+    <string name="parts_search_apps">Пошук прыкладанняў</string>
+    <string name="touch_controls_active_summary">Ужываецца, калі гэта дадатак працуе на пярэднім плане. Выхад з праграмы або выключэнне экрана аднаўляюць нармальныя паводзіны дотыку.</string>
+    <string name="touch_controls_active_title">Уключана налада для кожнай праграмы</string>
+    <string name="touch_controls_advanced_group">Ручной рэжым · тонкія налады</string>
+    <string name="touch_controls_aim_summary">Рэгулюйце адчувальнасць жэстаў прыцэльвання толькі ў выпадку неабходнасці. Значэнне 0 аднаўляе налады прашыўкі па змаўчанні.</string>
+    <string name="touch_controls_edge_group">Незалежная · абарона краю</string>
+    <string name="touch_controls_edge_summary">0 адключае краявую фільтрацыю; ўзроўні 1–3 павялічваюць абарону ад выпадковых дакрананняў да краю. Мацнейшая фільтрацыя можа зрабіць наўмыснае крананне цяжэйшым.</string>
+    <string name="touch_controls_global_summary">Параметр глабальнай хуткасці рэагавання мае прыярытэт. Вашы налады для кожнай праграмы захоўваюцца, але прыпыненыя. Націсніце тут, каб кіраваць глабальнай опцыяй.</string>
+    <string name="touch_controls_global_title">Глабальнае перавызначэнне дотыку актыўна</string>
+    <string name="touch_controls_help">Пачніце з ручных налад па змаўчанні. Уключыце настройку толькі для праграм, якім яна патрэбна.\n\nПапярэднія ўстаноўкі і ручныя карэкціроўкі - гэта альтэрнатыва, а не эфекты для набору. Папярэднія ўстаноўкі 1–3 - гэта профілі прашыўкі; яны не з\'яўляюцца рэйтынгамі якасці.\n\nУ ручным рэжыме 0 аднаўляе прашыўку па змаўчанні. Больш высокія ўзроўні змяняюць паводзіны дотыку і могуць адчуваць сябе горш у некаторых гульнях. Спачатку адрэгулюйце адказ або адчувальнасць; выкарыстоўвайце прыцэл і стабільнасць толькі для больш тонкай налады.\n\nКраёвая фільтрацыя незалежная. Мацнейшая абарона можа таксама адхіляць наўмысныя дакрананні каля краю экрана.\n\nПараметр глабальнай хуткасці рэагавання мае прыярытэт перад наладай для кожнай праграмы. Гэтыя элементы кіравання не змяняюць частату абнаўлення дысплея.</string>
+    <string name="touch_controls_help_title">Як працуе сэнсарная настройка</string>
+    <string name="touch_controls_manual">Ручны рэжым · пачніце з налад прашыўкі па змаўчанні</string>
+    <string name="touch_controls_manual_group">Ручной рэжым · асноўныя налады</string>
+    <string name="touch_controls_mode_group">Асноўная налада</string>
+    <string name="touch_controls_mode_help">Прадустаноўка замяняе рэакцыю, адчувальнасць, прыцэльванне і стабільнасць націскання разам. Ручныя налады захоўваюцца на потым. Абарона краёў працуе асобна ў любым рэжыме.</string>
+    <string name="touch_controls_mode_help_title">Выберыце адзін спосаб налады</string>
+    <string name="touch_controls_mode_title">Сэнсарны рэжым рэгулявання</string>
+    <string name="touch_controls_preset_one">Прашыўка 1</string>
+    <string name="touch_controls_preset_three">Прашыўка 3</string>
+    <string name="touch_controls_preset_two">Прашыўка 2</string>
+    <string name="touch_controls_reset_summary">Вярнуцца да налад ручной прашыўкі і абароны краёў па змаўчанні. Пакіньце перамыкач уключэння праграмы нязменным.</string>
+    <string name="touch_controls_reset_title">Скінуць налады гэтага прыкладання</string>
+    <string name="touch_controls_response_summary">Адрэгулюйце рэакцыю сэнсарнага экрана на націскі. Значэнне 0 аднаўляе налады прашыўкі па змаўчанні. Змяняйце адну наладу за раз і паспрабуйце гэта ў сваёй гульні.</string>
+    <string name="touch_controls_screen_title">Сэнсарнае кіраванне</string>
+    <string name="touch_controls_sensitivity_summary">Адрэгулюйце адчувальнасць да дотыку. 0 аднаўляе прашыўку па змаўчанні; больш высокі ўзровень не азначае аўтаматычна лепшы для кожнай гульні.</string>
+    <string name="touch_controls_stability_summary">Адрэгулюйце стабільнасць паўторных націсканняў на сэнсарны экран толькі ў выпадку неабходнасці. Значэнне 0 аднаўляе налады прашыўкі па змаўчанні.</string>
+    <string name="touch_controls_start_summary">Уключыце элементы кіравання для гэтай праграмы, а затым выберыце прадусталяваныя або наладзьце індывідуальныя налады. Вам не трэба падымаць кожны паўзунок.</string>
+    <string name="touch_controls_start_title">Пачніце з налад па змаўчанні</string>
+    <string name="touch_controls_unavailable_summary">Сэнсарны сэрвіс не забяспечыў сапраўдныя дыяпазоны кіравання. Каб паўтарыць спробу, адкрыйце гэту старонку.</string>
+    <string name="touch_controls_unavailable_title">Сэнсарныя элементы кіравання недаступныя</string>
+</resources>

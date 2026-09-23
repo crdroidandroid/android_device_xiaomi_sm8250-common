@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">การตั้งค่าอุปกรณ์</string>
+    <string name="dirac_preset_blues">บลูส์</string>
+    <string name="dirac_preset_classical">คลาสสิค</string>
+    <string name="dirac_preset_country">คันทรี่</string>
+    <string name="dirac_preset_dance">แด๊นซ์</string>
+    <string name="dirac_preset_electronic">อิเล็กทรอนิกส์</string>
+    <string name="dirac_preset_jazz">แจ๊ส</string>
+    <string name="dirac_preset_metal">เมทัล</string>
+    <string name="dirac_preset_pop">ป๊อป</string>
+    <string name="dirac_preset_rock">ร็อค</string>
+    <string name="dirac_headset_title">ประเภทชุดหูฟัง</string>
+    <string name="dirac_preset_title">ค่าที่ตั้งไว้</string>
+</resources>

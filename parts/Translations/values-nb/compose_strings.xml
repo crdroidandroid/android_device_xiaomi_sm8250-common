@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Tilbake</string>
+    <string name="parts_search_apps">Søk etter apper</string>
+    <string name="touch_controls_active_summary">Brukes mens denne appen er i forgrunnen. Å forlate appen eller slå av skjermen gjenoppretter normal berøringsadferd.</string>
+    <string name="touch_controls_active_title">Innstilling per app er aktivert</string>
+    <string name="touch_controls_advanced_group">Manuell modus · finjusteringer</string>
+    <string name="touch_controls_aim_summary">Juster følsomheten til siktebevegelser bare hvis nødvendig. En verdi på 0 gjenoppretter standard fastvareinnstilling.</string>
+    <string name="touch_controls_edge_group">Uavhengig · kantbeskyttelse</string>
+    <string name="touch_controls_edge_summary">0 deaktiverer kantfiltrering; nivå 1–3 øker beskyttelsen mot utilsiktet kantberøring. Sterkere filtrering kan gjøre tilsiktede kantberøringer vanskeligere.</string>
+    <string name="touch_controls_global_summary">Alternativet for global respons har prioritet. Innstillingene dine per app er lagret, men satt på pause. Trykk her for å administrere det globale alternativet.</string>
+    <string name="touch_controls_global_title">Global berøringsoverstyring er aktiv</string>
+    <string name="touch_controls_help">Start med manuelle standardinnstillinger. Aktiver innstilling bare for apper som trenger det.\n\nForhåndsinnstillinger og manuelle justeringer er alternativer, ikke effekter å stable. Forhåndsinnstillinger 1–3 er fastvareprofiler; de er ikke kvalitetsvurderinger.\n\nI manuell modus gjenoppretter 0 fastvarestandarden. Høyere nivåer endrer berøringsatferden og kan føles verre i enkelte spill. Juster respons eller følsomhet først; bruk mål og stabilitet kun for finjustering.\n\nKantfiltrering er uavhengig. Sterkere beskyttelse kan også avvise tilsiktede berøringer nær skjermkanten.\n\nAlternativet for global respons prioriteres fremfor tuning per app. Disse kontrollene endrer ikke skjermens oppdateringsfrekvens.</string>
+    <string name="touch_controls_help_title">Hvordan touch tuning fungerer</string>
+    <string name="touch_controls_manual">Manuell modus · start med standard fastvareinnstillinger</string>
+    <string name="touch_controls_manual_group">Manuell modus · hovedjusteringer</string>
+    <string name="touch_controls_mode_group">Hovedinnstilling</string>
+    <string name="touch_controls_mode_help">En forhåndsinnstilling erstatter respons, følsomhet, sikte- og trykkstabilitet sammen. Manuelle innstillinger lagres til senere. Kantbeskyttelse fungerer separat i begge modusene.</string>
+    <string name="touch_controls_mode_help_title">Velg én innstillingsmetode</string>
+    <string name="touch_controls_mode_title">Berøringsjusteringsmodus</string>
+    <string name="touch_controls_preset_one">Fastvareforhåndsinnstilling 1</string>
+    <string name="touch_controls_preset_three">Fastvareforhåndsinnstilling 3</string>
+    <string name="touch_controls_preset_two">Fastvareforhåndsinnstilling 2</string>
+    <string name="touch_controls_reset_summary">Gå tilbake til manuelle fastvarestandarder og standard kantbeskyttelse. Hold appens aktiveringsbryter uendret.</string>
+    <string name="touch_controls_reset_title">Tilbakestill denne appens innstilling</string>
+    <string name="touch_controls_response_summary">Juster berøringsskjermresponsen på trykk. En verdi på 0 gjenoppretter standard fastvareinnstilling. Endre en innstilling om gangen og prøv den i spillet ditt.</string>
+    <string name="touch_controls_screen_title">Berøringskontroller</string>
+    <string name="touch_controls_sensitivity_summary">Juster berøringsfølsomheten. 0 gjenoppretter fastvarestandarden; et høyere nivå er ikke automatisk bedre for hvert spill.</string>
+    <string name="touch_controls_stability_summary">Juster stabiliteten til gjentatte trykk på berøringsskjermen bare hvis det er nødvendig. En verdi på 0 gjenoppretter standard fastvareinnstilling.</string>
+    <string name="touch_controls_start_summary">Aktiver kontroller for denne appen, og velg deretter en forhåndsinnstilling eller juster individuelle innstillinger. Du trenger ikke å heve hver glidebryter.</string>
+    <string name="touch_controls_start_title">Start med standardinnstillingene</string>
+    <string name="touch_controls_unavailable_summary">Berøringstjenesten ga ikke gyldige kontrollområder. Åpne denne siden på nytt for å prøve på nytt.</string>
+    <string name="touch_controls_unavailable_title">Berøringskontroller er utilgjengelige</string>
+</resources>

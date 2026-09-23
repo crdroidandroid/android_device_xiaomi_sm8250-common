@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Vissza</string>
+    <string name="parts_search_apps">Alkalmazások keresése</string>
+    <string name="touch_controls_active_summary">Akkor alkalmazzák, amikor ez az alkalmazás az előtérben van. Az alkalmazás elhagyása vagy a képernyő kikapcsolása visszaállítja a normál érintési viselkedést.</string>
+    <string name="touch_controls_active_title">Az alkalmazásonkénti hangolás engedélyezve van</string>
+    <string name="touch_controls_advanced_group">Kézi üzemmód · finombeállítások</string>
+    <string name="touch_controls_aim_summary">Csak szükség esetén állítsa be a célzási gesztusok érzékenységét. A 0 érték visszaállítja az alapértelmezett firmware-beállítást.</string>
+    <string name="touch_controls_edge_group">Független · élvédelem</string>
+    <string name="touch_controls_edge_summary">0 letiltja az élszűrést; Az 1–3. szint növeli a védelmet a véletlen élérintések ellen. Az erősebb szűrés megnehezítheti a szándékos élérintéseket.</string>
+    <string name="touch_controls_global_summary">A globális reagálási lehetőség elsőbbséget élvez. Az alkalmazásonkénti beállítások mentésre kerülnek, de szünetelnek. Koppintson ide a globális beállítás kezeléséhez.</string>
+    <string name="touch_controls_global_title">A globális érintésfelülírás aktív</string>
+    <string name="touch_controls_help">Kezdje a kézi alapértelmezésekkel. Csak azoknál az alkalmazásoknál engedélyezze a hangolást, amelyeknek szüksége van rá.\n\nAz előre beállított értékek és a kézi beállítások alternatívák, nem egymásra rakható effektusok. Az 1–3. előbeállítások firmware-profilok; ezek nem minőségi minősítések.\n\nKézi módban a 0 visszaállítja a firmware alapértelmezett értékét. A magasabb szintek megváltoztatják az érintési viselkedést, és egyes játékokban rosszabbul érezhetik magukat. Először állítsa be a választ vagy az érzékenységet; csak finomabb hangoláshoz használja a célzást és a stabilitást.\n\nAz élszűrés független. Az erősebb védelem a képernyő széléhez közeli szándékos érintéseket is visszautasítja.\n\nA globális reagálási lehetőség elsőbbséget élvez az alkalmazásonkénti hangolással szemben. Ezek a vezérlők nem változtatják meg a képernyő frissítési gyakoriságát.</string>
+    <string name="touch_controls_help_title">Hogyan működik az érintéses hangolás</string>
+    <string name="touch_controls_manual">Kézi mód · Kezdje az alapértelmezett firmware-beállításokkal</string>
+    <string name="touch_controls_manual_group">Kézi üzemmód · fő beállítások</string>
+    <string name="touch_controls_mode_group">Fő beállítás</string>
+    <string name="touch_controls_mode_help">Egy előre beállított beállítás helyettesíti a reakciót, az érzékenységet, a célzást és a koppintás stabilitását. A kézi beállítások későbbre mentve maradnak. Az élvédelem mindkét módban külön működik.</string>
+    <string name="touch_controls_mode_help_title">Válasszon egy hangolási módot</string>
+    <string name="touch_controls_mode_title">Érintés beállítási mód</string>
+    <string name="touch_controls_preset_one">Firmware előre beállított 1</string>
+    <string name="touch_controls_preset_three">Firmware előre beállított 3</string>
+    <string name="touch_controls_preset_two">Firmware előre beállított 2</string>
+    <string name="touch_controls_reset_summary">Térjen vissza a kézi firmware-alapbeállításokhoz és az alapértelmezett élvédelemhez. Tartsa változatlanul az alkalmazás engedélyezési kapcsolóját.</string>
+    <string name="touch_controls_reset_title">Állítsa vissza az alkalmazás hangolását</string>
+    <string name="touch_controls_response_summary">Állítsa be az érintőképernyő reakcióját az érintésre. A 0 érték visszaállítja az alapértelmezett firmware-beállítást. Egyszerre módosíts egy beállítást, és próbáld ki a játékban.</string>
+    <string name="touch_controls_screen_title">Érintő vezérlők</string>
+    <string name="touch_controls_sensitivity_summary">Állítsa be az érintésérzékenységet. 0 visszaállítja a firmware alapértelmezett értékét; a magasabb szint nem automatikusan jobb minden játéknál.</string>
+    <string name="touch_controls_stability_summary">Csak szükség esetén állítsa be az érintőképernyő ismételt érintésének stabilitását. A 0 érték visszaállítja az alapértelmezett firmware-beállítást.</string>
+    <string name="touch_controls_start_summary">Engedélyezze a vezérlőket ehhez az alkalmazáshoz, majd válasszon egy előre beállított értéket, vagy hangolja be az egyéni beállításokat. Nem kell minden csúszkát felemelnie.</string>
+    <string name="touch_controls_start_title">Kezdje az alapértelmezettekkel</string>
+    <string name="touch_controls_unavailable_summary">Az érintési szolgáltatás nem biztosított érvényes vezérlési tartományokat. Nyissa meg újra ezt az oldalt az újrapróbálkozáshoz.</string>
+    <string name="touch_controls_unavailable_title">Az érintésvezérlés nem elérhető</string>
+</resources>

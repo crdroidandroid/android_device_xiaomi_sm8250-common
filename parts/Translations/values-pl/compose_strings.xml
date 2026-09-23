@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Powrót</string>
+    <string name="parts_search_apps">Wyszukaj aplikacje</string>
+    <string name="touch_controls_active_summary">Stosowane, gdy ta aplikacja jest na pierwszym planie. Opuszczenie aplikacji lub wyłączenie ekranu przywraca normalne zachowanie podczas dotyku.</string>
+    <string name="touch_controls_active_title">Dostrajanie dla poszczególnych aplikacji jest włączone</string>
+    <string name="touch_controls_advanced_group">Tryb ręczny · precyzyjna regulacja</string>
+    <string name="touch_controls_aim_summary">Dostosuj czułość gestów celowania tylko w razie potrzeby. Wartość 0 przywraca domyślne ustawienie oprogramowania sprzętowego.</string>
+    <string name="touch_controls_edge_group">Niezależne · zabezpieczenie krawędzi</string>
+    <string name="touch_controls_edge_summary">0 wyłącza filtrowanie krawędzi; poziomy 1–3 zwiększają ochronę przed przypadkowym dotknięciem krawędzi. Silniejsze filtrowanie może utrudnić celowe dotknięcie krawędzi.</string>
+    <string name="touch_controls_global_summary">Opcja globalnej reakcji ma pierwszeństwo. Ustawienia poszczególnych aplikacji zostały zapisane, ale wstrzymane. Kliknij tutaj, aby zarządzać opcją globalną.</string>
+    <string name="touch_controls_global_title">Globalne sterowanie dotykiem jest aktywne</string>
+    <string name="touch_controls_help">Zacznij od ręcznych ustawień domyślnych. Włącz dostrajanie tylko dla aplikacji, które tego potrzebują.\n\nPresety i ręczne korekty to alternatywy, a nie efekty, które można łączyć. Ustawienia wstępne 1–3 to profile oprogramowania sprzętowego; nie są to oceny jakości.\n\nW trybie ręcznym wartość 0 przywraca domyślne ustawienie oprogramowania sprzętowego. Wyższe poziomy zmieniają zachowanie podczas dotyku i mogą powodować gorsze wrażenia w niektórych grach. Najpierw dostosuj reakcję lub czułość; używaj celowania i stabilności tylko w celu dokładniejszego dostrojenia.\n\nFiltrowanie krawędzi jest niezależne. Silniejsza ochrona może również odrzucić celowe dotknięcia w pobliżu krawędzi ekranu.\n\nOpcja globalnego reagowania ma pierwszeństwo przed dostrajaniem poszczególnych aplikacji. Te elementy sterujące nie zmieniają częstotliwości odświeżania wyświetlacza.</string>
+    <string name="touch_controls_help_title">Jak działa strojenie dotykowe</string>
+    <string name="touch_controls_manual">Tryb ręczny · rozpocznij od domyślnych ustawień oprogramowania sprzętowego</string>
+    <string name="touch_controls_manual_group">Tryb ręczny · główne regulacje</string>
+    <string name="touch_controls_mode_group">Główne ustawienie</string>
+    <string name="touch_controls_mode_help">Ustawienie wstępne zastępuje razem reakcję, czułość, celowanie i stabilność dotknięcia. Ustawienia ręczne pozostają zapisane na później. Ochrona krawędzi działa oddzielnie w każdym trybie.</string>
+    <string name="touch_controls_mode_help_title">Wybierz jedną metodę strojenia</string>
+    <string name="touch_controls_mode_title">Tryb regulacji dotykowej</string>
+    <string name="touch_controls_preset_one">Wstępne oprogramowanie sprzętowe 1</string>
+    <string name="touch_controls_preset_three">Wstępne oprogramowanie sprzętowe 3</string>
+    <string name="touch_controls_preset_two">Wstępne oprogramowanie sprzętowe 2</string>
+    <string name="touch_controls_reset_summary">Wróć do ręcznych domyślnych ustawień oprogramowania sprzętowego i domyślnej ochrony krawędzi. Pozostaw przełącznik włączania aplikacji bez zmian.</string>
+    <string name="touch_controls_reset_title">Zresetuj strojenie tej aplikacji</string>
+    <string name="touch_controls_response_summary">Dostosuj reakcję ekranu dotykowego na dotknięcia. Wartość 0 przywraca domyślne ustawienie oprogramowania sprzętowego. Zmieniaj jedno ustawienie na raz i wypróbuj je w swojej grze.</string>
+    <string name="touch_controls_screen_title">Sterowanie dotykowe</string>
+    <string name="touch_controls_sensitivity_summary">Dostosuj czułość dotyku. 0 przywraca domyślne ustawienia oprogramowania; wyższy poziom nie jest automatycznie lepszy w każdej grze.</string>
+    <string name="touch_controls_stability_summary">Dostosuj stabilność powtarzających się dotknięć ekranu dotykowego tylko w razie potrzeby. Wartość 0 przywraca domyślne ustawienie oprogramowania sprzętowego.</string>
+    <string name="touch_controls_start_summary">Włącz sterowanie dla tej aplikacji, a następnie wybierz ustawienie wstępne lub dostosuj poszczególne ustawienia. Nie musisz podnosić każdego suwaka.</string>
+    <string name="touch_controls_start_title">Zacznij od ustawień domyślnych</string>
+    <string name="touch_controls_unavailable_summary">Usługa dotykowa nie zapewniła prawidłowych zakresów kontrolnych. Otwórz ponownie tę stronę, aby spróbować jeszcze raz.</string>
+    <string name="touch_controls_unavailable_title">Sterowanie dotykowe jest niedostępne</string>
+</resources>

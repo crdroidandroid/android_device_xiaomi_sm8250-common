@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Назад</string>
+    <string name="parts_search_apps">Претражите апликације</string>
+    <string name="touch_controls_active_summary">Примењено док је ова апликација у првом плану. Ако напустите апликацију или искључите екран, враћа се нормално понашање додира.</string>
+    <string name="touch_controls_active_title">Подешавање по апликацији је омогућено</string>
+    <string name="touch_controls_advanced_group">Ручни режим · фина подешавања</string>
+    <string name="touch_controls_aim_summary">Подесите осетљивост покрета циљања само ако је потребно. Вредност 0 враћа подразумевану поставку фирмвера.</string>
+    <string name="touch_controls_edge_group">Независна · заштита ивица</string>
+    <string name="touch_controls_edge_summary">0 онемогућава филтрирање ивица; нивои 1–3 повећавају заштиту од случајних додира ивица. Јаче филтрирање може отежати намерне додире ивица.</string>
+    <string name="touch_controls_global_summary">Опција глобалног одзива има приоритет. Подешавања по апликацији су сачувана, али су паузирана. Додирните овде да бисте управљали глобалном опцијом.</string>
+    <string name="touch_controls_global_title">Глобално надјачавање додира је активно</string>
+    <string name="touch_controls_help">Почните са ручним подразумеваним подешавањима. Омогућите подешавање само за апликације којима је то потребно.\n\nУнапред подешене поставке и ручна подешавања су алтернативе, а не ефекти за слагање. Унапред подешене поставке 1–3 су профили фирмвера; нису оцене квалитета.\n\nУ ручном режиму, 0 враћа подразумеване вредности фирмвера. Виши нивои мењају понашање додира и могу се осећати лошије у неким играма. Прво подесите одзив или осетљивост; користите циљ и стабилност само за финије подешавање.\n\nФилтрирање ивица је независно. Јача заштита такође може да одбије намерне додире близу ивице екрана.\n\nОпција глобалног одзива има приоритет над подешавањем по апликацији. Ове контроле не мењају брзину освежавања екрана.</string>
+    <string name="touch_controls_help_title">Како функционише подешавање додира</string>
+    <string name="touch_controls_manual">Ручни режим · почните са подразумеваним подешавањима фирмвера</string>
+    <string name="touch_controls_manual_group">Ручни режим · главна подешавања</string>
+    <string name="touch_controls_mode_group">Главна поставка</string>
+    <string name="touch_controls_mode_help">Унапред подешена вредност замењује одзив, осетљивост, нишан и стабилност додира заједно. Ручна подешавања остају сачувана за касније. Заштита ивица ради одвојено у оба режима.</string>
+    <string name="touch_controls_mode_help_title">Изаберите један метод подешавања</string>
+    <string name="touch_controls_mode_title">Режим подешавања додиром</string>
+    <string name="touch_controls_preset_one">Пресет фирмвера 1</string>
+    <string name="touch_controls_preset_three">Пресет фирмвера 3</string>
+    <string name="touch_controls_preset_two">Пресет фирмвера 2</string>
+    <string name="touch_controls_reset_summary">Вратите се на ручне подразумеване поставке фирмвера и подразумевану заштиту ивице. Оставите прекидач за омогућавање апликације непромењен.</string>
+    <string name="touch_controls_reset_title">Ресетујте подешавање ове апликације</string>
+    <string name="touch_controls_response_summary">Подесите одзив екрана осетљивог на додир на додир. Вредност 0 враћа подразумевану поставку фирмвера. Мењајте једно по једно подешавање и испробајте га у својој игрици.</string>
+    <string name="touch_controls_screen_title">Контроле на додир</string>
+    <string name="touch_controls_sensitivity_summary">Подесите осетљивост на додир. 0 враћа подразумеване вредности фирмвера; виши ниво није аутоматски бољи за сваку игру.</string>
+    <string name="touch_controls_stability_summary">Подесите стабилност поновљених додиривања екрана осетљивог на додир само ако је потребно. Вредност 0 враћа подразумевану поставку фирмвера.</string>
+    <string name="touch_controls_start_summary">Омогућите контроле за ову апликацију, а затим одаберите унапред подешено или подесите појединачна подешавања. Не морате да подижете сваки клизач.</string>
+    <string name="touch_controls_start_title">Почните са подразумеваним вредностима</string>
+    <string name="touch_controls_unavailable_summary">Услуга додира није пружила важеће контролне опсеге. Поново отворите ову страницу да бисте покушали поново.</string>
+    <string name="touch_controls_unavailable_title">Контроле на додир су недоступне</string>
+</resources>

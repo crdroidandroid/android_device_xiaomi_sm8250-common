@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Zpět</string>
+    <string name="parts_search_apps">Hledat aplikace</string>
+    <string name="touch_controls_active_summary">Použito, když je tato aplikace v popředí. Opuštěním aplikace nebo vypnutím obrazovky se obnoví normální chování při dotyku.</string>
+    <string name="touch_controls_active_title">Je povoleno ladění podle aplikací</string>
+    <string name="touch_controls_advanced_group">Manuální režim · jemné nastavení</string>
+    <string name="touch_controls_aim_summary">Citlivost zaměřovacích gest upravujte pouze v případě potřeby. Hodnota 0 obnoví výchozí nastavení firmwaru.</string>
+    <string name="touch_controls_edge_group">Nezávislá · ochrana hran</string>
+    <string name="touch_controls_edge_summary">0 zakáže filtrování hran; úrovně 1–3 zvyšují ochranu proti náhodnému dotyku hrany. Silnější filtrování může ztížit úmyslné doteky okrajů.</string>
+    <string name="touch_controls_global_summary">Prioritu má možnost globální odezvy. Vaše nastavení pro jednotlivé aplikace jsou uložena, ale pozastavena. Klepnutím sem můžete spravovat globální možnost.</string>
+    <string name="touch_controls_global_title">Global touch override je aktivní</string>
+    <string name="touch_controls_help">Začněte s ručními výchozími nastaveními. Povolte ladění pouze pro aplikace, které to potřebují.\n\nPředvolby a ruční úpravy jsou alternativy, nikoli efekty ke stackování. Předvolby 1–3 jsou profily firmwaru; nejsou to hodnocení kvality.\n\nV manuálním režimu 0 obnoví výchozí firmware. Vyšší úrovně mění chování při dotyku a v některých hrách se mohou cítit hůře. Nejprve nastavte odezvu nebo citlivost; použijte cíl a stabilitu pouze pro jemnější ladění.\n\nFiltrování hran je nezávislé. Silnější ochrana může také odmítnout úmyslné dotyky poblíž okraje obrazovky.\n\nMožnost globální odezvy má přednost před laděním jednotlivých aplikací. Tyto ovládací prvky nemění obnovovací frekvenci displeje.</string>
+    <string name="touch_controls_help_title">Jak funguje dotykové ladění</string>
+    <string name="touch_controls_manual">Ruční režim · začněte s výchozím nastavením firmwaru</string>
+    <string name="touch_controls_manual_group">Manuální režim · hlavní nastavení</string>
+    <string name="touch_controls_mode_group">Hlavní nastavení</string>
+    <string name="touch_controls_mode_help">Předvolba nahrazuje odezvu, citlivost, míření a stabilitu klepnutí dohromady. Ruční nastavení zůstanou uložena na později. Ochrana hran funguje samostatně v obou režimech.</string>
+    <string name="touch_controls_mode_help_title">Vyberte jeden způsob ladění</string>
+    <string name="touch_controls_mode_title">Režim dotykového nastavení</string>
+    <string name="touch_controls_preset_one">Přednastavený firmware 1</string>
+    <string name="touch_controls_preset_three">Přednastavený firmware 3</string>
+    <string name="touch_controls_preset_two">Přednastavený firmware 2</string>
+    <string name="touch_controls_reset_summary">Návrat k ručnímu výchozímu nastavení firmwaru a výchozí ochraně hran. Ponechte přepínač povolení aplikace beze změny.</string>
+    <string name="touch_controls_reset_title">Resetujte ladění této aplikace</string>
+    <string name="touch_controls_response_summary">Upravte odezvu dotykové obrazovky na klepnutí. Hodnota 0 obnoví výchozí nastavení firmwaru. Měňte jedno nastavení po druhém a vyzkoušejte to ve své hře.</string>
+    <string name="touch_controls_screen_title">Dotykové ovládání</string>
+    <string name="touch_controls_sensitivity_summary">Upravte citlivost dotyku. 0 obnoví výchozí nastavení firmwaru; vyšší úroveň není automaticky lepší pro každou hru.</string>
+    <string name="touch_controls_stability_summary">Stabilitu opakovaných klepnutí na dotykovou obrazovku upravujte pouze v případě potřeby. Hodnota 0 obnoví výchozí nastavení firmwaru.</string>
+    <string name="touch_controls_start_summary">Povolte ovládací prvky pro tuto aplikaci a poté vyberte předvolbu nebo dolaďte individuální nastavení. Nemusíte zvedat každý posuvník.</string>
+    <string name="touch_controls_start_title">Začněte s výchozími nastaveními</string>
+    <string name="touch_controls_unavailable_summary">Dotyková služba neposkytla platné rozsahy ovládání. Znovu otevřete tuto stránku a zkuste to znovu.</string>
+    <string name="touch_controls_unavailable_title">Dotykové ovládání není k dispozici</string>
+</resources>

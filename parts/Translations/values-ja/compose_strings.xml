@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">戻る</string>
+    <string name="parts_search_apps">アプリを検索する</string>
+    <string name="touch_controls_active_summary">このアプリがフォアグラウンドにあるときに適用されます。アプリを終了するか画面をオフにすると、通常のタッチ動作が復元されます。</string>
+    <string name="touch_controls_active_title">アプリごとのチューニングが有効になっています</string>
+    <string name="touch_controls_advanced_group">マニュアルモード・微調整</string>
+    <string name="touch_controls_aim_summary">照準ジェスチャの感度は、必要な場合にのみ調整してください。値 0 を指定すると、デフォルトのファームウェア設定が復元されます。</string>
+    <string name="touch_controls_edge_group">独立・エッジプロテクション</string>
+    <string name="touch_controls_edge_summary">0 はエッジ フィルタリングを無効にします。レベル 1 ～ 3 では、偶発的なエッジ接触に対する保護が強化されます。フィルタリングを強化すると、意図的なエッジタッチが難しくなります。</string>
+    <string name="touch_controls_global_summary">グローバル応答性オプションが優先されます。アプリごとの設定は保存されますが、一時停止されます。ここをタップしてグローバル オプションを管理します。</string>
+    <string name="touch_controls_global_title">グローバルタッチオーバーライドがアクティブです</string>
+    <string name="touch_controls_help">手動のデフォルトから始めます。必要なアプリに対してのみチューニングを有効にします。\n\nプリセットと手動調整は代替手段であり、スタックするエフェクトではありません。プリセット 1 ～ 3 はファームウェア プロファイルです。それらは品質評価ではありません。\n\n手動モードでは、0 を指定するとファームウェアのデフォルトが復元されます。レベルが高くなるとタッチ動作が変化し、一部のゲームでは感触が悪化する場合があります。最初に応答または感度を調整します。照準と安定性は、より微調整する場合にのみ使用してください。\n\nエッジ フィルタリングは独立しています。保護を強化すると、画面端近くの意図的なタッチも拒否できます。\n\nグローバル応答性オプションは、アプリごとの調整よりも優先されます。これらのコントロールはディスプレイのリフレッシュ レートを変更しません。</string>
+    <string name="touch_controls_help_title">タッチチューニングの仕組み</string>
+    <string name="touch_controls_manual">手動モード · デフォルトのファームウェア設定で開始します</string>
+    <string name="touch_controls_manual_group">マニュアルモード・主な調整</string>
+    <string name="touch_controls_mode_group">主な設定</string>
+    <string name="touch_controls_mode_help">プリセットは、応答、感度、照準、タップの安定性をまとめて置き換えます。手動設定は後で使用できるように保存されます。エッジ保護はどちらのモードでも個別に機能します。</string>
+    <string name="touch_controls_mode_help_title">チューニング方法を 1 つ選択してください</string>
+    <string name="touch_controls_mode_title">タッチ調整モード</string>
+    <string name="touch_controls_preset_one">ファームウェアプリセット1</string>
+    <string name="touch_controls_preset_three">ファームウェアプリセット3</string>
+    <string name="touch_controls_preset_two">ファームウェアプリセット2</string>
+    <string name="touch_controls_reset_summary">手動ファームウェアのデフォルトとデフォルトのエッジ保護に戻ります。アプリの有効化スイッチは変更しないでください。</string>
+    <string name="touch_controls_reset_title">このアプリのチューニングをリセットする</string>
+    <string name="touch_controls_response_summary">タップに対するタッチスクリーンの反応を調整します。値 0 を指定すると、デフォルトのファームウェア設定が復元されます。一度に 1 つずつ設定を変更し、ゲーム内で試してください。</string>
+    <string name="touch_controls_screen_title">タッチコントロール</string>
+    <string name="touch_controls_sensitivity_summary">タッチ感度を調整します。 0 はファームウェアのデフォルトを復元します。レベルが高いほど、すべてのゲームで自動的に優れているわけではありません。</string>
+    <string name="touch_controls_stability_summary">必要な場合にのみ、タッチスクリーンの繰り返しタップの安定性を調整します。値 0 を指定すると、デフォルトのファームウェア設定が復元されます。</string>
+    <string name="touch_controls_start_summary">このアプリのコントロールを有効にしてから、プリセットを選択するか、個々の設定を調整します。すべてのスライダーを上げる必要はありません。</string>
+    <string name="touch_controls_start_title">デフォルトから始める</string>
+    <string name="touch_controls_unavailable_summary">タッチ サービスは有効な制御範囲を提供しませんでした。このページをもう一度開いて再試行してください。</string>
+    <string name="touch_controls_unavailable_title">タッチコントロールは使用できません</string>
+</resources>

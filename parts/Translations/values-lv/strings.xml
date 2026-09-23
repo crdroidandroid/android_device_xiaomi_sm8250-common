@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">Ierīces iestatījumi</string>
+    <string name="dirac_preset_blues">Blūzs</string>
+    <string name="dirac_preset_classical">Klasiskā mūzika</string>
+    <string name="dirac_preset_country">Kantrī mūzika</string>
+    <string name="dirac_preset_dance">Deju mūzika</string>
+    <string name="dirac_preset_electronic">Elektroniskā mūzika</string>
+    <string name="dirac_preset_jazz">Džezs</string>
+    <string name="dirac_preset_metal">Metāls</string>
+    <string name="dirac_preset_pop">Popmūzika</string>
+    <string name="dirac_preset_rock">Roks</string>
+    <string name="dirac_headset_title">Austiņu veids</string>
+    <string name="dirac_preset_title">Iestatījums</string>
+</resources>

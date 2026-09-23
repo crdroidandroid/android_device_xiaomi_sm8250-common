@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Terug</string>
+    <string name="parts_search_apps">Soek programme</string>
+    <string name="touch_controls_active_summary">Toegepas terwyl hierdie toepassing op die voorgrond is. As u die toepassing verlaat of die skerm afskakel, word normale aanraakgedrag herstel.</string>
+    <string name="touch_controls_active_title">Per-app-instelling is geaktiveer</string>
+    <string name="touch_controls_advanced_group">Handmatige modus · fyn aanpassings</string>
+    <string name="touch_controls_aim_summary">Pas die sensitiwiteit van mikgebare net aan indien nodig. \'n Waarde van 0 herstel die verstek firmware-instelling.</string>
+    <string name="touch_controls_edge_group">Onafhanklike · randbeskerming</string>
+    <string name="touch_controls_edge_summary">0 deaktiveer randfiltrering; vlakke 1–3 verhoog beskerming teen toevallige randaanrakings. Sterker filtering kan doelbewuste randaanrakings harder maak.</string>
+    <string name="touch_controls_global_summary">Die globale reaksie-opsie geniet prioriteit. Jou per-program-instellings word gestoor, maar onderbreek. Tik hier om die globale opsie te bestuur.</string>
+    <string name="touch_controls_global_title">Global touch ignorering is aktief</string>
+    <string name="touch_controls_help">Begin met handmatige verstekke. Aktiveer instel slegs vir programme wat dit nodig het.\n\nVoorinstellings en handmatige aanpassings is alternatiewe, nie effekte om te stapel nie. Voorinstellings 1–3 is fermwareprofiele; hulle is nie kwaliteitgraderings nie.\n\nIn handmatige modus herstel 0 die verstek firmware. Hoër vlakke verander die aanrakingsgedrag en kan in sommige speletjies erger voel. Pas reaksie of sensitiwiteit eers aan; gebruik doel en stabiliteit slegs vir fyner stemming.\n\nRandfiltrering is onafhanklik. Sterker beskerming kan ook opsetlike aanraking naby die skermrand verwerp.\n\nDie globale reaksie-opsie geniet prioriteit bo per-app-instelling. Hierdie kontroles verander nie die skermverfrissingstempo nie.</string>
+    <string name="touch_controls_help_title">Hoe touch tuning werk</string>
+    <string name="touch_controls_manual">Handmatige modus · begin met die verstek firmware-instellings</string>
+    <string name="touch_controls_manual_group">Handmatige modus · hoofaanpassings</string>
+    <string name="touch_controls_mode_group">Hoofinstelling</string>
+    <string name="touch_controls_mode_help">\'n Voorinstelling vervang reaksie, sensitiwiteit, mik- en tikstabiliteit saam. Handmatige instellings bly gestoor vir later. Randbeskerming werk afsonderlik in enige modus.</string>
+    <string name="touch_controls_mode_help_title">Kies een stemmetode</string>
+    <string name="touch_controls_mode_title">Raak aanpassingsmodus</string>
+    <string name="touch_controls_preset_one">Firmware voorafinstelling 1</string>
+    <string name="touch_controls_preset_three">Firmware voorafinstelling 3</string>
+    <string name="touch_controls_preset_two">Firmware voorafinstelling 2</string>
+    <string name="touch_controls_reset_summary">Keer terug na handmatige firmware-standaarde en die verstek randbeskerming. Hou die toepassing se aktiveerskakelaar onveranderd.</string>
+    <string name="touch_controls_reset_title">Stel hierdie toepassing se stemming terug</string>
+    <string name="touch_controls_response_summary">Pas die aanraakskermreaksie op tik aan. \'n Waarde van 0 herstel die verstek firmware-instelling. Verander een instelling op \'n slag en probeer dit in jou speletjie.</string>
+    <string name="touch_controls_screen_title">Raak kontroles</string>
+    <string name="touch_controls_sensitivity_summary">Pas aanraaksensitiwiteit aan. 0 herstel die firmware verstek; \'n hoër vlak is nie outomaties beter vir elke wedstryd nie.</string>
+    <string name="touch_controls_stability_summary">Pas die stabiliteit van herhaalde raakskermkrane net aan indien nodig. \'n Waarde van 0 herstel die verstek firmware-instelling.</string>
+    <string name="touch_controls_start_summary">Aktiveer kontroles vir hierdie toepassing, kies dan \'n voorafinstelling of stel individuele instellings in. Jy hoef nie elke skuifbalk op te lig nie.</string>
+    <string name="touch_controls_start_title">Begin met die verstekke</string>
+    <string name="touch_controls_unavailable_summary">Die raakdiens het nie geldige beheerreekse verskaf nie. Heropen hierdie bladsy om weer te probeer.</string>
+    <string name="touch_controls_unavailable_title">Raakkontroles is nie beskikbaar nie</string>
+</resources>

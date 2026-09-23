@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="parts_back">Atgal</string>
+    <string name="parts_search_apps">Ieškoti programų</string>
+    <string name="touch_controls_active_summary">Taikoma, kai ši programa yra pirmame plane. Išėjus iš programos arba išjungus ekraną, atkuriamas įprastas prisilietimas.</string>
+    <string name="touch_controls_active_title">Įjungtas derinimas kiekvienai programai</string>
+    <string name="touch_controls_advanced_group">Rankinis režimas · smulkus reguliavimas</string>
+    <string name="touch_controls_aim_summary">Taikymo gestų jautrumą reguliuokite tik tada, kai reikia. 0 reikšmė atkuria numatytąjį programinės įrangos nustatymą.</string>
+    <string name="touch_controls_edge_group">Nepriklausoma · krašto apsauga</string>
+    <string name="touch_controls_edge_summary">0 išjungia briaunų filtravimą; 1–3 lygiai padidina apsaugą nuo atsitiktinio kraštų prisilietimo. Stipresnis filtravimas gali apsunkinti tyčinį krašto prisilietimą.</string>
+    <string name="touch_controls_global_summary">Pirmenybė teikiama visuotiniam reagavimo variantui. Kiekvienos programos nustatymai išsaugoti, bet pristabdyti. Norėdami valdyti visuotinę parinktį, bakstelėkite čia.</string>
+    <string name="touch_controls_global_title">Įjungtas visuotinis prisilietimo nepaisymas</string>
+    <string name="touch_controls_help">Pradėkite nuo rankinių numatytųjų nustatymų. Įgalinkite derinimą tik toms programoms, kurioms to reikia.\n\nIšankstiniai nustatymai ir rankinis koregavimas yra alternatyvos, o ne sukrauti efektai. 1–3 išankstiniai nustatymai yra programinės įrangos profiliai; jie nėra kokybės įvertinimai.\n\nRankiniu režimu 0 atkuria numatytąją programinės įrangos nustatymą. Aukštesni lygiai keičia lietimo elgesį ir kai kuriuose žaidimuose gali jaustis blogiau. Pirmiausia sureguliuokite atsaką arba jautrumą; Tikslą ir stabilumą naudokite tik tikslesniam derinimui.\n\nKraštų filtravimas yra nepriklausomas. Stipresnė apsauga taip pat gali atmesti tyčinius prisilietimus prie ekrano krašto.\n\nVisuotinio reagavimo parinktis yra svarbesnė už programos derinimą. Šie valdikliai nekeičia ekrano atnaujinimo dažnio.</string>
+    <string name="touch_controls_help_title">Kaip veikia jutiklinis derinimas</string>
+    <string name="touch_controls_manual">Rankinis režimas · pradėkite nuo numatytųjų programinės įrangos nustatymų</string>
+    <string name="touch_controls_manual_group">Rankinis režimas · pagrindiniai reguliavimai</string>
+    <string name="touch_controls_mode_group">Pagrindinis nustatymas</string>
+    <string name="touch_controls_mode_help">Išankstinis nustatymas kartu pakeičia atsaką, jautrumą, taikymą ir smūgio stabilumą. Rankiniai nustatymai išsaugomi vėliau. Kraštų apsauga veikia atskirai bet kuriuo režimu.</string>
+    <string name="touch_controls_mode_help_title">Pasirinkite vieną derinimo būdą</string>
+    <string name="touch_controls_mode_title">Palietimo reguliavimo režimas</string>
+    <string name="touch_controls_preset_one">Iš anksto nustatyta programinė įranga 1</string>
+    <string name="touch_controls_preset_three">Iš anksto nustatyta programinė įranga 3</string>
+    <string name="touch_controls_preset_two">Iš anksto nustatyta programinė įranga 2</string>
+    <string name="touch_controls_reset_summary">Grįžkite į numatytąsias programinės įrangos rankines nuostatas ir numatytąją krašto apsaugą. Nepakeiskite programos įgalinimo jungiklio.</string>
+    <string name="touch_controls_reset_title">Iš naujo nustatykite šios programos derinimą</string>
+    <string name="touch_controls_response_summary">Sureguliuokite jutiklinio ekrano reakciją į bakstelėjimus. 0 reikšmė atkuria numatytąjį programinės įrangos nustatymą. Keiskite po vieną nustatymą ir išbandykite jį savo žaidime.</string>
+    <string name="touch_controls_screen_title">Jutikliniai valdikliai</string>
+    <string name="touch_controls_sensitivity_summary">Sureguliuokite lietimo jautrumą. 0 atkuria numatytąją programinės įrangos nustatymą; aukštesnis lygis nėra automatiškai geresnis kiekvienam žaidimui.</string>
+    <string name="touch_controls_stability_summary">Pakartotinių jutiklinio ekrano paspaudimų stabilumą reguliuokite tik tada, kai reikia. 0 reikšmė atkuria numatytąjį programinės įrangos nustatymą.</string>
+    <string name="touch_controls_start_summary">Įgalinkite šios programos valdiklius, tada pasirinkite iš anksto nustatytą arba suderinkite atskirus nustatymus. Nereikia pakelti kiekvieno slankiklio.</string>
+    <string name="touch_controls_start_title">Pradėkite nuo numatytųjų</string>
+    <string name="touch_controls_unavailable_summary">Jutiklinė paslauga nepateikė galiojančių valdymo diapazonų. Iš naujo atidarykite šį puslapį ir bandykite dar kartą.</string>
+    <string name="touch_controls_unavailable_title">Jutikliniai valdikliai nepasiekiami</string>
+</resources>

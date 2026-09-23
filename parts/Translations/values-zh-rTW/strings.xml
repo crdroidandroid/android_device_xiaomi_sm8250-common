@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">設備設定</string>
+    <string name="dirac_preset_blues">布魯斯</string>
+    <string name="dirac_preset_classical">古典</string>
+    <string name="dirac_preset_country">鄉村</string>
+    <string name="dirac_preset_dance">舞曲</string>
+    <string name="dirac_preset_electronic">電子音樂</string>
+    <string name="dirac_preset_jazz">爵士</string>
+    <string name="dirac_preset_metal">金屬</string>
+    <string name="dirac_preset_pop">流行</string>
+    <string name="dirac_preset_rock">搖滾</string>
+    <string name="dirac_headset_title">耳機類型</string>
+    <string name="dirac_preset_title">聽感</string>
+</resources>

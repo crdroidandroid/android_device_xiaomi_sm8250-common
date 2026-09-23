@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="device_settings_app_name">장치 설정</string>
+    <string name="dirac_preset_blues">블루스</string>
+    <string name="dirac_preset_classical">클래식</string>
+    <string name="dirac_preset_country">컨트리</string>
+    <string name="dirac_preset_dance">댄스</string>
+    <string name="dirac_preset_electronic">일렉트로닉</string>
+    <string name="dirac_preset_jazz">재즈</string>
+    <string name="dirac_preset_metal">메탈</string>
+    <string name="dirac_preset_pop">팝</string>
+    <string name="dirac_preset_rock">락</string>
+    <string name="dirac_headset_title">헤드셋 유형</string>
+    <string name="dirac_preset_title">프리셋</string>
+</resources>
