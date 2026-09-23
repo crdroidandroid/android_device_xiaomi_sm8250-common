@@ -50,6 +50,8 @@ public class ClearSpeakerFragment extends SettingsBasePreferenceFragment impleme
         addPreferencesFromResource(R.xml.clear_speaker_settings);
 
         mClearSpeakerPref = findPreference(PREF_CLEAR_SPEAKER);
+        mClearSpeakerPref.setPersistent(false);
+        mClearSpeakerPref.setChecked(false);
         mClearSpeakerPref.setOnPreferenceChangeListener(this);
     }
 
@@ -57,7 +59,11 @@ public class ClearSpeakerFragment extends SettingsBasePreferenceFragment impleme
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mClearSpeakerPref) {
             boolean value = (Boolean) newValue;
-            if (value && startPlaying()) {
+            if (!value) {
+                stopPlaying();
+                return true;
+            }
+            if (startPlaying()) {
                 mHandler.removeCallbacksAndMessages(null);
                 mHandler.postDelayed(this::stopPlaying, PLAY_DURATION_MS);
                 return true;
@@ -73,6 +79,7 @@ public class ClearSpeakerFragment extends SettingsBasePreferenceFragment impleme
     }
 
     public boolean startPlaying() {
+        stopPlaying();
         getActivity().setVolumeControlStream(AudioManager.STREAM_MUSIC);
         mMediaPlayer = new MediaPlayer();
         mMediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
@@ -86,27 +93,21 @@ public class ClearSpeakerFragment extends SettingsBasePreferenceFragment impleme
             mMediaPlayer.setVolume(1.0f, 1.0f);
             mMediaPlayer.prepare();
             mMediaPlayer.start();
-            mClearSpeakerPref.setEnabled(false);
-        } catch (IOException | IllegalArgumentException e) {
+        } catch (IOException | RuntimeException e) {
             Log.e(TAG, "Failed to play speaker clean sound!", e);
+            stopPlaying();
             return false;
         }
         return true;
     }
 
     public void stopPlaying() {
-        if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-            try {
-                mMediaPlayer.stop();
-            } catch (IllegalStateException e) {
-                Log.e(TAG, "Failed to stop media player!", e);
-            } finally {
-                mMediaPlayer.reset();
-                mMediaPlayer.release();
-                mMediaPlayer = null;
-            }
+        mHandler.removeCallbacksAndMessages(null);
+        if (mMediaPlayer != null) {
+            // release() also handles failed prepare/start and already stopped players.
+            mMediaPlayer.release();
+            mMediaPlayer = null;
         }
-        mClearSpeakerPref.setEnabled(true);
-        mClearSpeakerPref.setChecked(false);
+        if (mClearSpeakerPref != null) mClearSpeakerPref.setChecked(false);
     }
 }
