@@ -36,7 +36,6 @@ on init
     write /dev/stune/top-app/schedtune.sched_boost_no_override 1
     write /dev/stune/schedtune.colocate 0
     write /dev/stune/background/schedtune.colocate 0
-    write /dev/stune/system-background/schedtune.colocate 0
     write /dev/stune/foreground/schedtune.colocate 0
     write /dev/stune/top-app/schedtune.colocate 1
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -106,7 +105,6 @@ on post-fs-data
     #sensors diag2bugreport log dir
     mkdir /data/vendor/sensor_log
     chown system system /data/vendor/sensor_log
-    chown system system /vendor/etc/sensors/sensor_diag.cfg
     chown system system /dev/ir_spi
     mkdir /data/vendor/wlan_logs 0777 root shell
     mkdir /data/vendor/nfc 0770 nfc nfc
@@ -144,9 +142,6 @@ on property:persist.vendor.thermal.map=india
     restorecon /data/vendor/thermal/config/thermal-map.conf
     restart mi_thermald
 
-on property:ro.boot.dp=0x0
-    write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/pshold_reboot 7
-
 on boot
     # Allow system apps to modify exposure dim layer state
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable
@@ -163,7 +158,6 @@ on boot
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
 
-    write /dev/cpuset/audio-app/cpus 1-2
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
@@ -203,20 +197,6 @@ on boot
 
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
-    chown root system /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/reset_clus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/reset_clus_affinity_uidlist
 
 on property:persist.vendor.sys.fp.fod.large_field=1
     write sys/bus/i2c/devices/3-0049/fod_area 1
@@ -349,11 +329,9 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 on property:vendor.dcvs.prop=1
    start dcvs-sh
 
+# Acknowledge legacy requests; this kernel has no cam_reclaim interface.
 on property:sys.lmkd.memory.start_reclaim_in_video_record=1
     setprop sys.lmkd.memory.start_reclaim_in_video_record 0
-    write /sys/kernel/cam_reclaim/event 1
 
 on property:sys.lmkd.memory.start_reclaim_in_capture=1
     setprop sys.lmkd.memory.start_reclaim_in_capture 0
-    write /sys/kernel/cam_reclaim/config "120 0 0 400000 1000 0 0 2000000000"
-    write /sys/kernel/cam_reclaim/event 1

@@ -30,16 +30,8 @@
 target=`getprop ro.board.platform`
 
 
-function configure_zram_parameters() {
-    # Never change the compressor or reformat an initialized ZRAM device.
-    [ -r /sys/block/zram0/disksize ] || return 0
-    disksize=$(cat /sys/block/zram0/disksize) || return 1
-    case "$disksize" in
-        ''|*[!0-9]*) return 1 ;;
-    esac
-    [ "$disksize" -eq 0 ] || return 0
-
-    # Parse the value, not a fixed-width slice of /proc/meminfo.
+# Read MemTotal without fixed-width assumptions or spawning cat/grep.
+function read_mem_total() {
     MemTotal=
     while read -r key value unit; do
         if [ "$key" = "MemTotal:" ]; then
@@ -50,7 +42,19 @@ function configure_zram_parameters() {
     case "$MemTotal" in
         ''|*[!0-9]*) return 1 ;;
     esac
-    [ "$MemTotal" -gt 0 ] || return 1
+    [ "$MemTotal" -gt 0 ]
+}
+
+function configure_zram_parameters() {
+    # Never change the compressor or reformat an initialized ZRAM device.
+    [ -r /sys/block/zram0/disksize ] || return 0
+    disksize=$(cat /sys/block/zram0/disksize) || return 1
+    case "$disksize" in
+        ''|*[!0-9]*) return 1 ;;
+    esac
+    [ "$disksize" -eq 0 ] || return 0
+
+    read_mem_total || return 1
 
     # Preserve the existing capacity policy: 75% at <=2 GiB, otherwise
     # half the rounded RAM tier, capped at 4 GiB (3/4 GiB on 6/8 GiB phones).
@@ -85,31 +89,21 @@ function configure_zram_parameters() {
 }
 
 function configure_read_ahead_kb_values() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+    read_mem_total || return 1
 
-    dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc)
-
-    # Set 128 for <= 3GB &
-    # set 512 for >= 4GB targets.
-    if [ $MemTotal -le 3145728 ]; then
-        echo 128 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 128 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        for dm in $dmpts; do
-            echo 128 > $dm
-        done
-    else
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
-        for dm in $dmpts; do
-            echo 512 > $dm
-        done
-    fi
+    # Preserve 128 KiB at <=3 GiB and 512 KiB above it.
+    read_ahead=512
+    [ "$MemTotal" -le 3145728 ] && read_ahead=128
+    for node in /sys/block/mmcblk0/bdi/read_ahead_kb \
+                /sys/block/mmcblk0rpmb/bdi/read_ahead_kb \
+                /sys/block/dm-*/queue/read_ahead_kb \
+                /sys/block/mmc*/queue/read_ahead_kb; do
+        [ -f "$node" ] && echo "$read_ahead" > "$node"
+    done
 }
 
 function enable_swap() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+    read_mem_total || return 1
 
     SWAP_ENABLE_THRESHOLD=1048576
     swap_enable=`getprop ro.vendor.qti.config.swap`
@@ -130,11 +124,8 @@ function enable_swap() {
 }
 
 function configure_memory_parameters() {
-    ProductName=`getprop ro.product.name`
-
     #add memory limit to camera cgroup
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+    read_mem_total || return 1
     if [ $MemTotal -gt 8388608 ]; then
         let LimitSize=838860800
     else
@@ -146,28 +137,14 @@ function configure_memory_parameters() {
         echo $LimitSize > /dev/memcg/camera/memory.soft_limit_in_bytes
     fi
 
-    if [[ "$ProductName" == "bengal"* ]]; then
-        #Set PPR nomap parameters for bengal targets
-        echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
-        echo 50 > /sys/module/process_reclaim/parameters/pressure_min
-        echo 70 > /sys/module/process_reclaim/parameters/pressure_max
-        echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-        echo 0 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo 7680 > /sys/module/process_reclaim/parameters/tsk_nomap_swap_sz
-    fi
-
-    # Set allocstall_threshold to 0 for all targets.
     # Set swappiness to 60 for all targets
-    echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
     echo 60 > /proc/sys/vm/swappiness
 
-    # Disable wsf for all targets beacause we are using efk.
-    # wsf Range : 1..1000 So set to bare minimum value 1.
+    # Preserve the existing device watermark policy; retune only with workload data.
     echo 1 > /proc/sys/vm/watermark_scale_factor
 
     # Disable the feature of watermark boost for 8G and below device
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
+    read_mem_total || return 1
 
     if [ $MemTotal -le 8388608 ]; then
         echo 0 > /proc/sys/vm/watermark_boost_factor
@@ -226,7 +203,9 @@ case "$target" in
 	# cpuset parameters
         echo 0-2     > /dev/cpuset/background/cpus
         echo 0-3     > /dev/cpuset/system-background/cpus
-        echo 4-7     > /dev/cpuset/foreground/boost/cpus
+        if [ -f /dev/cpuset/foreground/boost/cpus ]; then
+            echo 4-7 > /dev/cpuset/foreground/boost/cpus
+        fi
         echo 0-2,4-7 > /dev/cpuset/foreground/cpus
         echo 0-7     > /dev/cpuset/top-app/cpus
 
@@ -248,8 +227,6 @@ case "$target" in
 	# configure input boost settings
 	echo "0:1344000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
 	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
-	echo "0:1804800 1:0 2:0 3:0 4:2419200 5:0 6:0 7:3187200" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-	echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
@@ -274,6 +251,7 @@ case "$target" in
 	do
 	    for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
 	    do
+		[ -d "${cpubw}" ] || continue
 		echo "bw_hwmon" > $cpubw/governor
 		echo "4577 7110 9155 12298 14236 15258" > $cpubw/bw_hwmon/mbps_zones
 		echo 4 > $cpubw/bw_hwmon/sample_ms
@@ -290,6 +268,7 @@ case "$target" in
 
 	    for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	    do
+		[ -d "${llccbw}" ] || continue
 		echo "bw_hwmon" > $llccbw/governor
 		if [ ${ddr_type:4:2} == $ddr_type4 ]; then
 			echo "1720 2086 2929 3879 5161 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
@@ -310,6 +289,8 @@ case "$target" in
 
 	    for npubw in $device/*npu*-ddr-bw/devfreq/*npu*-ddr-bw
 	    do
+		[ -d "${npubw}" ] || continue
+		[ -w /sys/devices/virtual/npu/msm_npu/pwr ] || continue
 		echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
 		echo "bw_hwmon" > $npubw/governor
 		if [ ${ddr_type:4:2} == $ddr_type4 ]; then
@@ -331,6 +312,8 @@ case "$target" in
 
 	    for npullccbw in $device/*npu*-llcc-bw/devfreq/*npu*-llcc-bw
 	    do
+		[ -d "${npullccbw}" ] || continue
+		[ -w /sys/devices/virtual/npu/msm_npu/pwr ] || continue
 		echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
 		echo "bw_hwmon" > $npullccbw/governor
 		echo "4577 7110 9155 12298 14236 15258" > $npullccbw/bw_hwmon/mbps_zones
@@ -355,64 +338,11 @@ case "$target" in
     ;;
 esac
 
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-chown -h system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-
-emmc_boot=`getprop vendor.boot.emmc`
-case "$emmc_boot"
-    in "true")
-        chown -h system /sys/devices/platform/rs300000a7.65536/force_sync
-        chown -h system /sys/devices/platform/rs300000a7.65536/sync_sts
-        chown -h system /sys/devices/platform/rs300100a7.65536/force_sync
-        chown -h system /sys/devices/platform/rs300100a7.65536/sync_sts
-    ;;
-esac
-
-# Post-setup services
+# Post-setup completion for this platform.
 case "$target" in
-    "msm8660" | "msm8960" | "msm8226" | "msm8610" | "mpq8092" )
-        start mpdecision
-    ;;
-    "msm8974")
-        start mpdecision
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-    ;;
-    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" | "sdmshrike")
-        setprop vendor.post_boot.parsed 1
-    ;;
-    "apq8084")
-        rm /data/system/perfd/default_values
-        start mpdecision
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/sda/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdb/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdc/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdd/bdi/read_ahead_kb
-        echo 512 > /sys/block/sde/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdf/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdg/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdh/bdi/read_ahead_kb
-    ;;
-    "msm7627a")
-        if [ -f /sys/devices/soc0/soc_id ]; then
-            soc_id=`cat /sys/devices/soc0/soc_id`
-        else
-            soc_id=`cat /sys/devices/system/soc/soc0/id`
-        fi
-        case "$soc_id" in
-            "127" | "128" | "129")
-                start mpdecision
-        ;;
-        esac
-    ;;
+    "kona") setprop vendor.post_boot.parsed 1 ;;
 esac
 
-# Enable Power modes and set the CPU Freq Sampling rates
-
-# Change adj level and min_free_kbytes setting for lowmemory killer to kick in
-
-# Change adj level and min_free_kbytes setting for lowmemory killer to kick in
 # Let kernel know our image version/variant/crm_version
 if [ -f /sys/devices/soc0/select_image ]; then
     image_version="10:"
