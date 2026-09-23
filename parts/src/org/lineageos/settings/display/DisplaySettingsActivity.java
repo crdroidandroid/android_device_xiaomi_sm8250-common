@@ -28,7 +28,9 @@ public class DisplaySettingsActivity extends CollapsingToolbarBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 new DisplaySettingsFragment(), TAG_DCDIMMING).commit();
+        }
     }
 }

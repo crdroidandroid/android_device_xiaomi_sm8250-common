@@ -23,6 +23,8 @@ public class DisplayNodes {
     private static final String HBM_ENABLE_KEY = "hbm_mode";
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
     private static final String BACKLIGHT = "/sys/class/backlight/panel0-backlight/brightness";
+    private static final String BACKLIGHT_MAX =
+            "/sys/class/backlight/panel0-backlight/max_brightness";
 
     public static final String getDcDimmingEnableKey() {
         return DC_DIMMING_ENABLE_KEY;
@@ -42,5 +44,9 @@ public class DisplayNodes {
 
     public static final String getBacklight() {
         return BACKLIGHT;
+    }
+
+    public static final String getBacklightMax() {
+        return BACKLIGHT_MAX;
     }
 }
