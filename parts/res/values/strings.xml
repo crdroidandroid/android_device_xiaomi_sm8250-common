@@ -15,41 +15,140 @@
      limitations under the License.
 -->
 <resources>
+    <!-- App -->
+    <string name="device_settings_app_name">Device settings</string>
+
+    <!-- MiSound core strings kept local to XiaomiParts -->
+    <string name="dirac_title">MiSound</string>
+    <string name="dirac_summary">Enhance audio quality</string>
+    <string name="dirac_enable">Enable</string>
+    <string name="dirac_headset_title">Headset type</string>
+    <string name="dirac_preset_title">Preset</string>
+    <string name="dirac_hifi_title">Hi-Fi</string>
+    <string name="dirac_hifi_summary">Enable high-fidelity mode on supported devices</string>
+    <string name="dirac_preset_default">Default</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Classical</string>
+    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_blues">Blues</string>
+    <string name="dirac_preset_electronic">Electronic</string>
+    <string name="dirac_preset_country">Country</string>
+    <string name="dirac_preset_dance">Dance</string>
+    <string name="dirac_preset_metal">Metal</string>
+    <string name="dirac_preset_bass_booster">Bass Booster</string>
+
     <!-- Thermal Profiles -->
-    <string name="thermal_title">Thermal Profiles</string>
-    <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
-    <string name="thermal_default">Default</string>
-    <string name="thermal_benchmark">Benchmark</string>
-    <string name="thermal_browser">Browser</string>
+    <string name="thermal_title">Thermal profiles</string>
+    <string name="thermal_summary">System and per-app Xiaomi thermal policies</string>
+    <string name="thermal_profile_dialog_title">Thermal profile</string>
+    <string name="thermal_system_profile_title">System profile</string>
+    <string name="thermal_system_profile_summary">Used when an app has no override</string>
+    <string name="thermal_system_compact_summary">%1$s • %2$s</string>
+    <string name="thermal_system_expand">Show system profile controls</string>
+    <string name="thermal_system_collapse">Hide system profile controls</string>
+    <string name="thermal_search_apps">Search apps</string>
+    <string name="thermal_profile_set_title">Profile set</string>
+    <string name="thermal_profile_set_summary">Select Xiaomi’s Global or India thermal map</string>
+    <string name="thermal_region_global">Global</string>
+    <string name="thermal_region_india">India</string>
+    <string name="thermal_app_overrides">App overrides</string>
+    <string name="thermal_system_default">System profile</string>
+    <string name="thermal_system_default_summary">Use the profile selected above</string>
+
+    <string name="thermal_normal">Balanced</string>
+    <string name="thermal_normal_summary">Default Xiaomi thermal policy</string>
+    <string name="thermal_class0">Conservative</string>
+    <string name="thermal_class0_summary">Earlier CPU throttling to reduce heat</string>
+    <string name="thermal_calls">Calls</string>
+    <string name="thermal_calls_summary">Lower CPU limits for calls and voice use</string>
     <string name="thermal_camera">Camera</string>
-    <string name="thermal_dialer">Dialer</string>
-    <string name="thermal_gaming">Gaming</string>
-    <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_camera_summary">Thermal limits tuned for camera use</string>
+    <string name="thermal_gaming">Gaming boost</string>
+    <string name="thermal_gaming_summary">Highest gaming headroom before thermal caps</string>
+    <string name="thermal_sustained_gaming">Sustained gaming</string>
+    <string name="thermal_sustained_gaming_summary">Moderate limits for longer gaming sessions</string>
+    <string name="thermal_video">Video playback</string>
+    <string name="thermal_video_summary">Thermal policy tuned for video playback</string>
+    <string name="thermal_navigation">Navigation</string>
+    <string name="thermal_navigation_summary">Thermal policy tuned for navigation</string>
+    <string name="thermal_no_limits">Minimal throttling</string>
+    <string name="thermal_no_limits_summary">Fewest thermal limits; highest heat and power</string>
+    <string name="thermal_per_normal">Balanced performance</string>
+    <string name="thermal_per_normal_summary">Balanced policy with CPU throttling starting later</string>
+    <string name="thermal_per_class0">Conservative performance</string>
+    <string name="thermal_per_class0_summary">Conservative policy with CPU throttling starting later</string>
+    <string name="thermal_per_navigation">Navigation performance</string>
+    <string name="thermal_per_navigation_summary">Navigation policy with CPU throttling starting later</string>
+    <string name="thermal_per_video">Video performance</string>
+    <string name="thermal_per_video_summary">Video policy with CPU throttling starting later</string>
+
+    <string name="thermal_info_title">Profile reference</string>
+    <string name="thermal_info_header_title">%1$s profile set</string>
+    <string name="thermal_info_header">%1$d distinct profiles backed by shipped Alioth configs. Duplicate aliases and missing configs are hidden.</string>
+    <string name="thermal_detail_cpu_title">CPU thermal ceilings</string>
+    <string name="thermal_detail_gpu_title">GPU thermal ceilings</string>
+    <string name="thermal_detail_controls_title">Other thermal controls</string>
+    <string name="thermal_detail_sensor_title">Sensor model</string>
+    <string name="thermal_detail_clock_note">These are thermal ceilings, not fixed clocks. DVFS may choose lower frequencies. Performance variants delay CPU thermal caps; they do not force higher clocks. CPU4 is the performance cluster and CPU7 is the prime core; these configs do not directly set a CPU0–3 ceiling.</string>
+    <string name="thermal_info_meta">ID %1$d • %2$s</string>
+    <string name="thermal_detail_meta">%1$s • ID %2$d\n%3$s</string>
+    <string name="thermal_cpu_performance_cluster">CPU4 / performance cluster</string>
+    <string name="thermal_cpu_prime_core">CPU7 / prime core</string>
+    <string name="thermal_no_profile_ceiling">No explicit profile ceiling</string>
+    <string name="thermal_below_no_cap">Below %1$d°C: no explicit profile cap</string>
+    <string name="thermal_configured_ceiling">Configured thermal ceiling: %1$s</string>
+    <string name="thermal_configured_range">Configured ceiling range: %1$s – %2$s</string>
+    <string name="thermal_trigger_clear_cap">%1$d°C (clear %2$d°C) → %3$s</string>
+    <string name="thermal_trigger_cap">%1$d°C → %2$s</string>
+    <string name="thermal_no_gpu_ceiling">No explicit GPU thermal ceiling</string>
+    <string name="thermal_gpu_trigger_clear_cap">%1$d°C (clear %2$d°C) → state %3$d ≈ %4$s</string>
+    <string name="thermal_gpu_trigger_cap">%1$d°C → state %2$d ≈ %3$s</string>
+    <string name="thermal_gpu_bin_note">On Alioth’s 670 MHz GPU bin: state 0≈670 MHz, 1≈587 MHz, 2≈525 MHz. Other speed bins may start lower; the cooling state is authoritative.</string>
+    <string name="thermal_control_battery">Battery cooling</string>
+    <string name="thermal_control_state">Thermal state</string>
+    <string name="thermal_control_hotplug">Big-core hotplug</string>
+    <string name="thermal_control_boost">Boost limit</string>
+    <string name="thermal_control_low_battery">Low-battery CPU/core protection</string>
+    <string name="thermal_control_hbm">HBM disable</string>
+    <string name="thermal_control_backlight">Backlight cooling</string>
+    <string name="thermal_control_modem">Modem UL/DL cooling</string>
+    <string name="thermal_control_wireless">Wireless charging cooling</string>
+    <string name="thermal_control_none">No additional controls in this config.</string>
+    <string name="thermal_control_line">%1$s: %2$s</string>
+    <string name="thermal_temperature_value">%1$d°C</string>
+    <string name="thermal_temperature_range">%1$d–%2$d°C</string>
+    <string name="thermal_control_low_battery_value">5% SOC</string>
+    <string name="thermal_control_wireless_value">20°C and 60°C</string>
+    <string name="thermal_sensor_model">CPU/GPU triggers reference VIRTUAL-SENSOR0. The Normal-family configs define it from quiet_therm, cpu_therm, battery, wifi_therm, pa_therm0, pa_therm1 and charger_therm0 with weights 362, 229, 108, -111, -224, 734 and -159 (sum 1000, compensation 2169).</string>
+    <string name="thermal_sensor_defined">This config contains the VIRTUAL-SENSOR0 definition.</string>
+    <string name="thermal_sensor_referenced">This config references the active VIRTUAL-SENSOR0 definition.</string>
 
     <!-- Refresh Rate Settings -->
-    <string name="refresh_rate_tile_title">Refresh Rate</string>
+    <string name="refresh_rate_tile_title">Refresh rate</string>
 
     <!-- Touch Control Settings -->
-    <string name="touch_control_title">Touch Control</string>
-    <string name="touch_game_mode_title">Enable</string>
-    <string name="touch_response_title">Responsivity</string>
-    <string name="touch_response_summary">Controls touch response</string>
-    <string name="touch_sensitivity_title">Sensitivity</string>
-    <string name="touch_sensitivity_summary">Controls touch sensitivity for repeated taps</string>
-    <string name="touch_resistant_title">Resistant area</string>
-    <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
+    <string name="touch_control_title">Game touch controls</string>
+    <string name="touch_game_mode_title">Use game touch controls</string>
+    <string name="touch_response_title">Touch response</string>
+    <string name="touch_response_summary">Adjust tap response for the selected app</string>
+    <string name="touch_sensitivity_title">Touch sensitivity</string>
+    <string name="touch_sensitivity_summary">Adjust sensitivity for repeated taps</string>
+    <string name="touch_resistant_title">Edge resistance</string>
+    <string name="touch_resistant_summary">Reduce edge sensitivity to prevent accidental touches</string>
 
     <!-- Per-app refresh rate -->
     <string name="refresh_title">Per-app refresh rate</string>
-    <string name="refresh_summary">Set the maximum refresh rate for a specific application</string>
+    <string name="refresh_summary">Set the maximum refresh rate for each app</string>
     <string name="refresh_default">Default</string>
     <string name="refresh_standard">60Hz</string>    
     <string name="refresh_extreme">120Hz</string>    
 
     <!-- Clear Speaker -->
     <string name="clear_speaker_title">Clear speaker</string>
-    <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
-    <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2–5 times while shaking your device with the speaker facing downwards.\n\nWARNING: Ensure that any headphones are unplugged.</string>
+    <string name="clear_speaker_summary">Play a 30-second speaker-cleaning tone</string>
+    <string name="clear_speaker_description">Play the cleaning tone with the speaker facing down. For stubborn dust, repeat it a few times while gently moving the phone.\n\nDisconnect headphones before starting.</string>
 
     <!-- Dirac settings: Headset types -->
     <string name="dirac_headset_earbuds">Mi Earbuds</string>
@@ -93,22 +192,27 @@
     <string name="music_headset_scenario_vocal">Voice</string>
 
     <!-- High Touch Polling -->
-    <string name="htsr_title">Touch Responsiveness</string>
-    <string name="htsr_enable_title">Increase Touch Responsiveness</string>
-    <string name="htsr_enable_summary">Increases touch polling rate to decrease latency</string>    
+    <string name="htsr_title">Touch responsiveness</string>
+    <string name="htsr_enable_title">Increase touch responsiveness</string>
+    <string name="htsr_enable_summary">Increase touch polling rate to reduce input latency</string>    
 
     <!-- DC dimming settings -->
-    <string name="dc_dimming_enable_title">Anti-Flicker Mode</string>
-    <string name="dc_dimming_enable_summary">DC Dimming reduces eye strain in low light conditions (Note: reduce image quality)</string>
-    <string name="dc_dimming_enable_summary_not_supported">DC Dimming is not currently supported by the kernel</string>
+    <string name="dc_dimming_enable_title">Anti-flicker mode</string>
+    <string name="dc_dimming_enable_summary">Reduce low-brightness flicker. Color accuracy may be affected.</string>
+    <string name="dc_dimming_enable_summary_not_supported">Anti-flicker mode is not supported by the current kernel</string>
 
     <!--Display settings fragment -->
-    <string name="display_settings_title">Custom display settings</string>
-    <string name="display_settings_summary">DC Dimming, High Brightness Mode</string>
+    <string name="display_settings_title">Display enhancements</string>
+    <string name="display_settings_summary">Anti-flicker and high brightness mode</string>
 
     <!-- HBM settings -->
-    <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
-    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
+    <string name="hbm_mode_title">High brightness mode</string>
+    <string name="hbm_mode_summary">Allow higher display brightness for better visibility in direct sunlight. Uses more power.</string>
+    <string name="hbm_enable_summary_not_supported">High brightness mode is not supported by the current kernel</string>
 
+    <string name="dirac_unavailable">MiSound is temporarily unavailable</string>
+    <string name="dirac_apply_failed">Could not apply MiSound settings. Please try again.</string>
+    <string name="dirac_speaker_title">Speaker output</string>
+    <string name="dirac_speaker_summary">Speaker processing follows the active audio route and vendor support. The headphone profile below applies to headphones; it does not select a speaker mode.</string>
+    <string name="parts_apply_failed">Could not apply this setting. Please try again.</string>
 </resources>

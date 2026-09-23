@@ -16,6 +16,6 @@
 -->
 <permissions>
     <privapp-permissions package="org.lineageos.settings">
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
     </privapp-permissions>
 </permissions>

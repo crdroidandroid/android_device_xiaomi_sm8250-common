@@ -8,15 +8,15 @@ android_app {
     name: "XiaomiParts",
 
     srcs: ["src/**/*.java"],
-    resource_dirs: ["res"],
+    resource_dirs: ["res", "Translations"],
     certificate: "platform",
     platform_apis: true,
     system_ext_specific: true,
     privileged: true,
 
     static_libs: [
-        "org.lineageos.settings.resources",
         "SettingsLib",
+        "SettingsLibSliderPreference",
         "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="dirac_eq_enabled_title">Equalizer</string>
+    <string name="dirac_eq_enabled_summary">Apply the selected preset. Turning this off keeps the saved preset and uses a flat EQ curve.</string>
+    <string name="dirac_pause_calls_title">Pause during calls</string>
+    <string name="dirac_pause_calls_summary">Temporarily bypass MiSound during calls and voice communication, then restore it automatically.</string>
+    <string name="dirac_paused_for_calls">Paused for voice communication</string>
+</resources>
