@@ -147,10 +147,6 @@ on init
     chown system system /dev/stune/camera-daemon/tasks
     chmod 0664 /dev/stune/camera-daemon/tasks
 
-    # set default schedTune value for camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
-    write /dev/stune/camera-daemon/schedtune.boost 0
-
     # Keep CPU frequency reporting accurate for all apps.
     write /proc/sys/kernel/sched_lib_mask_force 0
 
