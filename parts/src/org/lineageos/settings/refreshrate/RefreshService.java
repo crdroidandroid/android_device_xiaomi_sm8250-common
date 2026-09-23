@@ -1,71 +1,113 @@
 /*
  * Copyright (C) 2020 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.lineageos.settings.refreshrate;
 
-import android.app.ActivityManager;
 import android.app.ActivityTaskManager;
 import android.app.ActivityTaskManager.RootTaskInfo;
 import android.app.IActivityTaskManager;
-import android.app.TaskStackListener;
 import android.app.Service;
+import android.app.TaskStackListener;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Handler;
 import android.os.IBinder;
-import android.util.Log;
+import android.os.Looper;
+import android.os.PowerManager;
 import android.os.RemoteException;
+import android.util.Log;
 
 public class RefreshService extends Service {
-
     private static final String TAG = "RefreshService";
-    private static final boolean DEBUG = true;
 
-    private String mPreviousApp;
+    private final Handler mHandler = new Handler(Looper.getMainLooper());
+    private boolean mDestroyed;
+    private boolean mScreenOn;
+    private boolean mReceiverRegistered;
+    private boolean mTaskListenerRegistered;
+    private String mPreviousApp = "";
+
     private RefreshUtils mRefreshUtils;
     private IActivityTaskManager mActivityTaskManager;
 
-    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+    private final Runnable mRefreshForeground = () -> refreshForegroundApp(false);
+
+    private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            mPreviousApp = "";
+            if (mDestroyed || intent == null) return;
+            if (Intent.ACTION_SCREEN_OFF.equals(intent.getAction())) {
+                mScreenOn = false;
+                mPreviousApp = "";
+                mRefreshUtils.restoreDefaultRates();
+            } else if (Intent.ACTION_SCREEN_ON.equals(intent.getAction())) {
+                mScreenOn = true;
+                refreshForegroundApp(true);
+            }
         }
     };
 
     @Override
     public void onCreate() {
-        if (DEBUG) Log.d(TAG, "Creating service");
-        try {
-            mActivityTaskManager = ActivityTaskManager.getService();
-            mActivityTaskManager.registerTaskStackListener(mTaskListener);
-        } catch (RemoteException e) {
-            // Do nothing
-        }
-        mRefreshUtils = new RefreshUtils(this);
-        registerReceiver();
         super.onCreate();
+
+        mRefreshUtils = new RefreshUtils(this);
+        mActivityTaskManager = ActivityTaskManager.getService();
+        PowerManager powerManager = getSystemService(PowerManager.class);
+        mScreenOn = powerManager != null && powerManager.isInteractive();
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(Intent.ACTION_SCREEN_OFF);
+        filter.addAction(Intent.ACTION_SCREEN_ON);
+        registerReceiver(mIntentReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+        mReceiverRegistered = true;
+
+        if (mActivityTaskManager != null) {
+            try {
+                mActivityTaskManager.registerTaskStackListener(mTaskListener);
+                mTaskListenerRegistered = true;
+            } catch (RemoteException | RuntimeException e) {
+                Log.w(TAG, "Cannot register task listener", e);
+            }
+        }
+
+        refreshForegroundApp(true);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if (DEBUG) Log.d(TAG, "Starting service");
+        refreshForegroundApp(true);
         return START_STICKY;
+    }
+
+    @Override
+    public void onDestroy() {
+        mDestroyed = true;
+        mHandler.removeCallbacks(mRefreshForeground);
+
+        if (mReceiverRegistered) {
+            try {
+                unregisterReceiver(mIntentReceiver);
+            } catch (RuntimeException e) {
+                Log.w(TAG, "Cannot unregister screen receiver", e);
+            }
+            mReceiverRegistered = false;
+        }
+
+        if (mTaskListenerRegistered && mActivityTaskManager != null) {
+            try {
+                mActivityTaskManager.unregisterTaskStackListener(mTaskListener);
+            } catch (RemoteException | RuntimeException e) {
+                Log.w(TAG, "Cannot unregister task listener", e);
+            }
+            mTaskListenerRegistered = false;
+        }
+
+        mRefreshUtils.restoreDefaultRates();
+        super.onDestroy();
     }
 
     @Override
@@ -73,30 +115,44 @@ public class RefreshService extends Service {
         return null;
     }
 
-    private void registerReceiver() {
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(Intent.ACTION_SCREEN_OFF);
-        filter.addAction(Intent.ACTION_SCREEN_ON);        
-        this.registerReceiver(mIntentReceiver, filter);
+    private void refreshForegroundApp(boolean force) {
+        if (mDestroyed) return;
+        if (!mScreenOn) {
+            mPreviousApp = "";
+            mRefreshUtils.restoreDefaultRates();
+            return;
+        }
+
+        String foregroundApp = "";
+        if (mActivityTaskManager != null) {
+            try {
+                RootTaskInfo info = mActivityTaskManager.getFocusedRootTaskInfo();
+                if (info != null && info.topActivity != null) {
+                    foregroundApp = info.topActivity.getPackageName();
+                }
+            } catch (RemoteException | RuntimeException e) {
+                Log.w(TAG, "Cannot query foreground app", e);
+                mPreviousApp = "";
+                mRefreshUtils.restoreDefaultRates();
+                return;
+            }
+        }
+
+        if (!force && foregroundApp.equals(mPreviousApp)) return;
+        mPreviousApp = foregroundApp;
+        if (foregroundApp.isEmpty()) {
+            mRefreshUtils.restoreDefaultRates();
+        } else {
+            mRefreshUtils.setRefreshRate(foregroundApp);
+        }
     }
 
-     private final TaskStackListener mTaskListener = new TaskStackListener() {
+    private final TaskStackListener mTaskListener = new TaskStackListener() {
         @Override
         public void onTaskStackChanged() {
-            try {
-                final RootTaskInfo info = mActivityTaskManager.getFocusedRootTaskInfo();
-                if (info == null || info.topActivity == null) {
-                    return;
-                }
-                String foregroundApp = info.topActivity.getPackageName();
-                if (!mRefreshUtils.isAppInList) {
-                 mRefreshUtils.getOldRate();
-                  } 
-                if (!foregroundApp.equals(mPreviousApp)) {
-                    mRefreshUtils.setRefreshRate(foregroundApp);
-                    mPreviousApp = foregroundApp;
-                  }
- 		 } catch (Exception e) {}
-            }
-        };
-    }
+            if (mDestroyed) return;
+            mHandler.removeCallbacks(mRefreshForeground);
+            mHandler.post(mRefreshForeground);
+        }
+    };
+}

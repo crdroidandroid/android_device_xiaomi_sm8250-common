@@ -29,15 +29,17 @@ public class RefreshActivity extends CollapsingToolbarBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
                 new RefreshSettingsFragment(), TAG_REFRESH).commit();
+        }
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+            getOnBackPressedDispatcher().onBackPressed();
             return true;
         }
         return false;
