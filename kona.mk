@@ -170,8 +170,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.dolby.speaker_tuning.support?=false \
     vendor.audio.dolby.control.tunning.by.volume.support?=false
 
-# Dolby MediaCodecs Dependenices
+# Dolby MediaCodecs dependencies
 PRODUCT_PACKAGES += \
+    dolby_ac4_omx_legacy_path \
+    libstagefright_omx.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_soft_common.vendor \
     libstagefright_softomx.vendor \

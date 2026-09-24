@@ -53,3 +53,12 @@ xiaomi_kona_wifi_install_symlink {
         },
     },
 }
+
+// The stock 32-bit AC-4 decoder dlopens this legacy VNDK path for function_a/b/c.
+// Point it to the current vendor OMX helper instead of duplicating the library.
+install_symlink {
+    name: "dolby_ac4_omx_legacy_path",
+    vendor: true,
+    installed_location: "lib/vndk/libstagefright_omx.so",
+    symlink_target: "/vendor/lib/libstagefright_omx.so",
+}
