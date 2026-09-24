@@ -249,3 +249,6 @@ include vendor/xiaomi/sm8250-common/BoardConfigVendor.mk
 
 # Explicit framework opt-in for this product's Qualcomm DAX 3.6 effect contract.
 $(call soong_config_set_bool,audio,legacy_dap_integration,true)
+
+# Match the 21-entry AC-4 tables paired with the shipped stock Dolby decoder.
+$(call soong_config_set_bool,media,dolby_ac4_21_entry_tables,true)
