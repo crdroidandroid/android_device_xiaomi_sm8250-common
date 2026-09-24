@@ -246,3 +246,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
 include vendor/xiaomi/sm8250-common/BoardConfigVendor.mk
+
+# Explicit framework opt-in for this product's Qualcomm DAX 3.6 effect contract.
+$(call soong_config_set_bool,audio,legacy_dap_integration,true)
