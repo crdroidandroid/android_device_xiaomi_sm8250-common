@@ -69,6 +69,7 @@ TARGET_NO_BOOTLOADER := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
 # Camera - Miui
+$(call soong_config_set_bool,camera,xiaomi_session_client_name,true)
 $(call soong_config_set,camera,package_name,com.android.camera)
 
 # Camera - HIDL overrideFormat
