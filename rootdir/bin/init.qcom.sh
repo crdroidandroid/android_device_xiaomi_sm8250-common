@@ -29,14 +29,7 @@
 
 # This tree is SM8250/Kona-only (TARGET_BOARD_PLATFORM := kona).
 # Keep the runtime setup limited to the path that can actually execute here.
-baseband=`getprop ro.baseband`
 echo 1 > /proc/sys/net/ipv6/conf/default/accept_ra_defrtr
-
-case "$baseband" in
-    "svlte2a")
-        start bridgemgrd
-        ;;
-esac
 
 if [ -f /vendor/bin/msm_irqbalance ]; then
     start vendor.msm_irqbalance
