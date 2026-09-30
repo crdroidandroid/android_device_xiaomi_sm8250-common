@@ -425,7 +425,13 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 ifneq ($(TARGET_IS_TABLET),true)
+ifeq ($(TARGET_USES_AW8697_VIBRATOR),true)
+PRODUCT_PACKAGES += android.hardware.vibrator-service.xiaomi_aw8697
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+else
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+endif
 endif
 
 # Wi-Fi
