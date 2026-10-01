@@ -41,9 +41,13 @@ void set_variant_props(const variant_info& variant) {
 
     set_ro_build_prop("brand", variant.brand, true);
     set_ro_build_prop("device", variant.device, true);
-    set_ro_build_prop("name", variant.name, true);
+    if (!variant.name.empty()) {
+        set_ro_build_prop("name", variant.name, true);
+    }
     set_ro_build_prop("marketname", marketname, true);
-    set_ro_build_prop("mod_device", variant.mod_device, true);
+    if (!variant.mod_device.empty()) {
+        set_ro_build_prop("mod_device", variant.mod_device, true);
+    }
     set_ro_build_prop("model", variant.model, true);
     property_override("vendor.usb.product_string", marketname, true);
 
