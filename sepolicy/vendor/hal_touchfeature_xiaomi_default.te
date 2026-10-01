@@ -18,4 +18,3 @@ get_prop(hal_touchfeature_xiaomi_default, hwservicemanager_prop)
 
 # Allow hal_touchfeature_xiaomi_default to read/write to vendor_touchfeature_device
 allow hal_touchfeature_xiaomi_default vendor_touchfeature_device:chr_file rw_file_perms;
-
