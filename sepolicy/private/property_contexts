@@ -17,3 +17,6 @@ settingsdebug.instant.packages u:object_r:settingslib_prop:s0
 viewroot.ipc_rendering_packages u:object_r:exported_default_prop:s0 exact string
 viewroot.profile_rendering u:object_r:exported_default_prop:s0 exact bool
 ro.input.resampling u:object_r:exported_default_prop:s0 exact bool
+
+# XiaomiParts thermal region selector
+persist.sys.xiaomi.thermal.map u:object_r:xiaomi_thermal_profile_prop:s0 exact enum global india

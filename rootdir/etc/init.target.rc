@@ -126,7 +126,7 @@ on early-boot
 
 # XiaomiParts runtime thermal map selection. Keep the stock encrypted maps
 # untouched and restart mi_thermald after replacing its data override.
-on property:persist.vendor.thermal.map=global
+on property:persist.sys.xiaomi.thermal.map=global
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
     copy /vendor/etc/thermal-map.conf /data/vendor/thermal/config/thermal-map.conf
@@ -135,7 +135,7 @@ on property:persist.vendor.thermal.map=global
     restorecon /data/vendor/thermal/config/thermal-map.conf
     restart mi_thermald
 
-on property:persist.vendor.thermal.map=india
+on property:persist.sys.xiaomi.thermal.map=india
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
     copy /vendor/etc/thermal-map-india.conf /data/vendor/thermal/config/thermal-map.conf

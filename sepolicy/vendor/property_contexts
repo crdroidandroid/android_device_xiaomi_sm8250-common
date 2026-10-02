@@ -57,6 +57,5 @@ vendor.invn.hal.                                                                
 persist.vendor.sensor.                                                                              u:object_r:vendor_sensors_prop:s0
 
 # Thermal
-persist.vendor.thermal.map                                                                          u:object_r:vendor_thermal_profile_prop:s0 exact string
 persist.vendor.sys.thermal.config                                                                   u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                                                                                 u:object_r:vendor_thermal_normal_prop:s0
