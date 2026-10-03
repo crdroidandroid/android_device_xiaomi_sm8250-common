@@ -81,7 +81,7 @@ on fs
     chmod 0660 /dev/tfa_control
     chmod 0666 /dev/xlog
     chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/custom_wave
-    chmod 0440 /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/custom_wave
+    chmod 0660 /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/custom_wave
     chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/gain
     chmod 0660 /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/gain
 
