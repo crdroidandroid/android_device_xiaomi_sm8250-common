@@ -403,12 +403,6 @@ PRODUCT_BOOT_JARS += \
     telephony-ext \
     xiaomi-telephony-stub
 
-# Thermal
-ifeq ($(TARGET_USE_QTI_THERMAL_SERVICE),true)
-PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.qti
-endif
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.qti \
