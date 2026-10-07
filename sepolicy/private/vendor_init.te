@@ -1,0 +1,2 @@
+# init.target.rc selects the regional thermal map from this system-owned property.
+get_prop(vendor_init, xiaomi_thermal_profile_prop)
