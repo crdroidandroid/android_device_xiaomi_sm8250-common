@@ -131,6 +131,9 @@ on property:persist.sys.xiaomi.thermal.map=global
 on property:persist.sys.xiaomi.thermal.map=india
     exec_start vendor.thermal-map-india
 
+on property:vendor.sys.thermal.map_ready=1
+    restart mi_thermald
+
 service vendor.thermal-map-global /vendor/bin/init.mi.thermal-map.sh global
     class late_start
     user root

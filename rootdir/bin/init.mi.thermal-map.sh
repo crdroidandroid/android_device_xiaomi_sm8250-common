@@ -23,6 +23,7 @@ umask 077
 # Init creates and labels the directory during post-fs-data.
 [ -d "$directory" ] && [ ! -L "$directory" ] || exit 1
 [ -f "$source" ] && [ -s "$source" ] || exit 1
+setprop vendor.sys.thermal.map_ready 0 || exit 1
 rm -f "$temporary" || exit 1
 cp "$source" "$temporary" || exit 1
 [ -s "$temporary" ] || exit 1
@@ -31,4 +32,4 @@ chown root:system "$temporary" || exit 1
 chmod 0644 "$temporary" || exit 1
 restorecon "$temporary" || exit 1
 mv -f "$temporary" "$destination" || exit 1
-setprop ctl.restart mi_thermald
+setprop vendor.sys.thermal.map_ready 1

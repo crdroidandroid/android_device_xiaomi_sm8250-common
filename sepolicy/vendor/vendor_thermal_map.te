@@ -14,4 +14,4 @@ allow vendor_thermal_map vendor_thermal_data_file:file { relabelfrom relabelto }
 allow vendor_thermal_map self:capability chown;
 allow vendor_thermal_map file_contexts_file:file r_file_perms;
 selinux_check_context(vendor_thermal_map)
-set_prop(vendor_thermal_map, vendor_ctl_thermal_map_prop)
+set_prop(vendor_thermal_map, vendor_thermal_map_ready_prop)
