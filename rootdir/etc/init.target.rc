@@ -197,9 +197,6 @@ on boot
     chown system system /sys/class/thermal/thermal_message/balance_mode
     chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
 
-    # default country code
-    setprop ro.boot.wificountrycode 00
-
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
 
@@ -339,3 +336,7 @@ on property:sys.lmkd.memory.start_reclaim_in_video_record=1
 
 on property:sys.lmkd.memory.start_reclaim_in_capture=1
     setprop sys.lmkd.memory.start_reclaim_in_capture 0
+
+# Preserve the bootloader country when provided; use the world domain otherwise.
+on boot && property:ro.boot.wificountrycode=
+    setprop ro.boot.wificountrycode 00
