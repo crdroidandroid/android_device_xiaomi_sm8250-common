@@ -41,36 +41,57 @@ fi
 function copy_modem_config() {
     local source=/vendor/firmware_mnt
     local dest=/data/vendor/modem_config
-    local current previous
+    local current previous checksums entry links
+    local configs="$source/image/modem_pr/mcfg/configs"
+    local ota="$source/image/modem_pr/mbn_ota.txt"
+    local version="$source/verinfo/ver_info.txt"
 
-    # Do not destroy a usable cache when the firmware mount is unavailable.
-    current=$(cat "$source/verinfo/ver_info.txt") || return 1
-    [ -n "$current" ] || return 1
-    [ -r "$source/image/modem_pr/mbn_ota.txt" ] || return 1
-    [ -d "$source/image/modem_pr/mcfg/configs" ] || return 1
-    set -- "$source/image/modem_pr/mcfg/configs/"*
+    # Xiaomi firmware can ship MCFG without Qualcomm's optional metadata.
+    # Fingerprint actual contents, not a version file that may be absent.
+    [ -d "$configs" ] && [ ! -L "$configs" ] || return 1
+    links=$(cd "$configs" && find . -type l) || return 1
+    [ -z "$links" ] || return 1
+    checksums=$(cd "$configs" && find . -type f -exec sha256sum {} +) || return 1
+    [ -n "$checksums" ] || return 1
+    for entry in "$ota" "$version"; do
+        [ ! -L "$entry" ] || return 1
+        if [ -f "$entry" ]; then
+            current=$(sha256sum "$entry") || return 1
+            checksums="$checksums
+$current"
+        fi
+    done
+    checksums=$(printf '%s\n' "$checksums" | sort) || return 1
+    current=$(printf '%s\n' "$checksums" | sha256sum) || return 1
+    current=${current%% *}
+    set -- "$configs/"*
     [ -e "$1" ] || return 1
 
     previous=
-    if [ -f "$dest/ver_info.txt" ]; then
-        previous=$(cat "$dest/ver_info.txt") || return 1
+    if [ -f "$dest/.mcfg_version" ]; then
+        previous=$(cat "$dest/.mcfg_version") || return 1
     fi
     if [ "$previous" != "$current" ]; then
-        # Existing configuration subdirectories preserve firmware read-only modes.
-        # The parent is created by init with group root and mode 0570.
+        # Invalidate completion before changing the cache; retry failures next boot.
+        rm -f "$dest/.mcfg_version" || return 1
         for entry in "$dest/"*; do
             [ -e "$entry" ] || [ -L "$entry" ] || continue
             chmod -R g+w "$entry" || return 1
         done
         rm -rf "$dest/"* || return 1
         cp --preserve=m -dr "$@" "$dest/" || return 1
-        cp --preserve=m -d "$source/image/modem_pr/mbn_ota.txt" "$dest/" || return 1
+        if [ -f "$ota" ]; then
+            cp --preserve=m -d "$ota" "$dest/" || return 1
+        fi
+        if [ -f "$version" ]; then
+            cp --preserve=m -d "$version" "$dest/" || return 1
+        fi
         chown -hR radio.root "$dest/"* || return 1
 
-        # Publish the version last. Failed copies must be retried next boot.
-        cp --preserve=m -d "$source/verinfo/ver_info.txt" "$dest/ver_info.txt" &&
-            chown radio.root "$dest/ver_info.txt" || {
-                rm -f "$dest/ver_info.txt"
+        # Publish the content fingerprint last, after every copy succeeds.
+        printf '%s\n' "$current" > "$dest/.mcfg_version" &&
+            chown radio.root "$dest/.mcfg_version" || {
+                rm -f "$dest/.mcfg_version"
                 return 1
             }
     fi
@@ -78,7 +99,9 @@ function copy_modem_config() {
 }
 
 if copy_modem_config; then
-    setprop ro.vendor.ril.mbn_copy_completed 1
+    if [ "$(getprop ro.vendor.ril.mbn_copy_completed)" != "1" ]; then
+        setprop ro.vendor.ril.mbn_copy_completed 1
+    fi
 else
     log -t init.qcom -p e "Modem configuration copy failed; leaving completion unset"
 fi
