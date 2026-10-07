@@ -1,0 +1,17 @@
+type vendor_thermal_map, domain;
+type vendor_thermal_map_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_thermal_map)
+
+allow vendor_thermal_map vendor_shell_exec:file rx_file_perms;
+allow vendor_thermal_map vendor_toolbox_exec:file rx_file_perms;
+allow vendor_thermal_map vendor_configs_file:dir search;
+allow vendor_thermal_map vendor_configs_file:file r_file_perms;
+allow vendor_thermal_map vendor_data_file:dir search;
+allow vendor_thermal_map vendor_thermal_data_file:dir rw_dir_perms;
+allow vendor_thermal_map vendor_thermal_data_file:file create_file_perms;
+# restorecon preserves the thermal type for the staging file.
+allow vendor_thermal_map vendor_thermal_data_file:file { relabelfrom relabelto };
+allow vendor_thermal_map self:capability chown;
+allow vendor_thermal_map file_contexts_file:file r_file_perms;
+selinux_check_context(vendor_thermal_map)
+set_prop(vendor_thermal_map, vendor_ctl_thermal_map_prop)

@@ -94,3 +94,5 @@
 
 # Xiaomi Touch
 /dev/xiaomi-touch                                                                                   u:object_r:vendor_touchfeature_device:s0
+
+/vendor/bin/init\.mi\.thermal-map\.sh u:object_r:vendor_thermal_map_exec:s0

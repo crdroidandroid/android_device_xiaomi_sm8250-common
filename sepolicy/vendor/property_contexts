@@ -59,3 +59,5 @@ persist.vendor.sensor.                                                          
 # Thermal
 persist.vendor.sys.thermal.config                                                                   u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                                                                                 u:object_r:vendor_thermal_normal_prop:s0
+
+ctl.restart$mi_thermald u:object_r:vendor_ctl_thermal_map_prop:s0 exact string

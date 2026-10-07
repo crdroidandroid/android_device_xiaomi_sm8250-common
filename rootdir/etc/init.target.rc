@@ -124,25 +124,28 @@ on early-boot
     verity_update_state
 
 
-# XiaomiParts runtime thermal map selection. Keep the stock encrypted maps
-# untouched and restart mi_thermald after replacing its data override.
+# Publish complete validated maps while mi_thermald continues running.
 on property:persist.sys.xiaomi.thermal.map=global
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
-    copy /vendor/etc/thermal-map.conf /data/vendor/thermal/config/thermal-map.conf
-    chown root system /data/vendor/thermal/config/thermal-map.conf
-    chmod 0644 /data/vendor/thermal/config/thermal-map.conf
-    restorecon /data/vendor/thermal/config/thermal-map.conf
-    restart mi_thermald
+    exec_start vendor.thermal-map-global
 
 on property:persist.sys.xiaomi.thermal.map=india
-    mkdir /data/vendor/thermal 0771 root system
-    mkdir /data/vendor/thermal/config 0771 root system
-    copy /vendor/etc/thermal-map-india.conf /data/vendor/thermal/config/thermal-map.conf
-    chown root system /data/vendor/thermal/config/thermal-map.conf
-    chmod 0644 /data/vendor/thermal/config/thermal-map.conf
-    restorecon /data/vendor/thermal/config/thermal-map.conf
-    restart mi_thermald
+    exec_start vendor.thermal-map-india
+
+service vendor.thermal-map-global /vendor/bin/init.mi.thermal-map.sh global
+    class late_start
+    user root
+    group system
+    capabilities CHOWN
+    disabled
+    oneshot
+
+service vendor.thermal-map-india /vendor/bin/init.mi.thermal-map.sh india
+    class late_start
+    user root
+    group system
+    capabilities CHOWN
+    disabled
+    oneshot
 
 on boot
     # Allow system apps to modify exposure dim layer state

@@ -47,6 +47,12 @@ sh_binary {
     vendor: true,
 }
 
+sh_binary {
+    name: "init.mi.thermal-map.sh",
+    src: "bin/init.mi.thermal-map.sh",
+    vendor: true,
+}
+
 // fstab
 soong_config_module_type {
     name: "xiaomi_kona_rootdir_prebuilt_etc",
