@@ -68,10 +68,16 @@ $current"
     [ -e "$1" ] || return 1
 
     previous=
+    [ ! -L "$dest/.mcfg_version" ] || return 1
     if [ -f "$dest/.mcfg_version" ]; then
+        # The script runs in the root group without DAC_OVERRIDE. A marker
+        # owned by radio must stay group-readable across subsequent boots.
+        chmod 0640 "$dest/.mcfg_version" || return 1
         previous=$(cat "$dest/.mcfg_version") || return 1
     fi
     if [ "$previous" != "$current" ]; then
+        # Restore the root group's write access revoked after the previous copy.
+        chmod g+w "$dest" || return 1
         # Invalidate completion before changing the cache; retry failures next boot.
         rm -f "$dest/.mcfg_version" || return 1
         for entry in "$dest/"*; do
@@ -90,6 +96,7 @@ $current"
 
         # Publish the content fingerprint last, after every copy succeeds.
         printf '%s\n' "$current" > "$dest/.mcfg_version" &&
+            chmod 0640 "$dest/.mcfg_version" &&
             chown radio.root "$dest/.mcfg_version" || {
                 rm -f "$dest/.mcfg_version"
                 return 1
