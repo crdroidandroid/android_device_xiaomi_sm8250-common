@@ -20,6 +20,10 @@ from extract_utils.fixups_lib import (
 blob_fixups: blob_fixups_user_type = {
     'system/framework/WfdCommon.jar': blob_fixup()
         .apktool_patch('blob-patches/WfdCommon.patch'),
+    # Only the 64-bit WFD executable is packaged by this tree.
+    'system_ext/etc/init/wfdservice.rc': blob_fixup()
+        .regex_replace(r'service wfdservice /system_ext/bin/wfdservice\n(?:    [^\n]*\n)+\n', '')
+        .regex_replace(r'on property:vendor\.wfdservice=(?:enable|disable)\n    (?:start|stop) wfdservice\n\n', ''),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     # SM8250 builds RMNET into the kernel; stock GKI module hooks cannot work.
