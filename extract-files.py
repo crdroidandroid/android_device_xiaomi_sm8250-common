@@ -36,7 +36,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/vendor.qti.media.c2@1.0-service.rc': blob_fixup()
         .regex_replace(r'writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
     'vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc': blob_fixup()
-        .regex_replace(r'writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
+        .regex_replace(r'writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh')
+        # The stock MIUI migration script is not present in this ROM.
+        .regex_replace(r'    start vendor\.move_data_sh\n', '')
+        .regex_replace(r'service vendor\.move_data_sh /system/bin/move_widevine_data\.sh\n(?:    [^\n]*\n)+\n', ''),
     'vendor/etc/init/init.mi_thermald.rc': blob_fixup()
         .regex_replace('.*seclabel u:r:mi_thermald:s0\n', ''),
     'vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc': blob_fixup()
