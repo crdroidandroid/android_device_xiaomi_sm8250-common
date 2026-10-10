@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="touch_controls_screen_title">Touch controls</string>
+    <string name="touch_controls_start_title">Start with the defaults</string>
+    <string name="touch_controls_start_summary">Enable controls for this app, then choose a preset or tune individual settings. You do not need to raise every slider.</string>
+    <string name="touch_controls_active_title">Per-app tuning is enabled</string>
+    <string name="touch_controls_active_summary">Applied while this app is in the foreground. Leaving the app or turning the screen off restores normal touch behavior.</string>
+    <string name="touch_controls_global_title">Global touch override is active</string>
+    <string name="touch_controls_global_summary">The global responsiveness option takes priority. Your per-app settings are saved but paused. Tap here to manage the global option.</string>
+    <string name="touch_controls_unavailable_title">Touch controls are unavailable</string>
+    <string name="touch_controls_unavailable_summary">The touch service did not provide valid control ranges. Reopen this page to retry.</string>
+    <string name="touch_controls_mode_group">Main setting</string>
+    <string name="touch_controls_mode_title">Tuning mode</string>
+    <string name="touch_controls_manual">Manual · firmware defaults to start</string>
+    <string name="touch_controls_preset_one">Firmware preset 1</string>
+    <string name="touch_controls_preset_two">Firmware preset 2</string>
+    <string name="touch_controls_preset_three">Firmware preset 3</string>
+    <string name="touch_controls_mode_help_title">Choose one tuning method</string>
+    <string name="touch_controls_mode_help">A preset replaces response, sensitivity, aim and tap stability together. Manual settings stay saved for later. Edge protection works separately in either mode.</string>
+    <string name="touch_controls_manual_group">Manual · main adjustments</string>
+    <string name="touch_controls_advanced_group">Manual · fine adjustments</string>
+    <string name="touch_controls_edge_group">Independent · edge protection</string>
+    <string name="touch_controls_response_summary">Adjust tap response. 0 restores the firmware default; change one setting at a time and test it in your game.</string>
+    <string name="touch_controls_sensitivity_summary">Adjust touch sensitivity. 0 restores the firmware default; a higher level is not automatically better for every game.</string>
+    <string name="touch_controls_aim_summary">Fine-tune aiming gestures only if needed. 0 restores the firmware default.</string>
+    <string name="touch_controls_stability_summary">Fine-tune repeated-tap stability only if needed. 0 restores the firmware default.</string>
+    <string name="touch_controls_edge_summary">0 disables edge filtering; levels 1–3 increase protection against accidental edge touches. Stronger filtering can make intentional edge touches harder.</string>
+    <string name="touch_controls_reset_title">Reset this app’s tuning</string>
+    <string name="touch_controls_reset_summary">Return to manual firmware defaults and the default edge protection. Keep the app’s enable switch unchanged.</string>
+    <string name="touch_controls_help_title">How touch tuning works</string>
+    <string name="touch_controls_help">Start with manual defaults. Enable tuning only for apps that need it.\n\nPresets and manual adjustments are alternatives, not effects to stack. Presets 1–3 are firmware profiles; they are not quality ratings.\n\nIn manual mode, 0 restores the firmware default. Higher levels change the touch behavior and may feel worse in some games. Adjust response or sensitivity first; use aim and stability only for finer tuning.\n\nEdge filtering is independent. Stronger protection can also reject intentional touches near the screen edge.\n\nThe global responsiveness option takes priority over per-app tuning. These controls do not change the display refresh rate.</string>
+    <string-array name="touch_controls_mode_entries" translatable="false">
+        <item>@string/touch_controls_manual</item>
+        <item>@string/touch_controls_preset_one</item>
+        <item>@string/touch_controls_preset_two</item>
+        <item>@string/touch_controls_preset_three</item>
+    </string-array>
+    <string-array name="touch_controls_mode_values" translatable="false">
+        <item>0</item><item>1</item><item>2</item><item>3</item>
+    </string-array>
+</resources>

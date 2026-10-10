@@ -26,6 +26,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.MANAGE_ACTIVITY_TASKS" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <queries>
         <intent>
@@ -40,7 +41,8 @@
         android:label="@string/device_settings_app_name"
         android:persistent="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SubSettingsBase.Expressive"
+        android:resizeableActivity="true"
+        android:theme="@style/Theme.XiaomiParts"
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
@@ -57,7 +59,7 @@
             android:name=".dirac.DiracActivity"
             android:exported="false"
             android:label="@string/dirac_title"
-            android:theme="@style/Theme.SubSettingsBase.Expressive">
+            android:theme="@style/Theme.XiaomiParts">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -88,13 +90,13 @@
             android:name=".thermal.ThermalInfoActivity"
             android:exported="false"
             android:label="@string/thermal_info_title"
-            android:theme="@style/Theme.SubSettingsBase.Expressive" />
+            android:theme="@style/Theme.XiaomiParts" />
 
         <activity
             android:name=".thermal.ThermalActivity"
             android:exported="false"
             android:label="@string/thermal_title"
-            android:theme="@style/Theme.SubSettingsBase.Expressive">
+            android:theme="@style/Theme.XiaomiParts">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -131,7 +133,7 @@
             android:name=".refreshrate.RefreshActivity"
             android:label="@string/refresh_title"
             android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase.Expressive">
+            android:theme="@style/Theme.XiaomiParts">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -151,7 +153,7 @@
         <activity
             android:name=".touchsampling.TouchSamplingSettingsActivity"
             android:label="@string/htsr_enable_title"
-            android:theme="@style/Theme.SubSettingsBase.Expressive"
+            android:theme="@style/Theme.XiaomiParts"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -183,7 +185,7 @@
             android:name=".display.DisplaySettingsActivity"
             android:label="@string/display_settings_title"
             android:exported="false"
-            android:theme="@style/Theme.SubSettingsBase.Expressive">
+            android:theme="@style/Theme.XiaomiParts">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

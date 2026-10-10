@@ -7,7 +7,7 @@
 android_app {
     name: "XiaomiParts",
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.kt"],
     resource_dirs: ["res", "Translations"],
     certificate: "platform",
     platform_apis: true,
@@ -15,8 +15,10 @@ android_app {
     privileged: true,
 
     static_libs: [
-        "SettingsLib",
-        "SettingsLibSliderPreference",
+        "androidx.activity_activity-compose",
+        "androidx.compose.material3_material3",
+        "androidx.compose.runtime_runtime",
+        "androidx.lifecycle_lifecycle-runtime-compose",
         "//hardware/xiaomi:vendor.xiaomi.hardware.touchfeature-V1.0-java",
     ],
 

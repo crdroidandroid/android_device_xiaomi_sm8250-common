@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alioth_touch_aim">Aim sensitivity</string>
+    <string name="alioth_touch_aim_summary">0: firmware default. Levels 1–5 adjust aiming touch response.</string>
+    <string name="alioth_touch_stability">Tap stability</string>
+    <string name="alioth_touch_stability_summary">0: firmware default. Levels 1–5 adjust tap stability.</string>
+    <string name="alioth_touch_expert">Touch preset</string>
+    <string name="alioth_touch_expert_summary">0: individual controls. Presets 1–3 replace response, sensitivity, aim sensitivity and tap stability; edge filtering stays separate.</string>
+</resources>
