@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_preset_hiphop">"Hip Hop"</string>
+    <string name="misound_preset_hiphop">"Hip Hop"</string>
     <string name="thermal_info_meta">"ID %1$d • %2$s"</string>
     <string name="thermal_detail_meta">"%1$s • ID %2$d\n%3$s"</string>
     <string name="thermal_trigger_cap">"%1$d°C → %2$s"</string>
@@ -10,11 +10,11 @@
     <string name="thermal_temperature_range">"%1$d–%2$d°C"</string>
     <string name="refresh_standard">"60Hz"</string>
     <string name="refresh_extreme">"120Hz"</string>
-    <string name="dirac_summary">"Popraw jakość dźwięku"</string>
-    <string name="dirac_enable">"Włącz"</string>
-    <string name="dirac_hifi_summary">"Włącz tryb wysokiej wierności dźwięku na obsługiwanych urządzeniach"</string>
-    <string name="dirac_preset_default">"Domyślne"</string>
-    <string name="dirac_preset_bass_booster">"Wzmocnienie basów"</string>
+    <string name="misound_summary">"Popraw jakość dźwięku"</string>
+    <string name="misound_enable">"Włącz"</string>
+    <string name="misound_hifi_summary">"Włącz tryb wysokiej wierności dźwięku na obsługiwanych urządzeniach"</string>
+    <string name="misound_preset_default">"Domyślne"</string>
+    <string name="misound_preset_bass_booster">"Wzmocnienie basów"</string>
     <string name="thermal_title">"Profile termiczne"</string>
     <string name="thermal_summary">"Zasady termiczne Xiaomi dla systemu i aplikacji"</string>
     <string name="thermal_profile_dialog_title">"Profil termiczny"</string>
@@ -100,11 +100,11 @@
     <string name="clear_speaker_title">"Wyczyść głośnik"</string>
     <string name="clear_speaker_summary">"Odtwórz 30-sekundowy dźwięk czyszczenia głośnika"</string>
     <string name="clear_speaker_description">"Odtwórz dźwięk czyszczenia z głośnikiem skierowanym w dół. W przypadku uporczywego kurzu powtórz kilka razy, delikatnie poruszając telefonem.\n\nPrzed rozpoczęciem odłącz słuchawki."</string>
-    <string name="dirac_preset_live">"Na żywo"</string>
-    <string name="dirac_preset_bass_reduction">"Redukcja basów"</string>
-    <string name="dirac_preset_treble_reduction">"Redukcja wysokich tonów"</string>
-    <string name="dirac_preset_soft_bass">"Łagodne basy"</string>
-    <string name="dirac_preset_soft_treble">"Łagodne wysokie tony"</string>
+    <string name="misound_preset_live">"Na żywo"</string>
+    <string name="misound_preset_bass_reduction">"Redukcja basów"</string>
+    <string name="misound_preset_treble_reduction">"Redukcja wysokich tonów"</string>
+    <string name="misound_preset_soft_bass">"Łagodne basy"</string>
+    <string name="misound_preset_soft_treble">"Łagodne wysokie tony"</string>
     <string name="music_headset_scenario_select">"Wybierz scenę"</string>
     <string name="music_headset_scenario_intelligent">"Inteligentna"</string>
     <string name="music_headset_scenario_music">"Muzyka"</string>
@@ -121,19 +121,19 @@
     <string name="hbm_mode_title">"Tryb wysokiej jasności"</string>
     <string name="hbm_mode_summary">"Zezwól na wyższą jasność ekranu dla lepszej widoczności w słońcu. Zużywa więcej energii."</string>
     <string name="hbm_enable_summary_not_supported">"Bieżące jądro nie obsługuje trybu wysokiej jasności"</string>
-    <string name="dirac_unavailable">"MiSound jest tymczasowo niedostępny"</string>
-    <string name="dirac_apply_failed">"Nie udało się zastosować ustawień MiSound. Spróbuj ponownie."</string>
-    <string name="dirac_speaker_title">"Wyjście głośnika"</string>
-    <string name="dirac_speaker_summary">"Przetwarzanie głośnika zależy od aktywnej ścieżki audio i obsługi przez dostawcę. Poniższy profil słuchawek dotyczy słuchawek; nie wybiera trybu głośnika."</string>
+    <string name="misound_unavailable">"MiSound jest tymczasowo niedostępny"</string>
+    <string name="misound_apply_failed">"Nie udało się zastosować ustawień MiSound. Spróbuj ponownie."</string>
+    <string name="misound_speaker_title">"Wyjście głośnika"</string>
+    <string name="misound_speaker_summary">"Przetwarzanie głośnika zależy od aktywnej ścieżki audio i obsługi przez dostawcę. Poniższy profil słuchawek dotyczy słuchawek; nie wybiera trybu głośnika."</string>
     <string name="parts_apply_failed">"Nie udało się zastosować tego ustawienia. Spróbuj ponownie."</string>
-    <string name="dirac_eq_enabled_title">"Korektor"</string>
-    <string name="dirac_eq_enabled_summary">"Zastosuj wybrane ustawienie wstępne. Wyłączenie zachowuje zapisane ustawienie i używa płaskiej krzywej korektora."</string>
-    <string name="dirac_pause_calls_title">"Wstrzymaj podczas połączeń"</string>
-    <string name="dirac_pause_calls_summary">"Tymczasowo pomijaj przetwarzanie MiSound podczas połączeń i komunikacji głosowej, a następnie przywracaj je automatycznie."</string>
-    <string name="dirac_paused_for_calls">"Wstrzymano na czas komunikacji głosowej"</string>
+    <string name="misound_eq_enabled_title">"Korektor"</string>
+    <string name="misound_eq_enabled_summary">"Zastosuj wybrane ustawienie wstępne. Wyłączenie zachowuje zapisane ustawienie i używa płaskiej krzywej korektora."</string>
+    <string name="misound_pause_calls_title">"Wstrzymaj podczas połączeń"</string>
+    <string name="misound_pause_calls_summary">"Tymczasowo pomijaj przetwarzanie MiSound podczas połączeń i komunikacji głosowej, a następnie przywracaj je automatycznie."</string>
+    <string name="misound_paused_for_calls">"Wstrzymano na czas komunikacji głosowej"</string>
     <string name="thermal_system_default">"Profil systemowy"</string>
     <string name="refresh_default">"Domyślne"</string>
-    <string name="dirac_preset_balanced">"Zrównoważony"</string>
+    <string name="misound_preset_balanced">"Zrównoważony"</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"Pokaż elementy sterujące profilem systemowym"</string>
     <string name="thermal_system_collapse">"Ukryj elementy sterujące profilem systemowym"</string>

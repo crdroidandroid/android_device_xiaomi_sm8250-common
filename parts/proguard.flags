@@ -2,7 +2,7 @@
   *;
 }
 
--keep class org.lineageos.settings.dirac.* {
+-keep class org.lineageos.settings.misound.* {
   *;
 }
 
@@ -23,5 +23,10 @@
 }
 
 -keep class org.lineageos.settings.thermal.* {
+  *;
+}
+
+# Preserve the compatibility entry point used by already-pinned MiSound tiles.
+-keep class org.lineageos.settings.dirac.DiracTileService {
   *;
 }

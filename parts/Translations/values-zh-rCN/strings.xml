@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">设备设置</string>
-    <string name="dirac_preset_blues">布鲁斯</string>
-    <string name="dirac_preset_classical">古典</string>
-    <string name="dirac_preset_country">乡村</string>
-    <string name="dirac_preset_dance">舞曲</string>
-    <string name="dirac_preset_electronic">电子音乐</string>
-    <string name="dirac_preset_jazz">爵士</string>
-    <string name="dirac_preset_metal">金属</string>
-    <string name="dirac_preset_pop">流行</string>
-    <string name="dirac_preset_rock">摇滚</string>
-    <string name="dirac_headset_title">耳机类型</string>
-    <string name="dirac_preset_title">听感</string>
+    <string name="misound_preset_blues">布鲁斯</string>
+    <string name="misound_preset_classical">古典</string>
+    <string name="misound_preset_country">乡村</string>
+    <string name="misound_preset_dance">舞曲</string>
+    <string name="misound_preset_electronic">电子音乐</string>
+    <string name="misound_preset_jazz">爵士</string>
+    <string name="misound_preset_metal">金属</string>
+    <string name="misound_preset_pop">流行</string>
+    <string name="misound_preset_rock">摇滚</string>
+    <string name="misound_headset_title">耳机类型</string>
+    <string name="misound_preset_title">听感</string>
 </resources>

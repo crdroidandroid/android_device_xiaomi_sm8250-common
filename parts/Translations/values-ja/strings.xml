@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">デバイス設定</string>
-    <string name="dirac_preset_blues">ブルース</string>
-    <string name="dirac_preset_classical">クラシック</string>
-    <string name="dirac_preset_country">カントリー</string>
-    <string name="dirac_preset_dance">ダンス</string>
-    <string name="dirac_preset_electronic">エレクトロニック</string>
-    <string name="dirac_preset_jazz">ジャズ</string>
-    <string name="dirac_preset_metal">メタル</string>
-    <string name="dirac_preset_pop">ポップ</string>
-    <string name="dirac_preset_rock">ロック</string>
-    <string name="dirac_headset_title">ヘッドセットの種類</string>
-    <string name="dirac_preset_title">プリセット</string>
+    <string name="misound_preset_blues">ブルース</string>
+    <string name="misound_preset_classical">クラシック</string>
+    <string name="misound_preset_country">カントリー</string>
+    <string name="misound_preset_dance">ダンス</string>
+    <string name="misound_preset_electronic">エレクトロニック</string>
+    <string name="misound_preset_jazz">ジャズ</string>
+    <string name="misound_preset_metal">メタル</string>
+    <string name="misound_preset_pop">ポップ</string>
+    <string name="misound_preset_rock">ロック</string>
+    <string name="misound_headset_title">ヘッドセットの種類</string>
+    <string name="misound_preset_title">プリセット</string>
 </resources>

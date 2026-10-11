@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_preset_hiphop">"Hip Hop"</string>
+    <string name="misound_preset_hiphop">"Hip Hop"</string>
     <string name="thermal_info_meta">"ID %1$d • %2$s"</string>
     <string name="thermal_detail_meta">"%1$s • ID %2$d\n%3$s"</string>
     <string name="thermal_trigger_cap">"%1$d°C → %2$s"</string>
@@ -10,11 +10,11 @@
     <string name="thermal_temperature_range">"%1$d–%2$d°C"</string>
     <string name="refresh_standard">"60Hz"</string>
     <string name="refresh_extreme">"120Hz"</string>
-    <string name="dirac_summary">"Audioqualität verbessern"</string>
-    <string name="dirac_enable">"Aktivieren"</string>
-    <string name="dirac_hifi_summary">"Hi-Fi-Modus auf unterstützten Geräten aktivieren"</string>
-    <string name="dirac_preset_default">"Standard"</string>
-    <string name="dirac_preset_bass_booster">"Bassverstärkung"</string>
+    <string name="misound_summary">"Audioqualität verbessern"</string>
+    <string name="misound_enable">"Aktivieren"</string>
+    <string name="misound_hifi_summary">"Hi-Fi-Modus auf unterstützten Geräten aktivieren"</string>
+    <string name="misound_preset_default">"Standard"</string>
+    <string name="misound_preset_bass_booster">"Bassverstärkung"</string>
     <string name="thermal_title">"Thermoprofile"</string>
     <string name="thermal_summary">"Xiaomi-Temperaturregeln für System und Apps"</string>
     <string name="thermal_profile_dialog_title">"Thermoprofil"</string>
@@ -100,11 +100,11 @@
     <string name="clear_speaker_title">"Lautsprecher reinigen"</string>
     <string name="clear_speaker_summary">"Einen 30-sekündigen Lautsprecher-Reinigungston abspielen"</string>
     <string name="clear_speaker_description">"Spiele den Reinigungston mit nach unten gerichtetem Lautsprecher ab. Bei hartnäckigem Staub mehrmals wiederholen und das Telefon dabei vorsichtig bewegen.\n\nVor dem Start Kopfhörer trennen."</string>
-    <string name="dirac_preset_live">"Live"</string>
-    <string name="dirac_preset_bass_reduction">"Bassabsenkung"</string>
-    <string name="dirac_preset_treble_reduction">"Höhenabsenkung"</string>
-    <string name="dirac_preset_soft_bass">"Sanfte Bässe"</string>
-    <string name="dirac_preset_soft_treble">"Sanfte Höhen"</string>
+    <string name="misound_preset_live">"Live"</string>
+    <string name="misound_preset_bass_reduction">"Bassabsenkung"</string>
+    <string name="misound_preset_treble_reduction">"Höhenabsenkung"</string>
+    <string name="misound_preset_soft_bass">"Sanfte Bässe"</string>
+    <string name="misound_preset_soft_treble">"Sanfte Höhen"</string>
     <string name="music_headset_scenario_select">"Szene auswählen"</string>
     <string name="music_headset_scenario_intelligent">"Intelligent"</string>
     <string name="music_headset_scenario_music">"Musik"</string>
@@ -121,19 +121,19 @@
     <string name="hbm_mode_title">"Modus für hohe Helligkeit"</string>
     <string name="hbm_mode_summary">"Höhere Displayhelligkeit für bessere Sichtbarkeit bei direktem Sonnenlicht erlauben. Erhöht den Energieverbrauch."</string>
     <string name="hbm_enable_summary_not_supported">"Der aktuelle Kernel unterstützt den Modus für hohe Helligkeit nicht"</string>
-    <string name="dirac_unavailable">"MiSound ist vorübergehend nicht verfügbar"</string>
-    <string name="dirac_apply_failed">"MiSound-Einstellungen konnten nicht angewendet werden. Bitte erneut versuchen."</string>
-    <string name="dirac_speaker_title">"Lautsprecherausgabe"</string>
-    <string name="dirac_speaker_summary">"Die Lautsprecherverarbeitung richtet sich nach dem aktiven Audiopfad und der Herstellerunterstützung. Das folgende Kopfhörerprofil gilt für Kopfhörer; es wählt keinen Lautsprechermodus aus."</string>
+    <string name="misound_unavailable">"MiSound ist vorübergehend nicht verfügbar"</string>
+    <string name="misound_apply_failed">"MiSound-Einstellungen konnten nicht angewendet werden. Bitte erneut versuchen."</string>
+    <string name="misound_speaker_title">"Lautsprecherausgabe"</string>
+    <string name="misound_speaker_summary">"Die Lautsprecherverarbeitung richtet sich nach dem aktiven Audiopfad und der Herstellerunterstützung. Das folgende Kopfhörerprofil gilt für Kopfhörer; es wählt keinen Lautsprechermodus aus."</string>
     <string name="parts_apply_failed">"Diese Einstellung konnte nicht angewendet werden. Bitte erneut versuchen."</string>
-    <string name="dirac_eq_enabled_title">"Equalizer"</string>
-    <string name="dirac_eq_enabled_summary">"Ausgewählte Voreinstellung anwenden. Beim Deaktivieren bleibt die gespeicherte Voreinstellung erhalten und eine flache EQ-Kurve wird verwendet."</string>
-    <string name="dirac_pause_calls_title">"Bei Anrufen pausieren"</string>
-    <string name="dirac_pause_calls_summary">"MiSound bei Anrufen und Sprachkommunikation vorübergehend umgehen und anschließend automatisch wiederherstellen."</string>
-    <string name="dirac_paused_for_calls">"Wegen Sprachkommunikation pausiert"</string>
+    <string name="misound_eq_enabled_title">"Equalizer"</string>
+    <string name="misound_eq_enabled_summary">"Ausgewählte Voreinstellung anwenden. Beim Deaktivieren bleibt die gespeicherte Voreinstellung erhalten und eine flache EQ-Kurve wird verwendet."</string>
+    <string name="misound_pause_calls_title">"Bei Anrufen pausieren"</string>
+    <string name="misound_pause_calls_summary">"MiSound bei Anrufen und Sprachkommunikation vorübergehend umgehen und anschließend automatisch wiederherstellen."</string>
+    <string name="misound_paused_for_calls">"Wegen Sprachkommunikation pausiert"</string>
     <string name="thermal_system_default">"Systemprofil"</string>
     <string name="refresh_default">"Standard"</string>
-    <string name="dirac_preset_balanced">"Ausgewogen"</string>
+    <string name="misound_preset_balanced">"Ausgewogen"</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"Steuerung des Systemprofils anzeigen"</string>
     <string name="thermal_system_collapse">"Steuerung des Systemprofils ausblenden"</string>

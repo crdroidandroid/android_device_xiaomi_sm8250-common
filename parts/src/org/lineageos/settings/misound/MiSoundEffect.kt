@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.dirac
+package org.lineageos.settings.misound
 
 import android.media.audiofx.AudioEffect
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.util.UUID
 
-class DiracSound(priority: Int, audioSession: Int) :
+class MiSoundEffect(priority: Int, audioSession: Int) :
     AudioEffect(
         EFFECT_TYPE_NULL,
         UUID.fromString("5b8e36a5-144a-4c38-b1d7-0002a5d5c51b"),

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dirac_preset_blues">ब्लुज</string>
-    <string name="dirac_preset_classical">क्लासिकल</string>
-    <string name="dirac_preset_country">राष्ट्र</string>
-    <string name="dirac_preset_dance">नाच</string>
-    <string name="dirac_preset_electronic">इलेक्ट्रोनिक</string>
-    <string name="dirac_preset_jazz">ज्याज</string>
-    <string name="dirac_preset_metal">मेटल</string>
-    <string name="dirac_preset_pop">पप</string>
-    <string name="dirac_preset_rock">रक</string>
-    <string name="dirac_headset_title">हेडसेट प्रकार</string>
-    <string name="dirac_preset_title">प्रिसेट</string>
+    <string name="misound_preset_blues">ब्लुज</string>
+    <string name="misound_preset_classical">क्लासिकल</string>
+    <string name="misound_preset_country">राष्ट्र</string>
+    <string name="misound_preset_dance">नाच</string>
+    <string name="misound_preset_electronic">इलेक्ट्रोनिक</string>
+    <string name="misound_preset_jazz">ज्याज</string>
+    <string name="misound_preset_metal">मेटल</string>
+    <string name="misound_preset_pop">पप</string>
+    <string name="misound_preset_rock">रक</string>
+    <string name="misound_headset_title">हेडसेट प्रकार</string>
+    <string name="misound_preset_title">प्रिसेट</string>
 </resources>

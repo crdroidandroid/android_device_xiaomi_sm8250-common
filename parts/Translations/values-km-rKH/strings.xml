@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="dirac_preset_blues">តន្រ្តីប្លូស៍</string>
-    <string name="dirac_preset_classical">បុរាណ</string>
-    <string name="dirac_preset_country">បែបជនបទ</string>
-    <string name="dirac_preset_dance">រាំ</string>
-    <string name="dirac_preset_electronic">អេឡិចត្រូនិក</string>
-    <string name="dirac_preset_jazz">ហ្សាស</string>
-    <string name="dirac_preset_metal">តន្ត្រីលោហៈ</string>
-    <string name="dirac_preset_pop">ប៉ប់</string>
-    <string name="dirac_preset_rock">ចង្វាក់​រ៉ុក</string>
-    <string name="dirac_headset_title">ប្រភេទកាស</string>
-    <string name="dirac_preset_title">កំណត់ជាមុន</string>
+    <string name="misound_preset_blues">តន្រ្តីប្លូស៍</string>
+    <string name="misound_preset_classical">បុរាណ</string>
+    <string name="misound_preset_country">បែបជនបទ</string>
+    <string name="misound_preset_dance">រាំ</string>
+    <string name="misound_preset_electronic">អេឡិចត្រូនិក</string>
+    <string name="misound_preset_jazz">ហ្សាស</string>
+    <string name="misound_preset_metal">តន្ត្រីលោហៈ</string>
+    <string name="misound_preset_pop">ប៉ប់</string>
+    <string name="misound_preset_rock">ចង្វាក់​រ៉ុក</string>
+    <string name="misound_headset_title">ប្រភេទកាស</string>
+    <string name="misound_preset_title">កំណត់ជាមុន</string>
 </resources>

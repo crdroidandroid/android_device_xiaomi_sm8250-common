@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">Įrenginio nustatymai</string>
-    <string name="dirac_preset_blues">Bliuzas</string>
-    <string name="dirac_preset_classical">Klasika</string>
-    <string name="dirac_preset_country">Kantri</string>
-    <string name="dirac_preset_dance">Šokių</string>
-    <string name="dirac_preset_electronic">Elektronika</string>
-    <string name="dirac_preset_jazz">Džiazas</string>
-    <string name="dirac_preset_metal">Metalas</string>
-    <string name="dirac_preset_pop">Pop</string>
-    <string name="dirac_preset_rock">Rokas</string>
-    <string name="dirac_headset_title">Ausinių tipas</string>
-    <string name="dirac_preset_title">Ruošinys</string>
+    <string name="misound_preset_blues">Bliuzas</string>
+    <string name="misound_preset_classical">Klasika</string>
+    <string name="misound_preset_country">Kantri</string>
+    <string name="misound_preset_dance">Šokių</string>
+    <string name="misound_preset_electronic">Elektronika</string>
+    <string name="misound_preset_jazz">Džiazas</string>
+    <string name="misound_preset_metal">Metalas</string>
+    <string name="misound_preset_pop">Pop</string>
+    <string name="misound_preset_rock">Rokas</string>
+    <string name="misound_headset_title">Ausinių tipas</string>
+    <string name="misound_preset_title">Ruošinys</string>
 </resources>

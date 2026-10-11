@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_preset_hiphop">"Hip Hop"</string>
+    <string name="misound_preset_hiphop">"Hip Hop"</string>
     <string name="thermal_info_meta">"ID %1$d • %2$s"</string>
     <string name="thermal_detail_meta">"%1$s • ID %2$d\n%3$s"</string>
     <string name="thermal_trigger_cap">"%1$d°C → %2$s"</string>
@@ -10,11 +10,11 @@
     <string name="thermal_temperature_range">"%1$d–%2$d°C"</string>
     <string name="refresh_standard">"60Hz"</string>
     <string name="refresh_extreme">"120Hz"</string>
-    <string name="dirac_summary">"Audiokwaliteit verbeteren"</string>
-    <string name="dirac_enable">"Inschakelen"</string>
-    <string name="dirac_hifi_summary">"Hifimodus inschakelen op ondersteunde apparaten"</string>
-    <string name="dirac_preset_default">"Standaard"</string>
-    <string name="dirac_preset_bass_booster">"Basversterking"</string>
+    <string name="misound_summary">"Audiokwaliteit verbeteren"</string>
+    <string name="misound_enable">"Inschakelen"</string>
+    <string name="misound_hifi_summary">"Hifimodus inschakelen op ondersteunde apparaten"</string>
+    <string name="misound_preset_default">"Standaard"</string>
+    <string name="misound_preset_bass_booster">"Basversterking"</string>
     <string name="thermal_title">"Thermische profielen"</string>
     <string name="thermal_summary">"Xiaomi-temperatuurbeleid voor het systeem en apps"</string>
     <string name="thermal_profile_dialog_title">"Thermisch profiel"</string>
@@ -100,11 +100,11 @@
     <string name="clear_speaker_title">"Luidspreker reinigen"</string>
     <string name="clear_speaker_summary">"Een reinigingstoon van 30 seconden afspelen"</string>
     <string name="clear_speaker_description">"Speel de reinigingstoon af met de luidspreker naar beneden. Herhaal dit bij hardnekkig stof enkele keren terwijl je de telefoon voorzichtig beweegt.\n\nKoppel de hoofdtelefoon los voordat je begint."</string>
-    <string name="dirac_preset_live">"Live"</string>
-    <string name="dirac_preset_bass_reduction">"Minder bas"</string>
-    <string name="dirac_preset_treble_reduction">"Minder hoge tonen"</string>
-    <string name="dirac_preset_soft_bass">"Zachte bas"</string>
-    <string name="dirac_preset_soft_treble">"Zachte hoge tonen"</string>
+    <string name="misound_preset_live">"Live"</string>
+    <string name="misound_preset_bass_reduction">"Minder bas"</string>
+    <string name="misound_preset_treble_reduction">"Minder hoge tonen"</string>
+    <string name="misound_preset_soft_bass">"Zachte bas"</string>
+    <string name="misound_preset_soft_treble">"Zachte hoge tonen"</string>
     <string name="music_headset_scenario_select">"Scène kiezen"</string>
     <string name="music_headset_scenario_intelligent">"Slim"</string>
     <string name="music_headset_scenario_music">"Muziek"</string>
@@ -121,19 +121,19 @@
     <string name="hbm_mode_title">"Hogehelderheidsmodus"</string>
     <string name="hbm_mode_summary">"Een hogere schermhelderheid toestaan voor betere zichtbaarheid in direct zonlicht. Verbruikt meer energie."</string>
     <string name="hbm_enable_summary_not_supported">"De huidige kernel ondersteunt de hogehelderheidsmodus niet"</string>
-    <string name="dirac_unavailable">"MiSound is tijdelijk niet beschikbaar"</string>
-    <string name="dirac_apply_failed">"MiSound-instellingen konden niet worden toegepast. Probeer het opnieuw."</string>
-    <string name="dirac_speaker_title">"Luidsprekeruitvoer"</string>
-    <string name="dirac_speaker_summary">"De luidsprekerverwerking volgt de actieve audioroute en de ondersteuning van de leverancier. Het onderstaande hoofdtelefoonprofiel geldt voor hoofdtelefoons; het selecteert geen luidsprekermodus."</string>
+    <string name="misound_unavailable">"MiSound is tijdelijk niet beschikbaar"</string>
+    <string name="misound_apply_failed">"MiSound-instellingen konden niet worden toegepast. Probeer het opnieuw."</string>
+    <string name="misound_speaker_title">"Luidsprekeruitvoer"</string>
+    <string name="misound_speaker_summary">"De luidsprekerverwerking volgt de actieve audioroute en de ondersteuning van de leverancier. Het onderstaande hoofdtelefoonprofiel geldt voor hoofdtelefoons; het selecteert geen luidsprekermodus."</string>
     <string name="parts_apply_failed">"Deze instelling kon niet worden toegepast. Probeer het opnieuw."</string>
-    <string name="dirac_eq_enabled_title">"Equalizer"</string>
-    <string name="dirac_eq_enabled_summary">"De geselecteerde voorinstelling toepassen. Uitschakelen behoudt de opgeslagen voorinstelling en gebruikt een vlakke EQ-curve."</string>
-    <string name="dirac_pause_calls_title">"Pauzeren tijdens oproepen"</string>
-    <string name="dirac_pause_calls_summary">"MiSound-verwerking tijdelijk overslaan tijdens oproepen en spraakcommunicatie en daarna automatisch herstellen."</string>
-    <string name="dirac_paused_for_calls">"Gepauzeerd voor spraakcommunicatie"</string>
+    <string name="misound_eq_enabled_title">"Equalizer"</string>
+    <string name="misound_eq_enabled_summary">"De geselecteerde voorinstelling toepassen. Uitschakelen behoudt de opgeslagen voorinstelling en gebruikt een vlakke EQ-curve."</string>
+    <string name="misound_pause_calls_title">"Pauzeren tijdens oproepen"</string>
+    <string name="misound_pause_calls_summary">"MiSound-verwerking tijdelijk overslaan tijdens oproepen en spraakcommunicatie en daarna automatisch herstellen."</string>
+    <string name="misound_paused_for_calls">"Gepauzeerd voor spraakcommunicatie"</string>
     <string name="thermal_system_default">"Systeemprofiel"</string>
     <string name="refresh_default">"Standaard"</string>
-    <string name="dirac_preset_balanced">"Gebalanceerd"</string>
+    <string name="misound_preset_balanced">"Gebalanceerd"</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"Bediening van systeemprofiel tonen"</string>
     <string name="thermal_system_collapse">"Bediening van systeemprofiel verbergen"</string>

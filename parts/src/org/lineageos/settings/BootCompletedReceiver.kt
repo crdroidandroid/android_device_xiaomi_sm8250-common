@@ -12,7 +12,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import org.lineageos.settings.dirac.DiracUtils
+import org.lineageos.settings.misound.MiSoundUtils
 import org.lineageos.settings.display.DisplayUtils
 import org.lineageos.settings.refreshrate.RefreshUtils
 import org.lineageos.settings.thermal.ThermalUtils
@@ -22,7 +22,7 @@ class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         if (intent?.action != Intent.ACTION_LOCKED_BOOT_COMPLETED) return
         try {
-            DiracUtils.getInstance(context)
+            MiSoundUtils.getInstance(context)
         } catch (error: RuntimeException) {
             Log.w("XiaomiParts", "Cannot initialize MiSound", error)
         }

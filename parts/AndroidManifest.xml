@@ -56,9 +56,9 @@
         </receiver>
 
         <activity
-            android:name=".dirac.DiracActivity"
+            android:name=".misound.MiSoundActivity"
             android:exported="false"
-            android:label="@string/dirac_title"
+            android:label="@string/misound_title"
             android:theme="@style/Theme.XiaomiParts">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -66,24 +66,41 @@
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary"
-                       android:resource="@string/dirac_summary" />
+                       android:resource="@string/misound_summary" />
         </activity>
+
+        <!-- Preserve existing shortcuts to the renamed MiSound screen. -->
+        <activity-alias
+            android:name=".dirac.DiracActivity"
+            android:targetActivity=".misound.MiSoundActivity"
+            android:exported="false" />
 
         <service
             android:name=".thermal.ThermalService"
             android:exported="false" />
 
         <service
-            android:name=".dirac.DiracTileService"
+            android:name=".misound.MiSoundTileService"
             android:exported="true"
             android:icon="@drawable/ic_headphone"
-            android:label="@string/dirac_title"
+            android:label="@string/misound_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
             <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
             android:value="true" />
+        </service>
+
+        <!-- Preserve previously pinned tiles; new tiles use the MiSound component. -->
+        <service
+            android:name=".dirac.DiracTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_headphone"
+            android:label="@string/misound_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <meta-data android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                       android:value="true" />
         </service>
 
         <activity

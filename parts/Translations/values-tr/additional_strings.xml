@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_preset_hiphop">"Hip Hop"</string>
+    <string name="misound_preset_hiphop">"Hip Hop"</string>
     <string name="thermal_info_meta">"ID %1$d • %2$s"</string>
     <string name="thermal_detail_meta">"%1$s • ID %2$d\n%3$s"</string>
     <string name="thermal_trigger_cap">"%1$d°C → %2$s"</string>
@@ -10,11 +10,11 @@
     <string name="thermal_temperature_range">"%1$d–%2$d°C"</string>
     <string name="refresh_standard">"60Hz"</string>
     <string name="refresh_extreme">"120Hz"</string>
-    <string name="dirac_summary">"Ses kalitesini iyileştir"</string>
-    <string name="dirac_enable">"Etkinleştir"</string>
-    <string name="dirac_hifi_summary">"Desteklenen cihazlarda yüksek ses kalitesi modunu etkinleştir"</string>
-    <string name="dirac_preset_default">"Varsayılan"</string>
-    <string name="dirac_preset_bass_booster">"Bas güçlendirme"</string>
+    <string name="misound_summary">"Ses kalitesini iyileştir"</string>
+    <string name="misound_enable">"Etkinleştir"</string>
+    <string name="misound_hifi_summary">"Desteklenen cihazlarda yüksek ses kalitesi modunu etkinleştir"</string>
+    <string name="misound_preset_default">"Varsayılan"</string>
+    <string name="misound_preset_bass_booster">"Bas güçlendirme"</string>
     <string name="thermal_title">"Termal profiller"</string>
     <string name="thermal_summary">"Sistem ve uygulamalar için Xiaomi termal ilkeleri"</string>
     <string name="thermal_profile_dialog_title">"Termal profil"</string>
@@ -100,11 +100,11 @@
     <string name="clear_speaker_title">"Hoparlörü temizle"</string>
     <string name="clear_speaker_summary">"30 saniyelik hoparlör temizleme sesi çal"</string>
     <string name="clear_speaker_description">"Temizleme sesini hoparlör aşağı bakarken çalın. İnatçı tozlar için telefonu hafifçe hareket ettirerek birkaç kez tekrarlayın.\n\nBaşlamadan önce kulaklıkları çıkarın."</string>
-    <string name="dirac_preset_live">"Canlı"</string>
-    <string name="dirac_preset_bass_reduction">"Bas azaltma"</string>
-    <string name="dirac_preset_treble_reduction">"Tiz azaltma"</string>
-    <string name="dirac_preset_soft_bass">"Yumuşak bas"</string>
-    <string name="dirac_preset_soft_treble">"Yumuşak tiz"</string>
+    <string name="misound_preset_live">"Canlı"</string>
+    <string name="misound_preset_bass_reduction">"Bas azaltma"</string>
+    <string name="misound_preset_treble_reduction">"Tiz azaltma"</string>
+    <string name="misound_preset_soft_bass">"Yumuşak bas"</string>
+    <string name="misound_preset_soft_treble">"Yumuşak tiz"</string>
     <string name="music_headset_scenario_select">"Sahne seç"</string>
     <string name="music_headset_scenario_intelligent">"Akıllı"</string>
     <string name="music_headset_scenario_music">"Müzik"</string>
@@ -121,19 +121,19 @@
     <string name="hbm_mode_title">"Yüksek parlaklık modu"</string>
     <string name="hbm_mode_summary">"Doğrudan güneş ışığında daha iyi görünürlük için ekran parlaklığını artırır. Daha fazla güç tüketir."</string>
     <string name="hbm_enable_summary_not_supported">"Mevcut çekirdek yüksek parlaklık modunu desteklemiyor"</string>
-    <string name="dirac_unavailable">"MiSound geçici olarak kullanılamıyor"</string>
-    <string name="dirac_apply_failed">"MiSound ayarları uygulanamadı. Yeniden deneyin."</string>
-    <string name="dirac_speaker_title">"Hoparlör çıkışı"</string>
-    <string name="dirac_speaker_summary">"Hoparlör işlemesi etkin ses yoluna ve üretici desteğine bağlıdır. Aşağıdaki kulaklık profili kulaklıklar içindir; hoparlör modu seçmez."</string>
+    <string name="misound_unavailable">"MiSound geçici olarak kullanılamıyor"</string>
+    <string name="misound_apply_failed">"MiSound ayarları uygulanamadı. Yeniden deneyin."</string>
+    <string name="misound_speaker_title">"Hoparlör çıkışı"</string>
+    <string name="misound_speaker_summary">"Hoparlör işlemesi etkin ses yoluna ve üretici desteğine bağlıdır. Aşağıdaki kulaklık profili kulaklıklar içindir; hoparlör modu seçmez."</string>
     <string name="parts_apply_failed">"Bu ayar uygulanamadı. Yeniden deneyin."</string>
-    <string name="dirac_eq_enabled_title">"Ekolayzer"</string>
-    <string name="dirac_eq_enabled_summary">"Seçilen ön ayarı uygular. Kapatıldığında kayıtlı ön ayar korunur ve düz bir EQ eğrisi kullanılır."</string>
-    <string name="dirac_pause_calls_title">"Aramalarda duraklat"</string>
-    <string name="dirac_pause_calls_summary">"Aramalar ve sesli iletişim sırasında MiSound işlemesini geçici olarak atlar, ardından otomatik olarak geri yükler."</string>
-    <string name="dirac_paused_for_calls">"Sesli iletişim için duraklatıldı"</string>
+    <string name="misound_eq_enabled_title">"Ekolayzer"</string>
+    <string name="misound_eq_enabled_summary">"Seçilen ön ayarı uygular. Kapatıldığında kayıtlı ön ayar korunur ve düz bir EQ eğrisi kullanılır."</string>
+    <string name="misound_pause_calls_title">"Aramalarda duraklat"</string>
+    <string name="misound_pause_calls_summary">"Aramalar ve sesli iletişim sırasında MiSound işlemesini geçici olarak atlar, ardından otomatik olarak geri yükler."</string>
+    <string name="misound_paused_for_calls">"Sesli iletişim için duraklatıldı"</string>
     <string name="thermal_system_default">"Sistem profili"</string>
     <string name="refresh_default">"Varsayılan"</string>
-    <string name="dirac_preset_balanced">"Dengeli"</string>
+    <string name="misound_preset_balanced">"Dengeli"</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"Sistem profili denetimlerini göster"</string>
     <string name="thermal_system_collapse">"Sistem profili denetimlerini gizle"</string>

@@ -19,25 +19,25 @@
     <string name="device_settings_app_name">Device settings</string>
 
     <!-- MiSound core strings kept local to XiaomiParts -->
-    <string name="dirac_title" translatable="false">MiSound</string>
-    <string name="dirac_summary">Enhance audio quality</string>
-    <string name="dirac_enable">Enable</string>
-    <string name="dirac_headset_title">Headset type</string>
-    <string name="dirac_preset_title">Preset</string>
-    <string name="dirac_hifi_title" translatable="false">Hi-Fi</string>
-    <string name="dirac_hifi_summary">Enable high-fidelity mode on supported devices</string>
-    <string name="dirac_preset_default">Default</string>
-    <string name="dirac_preset_rock">Rock</string>
-    <string name="dirac_preset_jazz">Jazz</string>
-    <string name="dirac_preset_pop">Pop</string>
-    <string name="dirac_preset_classical">Classical</string>
-    <string name="dirac_preset_hiphop">Hip Hop</string>
-    <string name="dirac_preset_blues">Blues</string>
-    <string name="dirac_preset_electronic">Electronic</string>
-    <string name="dirac_preset_country">Country</string>
-    <string name="dirac_preset_dance">Dance</string>
-    <string name="dirac_preset_metal">Metal</string>
-    <string name="dirac_preset_bass_booster">Bass Booster</string>
+    <string name="misound_title" translatable="false">MiSound</string>
+    <string name="misound_summary">Enhance audio quality</string>
+    <string name="misound_enable">Enable</string>
+    <string name="misound_headset_title">Headset type</string>
+    <string name="misound_preset_title">Preset</string>
+    <string name="misound_hifi_title" translatable="false">Hi-Fi</string>
+    <string name="misound_hifi_summary">Enable high-fidelity mode on supported devices</string>
+    <string name="misound_preset_default">Default</string>
+    <string name="misound_preset_rock">Rock</string>
+    <string name="misound_preset_jazz">Jazz</string>
+    <string name="misound_preset_pop">Pop</string>
+    <string name="misound_preset_classical">Classical</string>
+    <string name="misound_preset_hiphop">Hip Hop</string>
+    <string name="misound_preset_blues">Blues</string>
+    <string name="misound_preset_electronic">Electronic</string>
+    <string name="misound_preset_country">Country</string>
+    <string name="misound_preset_dance">Dance</string>
+    <string name="misound_preset_metal">Metal</string>
+    <string name="misound_preset_bass_booster">Bass Booster</string>
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal profiles</string>
@@ -150,39 +150,39 @@
     <string name="clear_speaker_summary">Play a 30-second speaker-cleaning tone</string>
     <string name="clear_speaker_description">Play the cleaning tone with the speaker facing down. For stubborn dust, repeat it a few times while gently moving the phone.\n\nDisconnect headphones before starting.</string>
 
-    <!-- Dirac settings: Headset types -->
-    <string name="dirac_headset_earbuds" translatable="false">Mi Earbuds</string>
-    <string name="dirac_headset_in_ear_2013" translatable="false">Mi In-Ear (2013)</string>
-    <string name="dirac_headset_piston_1" translatable="false">Mi Piston-1</string>
-    <string name="dirac_headset_general_inear" translatable="false">General In-Ear</string>
-    <string name="dirac_headset_piston_basic" translatable="false">Basic Edition</string>
-    <string name="dirac_headset_piston_2" translatable="false">Mi Piston-2</string>
-    <string name="dirac_headset_piston_standard" translatable="false">Standard Edition</string>
-    <string name="dirac_headset_piston_youth" translatable="false">Youth Edition</string>
-    <string name="dirac_headset_piston_color" translatable="false">Color Edition</string>
-    <string name="dirac_headset_in_ear" translatable="false">Mi In-Ear</string>
-    <string name="dirac_headset_capsule" translatable="false">Mi Capsule</string>
-    <string name="dirac_headset_in_ear_pro" translatable="false">Mi In-Ear Pro</string>
-    <string name="dirac_headset_comfort" translatable="false">Mi Comfort</string>
-    <string name="dirac_headset_reduction_noise" translatable="false">Mi Noise Cancelling Type-C</string>
-    <string name="dirac_headset_cancelling" translatable="false">Mi Noise Cancelling 3.5mm</string>
-    <string name="dirac_headset_half_in_ear" translatable="false">Mi Half In-Ear</string>
-    <string name="dirac_headset_in_ear2" translatable="false">Mi In-Ear 2</string>
-    <string name="dirac_headset_earphone_basic" translatable="false">Mi Earphones Basic</string>
-    <string name="dirac_headset_earphone" translatable="false">Mi Earphones</string>
-    <string name="dirac_headset_ear_four" translatable="false">Mi Quadruple Driver Earphones</string>
-    <string name="dirac_headset_piston_typec" translatable="false">Mi In-Ear Headphones (Type-C)</string>
-    <string name="dirac_headset_bluetooth_collar" translatable="false">Mi Bluetooth Neckband</string>
-    <string name="dirac_headset_bluetooth_linefree" translatable="false">Mi Bluetooth Earphones</string>
-    <string name="dirac_headset_redmi_earphones" translatable="false">Redmi Earphones</string>
+    <!-- MiSound settings: Headset types -->
+    <string name="misound_headset_earbuds" translatable="false">Mi Earbuds</string>
+    <string name="misound_headset_in_ear_2013" translatable="false">Mi In-Ear (2013)</string>
+    <string name="misound_headset_piston_1" translatable="false">Mi Piston-1</string>
+    <string name="misound_headset_general_inear" translatable="false">General In-Ear</string>
+    <string name="misound_headset_piston_basic" translatable="false">Basic Edition</string>
+    <string name="misound_headset_piston_2" translatable="false">Mi Piston-2</string>
+    <string name="misound_headset_piston_standard" translatable="false">Standard Edition</string>
+    <string name="misound_headset_piston_youth" translatable="false">Youth Edition</string>
+    <string name="misound_headset_piston_color" translatable="false">Color Edition</string>
+    <string name="misound_headset_in_ear" translatable="false">Mi In-Ear</string>
+    <string name="misound_headset_capsule" translatable="false">Mi Capsule</string>
+    <string name="misound_headset_in_ear_pro" translatable="false">Mi In-Ear Pro</string>
+    <string name="misound_headset_comfort" translatable="false">Mi Comfort</string>
+    <string name="misound_headset_reduction_noise" translatable="false">Mi Noise Cancelling Type-C</string>
+    <string name="misound_headset_cancelling" translatable="false">Mi Noise Cancelling 3.5mm</string>
+    <string name="misound_headset_half_in_ear" translatable="false">Mi Half In-Ear</string>
+    <string name="misound_headset_in_ear2" translatable="false">Mi In-Ear 2</string>
+    <string name="misound_headset_earphone_basic" translatable="false">Mi Earphones Basic</string>
+    <string name="misound_headset_earphone" translatable="false">Mi Earphones</string>
+    <string name="misound_headset_ear_four" translatable="false">Mi Quadruple Driver Earphones</string>
+    <string name="misound_headset_piston_typec" translatable="false">Mi In-Ear Headphones (Type-C)</string>
+    <string name="misound_headset_bluetooth_collar" translatable="false">Mi Bluetooth Neckband</string>
+    <string name="misound_headset_bluetooth_linefree" translatable="false">Mi Bluetooth Earphones</string>
+    <string name="misound_headset_redmi_earphones" translatable="false">Redmi Earphones</string>
 
-    <!-- Dirac settings: Equalizer presets -->
-    <string name="dirac_preset_live">Live</string>
-    <string name="dirac_preset_balanced">Balanced</string>
-    <string name="dirac_preset_bass_reduction">Bass Reduction</string>
-    <string name="dirac_preset_treble_reduction">Treble Reduction</string>
-    <string name="dirac_preset_soft_bass">Soft Bass</string>
-    <string name="dirac_preset_soft_treble">Soft Treble</string>
+    <!-- MiSound settings: Equalizer presets -->
+    <string name="misound_preset_live">Live</string>
+    <string name="misound_preset_balanced">Balanced</string>
+    <string name="misound_preset_bass_reduction">Bass Reduction</string>
+    <string name="misound_preset_treble_reduction">Treble Reduction</string>
+    <string name="misound_preset_soft_bass">Soft Bass</string>
+    <string name="misound_preset_soft_treble">Soft Treble</string>
 
     <!-- Scene Selection -->
     <string name="music_headset_scenario_select">Select scene</string>
@@ -210,9 +210,9 @@
     <string name="hbm_mode_summary">Allow higher display brightness for better visibility in direct sunlight. Uses more power.</string>
     <string name="hbm_enable_summary_not_supported">High brightness mode is not supported by the current kernel</string>
 
-    <string name="dirac_unavailable">MiSound is temporarily unavailable</string>
-    <string name="dirac_apply_failed">Could not apply MiSound settings. Please try again.</string>
-    <string name="dirac_speaker_title">Speaker output</string>
-    <string name="dirac_speaker_summary">Speaker processing follows the active audio route and vendor support. The headphone profile below applies to headphones; it does not select a speaker mode.</string>
+    <string name="misound_unavailable">MiSound is temporarily unavailable</string>
+    <string name="misound_apply_failed">Could not apply MiSound settings. Please try again.</string>
+    <string name="misound_speaker_title">Speaker output</string>
+    <string name="misound_speaker_summary">Speaker processing follows the active audio route and vendor support. The headphone profile below applies to headphones; it does not select a speaker mode.</string>
     <string name="parts_apply_failed">Could not apply this setting. Please try again.</string>
 </resources>

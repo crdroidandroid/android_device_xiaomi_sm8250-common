@@ -3,7 +3,7 @@
  * Custom music/EQ artwork: Copyright (C) 2026 The LineageOS Project, Apache-2.0.
  * Full provenance: parts/licenses/misound-icons.md.
  */
-package org.lineageos.settings.dirac
+package org.lineageos.settings.misound
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor

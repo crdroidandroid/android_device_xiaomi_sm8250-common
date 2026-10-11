@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.dirac
+package org.lineageos.settings.misound
 
 import android.media.*
 import android.util.Log
@@ -36,10 +36,10 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.lineageos.settings.R
 import org.lineageos.settings.compose.*
 
-class DiracActivity : PartsActivity() {
+class MiSoundActivity : PartsActivity() {
     @Composable
     override fun Content() {
-        var owner by remember { mutableStateOf<DiracUtils?>(null) }
+        var owner by remember { mutableStateOf<MiSoundUtils?>(null) }
         var revision by remember { mutableIntStateOf(0) }
         var headphones by remember { mutableStateOf(false) }
         val lifecycle = LocalLifecycleOwner.current
@@ -72,7 +72,7 @@ class DiracActivity : PartsActivity() {
                     try {
                         audio.removeOnDevicesForAttributesChangedListener(listener)
                     } catch (error: RuntimeException) {
-                        Log.w("DiracActivity", "Cannot unregister route", error)
+                        Log.w("MiSoundActivity", "Cannot unregister route", error)
                     }
                 registered = false
                 owner?.removeListener(stateListener)
@@ -80,10 +80,10 @@ class DiracActivity : PartsActivity() {
             fun start() {
                 stop()
                 try {
-                    owner = DiracUtils.getInstance(this@DiracActivity)
+                    owner = MiSoundUtils.getInstance(this@MiSoundActivity)
                     owner?.addListener(stateListener)
                 } catch (error: RuntimeException) {
-                    Log.w("DiracActivity", "Cannot initialize MiSound", error)
+                    Log.w("MiSoundActivity", "Cannot initialize MiSound", error)
                 }
                 try {
                     route(audio.getDevicesForAttributes(media))
@@ -91,7 +91,7 @@ class DiracActivity : PartsActivity() {
                     registered = true
                 } catch (error: RuntimeException) {
                     headphones = false
-                    Log.w("DiracActivity", "Cannot query media route", error)
+                    Log.w("MiSoundActivity", "Cannot query media route", error)
                 }
                 revision++
             }
@@ -114,13 +114,13 @@ class DiracActivity : PartsActivity() {
         val available = remember(utils, revision) { utils?.isAvailable() == true }
         val requested = remember(utils, revision) { utils?.isEnabledRequested() == true }
         val eq = remember(utils, revision) { utils?.isEqualizerEnabled() == true }
-        fun apply(action: (DiracUtils) -> Unit) {
+        fun apply(action: (MiSoundUtils) -> Unit) {
             val current = utils ?: return
             try {
                 action(current)
             } catch (error: RuntimeException) {
-                Log.w("DiracActivity", "Cannot apply MiSound", error)
-                Toast.makeText(this, R.string.dirac_apply_failed, Toast.LENGTH_SHORT).show()
+                Log.w("MiSoundActivity", "Cannot apply MiSound", error)
+                Toast.makeText(this, R.string.misound_apply_failed, Toast.LENGTH_SHORT).show()
                 current.restoreAfterFailure()
             }
             revision++
@@ -128,7 +128,7 @@ class DiracActivity : PartsActivity() {
         val hifiSupported = utils?.isHifiSupported() == true
         val headsetOffset = if (headphones) 1 else 0
         val secondaryRowCount = 4 + headsetOffset + (if (hifiSupported) 1 else 0)
-        PartsPage(stringResource(R.string.dirac_title), { finish() }) {
+        PartsPage(stringResource(R.string.misound_title), { finish() }) {
             Row(
                 Modifier.fillMaxWidth().padding(vertical = 12.dp),
                 horizontalArrangement = Arrangement.Center,
@@ -150,12 +150,12 @@ class DiracActivity : PartsActivity() {
                 )
             }
             ToggleCard(
-                stringResource(R.string.dirac_enable),
+                stringResource(R.string.misound_enable),
                 when {
-                    !available -> stringResource(R.string.dirac_unavailable)
+                    !available -> stringResource(R.string.misound_unavailable)
                     utils?.isPausedForCommunication() == true ->
-                        stringResource(R.string.dirac_paused_for_calls)
-                    else -> stringResource(R.string.dirac_summary)
+                        stringResource(R.string.misound_paused_for_calls)
+                    else -> stringResource(R.string.misound_summary)
                 },
                 requested,
                 available || requested,
@@ -165,8 +165,8 @@ class DiracActivity : PartsActivity() {
             }
             PreferenceRow(0, secondaryRowCount) {
                 ToggleCard(
-                    stringResource(R.string.dirac_pause_calls_title),
-                    stringResource(R.string.dirac_pause_calls_summary),
+                    stringResource(R.string.misound_pause_calls_title),
+                    stringResource(R.string.misound_pause_calls_summary),
                     utils?.isPauseDuringCallsEnabled() == true,
                     available,
                 ) { enabled ->
@@ -176,8 +176,8 @@ class DiracActivity : PartsActivity() {
             if (headphones) {
                 val catalog =
                     ResourceChoices(
-                        R.array.dirac_headset_pref_entries,
-                        R.array.dirac_headset_pref_values,
+                        R.array.misound_headset_pref_entries,
+                        R.array.misound_headset_pref_values,
                     )
                 val choices =
                     remember(utils, revision, catalog) {
@@ -194,7 +194,7 @@ class DiracActivity : PartsActivity() {
                     }
                 PreferenceRow(1, secondaryRowCount) {
                     ChoiceCard(
-                        stringResource(R.string.dirac_headset_title),
+                        stringResource(R.string.misound_headset_title),
                         utils?.getHeadsetType()?.toString() ?: "0",
                         choices,
                         available && requested,
@@ -218,8 +218,8 @@ class DiracActivity : PartsActivity() {
             }
             PreferenceRow(1 + headsetOffset, secondaryRowCount) {
                 ToggleCard(
-                    stringResource(R.string.dirac_eq_enabled_title),
-                    stringResource(R.string.dirac_eq_enabled_summary),
+                    stringResource(R.string.misound_eq_enabled_title),
+                    stringResource(R.string.misound_eq_enabled_summary),
                     eq,
                     available && requested,
                 ) { enabled ->
@@ -227,7 +227,7 @@ class DiracActivity : PartsActivity() {
                 }
             }
             val presetChoices =
-                ResourceChoices(R.array.dirac_preset_pref_entries, R.array.dirac_preset_pref_values)
+                ResourceChoices(R.array.misound_preset_pref_entries, R.array.misound_preset_pref_values)
             val presetSymbols =
                 listOf(
                     MiSoundIcons.sliders_vertical,
@@ -255,7 +255,7 @@ class DiracActivity : PartsActivity() {
                     .toMap()
             PreferenceRow(2 + headsetOffset, secondaryRowCount) {
                 ChoiceCard(
-                    stringResource(R.string.dirac_preset_title),
+                    stringResource(R.string.misound_preset_title),
                     utils?.getSavedPreset() ?: "0,0,0,0,0,0,0",
                     presetChoices,
                     available && requested && eq,
@@ -293,8 +293,8 @@ class DiracActivity : PartsActivity() {
             if (hifiSupported)
                 PreferenceRow(4 + headsetOffset, secondaryRowCount) {
                     ToggleCard(
-                        stringResource(R.string.dirac_hifi_title),
-                        stringResource(R.string.dirac_hifi_summary),
+                        stringResource(R.string.misound_hifi_title),
+                        stringResource(R.string.misound_hifi_summary),
                         utils?.getHifiMode() == true,
                         available && requested,
                     ) { enabled ->

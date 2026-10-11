@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">إعدادات الجهاز</string>
-    <string name="dirac_preset_blues">إيقاع</string>
-    <string name="dirac_preset_classical">كلاسيك</string>
-    <string name="dirac_preset_country">الريف</string>
-    <string name="dirac_preset_dance">رقص</string>
-    <string name="dirac_preset_electronic">الكتروني</string>
-    <string name="dirac_preset_jazz">جاز</string>
-    <string name="dirac_preset_metal">معدن</string>
-    <string name="dirac_preset_pop">بوب</string>
-    <string name="dirac_preset_rock">روك</string>
-    <string name="dirac_headset_title">نوع السماعة</string>
-    <string name="dirac_preset_title">إعداد</string>
+    <string name="misound_preset_blues">إيقاع</string>
+    <string name="misound_preset_classical">كلاسيك</string>
+    <string name="misound_preset_country">الريف</string>
+    <string name="misound_preset_dance">رقص</string>
+    <string name="misound_preset_electronic">الكتروني</string>
+    <string name="misound_preset_jazz">جاز</string>
+    <string name="misound_preset_metal">معدن</string>
+    <string name="misound_preset_pop">بوب</string>
+    <string name="misound_preset_rock">روك</string>
+    <string name="misound_headset_title">نوع السماعة</string>
+    <string name="misound_preset_title">إعداد</string>
 </resources>

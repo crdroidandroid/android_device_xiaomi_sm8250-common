@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_preset_hiphop">"Hip Hop"</string>
+    <string name="misound_preset_hiphop">"Hip Hop"</string>
     <string name="thermal_info_meta">"ID %1$d • %2$s"</string>
     <string name="thermal_detail_meta">"%1$s • ID %2$d\n%3$s"</string>
     <string name="thermal_trigger_cap">"%1$d°C → %2$s"</string>
@@ -10,11 +10,11 @@
     <string name="thermal_temperature_range">"%1$d–%2$d°C"</string>
     <string name="refresh_standard">"60Hz"</string>
     <string name="refresh_extreme">"120Hz"</string>
-    <string name="dirac_summary">"Tingkatkan kualitas audio"</string>
-    <string name="dirac_enable">"Aktifkan"</string>
-    <string name="dirac_hifi_summary">"Aktifkan mode fidelitas tinggi pada perangkat yang didukung"</string>
-    <string name="dirac_preset_default">"Default"</string>
-    <string name="dirac_preset_bass_booster">"Penguat bas"</string>
+    <string name="misound_summary">"Tingkatkan kualitas audio"</string>
+    <string name="misound_enable">"Aktifkan"</string>
+    <string name="misound_hifi_summary">"Aktifkan mode fidelitas tinggi pada perangkat yang didukung"</string>
+    <string name="misound_preset_default">"Default"</string>
+    <string name="misound_preset_bass_booster">"Penguat bas"</string>
     <string name="thermal_title">"Profil termal"</string>
     <string name="thermal_summary">"Kebijakan termal Xiaomi untuk sistem dan tiap aplikasi"</string>
     <string name="thermal_profile_dialog_title">"Profil termal"</string>
@@ -100,11 +100,11 @@
     <string name="clear_speaker_title">"Bersihkan speaker"</string>
     <string name="clear_speaker_summary">"Putar nada pembersih speaker selama 30 detik"</string>
     <string name="clear_speaker_description">"Putar nada pembersih dengan speaker menghadap ke bawah. Untuk debu membandel, ulangi beberapa kali sambil menggerakkan ponsel perlahan.\n\nLepaskan headphone sebelum memulai."</string>
-    <string name="dirac_preset_live">"Langsung"</string>
-    <string name="dirac_preset_bass_reduction">"Pengurangan bas"</string>
-    <string name="dirac_preset_treble_reduction">"Pengurangan treble"</string>
-    <string name="dirac_preset_soft_bass">"Bas lembut"</string>
-    <string name="dirac_preset_soft_treble">"Treble lembut"</string>
+    <string name="misound_preset_live">"Langsung"</string>
+    <string name="misound_preset_bass_reduction">"Pengurangan bas"</string>
+    <string name="misound_preset_treble_reduction">"Pengurangan treble"</string>
+    <string name="misound_preset_soft_bass">"Bas lembut"</string>
+    <string name="misound_preset_soft_treble">"Treble lembut"</string>
     <string name="music_headset_scenario_select">"Pilih skenario"</string>
     <string name="music_headset_scenario_intelligent">"Cerdas"</string>
     <string name="music_headset_scenario_music">"Musik"</string>
@@ -121,19 +121,19 @@
     <string name="hbm_mode_title">"Mode kecerahan tinggi"</string>
     <string name="hbm_mode_summary">"Izinkan kecerahan layar lebih tinggi agar lebih jelas di bawah sinar matahari langsung. Menggunakan lebih banyak daya."</string>
     <string name="hbm_enable_summary_not_supported">"Kernel saat ini tidak mendukung mode kecerahan tinggi"</string>
-    <string name="dirac_unavailable">"MiSound sementara tidak tersedia"</string>
-    <string name="dirac_apply_failed">"Tidak dapat menerapkan setelan MiSound. Coba lagi."</string>
-    <string name="dirac_speaker_title">"Output speaker"</string>
-    <string name="dirac_speaker_summary">"Pemrosesan speaker mengikuti rute audio aktif dan dukungan vendor. Profil headphone di bawah berlaku untuk headphone; profil tersebut tidak memilih mode speaker."</string>
+    <string name="misound_unavailable">"MiSound sementara tidak tersedia"</string>
+    <string name="misound_apply_failed">"Tidak dapat menerapkan setelan MiSound. Coba lagi."</string>
+    <string name="misound_speaker_title">"Output speaker"</string>
+    <string name="misound_speaker_summary">"Pemrosesan speaker mengikuti rute audio aktif dan dukungan vendor. Profil headphone di bawah berlaku untuk headphone; profil tersebut tidak memilih mode speaker."</string>
     <string name="parts_apply_failed">"Tidak dapat menerapkan setelan ini. Coba lagi."</string>
-    <string name="dirac_eq_enabled_title">"Ekualiser"</string>
-    <string name="dirac_eq_enabled_summary">"Terapkan preset yang dipilih. Menonaktifkannya mempertahankan preset tersimpan dan menggunakan kurva EQ datar."</string>
-    <string name="dirac_pause_calls_title">"Jeda selama panggilan"</string>
-    <string name="dirac_pause_calls_summary">"Lewati pemrosesan MiSound sementara selama panggilan dan komunikasi suara, lalu pulihkan secara otomatis."</string>
-    <string name="dirac_paused_for_calls">"Dijeda untuk komunikasi suara"</string>
+    <string name="misound_eq_enabled_title">"Ekualiser"</string>
+    <string name="misound_eq_enabled_summary">"Terapkan preset yang dipilih. Menonaktifkannya mempertahankan preset tersimpan dan menggunakan kurva EQ datar."</string>
+    <string name="misound_pause_calls_title">"Jeda selama panggilan"</string>
+    <string name="misound_pause_calls_summary">"Lewati pemrosesan MiSound sementara selama panggilan dan komunikasi suara, lalu pulihkan secara otomatis."</string>
+    <string name="misound_paused_for_calls">"Dijeda untuk komunikasi suara"</string>
     <string name="thermal_system_default">"Profil sistem"</string>
     <string name="refresh_default">"Default"</string>
-    <string name="dirac_preset_balanced">"Seimbang"</string>
+    <string name="misound_preset_balanced">"Seimbang"</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"Tampilkan kontrol profil sistem"</string>
     <string name="thermal_system_collapse">"Sembunyikan kontrol profil sistem"</string>

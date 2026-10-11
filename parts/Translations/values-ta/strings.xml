@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">சாதன அமைப்புகள்</string>
-    <string name="dirac_preset_blues">ப்ளூஸ்</string>
-    <string name="dirac_preset_classical">கிளாசிக்கல்</string>
-    <string name="dirac_preset_country">கண்ட்ரி</string>
-    <string name="dirac_preset_dance">நடனம்</string>
-    <string name="dirac_preset_electronic">எலக்ட்ரானிக்</string>
-    <string name="dirac_preset_jazz">ஜாஸ்</string>
-    <string name="dirac_preset_metal">மெட்டல்</string>
-    <string name="dirac_preset_pop">பாப்</string>
-    <string name="dirac_preset_rock">ராக்</string>
-    <string name="dirac_headset_title">ஹெட்செட் வகை</string>
-    <string name="dirac_preset_title">முன்னமைவு</string>
+    <string name="misound_preset_blues">ப்ளூஸ்</string>
+    <string name="misound_preset_classical">கிளாசிக்கல்</string>
+    <string name="misound_preset_country">கண்ட்ரி</string>
+    <string name="misound_preset_dance">நடனம்</string>
+    <string name="misound_preset_electronic">எலக்ட்ரானிக்</string>
+    <string name="misound_preset_jazz">ஜாஸ்</string>
+    <string name="misound_preset_metal">மெட்டல்</string>
+    <string name="misound_preset_pop">பாப்</string>
+    <string name="misound_preset_rock">ராக்</string>
+    <string name="misound_headset_title">ஹெட்செட் வகை</string>
+    <string name="misound_preset_title">முன்னமைவு</string>
 </resources>

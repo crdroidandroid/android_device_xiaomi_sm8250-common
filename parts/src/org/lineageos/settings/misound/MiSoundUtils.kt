@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.dirac
+package org.lineageos.settings.misound
 
 import android.content.Context
 import android.media.*
@@ -26,22 +26,22 @@ import android.util.Log
 import org.lineageos.settings.utils.PartsPreferences
 
 /** Persistent process-wide owner: activities never own or release the DSP effect. */
-class DiracUtils private constructor(context: Context) {
+class MiSoundUtils private constructor(context: Context) {
     companion object {
-        const val PREF_ENABLE = "dirac_enable"
-        const val PREF_HEADSET = "dirac_headset_pref"
-        const val PREF_PRESET = "dirac_preset_pref"
+        const val PREF_ENABLE = "misound_enable"
+        const val PREF_HEADSET = "misound_headset_pref"
+        const val PREF_PRESET = "misound_preset_pref"
         const val PREF_SCENE = "scenario_selection"
-        const val PREF_HIFI = "dirac_hifi_pref"
-        const val PREF_EQ = "dirac_eq_enabled"
-        const val PREF_PAUSE = "dirac_pause_during_calls"
+        const val PREF_HIFI = "misound_hifi_pref"
+        const val PREF_EQ = "misound_eq_enabled"
+        const val PREF_PAUSE = "misound_pause_during_calls"
         private const val FLAT = "0,0,0,0,0,0,0"
-        private var instance: DiracUtils? = null
+        private var instance: MiSoundUtils? = null
 
         @JvmStatic
         @Synchronized
-        fun getInstance(context: Context): DiracUtils =
-            instance ?: DiracUtils(context).also { instance = it }
+        fun getInstance(context: Context): MiSoundUtils =
+            instance ?: MiSoundUtils(context).also { instance = it }
 
         private fun parseLevels(preset: String): FloatArray {
             val values = preset.split(',')
@@ -68,7 +68,7 @@ class DiracUtils private constructor(context: Context) {
     private var serverDown = false
     private var communicationActive = false
     private var appliedEnabled: Boolean? = null
-    private var sound: DiracSound? = null
+    private var sound: MiSoundEffect? = null
     private var attempts = 0
     private val restoreTask = Runnable { restore() }
     private val audioTask = Runnable { updateAudioState() }
@@ -88,12 +88,33 @@ class DiracUtils private constructor(context: Context) {
             }
         }
 
+    /** Move legacy audio keys without overwriting values already saved by this version. */
+    private fun migratePreferences() {
+        val saved = preferences.all
+        val editor = preferences.edit()
+        var changed = false
+        for (key in listOf(PREF_ENABLE, PREF_HEADSET, PREF_PRESET, PREF_HIFI, PREF_EQ, PREF_PAUSE)) {
+            val oldKey = key.replaceFirst("misound_", "dirac_")
+            if (!saved.containsKey(oldKey)) continue
+            if (!saved.containsKey(key)) {
+                when (val value = saved[oldKey]) {
+                    is Boolean -> editor.putBoolean(key, value)
+                    is String -> editor.putString(key, value)
+                }
+            }
+            editor.remove(oldKey)
+            changed = true
+        }
+        if (changed) editor.apply()
+    }
+
     init {
+        migratePreferences()
         audio.setAudioServerStateCallback(
             app.mainExecutor,
             object : AudioManager.AudioServerStateCallback() {
                 override fun onAudioServerDown() =
-                    synchronized(this@DiracUtils) {
+                    synchronized(this@MiSoundUtils) {
                         serverDown = true
                         handler.removeCallbacks(restoreTask)
                         handler.removeCallbacks(audioTask)
@@ -102,7 +123,7 @@ class DiracUtils private constructor(context: Context) {
                     }
 
                 override fun onAudioServerUp() =
-                    synchronized(this@DiracUtils) {
+                    synchronized(this@MiSoundUtils) {
                         serverDown = false
                         attempts = 0
                         restore()
@@ -159,7 +180,7 @@ class DiracUtils private constructor(context: Context) {
                 notifyListeners()
             }
         } catch (error: RuntimeException) {
-            Log.w("DiracUtils", "Cannot update communication bypass", error)
+            Log.w("MiSoundUtils", "Cannot update communication bypass", error)
             restoreAfterFailure()
         }
     }
@@ -172,7 +193,7 @@ class DiracUtils private constructor(context: Context) {
             handler.removeCallbacks(restoreTask)
             notifyListeners()
         } catch (error: RuntimeException) {
-            Log.w("DiracUtils", "Cannot restore MiSound", error)
+            Log.w("MiSoundUtils", "Cannot restore MiSound", error)
             if (++attempts < 5 && !serverDown) {
                 handler.removeCallbacks(restoreTask)
                 handler.postDelayed(restoreTask, 1000)
@@ -212,22 +233,22 @@ class DiracUtils private constructor(context: Context) {
                     previous.setMusic(0)
                 }
         } catch (error: RuntimeException) {
-            Log.w("DiracUtils", "Cannot bypass MiSound before release", error)
+            Log.w("MiSoundUtils", "Cannot bypass MiSound before release", error)
         } finally {
             try {
                 previous.release()
             } catch (error: RuntimeException) {
-                Log.w("DiracUtils", "Cannot release MiSound", error)
+                Log.w("MiSoundUtils", "Cannot release MiSound", error)
             }
         }
     }
 
-    private fun requireEffect(): DiracSound {
+    private fun requireEffect(): MiSoundEffect {
         check(!serverDown) { "Audio server is down" }
         try {
             sound?.let { if (it.hasControl()) return it }
             releaseEffect()
-            val effect = DiracSound(0, 0)
+            val effect = MiSoundEffect(0, 0)
             sound = effect
             check(effect.hasControl()) { "MiSound control unavailable" }
             applyEnabled(false)
@@ -276,7 +297,7 @@ class DiracUtils private constructor(context: Context) {
             parseLevels(preset)
             preset
         } catch (error: IllegalArgumentException) {
-            Log.w("DiracUtils", "Discarding invalid saved preset", error)
+            Log.w("MiSoundUtils", "Discarding invalid saved preset", error)
             preferences.edit().remove(PREF_PRESET).apply()
             FLAT
         }
@@ -328,7 +349,7 @@ class DiracUtils private constructor(context: Context) {
             requireEffect()
             true
         } catch (error: RuntimeException) {
-            Log.w("DiracUtils", "MiSound unavailable", error)
+            Log.w("MiSoundUtils", "MiSound unavailable", error)
             false
         }
 
@@ -356,7 +377,7 @@ class DiracUtils private constructor(context: Context) {
             notifyListeners()
             true
         } catch (error: RuntimeException) {
-            Log.w("DiracUtils", "Cannot change MiSound", error)
+            Log.w("MiSoundUtils", "Cannot change MiSound", error)
             restoreAfterFailure()
             false
         }
@@ -389,7 +410,7 @@ class DiracUtils private constructor(context: Context) {
 
     private fun applyLevel(preset: String, enabled: Boolean) {
         val levels = if (enabled) parseLevels(preset) else FloatArray(0)
-        repeat(DiracSound.EQ_BAND_COUNT) { sound!!.setLevel(it, levels.getOrElse(it) { 0f }) }
+        repeat(MiSoundEffect.EQ_BAND_COUNT) { sound!!.setLevel(it, levels.getOrElse(it) { 0f }) }
     }
 
     @Synchronized fun getSupportedHeadsets() = requireEffect().getHeadsetList()

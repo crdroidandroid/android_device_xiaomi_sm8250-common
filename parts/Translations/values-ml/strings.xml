@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">ഉപകരണ ക്രമീകരണങ്ങൾ</string>
-    <string name="dirac_preset_blues">ദുഃഖഭാവമുള്ള</string>
-    <string name="dirac_preset_classical">ക്ലാസിക്കൽ</string>
-    <string name="dirac_preset_country">രാജ്യം</string>
-    <string name="dirac_preset_dance">ഡാൻസ്</string>
-    <string name="dirac_preset_electronic">ഇലക്ട്രോണിക്ക്</string>
-    <string name="dirac_preset_jazz">ജാസ്സ്</string>
-    <string name="dirac_preset_metal">മെറ്റൽ</string>
-    <string name="dirac_preset_pop">പോപ്പ്</string>
-    <string name="dirac_preset_rock">റോക്ക്</string>
-    <string name="dirac_headset_title">ഹെഡ്സെറ്റ് തരം</string>
-    <string name="dirac_preset_title">പ്രീസെറ്റ്</string>
+    <string name="misound_preset_blues">ദുഃഖഭാവമുള്ള</string>
+    <string name="misound_preset_classical">ക്ലാസിക്കൽ</string>
+    <string name="misound_preset_country">രാജ്യം</string>
+    <string name="misound_preset_dance">ഡാൻസ്</string>
+    <string name="misound_preset_electronic">ഇലക്ട്രോണിക്ക്</string>
+    <string name="misound_preset_jazz">ജാസ്സ്</string>
+    <string name="misound_preset_metal">മെറ്റൽ</string>
+    <string name="misound_preset_pop">പോപ്പ്</string>
+    <string name="misound_preset_rock">റോക്ക്</string>
+    <string name="misound_headset_title">ഹെഡ്സെറ്റ് തരം</string>
+    <string name="misound_preset_title">പ്രീസെറ്റ്</string>
 </resources>

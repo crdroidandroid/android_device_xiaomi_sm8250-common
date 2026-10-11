@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="device_settings_app_name">Enhedsindstillinger</string>
-    <string name="dirac_preset_blues">Blues</string>
-    <string name="dirac_preset_classical">Klassisk</string>
-    <string name="dirac_preset_country">Countrymusik</string>
-    <string name="dirac_preset_dance">Dans</string>
-    <string name="dirac_preset_electronic">Elektronisk</string>
-    <string name="dirac_preset_jazz">Jazz</string>
-    <string name="dirac_preset_metal">Metal</string>
-    <string name="dirac_preset_pop">Pop</string>
-    <string name="dirac_preset_rock">Rock</string>
-    <string name="dirac_headset_title">Headset type</string>
-    <string name="dirac_preset_title">Faste indstillinger</string>
+    <string name="misound_preset_blues">Blues</string>
+    <string name="misound_preset_classical">Klassisk</string>
+    <string name="misound_preset_country">Countrymusik</string>
+    <string name="misound_preset_dance">Dans</string>
+    <string name="misound_preset_electronic">Elektronisk</string>
+    <string name="misound_preset_jazz">Jazz</string>
+    <string name="misound_preset_metal">Metal</string>
+    <string name="misound_preset_pop">Pop</string>
+    <string name="misound_preset_rock">Rock</string>
+    <string name="misound_headset_title">Headset type</string>
+    <string name="misound_preset_title">Faste indstillinger</string>
 </resources>

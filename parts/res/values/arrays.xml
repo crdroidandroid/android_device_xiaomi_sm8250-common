@@ -4,35 +4,35 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Values for Dirac headset pref -->
-    <string-array name="dirac_headset_pref_entries" translatable="false">
-        <item>@string/dirac_headset_earbuds</item>
-        <item>@string/dirac_headset_in_ear_2013</item>
-        <item>@string/dirac_headset_piston_1</item>
-        <item>@string/dirac_headset_piston_basic</item>
-        <item>@string/dirac_headset_piston_2</item>
-        <item>@string/dirac_headset_piston_standard</item>
-        <item>@string/dirac_headset_general_inear</item>
-        <item>@string/dirac_headset_piston_youth</item>
-        <item>@string/dirac_headset_piston_color</item>
-        <item>@string/dirac_headset_in_ear</item>
-        <item>@string/dirac_headset_capsule</item>
-        <item>@string/dirac_headset_in_ear_pro</item>
-        <item>@string/dirac_headset_comfort</item>
-        <item>@string/dirac_headset_reduction_noise</item>
-        <item>@string/dirac_headset_cancelling</item>
-        <item>@string/dirac_headset_half_in_ear</item>
-        <item>@string/dirac_headset_in_ear2</item>
-        <item>@string/dirac_headset_earphone_basic</item>
-        <item>@string/dirac_headset_earphone</item>
-        <item>@string/dirac_headset_ear_four</item>
-        <item>@string/dirac_headset_piston_typec</item>
-        <item>@string/dirac_headset_bluetooth_collar</item>
-        <item>@string/dirac_headset_bluetooth_linefree</item>
-        <item>@string/dirac_headset_redmi_earphones</item>
+    <!-- Values for MiSound headset pref -->
+    <string-array name="misound_headset_pref_entries" translatable="false">
+        <item>@string/misound_headset_earbuds</item>
+        <item>@string/misound_headset_in_ear_2013</item>
+        <item>@string/misound_headset_piston_1</item>
+        <item>@string/misound_headset_piston_basic</item>
+        <item>@string/misound_headset_piston_2</item>
+        <item>@string/misound_headset_piston_standard</item>
+        <item>@string/misound_headset_general_inear</item>
+        <item>@string/misound_headset_piston_youth</item>
+        <item>@string/misound_headset_piston_color</item>
+        <item>@string/misound_headset_in_ear</item>
+        <item>@string/misound_headset_capsule</item>
+        <item>@string/misound_headset_in_ear_pro</item>
+        <item>@string/misound_headset_comfort</item>
+        <item>@string/misound_headset_reduction_noise</item>
+        <item>@string/misound_headset_cancelling</item>
+        <item>@string/misound_headset_half_in_ear</item>
+        <item>@string/misound_headset_in_ear2</item>
+        <item>@string/misound_headset_earphone_basic</item>
+        <item>@string/misound_headset_earphone</item>
+        <item>@string/misound_headset_ear_four</item>
+        <item>@string/misound_headset_piston_typec</item>
+        <item>@string/misound_headset_bluetooth_collar</item>
+        <item>@string/misound_headset_bluetooth_linefree</item>
+        <item>@string/misound_headset_redmi_earphones</item>
     </string-array>
 
-    <string-array name="dirac_headset_pref_values" translatable="false">
+    <string-array name="misound_headset_pref_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -59,29 +59,29 @@
         <item>28</item>
     </string-array>
 
-    <!-- Values for Dirac preset pref -->
-    <string-array name="dirac_preset_pref_entries" translatable="false">
-        <item>@string/dirac_preset_default</item>
-        <item>@string/dirac_preset_rock</item>
-        <item>@string/dirac_preset_jazz</item>
-        <item>@string/dirac_preset_pop</item>
-        <item>@string/dirac_preset_classical</item>
-        <item>@string/dirac_preset_hiphop</item>
-        <item>@string/dirac_preset_blues</item>
-        <item>@string/dirac_preset_electronic</item>
-        <item>@string/dirac_preset_country</item>
-        <item>@string/dirac_preset_dance</item>
-        <item>@string/dirac_preset_metal</item>
-        <item>@string/dirac_preset_bass_booster</item>
-        <item>@string/dirac_preset_balanced</item>
-        <item>@string/dirac_preset_live</item>
-        <item>@string/dirac_preset_bass_reduction</item>
-        <item>@string/dirac_preset_treble_reduction</item>
-        <item>@string/dirac_preset_soft_bass</item>
-        <item>@string/dirac_preset_soft_treble</item>
+    <!-- Values for MiSound preset pref -->
+    <string-array name="misound_preset_pref_entries" translatable="false">
+        <item>@string/misound_preset_default</item>
+        <item>@string/misound_preset_rock</item>
+        <item>@string/misound_preset_jazz</item>
+        <item>@string/misound_preset_pop</item>
+        <item>@string/misound_preset_classical</item>
+        <item>@string/misound_preset_hiphop</item>
+        <item>@string/misound_preset_blues</item>
+        <item>@string/misound_preset_electronic</item>
+        <item>@string/misound_preset_country</item>
+        <item>@string/misound_preset_dance</item>
+        <item>@string/misound_preset_metal</item>
+        <item>@string/misound_preset_bass_booster</item>
+        <item>@string/misound_preset_balanced</item>
+        <item>@string/misound_preset_live</item>
+        <item>@string/misound_preset_bass_reduction</item>
+        <item>@string/misound_preset_treble_reduction</item>
+        <item>@string/misound_preset_soft_bass</item>
+        <item>@string/misound_preset_soft_treble</item>
     </string-array>
 
-    <string-array name="dirac_preset_pref_values" translatable="false">
+    <string-array name="misound_preset_pref_values" translatable="false">
         <item>"0,0,0,0,0,0,0"</item>
         <item>"4,2,-2,0,-2,-2,4"</item>
         <item>"0,0,0,-2,-3,0,0"</item>

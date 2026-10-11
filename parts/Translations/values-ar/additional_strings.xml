@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="dirac_eq_enabled_title">"معادل الصوت"</string>
-    <string name="dirac_eq_enabled_summary">"طبّق الإعداد المسبق المحدد. يؤدي إيقاف هذا الخيار إلى الاحتفاظ بالإعداد المسبق المحفوظ واستخدام منحنى EQ مسطح."</string>
-    <string name="dirac_pause_calls_title">"إيقاف مؤقت أثناء المكالمات"</string>
-    <string name="dirac_pause_calls_summary">"يتم تجاوز MiSound مؤقتًا أثناء المكالمات والاتصال الصوتي، ثم استعادته تلقائيًا."</string>
-    <string name="dirac_paused_for_calls">"متوقف مؤقتًا للاتصال الصوتي"</string>
-    <string name="dirac_summary">"تحسين جودة الصوت"</string>
-    <string name="dirac_enable">"تفعيل"</string>
-    <string name="dirac_hifi_summary">"تفعيل وضع الدقة العالية على الأجهزة المدعومة"</string>
-    <string name="dirac_preset_default">"افتراضي"</string>
-    <string name="dirac_preset_hiphop">"هيب هوب"</string>
-    <string name="dirac_preset_bass_booster">"تعزيز الجهير"</string>
+    <string name="misound_eq_enabled_title">"معادل الصوت"</string>
+    <string name="misound_eq_enabled_summary">"طبّق الإعداد المسبق المحدد. يؤدي إيقاف هذا الخيار إلى الاحتفاظ بالإعداد المسبق المحفوظ واستخدام منحنى EQ مسطح."</string>
+    <string name="misound_pause_calls_title">"إيقاف مؤقت أثناء المكالمات"</string>
+    <string name="misound_pause_calls_summary">"يتم تجاوز MiSound مؤقتًا أثناء المكالمات والاتصال الصوتي، ثم استعادته تلقائيًا."</string>
+    <string name="misound_paused_for_calls">"متوقف مؤقتًا للاتصال الصوتي"</string>
+    <string name="misound_summary">"تحسين جودة الصوت"</string>
+    <string name="misound_enable">"تفعيل"</string>
+    <string name="misound_hifi_summary">"تفعيل وضع الدقة العالية على الأجهزة المدعومة"</string>
+    <string name="misound_preset_default">"افتراضي"</string>
+    <string name="misound_preset_hiphop">"هيب هوب"</string>
+    <string name="misound_preset_bass_booster">"تعزيز الجهير"</string>
     <string name="thermal_title">"ملفات التعريف الحرارية"</string>
     <string name="thermal_summary">"سياسات Xiaomi الحرارية للنظام ولكل تطبيق"</string>
     <string name="thermal_profile_dialog_title">"ملف التعريف الحراري"</string>
@@ -107,12 +107,12 @@
     <string name="clear_speaker_title">"تنظيف مكبر الصوت"</string>
     <string name="clear_speaker_summary">"تشغيل نغمة لتنظيف مكبر الصوت لمدة 30 ثانية"</string>
     <string name="clear_speaker_description">"شغّل نغمة التنظيف مع توجيه مكبر الصوت إلى الأسفل. للغبار العنيد، كررها عدة مرات مع تحريك الهاتف برفق.\n\nافصل سماعات الرأس قبل البدء."</string>
-    <string name="dirac_preset_live">"مباشر"</string>
-    <string name="dirac_preset_balanced">"متوازن"</string>
-    <string name="dirac_preset_bass_reduction">"خفض الجهير"</string>
-    <string name="dirac_preset_treble_reduction">"خفض الترددات العالية"</string>
-    <string name="dirac_preset_soft_bass">"جهير ناعم"</string>
-    <string name="dirac_preset_soft_treble">"ترددات عالية ناعمة"</string>
+    <string name="misound_preset_live">"مباشر"</string>
+    <string name="misound_preset_balanced">"متوازن"</string>
+    <string name="misound_preset_bass_reduction">"خفض الجهير"</string>
+    <string name="misound_preset_treble_reduction">"خفض الترددات العالية"</string>
+    <string name="misound_preset_soft_bass">"جهير ناعم"</string>
+    <string name="misound_preset_soft_treble">"ترددات عالية ناعمة"</string>
     <string name="music_headset_scenario_select">"اختيار المشهد"</string>
     <string name="music_headset_scenario_intelligent">"ذكي"</string>
     <string name="music_headset_scenario_music">"موسيقى"</string>
@@ -129,10 +129,10 @@
     <string name="hbm_mode_title">"وضع السطوع العالي"</string>
     <string name="hbm_mode_summary">"السماح بسطوع أعلى للشاشة لتحسين الرؤية تحت ضوء الشمس المباشر. يستهلك طاقة أكبر."</string>
     <string name="hbm_enable_summary_not_supported">"وضع السطوع العالي غير مدعوم بواسطة النواة الحالية"</string>
-    <string name="dirac_unavailable">"MiSound غير متاح مؤقتًا"</string>
-    <string name="dirac_apply_failed">"تعذر تطبيق إعدادات MiSound. يرجى المحاولة مرة أخرى."</string>
-    <string name="dirac_speaker_title">"خرج مكبر الصوت"</string>
-    <string name="dirac_speaker_summary">"تتبع معالجة مكبر الصوت مسار الصوت النشط ودعم الشركة المصنّعة. ينطبق ملف سماعات الرأس أدناه على سماعات الرأس؛ ولا يحدد وضعًا لمكبر الصوت."</string>
+    <string name="misound_unavailable">"MiSound غير متاح مؤقتًا"</string>
+    <string name="misound_apply_failed">"تعذر تطبيق إعدادات MiSound. يرجى المحاولة مرة أخرى."</string>
+    <string name="misound_speaker_title">"خرج مكبر الصوت"</string>
+    <string name="misound_speaker_summary">"تتبع معالجة مكبر الصوت مسار الصوت النشط ودعم الشركة المصنّعة. ينطبق ملف سماعات الرأس أدناه على سماعات الرأس؛ ولا يحدد وضعًا لمكبر الصوت."</string>
     <string name="parts_apply_failed">"تعذر تطبيق هذا الإعداد. يرجى المحاولة مرة أخرى."</string>
     <string name="thermal_system_compact_summary">"%1$s • %2$s"</string>
     <string name="thermal_system_expand">"إظهار عناصر تحكم ملف تعريف النظام"</string>
