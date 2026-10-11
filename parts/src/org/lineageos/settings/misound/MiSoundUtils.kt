@@ -20,10 +20,27 @@ import android.content.Context
 import android.media.*
 import android.media.audiofx.AudioEffect
 import android.os.Handler
+import android.os.HandlerThread
 import android.os.Looper
 import android.os.SystemProperties
 import android.util.Log
+import java.util.concurrent.Executor
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import org.lineageos.settings.utils.PartsPreferences
+
+data class MiSoundState(
+    val available: Boolean = false,
+    val enabled: Boolean = false,
+    val equalizer: Boolean = true,
+    val pauseDuringCalls: Boolean = true,
+    val paused: Boolean = false,
+    val headset: Int = 0,
+    val preset: String = "0,0,0,0,0,0,0",
+    val scenario: Int = 4,
+    val hifi: Boolean = false,
+    val supportedHeadsets: List<Int> = emptyList(),
+)
 
 /** Persistent process-wide owner: activities never own or release the DSP effect. */
 class MiSoundUtils private constructor(context: Context) {
@@ -63,8 +80,16 @@ class MiSoundUtils private constructor(context: Context) {
     private val app = context.applicationContext.createDeviceProtectedStorageContext()
     private val preferences = PartsPreferences.getDefaultSharedPreferences(app)
     private val audio = app.getSystemService(AudioManager::class.java)
-    private val handler = Handler(Looper.getMainLooper())
-    private val listeners = mutableSetOf<Runnable>()
+    private val worker = HandlerThread("MiSound").apply { start() }
+    private val handler = Handler(worker.looper)
+    private val mainHandler = Handler(Looper.getMainLooper())
+    private val executor = Executor { handler.post(it) }
+    private val mutableState = MutableStateFlow(MiSoundState())
+    val state = mutableState.asStateFlow()
+    private var supportedHeadsets = emptyList<Int>()
+    private var callbacksRegistered = false
+    private var callbackAttempts = 0
+    private val callbackTask = Runnable { registerCallbacks() }
     private var serverDown = false
     private var communicationActive = false
     private var appliedEnabled: Boolean? = null
@@ -109,38 +134,47 @@ class MiSoundUtils private constructor(context: Context) {
     }
 
     init {
-        migratePreferences()
-        audio.setAudioServerStateCallback(
-            app.mainExecutor,
-            object : AudioManager.AudioServerStateCallback() {
-                override fun onAudioServerDown() =
-                    synchronized(this@MiSoundUtils) {
-                        serverDown = true
-                        handler.removeCallbacks(restoreTask)
-                        handler.removeCallbacks(audioTask)
-                        releaseEffect()
-                        notifyListeners()
-                    }
+        handler.post(callbackTask)
+    }
 
-                override fun onAudioServerUp() =
-                    synchronized(this@MiSoundUtils) {
-                        serverDown = false
-                        attempts = 0
-                        restore()
-                    }
-            },
-        )
+    private fun registerCallbacks() {
+        migratePreferences()
         try {
-            audio.addOnModeChangedListener(app.mainExecutor, modeListener)
+            audio.setAudioServerStateCallback(
+                executor,
+                object : AudioManager.AudioServerStateCallback() {
+                    override fun onAudioServerDown() =
+                        synchronized(this@MiSoundUtils) {
+                            serverDown = true
+                            handler.removeCallbacks(restoreTask)
+                            handler.removeCallbacks(audioTask)
+                            releaseEffect()
+                            publishState()
+                        }
+
+                    override fun onAudioServerUp() =
+                        synchronized(this@MiSoundUtils) {
+                            serverDown = false
+                            attempts = 0
+                            restore()
+                        }
+                },
+            )
+            audio.addOnModeChangedListener(executor, modeListener)
             audio.registerAudioPlaybackCallback(playback, handler)
             audio.registerAudioRecordingCallback(recording, handler)
+            callbacksRegistered = true
         } catch (failure: RuntimeException) {
             cleanup(failure) { audio.removeOnModeChangedListener(modeListener) }
             cleanup(failure) { audio.unregisterAudioPlaybackCallback(playback) }
             cleanup(failure) { audio.unregisterAudioRecordingCallback(recording) }
             cleanup(failure) { audio.clearAudioServerStateCallback() }
             handler.removeCallbacks(audioTask)
-            throw failure
+            Log.w("MiSoundUtils", "Cannot register audio callbacks", failure)
+            if (++callbackAttempts < 5) handler.postDelayed(callbackTask, 1000)
+            releaseEffect()
+            publishState()
+            return
         }
         restore()
     }
@@ -177,7 +211,7 @@ class MiSoundUtils private constructor(context: Context) {
             val enabled = effectiveEnabled(isEnabledRequested(), isPauseDuringCallsEnabled())
             if (appliedEnabled != enabled) {
                 applyEnabled(enabled)
-                notifyListeners()
+                publishState()
             }
         } catch (error: RuntimeException) {
             Log.w("MiSoundUtils", "Cannot update communication bypass", error)
@@ -191,38 +225,62 @@ class MiSoundUtils private constructor(context: Context) {
             requireEffect()
             attempts = 0
             handler.removeCallbacks(restoreTask)
-            notifyListeners()
+            publishState()
         } catch (error: RuntimeException) {
             Log.w("MiSoundUtils", "Cannot restore MiSound", error)
             if (++attempts < 5 && !serverDown) {
                 handler.removeCallbacks(restoreTask)
                 handler.postDelayed(restoreTask, 1000)
             }
-            notifyListeners()
+            publishState()
         }
     }
 
-    @Synchronized
-    fun addListener(listener: Runnable) {
-        listeners.add(listener)
-    }
-
-    @Synchronized
-    fun removeListener(listener: Runnable) {
-        listeners.remove(listener)
-        handler.removeCallbacks(listener)
-    }
-
-    private fun notifyListeners() {
-        listeners.forEach {
-            handler.removeCallbacks(it)
-            handler.post(it)
+    fun requestRefresh() {
+        handler.post {
+            attempts = 0
+            if (callbacksRegistered) restore()
+            else {
+                callbackAttempts = 0
+                handler.removeCallbacks(callbackTask)
+                registerCallbacks()
+            }
         }
+    }
+
+    /** Queue native operations in user order; neither UI nor tile threads wait for the DSP. */
+    fun submit(action: (MiSoundUtils) -> Unit, onFailure: () -> Unit = {}) {
+        handler.post {
+            try {
+                action(this)
+            } catch (error: RuntimeException) {
+                Log.w("MiSoundUtils", "Cannot apply MiSound", error)
+                restoreAfterFailure()
+                mainHandler.post(onFailure)
+            }
+            publishState()
+        }
+    }
+
+    private fun publishState() {
+        mutableState.value = MiSoundState(
+            available = !serverDown && sound?.hasControl() == true,
+            enabled = isEnabledRequested(),
+            equalizer = isEqualizerEnabled(),
+            pauseDuringCalls = isPauseDuringCallsEnabled(),
+            paused = isPausedForCommunication(),
+            headset = getHeadsetType(),
+            preset = getSavedPreset(),
+            scenario = getScenario(),
+            hifi = getHifiMode(),
+            supportedHeadsets = supportedHeadsets,
+        )
     }
 
     private fun releaseEffect() {
         val previous = sound
         sound = null
+        supportedHeadsets = emptyList()
         appliedEnabled = null
         if (previous == null) return
         try {
@@ -244,6 +302,7 @@ class MiSoundUtils private constructor(context: Context) {
     }
 
     private fun requireEffect(): MiSoundEffect {
+        check(callbacksRegistered) { "Audio callbacks unavailable" }
         check(!serverDown) { "Audio server is down" }
         try {
             sound?.let { if (it.hasControl()) return it }
@@ -255,6 +314,12 @@ class MiSoundUtils private constructor(context: Context) {
             if (isEnabledRequested()) {
                 applySettings()
                 applyEnabled(effectiveEnabled(true, isPauseDuringCallsEnabled()))
+            }
+            supportedHeadsets = try {
+                effect.getHeadsetList().toList()
+            } catch (error: RuntimeException) {
+                Log.w("MiSoundUtils", "Headset capabilities unavailable", error)
+                emptyList()
             }
             return effect
         } catch (error: RuntimeException) {
@@ -343,16 +408,6 @@ class MiSoundUtils private constructor(context: Context) {
         restore()
     }
 
-    @Synchronized
-    fun isAvailable(): Boolean =
-        try {
-            requireEffect()
-            true
-        } catch (error: RuntimeException) {
-            Log.w("MiSoundUtils", "MiSound unavailable", error)
-            false
-        }
-
     @Synchronized fun isEnabledRequested() = safeBoolean(PREF_ENABLE, false)
 
     @Synchronized fun isEqualizerEnabled() = safeBoolean(PREF_EQ, true)
@@ -374,11 +429,9 @@ class MiSoundUtils private constructor(context: Context) {
                 applyEnabled(effectiveEnabled(true, isPauseDuringCallsEnabled()))
             }
             preferences.edit().putBoolean(PREF_ENABLE, enable).apply()
-            notifyListeners()
             true
         } catch (error: RuntimeException) {
             Log.w("MiSoundUtils", "Cannot change MiSound", error)
-            restoreAfterFailure()
             false
         }
     }
@@ -388,7 +441,6 @@ class MiSoundUtils private constructor(context: Context) {
         requireEffect()
         applyLevel(getSavedPreset(), enabled)
         preferences.edit().putBoolean(PREF_EQ, enabled).apply()
-        notifyListeners()
     }
 
     @Synchronized
@@ -396,7 +448,6 @@ class MiSoundUtils private constructor(context: Context) {
         requireEffect()
         applyEnabled(effectiveEnabled(isEnabledRequested(), enabled))
         preferences.edit().putBoolean(PREF_PAUSE, enabled).apply()
-        notifyListeners()
     }
 
     @Synchronized
@@ -405,7 +456,6 @@ class MiSoundUtils private constructor(context: Context) {
         requireEffect()
         applyLevel(preset, isEqualizerEnabled())
         preferences.edit().putString(PREF_PRESET, preset).apply()
-        notifyListeners()
     }
 
     private fun applyLevel(preset: String, enabled: Boolean) {
@@ -413,13 +463,10 @@ class MiSoundUtils private constructor(context: Context) {
         repeat(MiSoundEffect.EQ_BAND_COUNT) { sound!!.setLevel(it, levels.getOrElse(it) { 0f }) }
     }
 
-    @Synchronized fun getSupportedHeadsets() = requireEffect().getHeadsetList()
-
     @Synchronized
     fun setHeadsetType(value: Int) {
         requireEffect().setHeadsetType(value)
         preferences.edit().putString(PREF_HEADSET, value.toString()).apply()
-        notifyListeners()
     }
 
     @Synchronized fun getHifiMode() = safeBoolean(PREF_HIFI, false)
@@ -441,13 +488,11 @@ class MiSoundUtils private constructor(context: Context) {
         requireEffect()
         applyHifi(value != 0)
         preferences.edit().putBoolean(PREF_HIFI, value != 0).apply()
-        notifyListeners()
     }
 
     @Synchronized
     fun setScenario(value: Int) {
         requireEffect().setScenario(value)
         preferences.edit().putString(PREF_SCENE, value.toString()).apply()
-        notifyListeners()
     }
 }

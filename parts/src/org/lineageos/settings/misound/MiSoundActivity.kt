@@ -31,101 +31,73 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.awaitCancellation
+import kotlinx.coroutines.withContext
 import org.lineageos.settings.R
 import org.lineageos.settings.compose.*
 
 class MiSoundActivity : PartsActivity() {
     @Composable
     override fun Content() {
-        var owner by remember { mutableStateOf<MiSoundUtils?>(null) }
-        var revision by remember { mutableIntStateOf(0) }
+        val utils = remember { MiSoundUtils.getInstance(applicationContext) }
+        val state by utils.state.collectAsStateWithLifecycle()
         var headphones by remember { mutableStateOf(false) }
         val lifecycle = LocalLifecycleOwner.current
-        DisposableEffect(lifecycle) {
+        LaunchedEffect(lifecycle) {
             val audio = getSystemService(AudioManager::class.java)
             val media = AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA).build()
-            var registered = false
-            val stateListener = Runnable { revision++ }
             fun route(devices: List<AudioDeviceAttributes>) {
-                headphones =
-                    devices.any {
-                        it.type in
-                            setOf(
-                                AudioDeviceInfo.TYPE_WIRED_HEADSET,
-                                AudioDeviceInfo.TYPE_WIRED_HEADPHONES,
-                                AudioDeviceInfo.TYPE_USB_HEADSET,
-                                AudioDeviceInfo.TYPE_BLUETOOTH_A2DP,
-                                AudioDeviceInfo.TYPE_BLUETOOTH_SCO,
-                                AudioDeviceInfo.TYPE_BLE_HEADSET,
-                            )
-                    }
-            }
-            val listener =
-                AudioManager.OnDevicesForAttributesChangedListener { _, devices ->
-                    route(devices)
-                    revision++
+                headphones = devices.any {
+                    it.type in setOf(
+                        AudioDeviceInfo.TYPE_WIRED_HEADSET,
+                        AudioDeviceInfo.TYPE_WIRED_HEADPHONES,
+                        AudioDeviceInfo.TYPE_USB_HEADSET,
+                        AudioDeviceInfo.TYPE_BLUETOOTH_A2DP,
+                        AudioDeviceInfo.TYPE_BLUETOOTH_SCO,
+                        AudioDeviceInfo.TYPE_BLE_HEADSET,
+                    )
                 }
-            fun stop() {
-                if (registered)
-                    try {
-                        audio.removeOnDevicesForAttributesChangedListener(listener)
-                    } catch (error: RuntimeException) {
-                        Log.w("MiSoundActivity", "Cannot unregister route", error)
-                    }
-                registered = false
-                owner?.removeListener(stateListener)
             }
-            fun start() {
-                stop()
+            val listener = AudioManager.OnDevicesForAttributesChangedListener { _, devices ->
+                route(devices)
+            }
+            lifecycle.lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                utils.requestRefresh()
                 try {
-                    owner = MiSoundUtils.getInstance(this@MiSoundActivity)
-                    owner?.addListener(stateListener)
-                } catch (error: RuntimeException) {
-                    Log.w("MiSoundActivity", "Cannot initialize MiSound", error)
-                }
-                try {
-                    route(audio.getDevicesForAttributes(media))
-                    audio.addOnDevicesForAttributesChangedListener(media, mainExecutor, listener)
-                    registered = true
+                    withContext(Dispatchers.IO) {
+                        audio.addOnDevicesForAttributesChangedListener(media, mainExecutor, listener)
+                    }
+                    route(withContext(Dispatchers.IO) { audio.getDevicesForAttributes(media) })
+                    awaitCancellation()
                 } catch (error: RuntimeException) {
                     headphones = false
                     Log.w("MiSoundActivity", "Cannot query media route", error)
+                } finally {
+                    withContext(NonCancellable + Dispatchers.IO) {
+                        try {
+                            audio.removeOnDevicesForAttributesChangedListener(listener)
+                        } catch (error: RuntimeException) {
+                            Log.w("MiSoundActivity", "Cannot unregister route", error)
+                        }
+                    }
                 }
-                revision++
-            }
-            val observer = LifecycleEventObserver { _, event ->
-                when (event) {
-                    Lifecycle.Event.ON_RESUME -> start()
-                    Lifecycle.Event.ON_PAUSE -> stop()
-                    else -> Unit
-                }
-            }
-            lifecycle.lifecycle.addObserver(observer)
-            if (lifecycle.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) start()
-            onDispose {
-                lifecycle.lifecycle.removeObserver(observer)
-                stop()
             }
         }
-        val utils = owner
-        // Each callback invalidates the snapshot; the process owner is authoritative.
-        val available = remember(utils, revision) { utils?.isAvailable() == true }
-        val requested = remember(utils, revision) { utils?.isEnabledRequested() == true }
-        val eq = remember(utils, revision) { utils?.isEqualizerEnabled() == true }
+        val available = state.available
+        val requested = state.enabled
+        val eq = state.equalizer
         fun apply(action: (MiSoundUtils) -> Unit) {
-            val current = utils ?: return
-            try {
-                action(current)
-            } catch (error: RuntimeException) {
-                Log.w("MiSoundActivity", "Cannot apply MiSound", error)
-                Toast.makeText(this, R.string.misound_apply_failed, Toast.LENGTH_SHORT).show()
-                current.restoreAfterFailure()
+            val app = applicationContext
+            utils.submit(action) {
+                Toast.makeText(app, R.string.misound_apply_failed, Toast.LENGTH_SHORT).show()
             }
-            revision++
         }
-        val hifiSupported = utils?.isHifiSupported() == true
+        val hifiSupported = utils.isHifiSupported()
         val headsetOffset = if (headphones) 1 else 0
         val secondaryRowCount = 4 + headsetOffset + (if (hifiSupported) 1 else 0)
         PartsPage(stringResource(R.string.misound_title), { finish() }) {
@@ -153,7 +125,7 @@ class MiSoundActivity : PartsActivity() {
                 stringResource(R.string.misound_enable),
                 when {
                     !available -> stringResource(R.string.misound_unavailable)
-                    utils?.isPausedForCommunication() == true ->
+                    state.paused ->
                         stringResource(R.string.misound_paused_for_calls)
                     else -> stringResource(R.string.misound_summary)
                 },
@@ -167,7 +139,7 @@ class MiSoundActivity : PartsActivity() {
                 ToggleCard(
                     stringResource(R.string.misound_pause_calls_title),
                     stringResource(R.string.misound_pause_calls_summary),
-                    utils?.isPauseDuringCallsEnabled() == true,
+                    state.pauseDuringCalls,
                     available,
                 ) { enabled ->
                     apply { it.setPauseDuringCallsEnabled(enabled) }
@@ -179,23 +151,14 @@ class MiSoundActivity : PartsActivity() {
                         R.array.misound_headset_pref_entries,
                         R.array.misound_headset_pref_values,
                     )
-                val choices =
-                    remember(utils, revision, catalog) {
-                        try {
-                            val supported =
-                                if (available) utils?.getSupportedHeadsets()?.toSet().orEmpty()
-                                else emptySet()
-                            catalog
-                                .filter { it.first.toIntOrNull() in supported }
-                                .ifEmpty { catalog }
-                        } catch (_: RuntimeException) {
-                            catalog
-                        }
-                    }
+                val choices = remember(catalog, state.supportedHeadsets) {
+                    val supported = state.supportedHeadsets.toSet()
+                    catalog.filter { it.first.toIntOrNull() in supported }.ifEmpty { catalog }
+                }
                 PreferenceRow(1, secondaryRowCount) {
                     ChoiceCard(
                         stringResource(R.string.misound_headset_title),
-                        utils?.getHeadsetType()?.toString() ?: "0",
+                        state.headset.toString(),
                         choices,
                         available && requested,
                         choiceIcon = { id, selected ->
@@ -256,7 +219,7 @@ class MiSoundActivity : PartsActivity() {
             PreferenceRow(2 + headsetOffset, secondaryRowCount) {
                 ChoiceCard(
                     stringResource(R.string.misound_preset_title),
-                    utils?.getSavedPreset() ?: "0,0,0,0,0,0,0",
+                    state.preset,
                     presetChoices,
                     available && requested && eq,
                     choiceIcon = { id, selected ->
@@ -269,7 +232,7 @@ class MiSoundActivity : PartsActivity() {
             PreferenceRow(3 + headsetOffset, secondaryRowCount) {
                 ChoiceCard(
                     stringResource(R.string.music_headset_scenario_select),
-                    utils?.getScenario()?.toString() ?: "4",
+                    state.scenario.toString(),
                     ResourceChoices(
                         R.array.scenario_selector_titles,
                         R.array.scenario_selector_values,
@@ -295,7 +258,7 @@ class MiSoundActivity : PartsActivity() {
                     ToggleCard(
                         stringResource(R.string.misound_hifi_title),
                         stringResource(R.string.misound_hifi_summary),
-                        utils?.getHifiMode() == true,
+                        state.hifi,
                         available && requested,
                     ) { enabled ->
                         apply { it.setHifiMode(if (enabled) 1 else 0) }
