@@ -46,6 +46,15 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
+        <provider
+            android:name=".SoundEnhancementsProvider"
+            android:authorities="org.lineageos.settings.sound_enhancements"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+        </provider>
+
         <receiver
             android:name=".BootCompletedReceiver"
             android:exported="false">
@@ -63,6 +72,8 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data android:name="com.android.settings.group_key"
+                       android:value="xiaomi_audio_enhancements" />
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary"
@@ -193,6 +204,8 @@
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
+            <meta-data android:name="com.android.settings.group_key"
+                       android:value="xiaomi_audio_enhancements" />
             <meta-data
                 android:name="com.android.settings.category"
                 android:value="com.android.settings.category.ia.sound" />
