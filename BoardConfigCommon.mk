@@ -56,6 +56,7 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # ART
 WITH_DEXPREOPT := true
+DEX_PREOPT_DEFAULT := generate-vdex-and-image
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Bootloader
